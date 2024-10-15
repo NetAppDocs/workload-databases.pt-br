@@ -1,0 +1,183 @@
+---
+sidebar: sidebar 
+permalink: learn-databases.html 
+keywords: Databases 
+summary: O Databases é um serviço completo de implantação e manutenção de banco de dados com práticas recomendadas incorporadas para otimização, clonagem fina automática e recursos de monitoramento e resolução. 
+---
+= Saiba mais sobre o Workload Factory para bancos de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+O Workload Factory for Databases é um serviço completo de implantação e manutenção de banco de dados com práticas recomendadas incorporadas para otimização, clonagem fina automática e recursos de monitoramento e resolução.
+
+
+
+== O que é o Workload Factory para bancos de dados?
+
+Detecta, avalia, planeja, provisiona e move os dados do Microsoft SQL Server para implantações do Amazon FSX for NetApp ONTAP (FSX for ONTAP) otimizadas para atender às suas expetativa de desempenho e custo, aderindo às práticas recomendadas do setor. Ao longo do ciclo de vida, o Workload Factory oferece otimização e gerenciamento contínuos para bancos de dados no FSX for ONTAP.
+
+Para obter mais informações sobre o Workload Factory, consulte o link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["Visão geral da fábrica da carga de trabalho"^].
+
+
+
+== Benefícios de fábrica da carga de trabalho para bancos de dados autogerenciados
+
+O Workload Factory oferece as seguintes práticas recomendadas e automação benéficas para bancos de dados autogeridos.
+
+
+
+=== Práticas recomendadas
+
+* Conhecimento integrado dos servidores AWS Cloud, Microsoft Windows e SQL e NetApp ONTAP para implantações de servidor SQL em instâncias EC2.
+* Implantação otimizada do custo total de propriedade.
+* Automação de implantação completa que segue as práticas recomendadas da AWS, Microsoft e ONTAP.
+* O modo de implantação "criação rápida" ajuda você a evitar possíveis armadilhas com a configuração manual.
+
+
+
+
+=== Automação com Workload Factory Codebox
+
+O Workload Factory introduz a automação incorporada com o _Codebox_. O Codebox oferece os seguintes benefícios de automação:
+
+* *Geração de snippets de código*: Snippets de infraestrutura como código (IAC) são gerados durante a criação de recursos, permitindo uma integração perfeita com fluxos de trabalho de orquestração existentes.
+* *Copiloto de infraestrutura como código*: O Codebox é um copiloto de infraestrutura como código (IAC) que ajuda desenvolvedores e DevOps a gerar código para executar qualquer operação suportada pelo Workload Factory.
+* *Visualizador de código e catálogo de automação*: O Codebox fornece um visualizador de código para análise rápida da automação e um catálogo de automação para rápida reutilização futura.
+
+
+
+
+=== Fábrica de cargas de trabalho para recursos de bancos de dados
+
+A fábrica de cargas de trabalho para bancos de dados oferece os seguintes recursos:
+
+* * Implantações simples e rápidas*: Simplifique e simplifique sua experiência de provisionamento selecionando respostas para perguntas de especificação e eliminando o tempo normalmente necessário para investigar como provisionar e configurar seu Microsoft SQL Server na AWS.
+* *Orquestração automatizada*: Disponível através da interface de usuário do Workload Factory com os modos de implantação _Quick_ e _Advanced_ Crie, Chatbot do Workload Factory e API com o AWS CloudFormation.
+* *Recursos incorporados*: Utilize as melhores práticas do NetApp, Microsoft e Amazon e seleções de recursos da AWS incorporadas à configuração de implantação.
+* *Estimativa de custo*: Avalie possíveis economias de custo com a calculadora de armazenamento do Workload Factory que estima e detalha os custos de armazenamento, computação, licenciamento SQL, snapshot e clone detalhados para implantações existentes do Microsoft SQL Server com Elastic Block Store em comparação com o FSX for ONTAP.
+* *Modelos de automação reutilizáveis*: Crie, reuse e personalize modelos do CloudFormation a partir do Workload Factory Codebox para futuras implantações do Microsoft SQL Server em vários ambientes.
+* *Descoberta e provisionamento de recursos da AWS*: Detecte automaticamente os servidores Microsoft SQL no FSX for ONTAP, FSX for Windows File Servers e Elastic Block Store implantados a partir de sua conta da AWS. O Inventário de bancos de dados serve como ponto de lançamento para explorar oportunidades de economia de custos para servidores em outros sistemas de armazenamento da AWS ou uma ferramenta de gerenciamento para servidores e instâncias baseados no FSX for ONTAP.
+* * Criação de sandbox*: Crie um ambiente de banco de dados isolado sob demanda que pode ser usado para teste, integração, diagnóstico e treinamento, sem afetar os dados de produção.
+* * Criação de banco de dados*: Crie um banco de dados de usuários para seus servidores Microsoft SQL existentes com os modos _Quick_ ou _Advanced_ Create para configurar o agrupamento de banco de dados, nomes de arquivos e tamanhos. A configuração de armazenamento está incluída.
+* *Monitoramento de trabalho*: Monitore e acompanhe o progresso da execução do trabalho do banco de dados e diagnostique e solucione problemas no caso de ocorrer alguma falha.
+
+
+
+
+== Benefícios do Amazon FSX for ONTAP para bancos de dados autogeridos
+
+* *Durabilidade, disponibilidade e confiabilidade*: O FSX for ONTAP oferece vários recursos que aumentam a durabilidade e a disponibilidade de bancos de dados autogeridos hospedados no FSX for ONTAP, como alta disponibilidade com suporte a implantações de zonas de disponibilidade única e múltipla, snapshots com reconhecimento de aplicativos, recuperação de desastres aprimorada usando replicação e backup eficiente.
+* *Desempenho e escalabilidade*: O FSX for ONTAP oferece otimização de desempenho com alta taxa de transferência, baixa latência, conexões de rede de alta velocidade e escalabilidade com vários sistemas de arquivos para dimensionar o desempenho agregado necessário para uma carga de trabalho.
+* *Gerenciamento e eficiência de dados*: O FSX for ONTAP oferece vários recursos que aprimoram o gerenciamento e a eficiência de dados, como thin clones com uso eficiente de espaço, thin Provisioning, compactação e deduplicação e disposição em camadas de dados acessados com pouca frequência no pool de capacidade.
+
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Saiba mais sobre o FSX for ONTAP for Workload Factory"^].
+
+
+
+=== Modos operacionais na fábrica de cargas de trabalho
+
+Três modos operacionais diferentes - _Basic_, _read_ e _Automate_ - oferecem opções flexíveis para implantação dentro e fora do Workload Factory. Obtenha valor imediato com confiança zero no modo _básico_ com snippets de código para uso fora do Workload Factory. Obtenha valor incremental com confiança incremental nos modos _read_ e _Automate_.
+
+Saiba mais link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Modos operacionais na fábrica de cargas de trabalho"^]sobre o .
+
+
+
+== Detalhes de implantação
+
+
+
+=== Configurações compatíveis
+
+O SQL Server oferece suporte a implantações de alta disponibilidade (sempre em instâncias de cluster de failover) e de instância única de acordo com as práticas recomendadas da AWS, NetApp ONTAP e SQL Server.
+
+[cols="2a,2a,2a,2a"]
+|===
+| Versão do SQL Server | Windows Server 2016 | Windows Server 2019 | Windows Server 2022 
+
+
+ a| 
+SQL Server 2016
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+ a| 
+SQL Server 2019
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+SQL Server 2022
+ a| 
+Não
+ a| 
+Sim
+ a| 
+Sim
+
+|===
+
+
+=== Arquiteturas de implantação
+
+Arquiteturas de implantação de zona de disponibilidade única e várias zonas de disponibilidade são compatíveis com bancos de dados.
+
+.Zona de disponibilidade única
+O diagrama a seguir exibe a arquitetura autônoma com uma zona de disponibilidade única em uma única região.
+
+image:diagram-SAZ-database-architecture.png["Um diagrama de arquitetura autônoma com uma única implantação de zona de disponibilidade do Amazon FSX for NetApp ONTAP em uma única região"]
+
+.Várias zonas de disponibilidade
+O diagrama a seguir exibe a arquitetura de alta disponibilidade (HA) de dois nós com cluster de instância de cluster de failover (FCI) em uma única região.
+
+image:diagram-MAZ-database-architecture.png["Um diagrama da arquitetura de alta disponibilidade de dois nós com cluster de instâncias de cluster de failover em uma única região"]
+
+
+
+=== Serviços integrados da AWS
+
+Os bancos de dados incluem os seguintes serviços integrados da AWS:
+
+* CloudFormation
+* Serviço de notificação simples
+* CloudWatch
+* Gerente de sistemas
+* Gestor de segredos
+
+
+
+
+=== Regiões suportadas
+
+Os bancos de dados são suportados em todas as regiões comerciais onde o FSX for ONTAP é suportado. https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Exibir regiões da Amazon compatíveis."^]
+
+As seguintes regiões da AWS não são suportadas:
+
+* Regiões da China
+* Regiões GovCloud (EUA)
+* Nuvem secreta
+* Top nuvem secreta
+
+
+
+
+== Obter ajuda
+
+O Amazon FSX for NetApp ONTAP é uma solução exclusiva da AWS. Para dúvidas ou problemas de suporte técnico associados ao ONTAP sistema de arquivos, infraestrutura ou qualquer solução usando este serviço, use a Central de suporte no Console de Gerenciamento da AWS para abrir um caso de suporte com a AWS. Selecione o serviço "FSX for ONTAP" e a categoria apropriada. Forneça as informações restantes necessárias para criar seu caso de suporte da AWS.
+
+Para obter perguntas gerais sobre os aplicativos e serviços do Workload Factory ou do Workload Factory, link:get-help.html["Obtenha ajuda para bancos de dados para o Workload Factory"]consulte .

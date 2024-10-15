@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: create-sandbox-clone.html 
+keywords: create, clone, sandbox 
+summary: Crie um clone de sandbox no Workload Factory para bancos de dados. 
+---
+= Crie um clone de sandbox no Workload Factory para bancos de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Criar um clone de sandbox de um banco de dados no Workload Factory para bancos de dados permite que você use o clone para desenvolvimento, teste, integração, análise, treinamento, QA e muito mais sem alterar o banco de dados de origem.
+
+.Sobre esta tarefa
+Um clone sandbox é criado a partir do snapshot mais recente no banco de dados de origem. Ele pode ser clonado no mesmo Microsoft SQL Server que o banco de dados de origem ou clonado em outro Microsoft SQL Server, desde que eles compartilhem o mesmo sistema de arquivos FSX for ONTAP.
+
+.Antes de começar
+Certifique-se de concluir os seguintes pré-requisitos antes de criar um clone de sandbox.
+
+Credenciais e permissões:: É necessário link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões do modo _read_ ou _Automate_"^]criar um clone de sandbox no Workload Factory.
++
+--
+Como alternativa, você pode usar o Codebox para copiar um modelo parcialmente concluído ou criar um modelo concluído para que você possa criar o clone sandbox fora do Workload Factory usando a API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Saiba mais sobre a automação Codebox"^].
+
+--
+Microsoft SQL Server:: Você precisa ter um Microsoft SQL Server gerenciado no Workload Factory para que os bancos de dados hospedem o novo clone sandbox.
+AWS Systems Manager:: Certifique-se de que o `NT Authority\SYSTEM` privilégio de usuário esteja habilitado no host Microsoft SQL por meio do AWS Systems Manager.
+Banco de dados de origem:: Você precisa de um banco de dados de origem disponível para o clone.
+
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *sandboxes*.
+. Na guia sandboxes, selecione *Create new sandbox*.
+. Na página criar nova sandbox, em fonte de banco de dados, forneça o seguinte:
++
+.. * Servidor de banco de dados de origem*: Selecione o host de banco de dados de origem.
+.. *Instância do banco de dados de origem*: Selecione a instância do banco de dados de origem.
+.. *Base de dados de origem*: Selecione a base de dados de origem a partir da qual pretende clonar.
+
+
+. Em Database target, forneça o seguinte:
++
+.. * Anfitrião de banco de dados de destino*: Selecione um host de banco de dados de destino para o clone sandbox que está na mesma VPC e tem o mesmo sistema de arquivos FSX for ONTAP que o host de origem.
+.. *Target database instance*: Selecione a instância de banco de dados de destino para o clone sandbox.
+.. *Base de dados de destino*: Introduza um nome para o clone da sandbox.
+
+
+. *Mount*: Ao clonar um banco de dados SQL que tenha vários dados e/ou arquivos de log, o Workload Factory clonará todos os arquivos sob a letra de unidade definida ou atribuída automaticamente.
++
+Selecione uma das seguintes opções:
+
++
+.. * Auto-atribuir ponto de montagem *
+.. *Defina o caminho do ponto de montagem*
++
+Forneça o seguinte para definir o caminho do ponto de montagem:
+
++
+*** Introduza a letra da unidade para o caminho do ficheiro de dados.
+*** Introduza a letra da unidade para o caminho do ficheiro de registo.
+
+
+
+
+. *Define tag*: Selecione uma tag para definir o clone da sandbox.
+. Clique em *criar*.
+
+
+Para verificar o progresso do trabalho, vá para o separador *monitorização do trabalho*.

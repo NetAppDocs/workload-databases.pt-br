@@ -1,0 +1,134 @@
+---
+sidebar: sidebar 
+permalink: manage-server.html 
+keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage 
+summary: Gerenciar instâncias do Microsoft SQL Server no Workload Factory para bancos de dados. 
+---
+= Gerenciar instâncias do Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gerencie instâncias do Microsoft SQL Server para monitorar o status da instância e do banco de dados, a utilização de recursos, a proteção e o desempenho do armazenamento no Workload Factory para bancos de dados.
+
+Os bancos de dados só podem gerenciar instâncias do Microsoft SQL Server com o FSX for ONTAP armazenamento do sistema de arquivos.
+
+
+
+== Gerenciamento de instâncias do Microsoft SQL Server
+
+O gerenciamento de instâncias do Microsoft SQL Server inclui as seguintes tarefas:
+
+* Gerenciar uma instância de host
+* Exibir uma instância gerenciada
+* Exibir bancos de dados
+* Desgerenciar uma instância de host
+
+
+Para concluir qualquer uma dessas tarefas, você deve link:detect-host.html["detectar uma ou mais instâncias de host"^].
+
+
+
+== Gerenciar uma instância de host
+
+Gerencie instâncias do Microsoft SQL Server detetadas ou não gerenciadas para um host.
+
+Para gerenciar uma instância de host em uma rede privada sem conetividade externa, os seguintes endpoints precisam estar disponíveis na VPC com associação às sub-redes em que os servidores SQL estão presentes. Certifique-se de que os pontos de extremidade da interface permitem a porta 443 no grupo de segurança anexado.
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
+
+
+.Antes de começar
+Complete os seguintes pré-requisitos antes de começar:
+
+* Você deve ter uma instância detetada no host que esteja disponível para gerenciamento.
+* PowerShell7 é necessário para gerenciar a instância do banco de dados. Instale o PowerShell7 manualmente consultando link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4["Documentação do Microsoft PowerShell para Windows"^]a .
+* Todas as operações de gerenciamento são executadas pelo AWS System Manager Agent usando `NT Authority\SYSTEM` privilégios de usuário. Forneça as seguintes permissões para `NT Authority\SYSTEM` o usuário no servidor de banco de dados:
++
+** `“ALTER SETTINGS”`
+** `“CONTROL SERVER”`
+** `“ALTER ANY DATABASE”`
+** `“VIEW ANY DEFINITION”`
+** `“CONNECT ANY DATABASE”`
+** `“CREATE ANY DATABASE”`
+
+
+
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *Inventário*.
+. Clique em *Gerenciar* na linha do host a ser gerenciado.
+. Selecione uma ou mais instâncias de host para gerenciar.
+. Clique em *Gerenciar*.
+
+
+A operação falha quando o Microsoft SQL Server está faltando determinados módulos do PowerShell e scripts de gerenciamento. A fábrica de carga de trabalho aciona uma tarefa preparar recurso para instalar módulos e scripts ausentes que você pode exibir na guia Monitoramento de trabalho. Quando a tarefa for concluída, tente gerenciar a instância do host novamente.
+
+
+
+== Exibir uma instância gerenciada
+
+Você pode exibir uma instância gerenciada seguindo estas etapas.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *Inventário*.
+. Clique na seta suspensa para expandir a linha do host para exibir suas instâncias gerenciadas.
++
+O host se expande e as instâncias do host aparecem.
+
+. Clique no menu de três pontos da instância para exibir e selecione *Exibir instância*.
+
+
+.Resultado
+A visão geral da instância é exibida na guia Inventário.
+
+
+
+== Exibir bancos de dados
+
+Você pode exibir os bancos de dados gerenciados pela instância gerenciada seguindo estas etapas.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *Inventário*.
+. Clique na seta suspensa para expandir a linha do host para exibir seus bancos de dados.
++
+O host se expande e as instâncias do host aparecem.
+
+. Clique no menu três pontos da instância que contém os bancos de dados a serem exibidos.
+. Selecione *Ver bases de dados*.
+
+
+.Resultado
+A lista de bancos de dados na instância aparece na guia Inventário.
+
+
+
+== Desgerenciar uma instância de host
+
+Desgerencie uma instância de host seguindo estas etapas.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *Inventário*.
+. Clique na seta suspensa para expandir a linha da instância do host para desgerenciar.
++
+O host se expande e as instâncias do host aparecem.
+
+. Clique no menu três pontos da instância para desgerenciar.
+. Selecione *Unmanage*.
+
+
+.Resultado
+A instância do host agora não é gerenciada.

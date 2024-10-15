@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: delete-clone.html 
+keywords: delete, clone 
+summary: Exclua um clone de sandbox quando você não precisar mais dele. 
+---
+= Divida um clone de sandbox do banco de dados de origem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Exclua um clone de sandbox quando não precisar mais dele e quiser liberar a capacidade de storage.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. No bloco bancos de dados, clique em *ir para Inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *sandboxes*.
+. Clique no menu de três pontos do clone sandbox que você deseja excluir.
+. Selecione *Eliminar*.
+. Na caixa de diálogo Excluir, clique em *Excluir*.
+

@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: check-clone-integrity.html 
+keywords: integrity check, data corruption 
+summary: Execute uma verificação de integridade para determinar se os dados do clone da sandbox estão intactos ou corrompidos. 
+---
+= Verifique a integridade dos dados em um clone de sandbox
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Execute uma verificação de integridade para determinar se os dados do clone da sandbox estão intactos ou corrompidos.
+
+.Sobre esta tarefa
+Quando você cria um clone de sandbox a partir de um banco de dados de origem enquanto ele está ocupado, os dados do clone podem não estar sincronizados com o snapshot mais recente do banco de dados de origem. Essa operação verifica a integridade de todos os objetos no clone sandbox para determinar se os dados do clone sandbox são atuais.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *sandboxes*.
+. Na guia sandboxes, clique no menu de três pontos do clone sandbox para verificar a integridade.
+. Selecione *Executar verificação de integridade*.
+. Na caixa de diálogo Verificação de integridade, clique em *Verificação de integridade*.
+. Marque o status da verificação integridade nas caixas de areia ou em Monitoramento de trabalhos.
+
+
+Se a verificação de integridade falhar, recomendamos que você não use o clone sandbox e crie um novo clone sandbox.

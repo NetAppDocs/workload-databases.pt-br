@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: automate-codebox.html 
+keywords: automation, code automation, automate 
+summary: Você pode automatizar a implantação de host, a criação de banco de dados e muito mais com o Codebox. 
+---
+= Automatize com Codebox
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode automatizar a implantação de host, a criação de banco de dados e muito mais com o Codebox. Codebox é um copiloto de infraestrutura como código (IAC) que ajuda a gerar código para executar qualquer operação suportada pelo Workload Factory.
+
+Saiba mais sobre link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Automação Codebox"^] e como usá-lo.

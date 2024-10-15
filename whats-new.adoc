@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, workload factory, databases, workload factory' 
+summary: Saiba o que há de novo com o Workload Factory para bancos de dados. 
+---
+= O que há de novo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Saiba o que há de novo com bancos de dados.
+
+
+
+== 29 de setembro de 2024
+
+
+
+=== Explore as poupanças para servidores Microsoft SQL detetados no FSX for Windows File Server
+
+Agora você pode explorar a economia de servidores Microsoft SQL detetados no Amazon EC2 com o FSX for Windows File Server de armazenamento na calculadora de economia. Dependendo do seu servidor SQL e requisitos de armazenamento, você pode descobrir que o FSX for ONTAP é o mais econômico para suas cargas de trabalho de banco de dados.
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explore as economias com o FSX for ONTAP para suas cargas de trabalho de banco de dados"^]
+
+
+
+== 1 de setembro de 2024
+
+
+
+=== Explore as poupanças através da personalização
+
+Agora você pode personalizar as configurações do servidor Microsoft SQL no Amazon EC2 com o FSX for Windows File Server e armazenamento Elastic Block Store na calculadora de economia. Dependendo de seus requisitos de armazenamento, você pode descobrir que o FSX for ONTAP é o mais econômico para suas cargas de trabalho de banco de dados.
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explore as economias com o FSX for ONTAP para suas cargas de trabalho de banco de dados"^]
+
+
+
+=== Navegue até a calculadora de poupança a partir da página inicial
+
+Agora você pode navegar para a calculadora de economia a partir da link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^] página inicial. Selecione na Elastic Block Store e no FSX for Windows File Server para começar.
+
+image:screenshot-explore-savings-home-small.png["Captura de tela da página inicial do console do Workload Factory. A imagem mostra o bloco de bancos de dados com um novo botão explorar economia. Clique no botão para abrir um menu suspenso. O menu suspenso tem duas opções - Microsoft SQL Server no EBS e Microsoft SQL Server no FSX para Windows File Server."]
+
+
+
+== 4 de agosto de 2024
+
+
+
+=== Melhorias na calculadora de economia
+
+* Descrições da estimativa de custo
++
+Agora você pode aprender como as estimativas de custo são calculadas na calculadora de economia. Você poderá analisar as descrições de todos os cálculos para suas instâncias do Microsoft SQL Server usando o armazenamento do Amazon Elastic Block Store em comparação com o uso do armazenamento do Amazon FSX for ONTAP.
+
+* Suporte para grupo de disponibilidade sempre ativa
++
+Os bancos de dados agora fornecem cálculos de economia de custos para o tipo de implantação de grupo sempre em disponibilidade com o Microsoft SQL Server usando o Amazon Elastic Block Store.
+
+* Otimize o licenciamento do servidor SQL com o FSX for ONTAP
++
+A calculadora de bancos de dados determina se a edição de licença SQL que você usa com o armazenamento do Amazon Elastic Block Store é otimizada para suas cargas de trabalho de banco de dados. Você receberá uma recomendação para a licença SQL ideal com o FSX for ONTAP.
+
+* Várias instâncias de servidor SQL
++
+Os bancos de dados agora fornecem cálculos de economia de custos para uma configuração que hospeda várias instâncias do Microsoft SQL Server usando o Amazon Elastic Block Store.
+
+* Personalizar as definições da calculadora
++
+Agora você pode personalizar as configurações do Microsoft SQL Server, Amazon EC2 e Elastic Block Store para explorar a economia manualmente. A calculadora de economia determinará a melhor configuração com base no custo.
+
+
+
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explore as economias com o FSX for ONTAP para suas cargas de trabalho de banco de dados"^]
+
+
+
+== 7 de julho de 2024
+
+
+
+=== Lançamento inicial do Workload Factory para bancos de dados
+
+A versão inicial inclui a funcionalidade de explorar a economia com o Amazon FSX for NetApp ONTAP como o ambiente de armazenamento para suas cargas de trabalho de banco de dados, detetar, gerenciar e implantar servidores Microsoft SQL, implantar e clonar bancos de dados e monitorar essas tarefas no Workload Factory.
+
+link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["Saiba mais sobre bancos de dados"^]

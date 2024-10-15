@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: view-clone-connection.html 
+keywords: view clone connection, copy connection information 
+summary: Visualize e copie as informações de conexão de um clone de sandbox. 
+---
+= Exibir informações de conexão de um clone de sandbox
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Visualize e copie as informações de conexão de um clone de sandbox.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *sandboxes*.
+. Na guia sandboxes, clique no menu de três pontos do clone sandbox para exibir suas informações de conexão.
+. Selecione *Mostrar informações de conexão*.
+. Na caixa de diálogo Mostrar informações de conexão, copie as informações de conexão, se necessário.
+. Clique em *Fechar*.
+

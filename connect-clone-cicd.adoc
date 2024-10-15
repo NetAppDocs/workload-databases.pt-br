@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: connect-clone-cicd.html 
+keywords: connect ci/cd pipeline, clone 
+summary: Conecte um clone de sandbox a um pipeline de CI/CD com código API REST para aprimorar a entrega de software por meio da automação. 
+---
+= Conete um clone sandbox a ferramentas CI/CD
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Conecte um clone de sandbox a um pipeline de integração contínua e entrega contínua (CI/CD) com código API REST para aprimorar a entrega de software por meio da automação.
+
+.Sobre esta tarefa
+Para fornecer uma nova versão do software automaticamente ao clone do banco de dados, você deve se conectar a um pipeline de CI/CD. Use o código API REST fornecido a partir desta operação para fazer a conexão.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *sandboxes*.
+. Na guia sandboxes, clique no menu três pontos do clone sandbox para se conetar a ferramentas CI/CD.
+. Selecione *conetar a ferramentas CI/CD*.
+. Na caixa de diálogo CI/CD, copie ou baixe o código API REST necessário para se conetar a ferramentas CI/CD.
+. Clique em *Fechar*.
+

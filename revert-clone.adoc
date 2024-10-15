@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: revert-clone.html 
+keywords: re-baseline, revert clone, database, Microsoft SQL 
+summary: Reverter um clone de sandbox no Workload Factory para bancos de dados. 
+---
+= Reverter um clone de sandbox no Workload Factory para bancos de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Reverter um clone de banco de dados para sua versão original no momento da criação.
+
+.Sobre esta tarefa
+Quando você clonar um banco de dados, o clone na criação é um clone _Baseline_. Os dados no banco de dados clonados são os mesmos que o banco de dados de origem no momento da criação. À medida que os dados em um clone de banco de dados sandbox mudam ao longo do tempo, você pode querer reverter os dados de volta para a linha de base quando o clone foi criado pela primeira vez. Esta operação é chamada re-baselining um clone. Re-baselining um clone em vez de criar um novo clone economiza espaço; no entanto, quaisquer alterações feitas no clone sandbox serão excluídas.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *sandboxes*.
+. Na guia sandboxes, clique no menu três pontos do clone sandbox que você deseja reverter.
+. Selecione *Re-Baseline*.
+. Na caixa de diálogo Re-Baseline, clique em *Re-Baseline*.
+

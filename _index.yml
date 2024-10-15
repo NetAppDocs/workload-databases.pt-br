@@ -1,0 +1,29 @@
+---
+indexpage:
+  title: Documentação de carga de trabalho de fábrica para bancos de dados
+  lead: Implante configurações do Microsoft SQL Server e gerencie ambientes de banco
+    de dados em cima do FSX para armazenamento do sistema de arquivos ONTAP no BlueXP 
+    Workload Factory.
+  tiles:
+  - title: Comece agora
+    links:
+    - title: Notas de lançamento
+      url: "/whats-new.html"
+    - title: Saiba mais sobre bancos de dados
+      url: "/learn-databases.html"
+    - title: Início rápido
+      url: "/quick-start-databases.html"
+  - title: Use bancos de dados
+    links:
+    - title: Crie um servidor de banco de dados
+      url: "/create-database-server.html"
+    - title: Crie um banco de dados
+      url: "/create-database.html"
+    - title: Monitorar um banco de dados
+      url: "/monitor-databases.html"
+  - title: Conhecimento e apoio
+    links:
+    - title: Registre-se para obter suporte
+      url: "/support-registration.html"
+    - title: Obtenha ajuda
+      url: "/get-help.html"

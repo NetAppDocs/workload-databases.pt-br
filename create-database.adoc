@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: create-database.html 
+keywords: create, database, creation, Microsoft SQL 
+summary: Crie um banco de dados Microsoft SQL com os bancos de dados Workload Factory. 
+---
+= Crie um banco de dados Microsoft SQL no Workload Factory para bancos de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+A criação de um novo banco de dados Microsoft SQL no console do Workload Factory permite gerenciar o recurso dentro do Workload Factory.
+
+.Sobre esta tarefa
+Após a criação do banco de dados, dois novos volumes são criados no sistema de arquivos FSX for ONTAP que consiste em LUNs independentes para hospedar dados e arquivos de log para o banco de dados. Os arquivos de banco de dados no novo banco de dados são thin-provisionados e consomem apenas alguns MBs do tamanho total alocado para o novo banco de dados.
+
+Se você quiser segregar o armazenamento para o banco de dados, você pode fazer isso usando um _ponto de montagem virtual_. O ponto de montagem virtual permite consolidar bancos de dados em algumas unidades comuns no host.
+
+A criação de um banco de dados no Workload Factory requer permissões de modo automático. Em alternativa, no modo básico, pode copiar ou transferir um modelo de código parcialmente concluído para concluir a operação fora do Workload Factory. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Saiba mais sobre os modos operacionais no Workload Factory"^] para decidir qual modo você gostaria de usar.
+
+
+NOTE: Os servidores Microsoft SQL que usam o protocolo SMB não suportam a criação de banco de dados.
+
+.Antes de começar
+Certifique-se de concluir os seguintes pré-requisitos antes de criar um novo banco de dados.
+
+Credenciais e permissões:: É necessário link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões do modo _read_ ou _Automate_"^]criar um novo banco de dados no Workload Factory.
++
+--
+Como alternativa, você pode usar o Codebox para copiar um modelo para que você possa implantar um banco de dados fora do Workload Factory usando a API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Saiba mais sobre a automação Codebox"^].
+
+--
+Host Windows:: Você deve ter letras de unidade suficientes disponíveis no Microsoft SQL Server para criar novas unidades para o novo banco de dados se você usar o modo _Quick Create_.
+Microsoft SQL Server:: Você deve ter um Microsoft SQL Server gerenciado no Workload Factory para que os bancos de dados hospedem o novo banco de dados.
+AWS Systems Manager:: Certifique-se de que o `NT Authority\SYSTEM user` privilégio esteja habilitado no host Microsoft SQL por meio do AWS System Manager.
+
+
+
+
+== Crie um banco de dados
+
+Você pode usar os modos de implantação _Quick Create_ ou _Advanced Create_ para concluir essa tarefa no Workload Factory com permissões do modo _read_ ou _Automate_.
+
+[role="tabbed-block"]
+====
+.Criação rápida
+--
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *Inventário*.
+. Na guia Inventário, selecione um servidor de banco de dados com uma instância de servidor SQL gerenciado para criar o banco de dados.
+. Clique no menu três pontos da instância gerenciada e selecione *criar banco de dados de usuários*.
+. Na página criar banco de dados do usuário, em informações do banco de dados, forneça o seguinte:
++
+.. *Nome do banco de dados*: Insira o nome do banco de dados.
+.. *Collation*: Selecione um agrupamento para o banco de dados. A ordenação padrão SQL_Latin1_General_CP1_CI_AS" no Microsoft SQL Server é selecionada.
+
+
+. Em Configurações de arquivo, forneça o seguinte:
++
+.. *Modo de configurações de arquivo*: Selecione *criação rápida*.
+.. *Nome e caminho dos ficheiros*:
++
+*** *Nome do arquivo de dados*: Insira o nome do arquivo de dados.
+*** *Nome do arquivo de log*: Insira o nome do arquivo de log.
+
+
+.. *Tamanho dos arquivos*: Insira o tamanho dos dados e o tamanho do log para o banco de dados.
+
+
+. Clique em *criar*.
++
+Alternativamente, se você quiser alterar qualquer uma dessas configurações padrão agora, altere o *modo de configurações de arquivo* para *criação avançada*.
+
+
+
+--
+.Criação avançada
+--
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *Inventário*.
+. Na guia Inventário, selecione um servidor de banco de dados com uma instância de servidor SQL gerenciado para criar o banco de dados.
+. Clique no menu três pontos da instância gerenciada e selecione *criar banco de dados de usuários*.
+. Selecione *criar banco de dados de usuários*.
+. Na página criar banco de dados do usuário, em informações do banco de dados, forneça o seguinte:
++
+.. *Nome do banco de dados*: Insira o nome do banco de dados.
+.. *Collation*: Selecione a ordenação para o banco de dados. A ordenação padrão SQL_Latin1_General_CP1_CI_AS" no Microsoft SQL Server é selecionada.
+
+
+. Em Configurações de arquivo, forneça o seguinte:
++
+.. *Modo de configurações de arquivo*: Selecione *Advanced Create*.
+.. *Nome e caminho dos ficheiros*:
++
+... *Arquivo de dados*: Selecione uma letra de unidade e insira o nome do arquivo de dados.
++
+Opcionalmente, clique na caixa para *ponto de montagem virtual*.
+
+... *Log file*: Selecione uma letra de unidade e insira o nome do arquivo de log.
++
+Opcionalmente, clique na caixa para *ponto de montagem virtual*.
+
+
+
+.. *Tamanho dos arquivos*: Insira o tamanho dos dados e o tamanho do log para o banco de dados.
+
+
+. Clique em *criar*.
+
+
+--
+====
+Se você criou o host do banco de dados, você pode verificar o progresso do trabalho na guia *Monitoramento do trabalho*.

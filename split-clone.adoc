@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: split-clone.html 
+keywords: split, clone, source, new database 
+summary: Divida um clone de sandbox do banco de dados de origem para criar um novo banco de dados. 
+---
+= Divida um clone de sandbox do banco de dados de origem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dividir um clone de sandbox de seu banco de dados de origem cria um novo banco de dados que consumirá uma certa quantidade de capacidade de armazenamento. O clone é excluído quando a divisão é concluída e o novo banco de dados aparece no Inventário.
+
+.Antes de começar
+Considere a quantidade de capacidade de armazenamento necessária para o novo banco de dados. Se necessário, link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html["aumentar a capacidade do sistema de arquivos"^] para o sistema de arquivos FSX for ONTAP antes de começar.
+
+.Passos
+. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *sandboxes*.
+. Na guia sandboxes, clique no menu três pontos do clone sandbox que você deseja dividir.
+. Selecione *Split*.
+. Na caixa de diálogo dividir, clique em *dividir*.
+

@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: quick-start-databases.html 
+keywords: requirements, basic mode, read mode, automate mode 
+summary: Bancos de dados têm três modos diferentes que têm requisitos diferentes. 
+---
+= Início rápido para bancos de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Com bancos de dados, você pode começar imediatamente no modo _Basic_. Se você quiser usar o Workload Factory para descobrir hosts, gerenciar recursos e muito mais, você pode começar em alguns passos.
+
+Você precisa ter uma conta da AWS para começar.
+
+Siga estas etapas para começar a usar os bancos de dados do Workload Factory.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Inicie sessão no Workload Factory
+[role="quick-margin-para"]
+Você vai precisar link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Configure uma conta com o Workload Factory"^] de e. link:https://console.workloads.netapp.com["inicie sessão"^]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Adicione credenciais e permissões
+[role="quick-margin-para"]
+Escolha entre link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["_basic_, _read_ e _automate_ modos operacionais"^].
+
+[role="quick-margin-para"]
+Se você operar no modo _básico_, não precisa ir mais longe. Você pode começar a usar os bancos de dados Workload Factory para copiar amostras de código parcialmente concluídas. No bloco bancos de dados, clique em *Deploy database host*. link:create-database-server.html["Saiba como implantar um servidor de banco de dados"].
+
+[role="quick-margin-para"]
+Se você operar no modo _read_ ou _Automate_, precisará link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["adicione credenciais a uma conta manualmente"^]selecionar recursos de carga de trabalho, como bancos de dados e IA, e criar as políticas do IAM para garantir que você tenha as permissões corretas para operar no modo _read_ ou _Automate_.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Implantar um servidor de banco de dados
+[role="quick-margin-para"]
+Por último, se você optar por operar no modo _Automate_, você deve link:create-database-server.html["implantar"] ou link:detect-host.html["detectar um servidor de banco de dados"] para gerenciar seus recursos de host e antes de adicionar bancos de dados de usuários.
+
+.O que vem a seguir
+Quando você tem hosts gerenciados do FSX for ONTAP em seu inventário de bancos de dados, você pode link:create-database.html["crie um banco de dados de usuários"] ou link:create-sandbox-clone.html["clone seu host para criar uma sandbox"].
+
+Quando você tiver hosts do Elastic Block Store em seu inventário de bancos de dados, você pode link:explore-savings.html["Explore as economias com a calculadora de economia de armazenamento"].
