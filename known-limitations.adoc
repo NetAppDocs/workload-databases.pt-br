@@ -97,3 +97,9 @@ Na guia Inventário, o custo estimado mostrado para cada instância do Microsoft
 == Vários sistemas de arquivos FSX para ONTAP
 
 O Workload Factory não suporta a criação ou a gravação de configurações para o Microsoft SQL Server com vários sistemas de arquivos FSX for ONTAP. Apenas uma implantação de configuração do sistema de arquivos FSX for ONTAP é suportada.
+
+
+
+== Disponibilidade regional para implantação do Microsoft SQL Server em uma rede privada com o Terraform
+
+A implantação do Microsoft SQL Server em uma rede privada sem conetividade de saída usando o Terraform só é suportada na região US-East-1 (N. Virginia).

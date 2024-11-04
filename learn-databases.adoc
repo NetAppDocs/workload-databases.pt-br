@@ -63,6 +63,7 @@ A fábrica de cargas de trabalho para bancos de dados oferece os seguintes recur
 * * Criação de sandbox*: Crie um ambiente de banco de dados isolado sob demanda que pode ser usado para teste, integração, diagnóstico e treinamento, sem afetar os dados de produção.
 * * Criação de banco de dados*: Crie um banco de dados de usuários para seus servidores Microsoft SQL existentes com os modos _Quick_ ou _Advanced_ Create para configurar o agrupamento de banco de dados, nomes de arquivos e tamanhos. A configuração de armazenamento está incluída.
 * *Monitoramento de trabalho*: Monitore e acompanhe o progresso da execução do trabalho do banco de dados e diagnostique e solucione problemas no caso de ocorrer alguma falha.
+* * Otimização contínua*: Verifica continuamente o estado do Microsoft SQL Server offline, fornecendo-lhe um relatório abrangente de insights, oportunidades e recomendações para ajudá-lo a alcançar a excelência operacional.
 
 
 
@@ -83,6 +84,18 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Saib
 Três modos operacionais diferentes - _Basic_, _read_ e _Automate_ - oferecem opções flexíveis para implantação dentro e fora do Workload Factory. Obtenha valor imediato com confiança zero no modo _básico_ com snippets de código para uso fora do Workload Factory. Obtenha valor incremental com confiança incremental nos modos _read_ e _Automate_.
 
 Saiba mais link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Modos operacionais na fábrica de cargas de trabalho"^]sobre o .
+
+
+
+== Ferramentas para usar o Workload Factory
+
+Você pode usar o BlueXP  Workload Factory com as seguintes ferramentas:
+
+* *Console do Workload Factory*: O console do Workload Factory fornece uma interface visual que oferece uma visão holística de seus aplicativos e projetos
+* *API REST*: As APIs REST DE fábrica da carga de trabalho permitem implantar e gerenciar o Microsoft SQL Server e outros recursos da AWS
+* *CloudFormation*: O código do AWS CloudFormation permite que você execute as ações definidas no console do Workload Factory para modelar, provisionar e gerenciar recursos da AWS e de terceiros a partir da pilha do CloudFormation em sua conta da AWS.
+* *Fornecedor de fábrica de carga de trabalho do Terraform BlueXP *: O Terraform permite criar e gerenciar fluxos de trabalho de infraestrutura gerados no console do Workload Factory.
+
 
 
 

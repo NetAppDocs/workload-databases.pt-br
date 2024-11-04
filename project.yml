@@ -64,6 +64,12 @@ sidebar:
         url: "/delete-clone.html"
     - title: Monitorar bancos de dados
       url: "/monitor-databases.html"
+    - title: Otimize o servidor SQL
+      entries:
+      - title: Visão geral da otimização contínua
+        url: optimize-overview.html
+      - title: Otimizar configurações
+        url: optimize-configurations.html
   - title: Conhecimento e apoio
     entries:
     - title: Registre-se para obter suporte

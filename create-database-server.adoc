@@ -91,7 +91,10 @@ Ative Directory:: Ao se conetar ao ative Directory, você deve ter acesso admini
 
 == Passo 1: Crie um servidor de banco de dados
 
-Você pode usar os modos de implantação _Quick Create_ ou _Advanced Create_ para concluir essa tarefa no Workload Factory com permissões do modo _Automate_.
+Você pode usar os modos de implantação _Quick Create_ ou _Advanced Create_ para concluir essa tarefa no Workload Factory com permissões do modo _Automate_. Você também pode usar as seguintes ferramentas disponíveis na Codebox: API REST, CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Saiba como usar o Codebox para automação"^].
+
+
+NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta `fsxadmin` e `vsadmin` senhas. Você precisará digitar novamente as senhas quando executar o código. Você precisará incluir as seguintes permissões para a conta de usuário, além das permissões do modo _Automate_: `iam:TagRole` E `iam:TagInstanceProfile`.
 
 [role="tabbed-block"]
 ====

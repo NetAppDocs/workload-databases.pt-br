@@ -100,7 +100,6 @@
   <block id="8b018b615821339740a7c79a7473918a" category="list-text">Torne o usuário do domínio um administrador local nos nós do AD</block>
   <block id="045b984ac75a0da892fea6afe6b83555" category="list-text">Crie um usuário de serviço do Microsoft SQL Server no AD, se ele ainda não existir</block>
   <block id="15d1ade99815746ab0088981bd7585d3" category="section-title">Passo 1: Crie um servidor de banco de dados</block>
-  <block id="e501215e9258fda8d54793a123ed721f" category="paragraph">Você pode usar os modos de implantação _Quick Create_ ou _Advanced Create_ para concluir essa tarefa no Workload Factory com permissões do modo _Automate_.</block>
   <block id="956eaa6186169471a13345860cad0757" category="open-title">Criação rápida</block>
   <block id="542af019e2aa3ef9ca4b187a71c918bb" category="admonition">Em _Quick Create_, o FCI é o modelo de implantação padrão, o Windows 2016 é a versão padrão do Windows e o SQL 2019 Standard Edition é a versão padrão do SQL.</block>
   <block id="b26136a388864ee3f9e813ac8f6109ee" category="list-text">No bloco bancos de dados, selecione *Deploy database host*.</block>
@@ -798,4 +797,66 @@
   <block id="d1512bc8e97fad026d3a9604a38eafeb" category="sidebar">Exibir informações de conexão clone</block>
   <block id="3ed62cfc8918e6f101daf8572a05eac8" category="sidebar">Divida um clone de sandbox</block>
   <block id="651b8da486ba685aa80d9dd4866d0171" category="sidebar">Exclua um clone de sandbox</block>
+  <block id="0928468cb2283b21e6802a78c6a64e3a" category="doc">Otimize continuamente suas cargas de trabalho do Microsoft SQL Server com bancos de dados</block>
+  <block id="e73fa899152fb6836032fef4e1c95da4" category="paragraph">A fábrica de carga de trabalho do BlueXP  apresenta orientação contínua e corrimões para garantir a otimização contínua e a adesão às práticas recomendadas para o componente de armazenamento de suas cargas de trabalho do Microsoft SQL Server no Amazon FSX for NetApp ONTAP. Esse recurso verifica continuamente seu estado do Microsoft SQL Server offline, fornecendo a você um relatório abrangente de insights, oportunidades e recomendações para ajudá-lo a alcançar o máximo de desempenho, economia e conformidade.</block>
+  <block id="5d743e351f2bc0b96d19c12d46be8be2" category="inline-link-macro">Otimize suas cargas de trabalho do SQL Server</block>
+  <block id="72d1af9ffdd277a1cf7789b588da9b4d" category="paragraph"><block ref="72d1af9ffdd277a1cf7789b588da9b4d" category="inline-link-macro-rx"></block></block>
+  <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Suporte ao Terraform</block>
+  <block id="822802a1673e79cb7dbd54947e4dc32c" category="paragraph">Agora você pode usar o Terraform na caixa Codebox para implantar o Microsoft SQL Server.</block>
+  <block id="d83b54de9b50110195e4bf3c1f3c6a67" category="list-text"><block ref="d83b54de9b50110195e4bf3c1f3c6a67" category="inline-link-macro-rx"></block></block>
+  <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">Use o Terraform do Codebox</block>
+  <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
+  <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">Saiba como usar o Codebox para automação</block>
+  <block id="d3d10fb8f4b8181d69ae2092b30c544a" category="paragraph">Você pode usar os modos de implantação _Quick Create_ ou _Advanced Create_ para concluir essa tarefa no Workload Factory com permissões do modo _Automate_. Você também pode usar as seguintes ferramentas disponíveis na Codebox: API REST, CloudFormation e Terraform. <block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>.</block>
+  <block id="5de582d1d412797088979e47e496c2fe" category="admonition">Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> e<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> senhas. Você precisará digitar novamente as senhas quando executar o código. Você precisará incluir as seguintes permissões para a conta de usuário, além das permissões do modo _Automate_:<block ref="7f862a4b8fc22b0af5dda5c9ababa346" prefix=" " category="inline-code"></block> E<block ref="319bffed0f518819193d82ffe99b1444" prefix=" " category="inline-code"></block>.</block>
+  <block id="b2636246cf1e5e567e3ded4a9d65b1da" category="section-title">Disponibilidade regional para implantação do Microsoft SQL Server em uma rede privada com o Terraform</block>
+  <block id="eb4fca182b3b78e9a38aa1f6f59c8857" category="paragraph">A implantação do Microsoft SQL Server em uma rede privada sem conetividade de saída usando o Terraform só é suportada na região US-East-1 (N. Virginia).</block>
+  <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">* Otimização contínua*: Verifica continuamente o estado do Microsoft SQL Server offline, fornecendo-lhe um relatório abrangente de insights, oportunidades e recomendações para ajudá-lo a alcançar a excelência operacional.</block>
+  <block id="0d9b99cb00c934d1cd88332ae901fc26" category="section-title">Ferramentas para usar o Workload Factory</block>
+  <block id="76737aecf42a629e0422271332fcc5a3" category="paragraph">Você pode usar o BlueXP  Workload Factory com as seguintes ferramentas:</block>
+  <block id="0fc51b33bbeafc6425a9bd19ec449966" category="list-text">*Console do Workload Factory*: O console do Workload Factory fornece uma interface visual que oferece uma visão holística de seus aplicativos e projetos</block>
+  <block id="a0ba060c8b176de6550d97a1fc8b4a2a" category="list-text">*API REST*: As APIs REST DE fábrica da carga de trabalho permitem implantar e gerenciar o Microsoft SQL Server e outros recursos da AWS</block>
+  <block id="fb2bf23fd8d69c944827de16f09d3bb7" category="list-text">*CloudFormation*: O código do AWS CloudFormation permite que você execute as ações definidas no console do Workload Factory para modelar, provisionar e gerenciar recursos da AWS e de terceiros a partir da pilha do CloudFormation em sua conta da AWS.</block>
+  <block id="887582b3338810bdcfbc9b5a8ff6b6d7" category="list-text">*Fornecedor de fábrica de carga de trabalho do Terraform BlueXP *: O Terraform permite criar e gerenciar fluxos de trabalho de infraestrutura gerados no console do Workload Factory.</block>
+  <block id="d12f14d8e346018dc03c07aa6b74bf9e" category="summary">Os bancos de dados analisam as configurações de armazenamento dos Microsoft SQL Servers, fornecendo informações e recomendações para ajudá-lo a alcançar a excelência operacional.</block>
+  <block id="13025ba9f92de77af2aeaf1af07a4aa8" category="doc">Otimize as configurações para implantações do Microsoft SQL Server</block>
+  <block id="a843374a240a6303e99f9130260dec04" category="paragraph">A fábrica de carga de trabalho do BlueXP  para bancos de dados verifica e avalia continuamente as configurações de implantação do Microsoft SQL Server em execução no Amazon FSX for NetApp ONTAP. As avaliações fornecem insights, recomendações e otimizações para que você alcance a excelência operacional.</block>
+  <block id="6f2bcb2f8d4f34c036395a199095be9a" category="paragraph">A avaliação é executada automaticamente e continuamente uma vez por dia para instâncias do Microsoft SQL Server com o armazenamento do FSX for ONTAP gerenciado na fábrica de cargas de trabalho. Os relatórios de avaliação estão disponíveis no painel de otimização somente se um trabalho agendado diário tiver sido executado após a implantação ou após o gerenciamento de uma instância.</block>
+  <block id="72e34efcd5e12ef888a19ad8bd33c28b" category="paragraph">A fábrica de carga de trabalho fornece recomendações detalhadas para otimizar configurações com base nas práticas recomendadas do FSX for ONTAP.</block>
+  <block id="246db1206cb640c61b32f7cea2560b8e" category="list-text">O que é digitalizado</block>
+  <block id="af27bafd548aa3e366e582049aeb65f1" category="list-text">A fábrica de carga de trabalho avalia o status de otimização das seguintes configurações para instâncias do Microsoft SQL Server:</block>
+  <block id="04dff47f9a41cfa54b616dd86a4a6043" category="list-text">Dimensionamento do armazenamento: Inclui camada de armazenamento, espaço livre do sistema de arquivos, tamanho da unidade de Registro e tamanho da unidade TempDB</block>
+  <block id="b1107628010e55afc5ec740439838f10" category="list-text">Layout de armazenamento: Inclui posicionamento de arquivos de dados do usuário, posicionamento de arquivos de log e posicionamento TempDB</block>
+  <block id="8bc38d27c74401312cd5c45bfd8a7d05" category="list-text">Configuração de storage: Inclui gerenciamento de capacidade, thin Provisioning, política de disposição em categorias, snapshots, status, política e sessões de e/S de vários caminhos e muito mais</block>
+  <block id="96ca9ac0bd1d71d3fe0162c29b8a4ff3" category="list-text">Computação: Inclui redimensionamento</block>
+  <block id="1a0e703f0bdb101f4848a5510dd8ec1c" category="list-text">Você precisa ter credenciais com permissões de leitura ou automação.</block>
+  <block id="86bd4600548ee1b734f704338ab13665" category="list-text">Para avaliar o armazenamento de uma instância do Microsoft SQL Server, a instância deve ser gerenciada de fábrica de carga de trabalho e o tipo de armazenamento deve ser o FSX for ONTAP.</block>
+  <block id="40213188bf240529a1293728c4187a56" category="list-text">Certifique-se de rever cada recomendação cuidadosamente antes de selecionar para otimizar uma configuração ou configuração.</block>
+  <block id="1833c64ed881d7aac5733a15a8116354" category="list-text">Selecione o menu de três pontos da instância para digitalizar e, em seguida, selecione *Otimize*.</block>
+  <block id="3adf495aa133934a4330d99e0ad90fc1" category="list-text">Na página Otimize instance (otimizar instância) do host, revise as descobertas da avaliação de armazenamento.</block>
+  <block id="a09500dc3402d71be1fe58158c5cdfc9" category="paragraph">Os filtros estão disponíveis para classificar por categorias, sub-categorias, status, gravidade e tags.</block>
+  <block id="49aaa10529fcf35af76ba4e06450bb15" category="paragraph">Se necessário, você pode baixar um relatório das descobertas selecionando *Exportar PDF*.</block>
+  <block id="5f4f392649432d3064fdf2a04015472b" category="list-text">Selecione a seta suspensa para exibir a recomendação para qualquer configuração. Certifique-se de rever a recomendação com cuidado.</block>
+  <block id="c9e425055996f71ecfc858708d926276" category="paragraph">A recomendação explica as práticas recomendadas e possíveis armadilhas de configurações não otimizadas.</block>
+  <block id="ea3bf0643d3540c97b9b92a3fb2bbf75" category="list-text">Selecione para *otimizar* configurações não otimizadas.</block>
+  <block id="fa01f4b57079f7ca82b8d852cbf4ed43" category="list-text">Revise o resumo da otimização e os itens de ação que aparecem na caixa de diálogo de otimização para saber o que acontecerá se você optar por otimizar. Algumas operações de otimização podem causar tempos de inatividade de instâncias ou interrupções de serviço.</block>
+  <block id="78a5af6b8a486797f81f9b0dff06821e" category="list-text">Selecione *continuar* para otimizar a configuração.</block>
+  <block id="c6ff3995f3c633f2808f96020f887fd9" category="paragraph">O processo de otimização é iniciado. Selecione o separador *monitorização de trabalhos* para ver o estado da operação.</block>
+  <block id="0c47496112bcf6ed0b29fe1fe1d65d62" category="summary">A fábrica de workloads do BlueXP  para bancos de dados oferece otimização contínua para implantações do Microsoft SQL Server no armazenamento do Amazon FSX para NetApp ONTAP.</block>
+  <block id="9d62eb1e78c18c53c2bc3d807f4d5b04" category="doc">Otimização contínua para workloads da BlueXP  de fábrica para bancos de dados</block>
+  <block id="b97ec9fa7955169dbb93f4727a02e87d" category="paragraph">A otimização contínua verifica e avalia automaticamente a infraestrutura de banco de dados em escala para garantir que grandes propriedades atinjam o máximo de desempenho, eficiência de custo e conformidade com as práticas recomendadas. O recurso fornece um relatório abrangente de insights e recomendações para otimização.</block>
+  <block id="638c7d8777be813a6cc36be0ae2ccf68" category="paragraph">Com a otimização contínua, você pode detetar problemas na sua infraestrutura de banco de dados, entender o que precisa mudar e agir.</block>
+  <block id="1c11d2e59190fe6a4e37f1e68abafcb4" category="paragraph">Os principais recursos incluem:</block>
+  <block id="5767d06d754465b4eceaed828d43069f" category="list-text">Avaliação contínua</block>
+  <block id="8c0981b34ea19373e1dcf1c3d034f097" category="list-text">Validações automáticas de melhores práticas</block>
+  <block id="029d49350caff46ab3e1f31c9c60f494" category="list-text">Recomendações para o dimensionamento correto</block>
+  <block id="3583e4a3e4e2e122cff65b8ad9045348" category="list-text">Observabilidade proativa</block>
+  <block id="16fcd85dc9469370b62b4b46381f8e2a" category="list-text">Insights para ação</block>
+  <block id="7a3fc3cf12e9da54628c7311398bee5c" category="list-text">Consultor do AWS Well-Architected Framework</block>
+  <block id="de29686d1474303323860ff8044fc4ed" category="paragraph">O escopo da otimização é diferente dependendo de qual componente está sendo avaliado. Por exemplo, a otimização de storage ocorre no nível de instância SQL, enquanto a otimização de computação ocorre no nível de host.</block>
+  <block id="ca3feda4f22b6d2a240006fa0a33f99e" category="paragraph"><block ref="ca3feda4f22b6d2a240006fa0a33f99e" category="inline-link-macro-rx"></block></block>
+  <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">3 de novembro de 2024</block>
+  <block id="372aea905d324ed9cf6878e3f3ed7abc" category="sidebar">Otimize o servidor SQL</block>
+  <block id="6ca43380ae924ff967599986889184b3" category="sidebar">Visão geral da otimização contínua</block>
+  <block id="d1e68728a28b7936858b1484445ef50f" category="sidebar">Otimizar configurações</block>
 </blocks>
