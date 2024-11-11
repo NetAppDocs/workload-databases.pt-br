@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: check-clone-integrity.html 
 keywords: integrity check, data corruption 
-summary: Execute uma verificação de integridade para determinar se os dados do clone da sandbox estão intactos ou corrompidos. 
+summary: Execute uma verificação de integridade para determinar se os dados de clone de sandbox estão intactos ou corrompidos na fábrica de workloads do BlueXP  para bancos de dados. 
 ---
 = Verifique a integridade dos dados em um clone de sandbox
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: Execute uma verificação de integridade para determinar se os dados do
 
 
 [role="lead"]
-Execute uma verificação de integridade para determinar se os dados do clone da sandbox estão intactos ou corrompidos.
+Execute uma verificação de integridade para determinar se os dados de clone de sandbox estão intactos ou corrompidos na fábrica de workloads do BlueXP  para bancos de dados.
 
 .Sobre esta tarefa
 Quando você cria um clone de sandbox a partir de um banco de dados de origem enquanto ele está ocupado, os dados do clone podem não estar sincronizados com o snapshot mais recente do banco de dados de origem. Essa operação verifica a integridade de todos os objetos no clone sandbox para determinar se os dados do clone sandbox são atuais.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *sandboxes*.
 . Na guia sandboxes, clique no menu de três pontos do clone sandbox para verificar a integridade.

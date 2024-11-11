@@ -24,7 +24,7 @@ sidebar:
       url: "/known-limitations.html"
   - title: Comece agora
     entries:
-    - title: Saiba mais sobre o Workload Factory para bancos de dados
+    - title: Saiba mais sobre a fábrica de cargas de trabalho para bancos de dados
       url: "/learn-databases.html"
     - title: Início rápido
       url: "/quick-start-databases.html"
@@ -79,5 +79,5 @@ sidebar:
   - title: Avisos legais
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP Workload Factory for AWS
+  name: BlueXP workload factory for AWS
   repo: workload-family

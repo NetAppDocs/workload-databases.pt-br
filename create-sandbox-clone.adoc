@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-sandbox-clone.html 
 keywords: create, clone, sandbox 
-summary: Crie um clone de sandbox no Workload Factory para bancos de dados. 
+summary: Crie um clone de sandbox na fábrica de workloads do BlueXP  para bancos de dados. 
 ---
-= Crie um clone de sandbox no Workload Factory para bancos de dados
+= Crie um clone de sandbox na fábrica de workloads do BlueXP  para bancos de dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Criar um clone de sandbox de um banco de dados no Workload Factory para bancos de dados permite que você use o clone para desenvolvimento, teste, integração, análise, treinamento, QA e muito mais sem alterar o banco de dados de origem.
+A criação de um clone de sandbox de um banco de dados na fábrica de workloads do BlueXP  para bancos de dados permite que você use o clone para desenvolvimento, teste, integração, análise, treinamento, QA e muito mais sem alterar o banco de dados de origem.
 
 .Sobre esta tarefa
 Um clone sandbox é criado a partir do snapshot mais recente no banco de dados de origem. Ele pode ser clonado no mesmo Microsoft SQL Server que o banco de dados de origem ou clonado em outro Microsoft SQL Server, desde que eles compartilhem o mesmo sistema de arquivos FSX for ONTAP.
@@ -19,19 +19,19 @@ Um clone sandbox é criado a partir do snapshot mais recente no banco de dados d
 .Antes de começar
 Certifique-se de concluir os seguintes pré-requisitos antes de criar um clone de sandbox.
 
-Credenciais e permissões:: É necessário link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões do modo _read_ ou _Automate_"^]criar um clone de sandbox no Workload Factory.
+Credenciais e permissões:: Você precisa link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões do modo _read_ ou _Automate_"^]criar um clone de sandbox na fábrica de carga de trabalho.
 +
 --
-Como alternativa, você pode usar o Codebox para copiar um modelo parcialmente concluído ou criar um modelo concluído para que você possa criar o clone sandbox fora do Workload Factory usando a API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Saiba mais sobre a automação Codebox"^].
+Como alternativa, você pode usar o Codebox para copiar um modelo parcialmente concluído ou criar um modelo concluído para que você possa criar o clone sandbox fora da fábrica de carga de trabalho usando a API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Saiba mais sobre a automação Codebox"^].
 
 --
-Microsoft SQL Server:: Você precisa ter um Microsoft SQL Server gerenciado no Workload Factory para que os bancos de dados hospedem o novo clone sandbox.
+Microsoft SQL Server:: Você precisa ter um Microsoft SQL Server gerenciado na fábrica de carga de trabalho para que os bancos de dados hospedem o novo clone de sandbox.
 AWS Systems Manager:: Certifique-se de que o `NT Authority\SYSTEM` privilégio de usuário esteja habilitado no host Microsoft SQL por meio do AWS Systems Manager.
 Banco de dados de origem:: Você precisa de um banco de dados de origem disponível para o clone.
 
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *sandboxes*.
 . Na guia sandboxes, selecione *Create new sandbox*.
@@ -49,7 +49,7 @@ Banco de dados de origem:: Você precisa de um banco de dados de origem disponí
 .. *Base de dados de destino*: Introduza um nome para o clone da sandbox.
 
 
-. *Mount*: Ao clonar um banco de dados SQL que tenha vários dados e/ou arquivos de log, o Workload Factory clonará todos os arquivos sob a letra de unidade definida ou atribuída automaticamente.
+. *Mount*: Ao clonar um banco de dados SQL que tenha vários dados e/ou arquivos de log, a fábrica da carga de trabalho clona todos os arquivos sob a letra de unidade definida ou atribuída automaticamente.
 +
 Selecione uma das seguintes opções:
 

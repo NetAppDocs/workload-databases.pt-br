@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-server.html 
 keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage 
-summary: Gerenciar instâncias do Microsoft SQL Server no Workload Factory para bancos de dados. 
+summary: Gerencie instâncias do Microsoft SQL Server na fábrica de cargas de trabalho do BlueXP  para bancos de dados. 
 ---
-= Gerenciar instâncias do Microsoft SQL Server
+= Gerenciar instâncias do Microsoft SQL Server na fábrica de carga de trabalho do BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Gerencie instâncias do Microsoft SQL Server para monitorar o status da instância e do banco de dados, a utilização de recursos, a proteção e o desempenho do armazenamento no Workload Factory para bancos de dados.
+Gerencie instâncias do Microsoft SQL Server para monitorar o status da instância e do banco de dados, a utilização de recursos, a proteção e o desempenho do storage na fábrica de cargas de trabalho do BlueXP  para bancos de dados.
 
 Os bancos de dados só podem gerenciar instâncias do Microsoft SQL Server com o FSX for ONTAP armazenamento do sistema de arquivos.
 
@@ -61,7 +61,7 @@ Complete os seguintes pré-requisitos antes de começar:
 
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Inventário*.
 . Clique em *Gerenciar* na linha do host a ser gerenciado.
@@ -78,7 +78,7 @@ A operação falha quando o Microsoft SQL Server está faltando determinados mó
 Você pode exibir uma instância gerenciada seguindo estas etapas.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Inventário*.
 . Clique na seta suspensa para expandir a linha do host para exibir suas instâncias gerenciadas.
@@ -98,7 +98,7 @@ A visão geral da instância é exibida na guia Inventário.
 Você pode exibir os bancos de dados gerenciados pela instância gerenciada seguindo estas etapas.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Inventário*.
 . Clique na seta suspensa para expandir a linha do host para exibir seus bancos de dados.
@@ -119,7 +119,7 @@ A lista de bancos de dados na instância aparece na guia Inventário.
 Desgerencie uma instância de host seguindo estas etapas.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Inventário*.
 . Clique na seta suspensa para expandir a linha da instância do host para desgerenciar.

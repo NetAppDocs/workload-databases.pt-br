@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: delete-clone.html 
 keywords: delete, clone 
-summary: Exclua um clone de sandbox quando você não precisar mais dele. 
+summary: Exclua um clone de sandbox na fábrica de workloads do BlueXP  quando não precisar mais dele. 
 ---
 = Divida um clone de sandbox do banco de dados de origem
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: Exclua um clone de sandbox quando você não precisar mais dele.
 
 
 [role="lead"]
-Exclua um clone de sandbox quando não precisar mais dele e quiser liberar a capacidade de storage.
+Exclua um clone de sandbox na fábrica de workloads do BlueXP  para bancos de dados quando não precisar mais e quiser liberar a capacidade de storage.
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, clique em *ir para Inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *sandboxes*.
 . Clique no menu de três pontos do clone sandbox que você deseja excluir.

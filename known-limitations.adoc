@@ -4,7 +4,7 @@ permalink: known-limitations.html
 keywords: limitations, databases 
 summary: As limitações conhecidas identificam plataformas, dispositivos ou funções que não são suportadas por esta versão do produto ou que não interoperam corretamente com ele. Revise essas limitações com cuidado. 
 ---
-= Limitações conhecidas
+= Limitações conhecidas da fábrica de workloads do BlueXP  para bancos de dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -29,13 +29,13 @@ A implementação com uma AMI personalizada assume que a Mídia de instalação 
 * Ao selecionar uma ordenação diferente do conjunto de ordenação na imagem para implementação autónoma
 
 
-Como parte da implantação, o Workload Factory não instala uma AMI personalizada com várias instâncias do Microsoft SQL Server. Somente a instância padrão do Microsoft SQL Server é selecionada e configurada como parte da implantação.
+Como parte da implantação, a fábrica de carga de trabalho não instala uma AMI personalizada com várias instâncias do Microsoft SQL Server. Somente a instância padrão do Microsoft SQL Server é selecionada e configurada como parte da implantação.
 
 
 
 == Reverter e tentar novamente para implantações com falha
 
-A reversão e a tentativa de implantação com falha não são suportadas no Workload Factory. Você pode reverter ou tentar novamente uma pilha com falha no console do CloudFormation na AWS.
+A reversão e a tentativa de implantação com falha não são suportadas na fábrica da carga de trabalho. Você pode reverter ou tentar novamente uma pilha com falha no console do CloudFormation na AWS.
 
 
 
@@ -54,13 +54,13 @@ Você precisará limpá-los manualmente ou esperar que o domínio limpe as entra
 
 == Suporte à configuração de grupos de disponibilidade sempre ativa
 
-O gerenciamento de configurações de grupos sempre ativos não é compatível com o Workload Factory.
+O gerenciamento de configurações de grupos de disponibilidade sempre ativa não é compatível com os workloads de fábrica.
 
 
 
 == Grupos de segurança do ative Directory gerenciados pelo usuário
 
-Se você selecionar "ative Directory gerenciado pelo usuário" durante a implantação do Microsoft SQL Server no Workload Factory, você deverá fornecer um grupo de segurança que permita o tráfego entre as instâncias EC2 para o serviço de diretório para implantação. O Workload Factory não anexa automaticamente o grupo de segurança para o ative Directory gerenciado pelo usuário, como acontece com o AWS Managed Microsoft AD.
+Se você selecionar "ative Directory gerenciado pelo usuário" durante a implantação do Microsoft SQL Server na fábrica de carga de trabalho, você deverá fornecer um grupo de segurança que permita o tráfego entre as instâncias EC2 para o serviço de diretório para implantação. A fábrica de carga de trabalho não anexa automaticamente o grupo de segurança para o ative Directory gerenciado pelo usuário, como acontece com o AWS Managed Microsoft AD.
 
 
 
@@ -84,7 +84,7 @@ O número máximo de clones sandbox que podem ser criados a partir de um servido
 
 == Detecção e gerenciamento do Microsoft SQL Server
 
-A deteção do Microsoft SQL Server não é salva. Cada vez que você acessa bancos de dados no Workload Factory, a deteção do Microsoft SQL Server é executada novamente para identificar instalações SQL na região.
+A deteção do Microsoft SQL Server não é salva. Cada vez que você acessa bancos de dados na fábrica de carga de trabalho, a deteção do Microsoft SQL Server é executada novamente para identificar instalações SQL na região.
 
 
 

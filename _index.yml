@@ -1,9 +1,9 @@
 ---
 indexpage:
-  title: Documentação de carga de trabalho de fábrica para bancos de dados
+  title: Fábrica de carga de trabalho do BlueXP  para documentação de bancos de dados
   lead: Implante configurações do Microsoft SQL Server e gerencie ambientes de banco
-    de dados em cima do FSX para armazenamento do sistema de arquivos ONTAP no BlueXP 
-    Workload Factory.
+    de dados em cima do FSX for ONTAP file system storage na fábrica de carga de trabalho
+    do BlueXP .
   tiles:
   - title: Comece agora
     links:

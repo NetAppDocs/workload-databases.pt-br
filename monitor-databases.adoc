@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: Rastreie trabalhos de banco de dados e monitore bancos de dados no Workload Factory para bancos de dados. 
+summary: Rastreie trabalhos de banco de dados e monitore bancos de dados na fábrica de cargas de trabalho do BlueXP  para bancos de dados. 
 ---
-= Monitorar bancos de dados
+= Monitore bancos de dados na fábrica de workloads do BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Acompanhe trabalhos de banco de dados e monitore bancos de dados com o Workload Factory para bancos de dados.
+Rastreie trabalhos de banco de dados e monitore bancos de dados na fábrica de cargas de trabalho do BlueXP  para bancos de dados.
 
 .Sobre esta tarefa
 Os bancos de dados fornecem monitoramento de tarefas para que você possa acompanhar o progresso da tarefa e diagnosticar e solucionar problemas caso ocorra alguma falha. Além disso, filtra por tipo e estado, a função de pesquisa e a opção de transferir a ajuda da tabela de trabalhos com navegação e relatórios de trabalhos de base de dados.
@@ -36,7 +36,7 @@ Retenção de eventos de trabalho:: Os eventos de monitorização de trabalhos s
 == Monitorizar trabalhos
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Monitoramento de tarefas*.
 . No separador monitorização de trabalhos, utilize os filtros ou procure para restringir os resultados dos trabalhos. Também pode transferir um relatório de trabalhos.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-configurations.html 
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
-summary: Os bancos de dados analisam as configurações de armazenamento dos Microsoft SQL Servers, fornecendo informações e recomendações para ajudá-lo a alcançar a excelência operacional. 
+summary: A fábrica de workloads do BlueXP  para bancos de dados verifica as configurações de storage dos Microsoft SQL Servers, fornecendo insights e recomendações para ajudá-lo a alcançar a excelência operacional. 
 ---
 = Otimize as configurações para implantações do Microsoft SQL Server
 :allow-uri-read: 
@@ -37,7 +37,7 @@ O que é digitalizado:: A fábrica de carga de trabalho avalia o status de otimi
 
 
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Inventário*.
 . Clique na seta suspensa para expandir a linha do host para exibir suas instâncias gerenciadas.

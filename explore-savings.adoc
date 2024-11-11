@@ -4,20 +4,20 @@ permalink: explore-savings.html
 keywords: cost, savings, compare costs, EBS, FSx for ONTAP 
 summary: 'Explore as economias para suas cargas de trabalho de banco de dados comparando os custos de usar o Amazon Elastic Block Store (EBS) e o FSX for Windows File Server com o armazenamento FSX for ONTAP.' 
 ---
-= Explore a economia no Workload Factory para bancos de dados
+= Explore a economia na fábrica de workloads da BlueXP  para bancos de dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Explore as economias para suas cargas de trabalho de banco de dados comparando os custos de usar o Amazon Elastic Block Store (EBS) e o FSX for Windows File Server com o armazenamento FSX for ONTAP.
+Explore a economia na fábrica de cargas de trabalho do BlueXP  para bancos de dados para suas cargas de trabalho de banco de dados comparando os custos de usar o armazenamento do Amazon Elastic Block Store (EBS) e o FSX for Windows com o armazenamento do FSX for ONTAP.
 
-O Workload Factory fornece uma calculadora de economia para que você possa comparar vários componentes de custo da execução de cargas de trabalho do Microsoft SQL Server, como armazenamento, computação, licença SQL, snapshots e clones para suas cargas de trabalho de banco de dados nos sistemas de arquivos FSX for ONTAP com o Elastic Block Store (EBS) e o FSX for Windows File Server. Dependendo de seus requisitos de armazenamento, você pode descobrir que os sistemas de arquivos do FSX for ONTAP são os mais econômicos para suas cargas de trabalho de banco de dados. A calculadora mostra se o armazenamento para as cargas de trabalho de banco de dados nesses servidores SQL da Microsoft custaria menos se você usou um sistema de arquivos FSX for ONTAP.
+A fábrica de carga de trabalho fornece uma calculadora de economia para que você possa comparar vários componentes de custo da execução de cargas de trabalho do Microsoft SQL Server, como armazenamento, computação, licença SQL, snapshots e clones para suas cargas de trabalho de banco de dados nos sistemas de arquivos FSX for ONTAP com o Elastic Block Store (EBS) e o FSX for Windows File Server. Dependendo de seus requisitos de armazenamento, você pode descobrir que os sistemas de arquivos do FSX for ONTAP são os mais econômicos para suas cargas de trabalho de banco de dados. A calculadora mostra se o armazenamento para as cargas de trabalho de banco de dados nesses servidores SQL da Microsoft custaria menos se você usou um sistema de arquivos FSX for ONTAP.
 
 image:screenshot-ebs-savings-calculator.png["Uma captura de tela da página da calculadora de economia mostra a configuração selecionada do Microsoft SQL Server no Amazon Elastic Block Store à esquerda com a opção de personalizar os valores de snapshot e clone. Economia de custos em valor em dólares e economia percentual, bem como o custo mensal total para usar o Microsoft SQL Server no FSX for ONTAP e a exibição de armazenamento Elastic Block Store à esquerda."]
 
-Se o Workload Factory determinar que você poderia economizar dinheiro executando essas cargas de trabalho em um sistema de arquivos FSX for ONTAP, você pode implantar o Microsoft SQL sobre o FSX for ONTAP diretamente da calculadora no Workload Factory. Quando você tem várias instâncias do Microsoft SQL Server sobre armazenamento Elastic Block Store ou FSX for Windows File Server, recomendamos uma configuração do FSX for ONTAP com uma única instância SQL.
+Se a fábrica de carga de trabalho determinar que você poderia economizar dinheiro executando essas cargas de trabalho em um sistema de arquivos FSX for ONTAP, você pode implantar o Microsoft SQL sobre o FSX for ONTAP diretamente da calculadora na fábrica de carga de trabalho. Quando você tem várias instâncias do Microsoft SQL Server sobre armazenamento Elastic Block Store ou FSX for Windows File Server, recomendamos uma configuração do FSX for ONTAP com uma única instância SQL.
 
 
 
@@ -27,7 +27,7 @@ Duas opções de calculadora estão disponíveis para fazer a comparação de cu
 
 Explore as economias através da personalização: Você fornece as configurações para o servidor Microsoft SQL no Amazon EC2 com EBS ou FSX para Windows File Server, incluindo a região, modelo de implantação, edição do servidor SQL, taxa de alteração de dados mensal, frequência de snapshot e muito mais.
 
-Explore a economia para hosts detetados: O Workload Factory vincula seus servidores Microsoft SQL existentes e puxa os detalhes para a calculadora para comparação automática. Você precisará conceder permissões de automação para usar essa opção de calculadora. Você pode alterar o caso de uso, mas todos os outros detalhes são determinados automaticamente no cálculo.
+Explore a economia para hosts detetados: A fábrica da carga de trabalho é vinculada aos seus servidores Microsoft SQL existentes e puxa os detalhes para a calculadora para comparação automática. Você precisará conceder permissões de automação para usar essa opção de calculadora. Você pode alterar o caso de uso, mas todos os outros detalhes são determinados automaticamente no cálculo.
 
 
 
@@ -40,7 +40,7 @@ Siga as etapas na guia para o tipo de armazenamento.
 .Amazon Elastic Block Store (EBS)
 --
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em bancos de dados, selecione *Explore savings* e depois *Microsoft SQL Server no EBS*.
 . Na calculadora de economia, forneça os seguintes detalhes:
 +
@@ -78,7 +78,7 @@ Além disso, role para baixo até a parte inferior da página para *Exportar PDF
 .Amazon FSX para Windows File Server
 --
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com/["Console de fábrica da carga de trabalho"^]
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Em bancos de dados, selecione *Explore poupança* e depois *Microsoft SQL Server no FSX para Windows*.
 . Na calculadora de economia, forneça os seguintes detalhes:
 +
@@ -129,10 +129,10 @@ Siga as etapas na guia para o tipo de armazenamento.
 .Amazon Elastic Block Store (EBS)
 --
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *explorar economia* e, em seguida, *Microsoft SQL Server no FSX para Windows* no menu suspenso.
 +
-Se o Workload Factory detetar hosts do EBS, você será redirecionado para a guia explorar economia. Se o Workload Factory não detetar hosts EBS, você será redirecionado para a calculadora para <<Explore as poupanças através da personalização,explore as poupanças através da personalização>>.
+Se a fábrica de carga de trabalho detetar hosts EBS, você será redirecionado para a guia explorar economia. Se a fábrica de carga de trabalho não detetar hosts EBS, você será redirecionado para <<Explore as poupanças através da personalização,explore as poupanças através da personalização>>a calculadora para .
 
 . Na guia explorar economia, clique em *explorar economia* do servidor de banco de dados usando armazenamento EBS.
 . Na calculadora de economia, opcionalmente, forneça os seguintes detalhes sobre clones e instantâneos no seu armazenamento EBS para uma estimativa de economia de custos mais precisa.
@@ -153,10 +153,10 @@ Além disso, role para baixo até a parte inferior da página para *Exportar PDF
 .Amazon FSX para Windows File Server
 --
 .Passos
-. Inicie sessão no link:https://console.workloads.netapp.com["Console de fábrica da carga de trabalho"^].
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *explorar economia* e, em seguida, *Microsoft SQL Server no FSX para Windows* no menu suspenso.
 +
-Se o Workload Factory detetar o FSX for Windows hosts, você será redirecionado para a guia explorar economia. Se o Workload Factory não detetar o FSX for Windows hosts, você será redirecionado para a calculadora para <<Explore as poupanças através da personalização,explore as poupanças através da personalização>>.
+Se a fábrica de carga de trabalho detetar o FSX for Windows hosts, você será redirecionado para a guia explorar economia. Se a fábrica de carga de trabalho não detetar o FSX para hosts do Windows, você será redirecionado para <<Explore as poupanças através da personalização,explore as poupanças através da personalização>>a calculadora para .
 
 . Na guia explorar economia, clique em *explorar economia* do servidor de banco de dados usando o FSX para Windows File Server armazenamento.
 . Na calculadora de economia, opcionalmente, forneça os seguintes detalhes sobre clones (cópias de sombra) e snapshots no seu armazenamento no FSX for Windows para uma estimativa de economia de custos mais precisa.
@@ -185,9 +185,9 @@ Além disso, role para baixo até a parte inferior da página para *Exportar PDF
 Se você quiser mudar para o FSX for ONTAP para obter economia de custos, clique em *criar* para criar a(s) configuração(ões) recomendada(s) diretamente do assistente criar novo servidor Microsoft SQL ou clique em *Salvar* para salvar a(s) configuração(s) recomendada(s) para mais tarde.
 
 
-NOTE: O Workload Factory não oferece suporte a salvar ou criar vários sistemas de arquivos FSX para ONTAP.
+NOTE: A fábrica de carga de trabalho não suporta salvar ou criar vários sistemas de arquivos FSX para ONTAP.
 
-Métodos de implantação:: No modo _Automate_, você pode implantar o novo servidor Microsoft SQL no AWS EC2 usando o FSX for ONTAP diretamente do Workload Factory. Você também pode copiar o conteúdo da janela do Codebox e implantar a configuração recomendada usando um dos métodos do Codebox.
+Métodos de implantação:: No modo _Automate_, você pode implantar o novo servidor Microsoft SQL no AWS EC2 usando o FSX for ONTAP diretamente da fábrica de carga de trabalho. Você também pode copiar o conteúdo da janela do Codebox e implantar a configuração recomendada usando um dos métodos do Codebox.
 +
 --
 No modo _Basic_, você pode copiar o conteúdo da janela Codebox e implantar a configuração recomendada usando um dos métodos Codebox.

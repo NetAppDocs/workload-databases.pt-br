@@ -4,32 +4,32 @@ permalink: quick-start-databases.html
 keywords: requirements, basic mode, read mode, automate mode 
 summary: Bancos de dados têm três modos diferentes que têm requisitos diferentes. 
 ---
-= Início rápido para bancos de dados
+= Início rápido do workload do BlueXP  de fábrica para bancos de dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Com bancos de dados, você pode começar imediatamente no modo _Basic_. Se você quiser usar o Workload Factory para descobrir hosts, gerenciar recursos e muito mais, você pode começar em alguns passos.
+Com a fábrica de carga de trabalho do BlueXP  para bancos de dados, você pode começar imediatamente no modo _básico_. Se você quiser usar a fábrica de carga de trabalho para descobrir hosts, gerenciar recursos e muito mais, comece em algumas etapas.
 
-Você precisa ter uma conta da AWS para começar.
+Você precisa ter uma conta da AWS para usar bancos de dados.
 
-Siga estas etapas para começar a usar os bancos de dados do Workload Factory.
+Siga estes passos para começar.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Inicie sessão no Workload Factory
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Faça login na fábrica de workloads da BlueXP 
 [role="quick-margin-para"]
-Você vai precisar link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Configure uma conta com o Workload Factory"^] de e. link:https://console.workloads.netapp.com["inicie sessão"^]
+Você precisará link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configure uma conta com a fábrica de carga de trabalho"^]fazer login usando um dos link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Adicione credenciais e permissões
 [role="quick-margin-para"]
 Escolha entre link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["_basic_, _read_ e _automate_ modos operacionais"^].
 
 [role="quick-margin-para"]
-Se você operar no modo _básico_, não precisa ir mais longe. Você pode começar a usar os bancos de dados Workload Factory para copiar amostras de código parcialmente concluídas. No bloco bancos de dados, clique em *Deploy database host*. link:create-database-server.html["Saiba como implantar um servidor de banco de dados"].
+Se você operar no modo _básico_, não precisa ir mais longe. Você pode começar a usar bancos de dados para copiar amostras de código parcialmente concluídas. No bloco bancos de dados, clique em *Deploy database host*. link:create-database-server.html["Saiba como implantar um servidor de banco de dados"].
 
 [role="quick-margin-para"]
-Se você operar no modo _read_ ou _Automate_, precisará link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["adicione credenciais a uma conta manualmente"^]selecionar recursos de carga de trabalho, como bancos de dados e IA, e criar as políticas do IAM para garantir que você tenha as permissões corretas para operar no modo _read_ ou _Automate_.
+Se você operar no modo _read_ ou _Automate_, será necessário link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["adicione credenciais a uma conta manualmente"^]selecionar recursos de carga de trabalho, como bancos de dados e GenAI, e criar as políticas do IAM para garantir que você tenha as permissões corretas para operar no modo _read_ ou _Automate_.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Implantar um servidor de banco de dados
 [role="quick-margin-para"]
