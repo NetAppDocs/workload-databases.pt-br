@@ -11,7 +11,7 @@ settings:
   rss_page: whats-new.html
   release_notes_autogen:
     release_notes_repo: workload-relnotes
-  langs: pt-br,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
+  langs: pt-br,us-en,de-de,es-es,fr-fr,it-it,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
   - title: Documentos de workloads de banco de dados
@@ -33,7 +33,11 @@ sidebar:
     - title: Explore as poupanças
       url: "/explore-savings.html"
     - title: Crie um novo servidor de banco de dados
-      url: "/create-database-server.html"
+      entries:
+      - title: Crie o Microsoft SQL Server
+        url: "/create-database-server.html"
+      - title: Crie o servidor PostgreSQL
+        url: "/create-postgresql-server.html"
     - title: Detectar um servidor de banco de dados
       url: "/detect-host.html"
     - title: Crie um banco de dados

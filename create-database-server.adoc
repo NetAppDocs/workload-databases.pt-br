@@ -67,7 +67,7 @@ Certifique-se de que você tem os seguintes pré-requisitos antes de criar um no
 Credenciais e permissões:: Você precisa link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais de conta da AWS e permissões de modo de automação"^]criar um novo host de banco de dados na fábrica de workloads.
 +
 --
-Como alternativa, você pode usar o Codebox para copiar um modelo vazio ou criar um modelo concluído para que você possa implantar um banco de dados fora da fábrica de carga de trabalho usando API REST, AWS CLI ou AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Saiba mais sobre a automação Codebox"^].
+Como alternativa, você pode usar o Codebox para copiar um modelo vazio ou criar um modelo concluído para que você possa implantar um banco de dados fora da fábrica de carga de trabalho usando API REST, AWS CLI e AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Saiba mais sobre a automação Codebox"^].
 
 --
 Ative Directory:: Ao se conetar ao ative Directory, você deve ter acesso administrativo com permissões para fazer o seguinte:
@@ -102,7 +102,7 @@ NOTE: Em _Quick Create_, o FCI é o modelo de implantação padrão, o Windows 2
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *Deploy database host*.
+. No bloco bancos de dados, selecione *Deploy database host* e, em seguida, selecione *Microsoft SQL Server* no menu suspenso.
 . Selecione *Quick Create*.
 . Em *configurações da AWS*, forneça o seguinte:
 +
@@ -136,9 +136,6 @@ Os atributos DNS da VPC `EnableDnsSupport` e `EnableDnsHostnames` são modificad
 +
 
 NOTE: As implantações de FCI são suportadas apenas em configurações do FSX para várias zonas de disponibilidade (MAZ) para ONTAP.
-
-+
-As sub-redes não devem compartilhar a mesma tabela de rotas para alta disponibilidade.
 
 +
 ... No campo *Configuração de cluster - nó 1*, selecione a zona de disponibilidade primária para a configuração do MAZ FSX for ONTAP no menu suspenso *zona de disponibilidade* e uma sub-rede da zona de disponibilidade primária no menu suspenso *sub-rede*.
@@ -211,7 +208,7 @@ Você também pode selecionar *Salvar configuração* para implantar o host mais
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *Deploy database host*.
+. No bloco bancos de dados, selecione *Deploy database host* e, em seguida, selecione *Microsoft SQL Server* no menu suspenso.
 . Selecione *Advanced Create*.
 . Para *modelo de implantação*, selecione *instância de cluster de failover* ou *instância única*.
 . Em *configurações da AWS*, forneça o seguinte:

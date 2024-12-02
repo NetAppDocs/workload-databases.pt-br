@@ -104,6 +104,7 @@ Saiba mais link:https://docs.netapp.com/us-en/workload-setup-admin/operational-m
 
 Você pode usar a fábrica do workload do BlueXP  com as seguintes ferramentas:
 
+* * BlueXP  console*: O console BlueXP  oferece uma experiência de interface híbrida para que você possa usar a carga de trabalho BlueXP  de fábrica junto com outros serviços BlueXP
 * *Console de fábrica do Workload*: O console de fábrica da carga de trabalho fornece uma interface visual que oferece uma visão holística de seus aplicativos e projetos
 * *API REST*: As APIs REST de fábrica de carga de trabalho permitem implantar e gerenciar o Microsoft SQL Server e outros recursos da AWS
 * *CloudFormation*: O código do AWS CloudFormation permite que você execute as ações definidas no console de fábrica de carga de trabalho para modelar, provisionar e gerenciar recursos da AWS e de terceiros a partir da pilha do CloudFormation em sua conta da AWS.
