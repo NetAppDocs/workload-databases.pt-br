@@ -65,11 +65,6 @@ Modos de operação de fábrica da carga de trabalho:: A fábrica de carga de tr
 Certifique-se de que você tem os seguintes pré-requisitos antes de criar um novo host de banco de dados.
 
 Credenciais e permissões:: Você precisa link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais de conta da AWS e permissões de modo de automação"^]criar um novo host de banco de dados na fábrica de workloads.
-+
---
-Como alternativa, você pode usar o Codebox para copiar um modelo vazio ou criar um modelo concluído para que você possa implantar um banco de dados fora da fábrica de carga de trabalho usando API REST, AWS CLI e AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Saiba mais sobre a automação Codebox"^].
-
---
 Ative Directory:: Ao se conetar ao ative Directory, você deve ter acesso administrativo com permissões para fazer o seguinte:
 +
 --
@@ -88,7 +83,7 @@ Ative Directory:: Ao se conetar ao ative Directory, você deve ter acesso admini
 
 == Passo 1: Crie um servidor de banco de dados
 
-Você pode usar os modos de implantação _Quick Create_ ou _Advanced Create_ para concluir essa tarefa na fábrica de cargas de trabalho com permissões do modo _Automate_. Você também pode usar as seguintes ferramentas disponíveis na Codebox: API REST, CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Saiba como usar o Codebox para automação"^].
+Você pode usar os modos de implantação _Quick Create_ ou _Advanced Create_ para concluir essa tarefa na fábrica de cargas de trabalho com permissões do modo _Automate_. Você também pode usar as seguintes ferramentas disponíveis no Codebox: API REST, AWS CLI, AWS CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Saiba como usar o Codebox para automação"^].
 
 
 NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta `fsxadmin` e `vsadmin` senhas. Você precisará digitar novamente as senhas quando executar o código. Você precisará incluir as seguintes permissões para a conta de usuário, além das permissões do modo _Automate_: `iam:TagRole` E `iam:TagInstanceProfile`.
