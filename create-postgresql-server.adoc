@@ -176,3 +176,6 @@ No CloudWatch, um grupo de log é criado com o nome da pilha. Um fluxo de log pa
 Alternativamente, você pode salvar a configuração.
 
 
+
+.O que vem a seguir
+Você pode configurar manualmente usuários, acesso remoto e bancos de dados no servidor PostgreSQL implantado.

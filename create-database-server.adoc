@@ -86,7 +86,7 @@ Ative Directory:: Ao se conetar ao ative Directory, você deve ter acesso admini
 Você pode usar os modos de implantação _Quick Create_ ou _Advanced Create_ para concluir essa tarefa na fábrica de cargas de trabalho com permissões do modo _Automate_. Você também pode usar as seguintes ferramentas disponíveis no Codebox: API REST, AWS CLI, AWS CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Saiba como usar o Codebox para automação"^].
 
 
-NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta `fsxadmin` e `vsadmin` senhas. Você precisará digitar novamente as senhas quando executar o código. Você precisará incluir as seguintes permissões para a conta de usuário, além das permissões do modo _Automate_: `iam:TagRole` E `iam:TagInstanceProfile`.
+NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta `fsxadmin` e `vsadmin` senhas. Você precisará digitar novamente as senhas quando executar o código. Você precisará incluir as seguintes permissões para a conta de usuário, além das permissões do modo _Automate_: `iam:TagRole` E `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["Saiba como usar o Terraform do Codebox"^].
 
 [role="tabbed-block"]
 ====
