@@ -56,13 +56,13 @@ Quando uma instância do Microsoft SQL é detetada, o ambiente existente não é
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Inventário*.
 . Clique na seta suspensa para expandir a linha do host para detetar.
 +
 O host se expande e as instâncias de host aparecem.
 
-. Clique no menu três pontos da instância a ser detetada.
+. Clique no menu de três pontos da instância para detetar.
 . Clique em *detectar*.
 . Na caixa de diálogo *detectar instância*, forneça o nome de usuário e a senha do Microsoft SQL Server ou o nome de usuário e a senha do FSX for ONTAP.
 +

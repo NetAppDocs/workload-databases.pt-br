@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-configurations.html 
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
-summary: A fábrica de workloads do BlueXP  para bancos de dados verifica as configurações de storage dos Microsoft SQL Servers, fornecendo insights e recomendações para ajudá-lo a alcançar a excelência operacional. 
+summary: A fábrica de carga de trabalho do BlueXP  para bancos de dados verifica as configurações do Microsoft SQL Server, fornecendo informações e recomendações para ajudá-lo a alcançar a excelência operacional. 
 ---
 = Otimize as configurações para implantações do Microsoft SQL Server
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: A fábrica de workloads do BlueXP  para bancos de dados verifica as co
 
 
 [role="lead"]
-A fábrica de carga de trabalho do BlueXP  para bancos de dados verifica e avalia continuamente as configurações de implantação do Microsoft SQL Server em execução no Amazon FSX for NetApp ONTAP. As avaliações fornecem insights, recomendações e otimizações para que você alcance a excelência operacional.
+A fábrica de carga de trabalho do BlueXP  para bancos de dados verifica e avalia continuamente as configurações de implantação do Microsoft SQL Server em execução no Amazon FSX for NetApp ONTAP. Esse recurso fornece insights e recomendações com a opção de otimizar automaticamente configurações não otimizadas para que seus workloads de banco de dados possam alcançar excelência operacional.
 
 .Sobre esta tarefa
 A avaliação é executada automaticamente e continuamente uma vez por dia para instâncias do Microsoft SQL Server com o armazenamento do FSX for ONTAP gerenciado na fábrica de cargas de trabalho. Os relatórios de avaliação estão disponíveis no painel de otimização somente se um trabalho agendado diário tiver sido executado após a implantação ou após o gerenciamento de uma instância.
@@ -24,7 +24,8 @@ O que é digitalizado:: A fábrica de carga de trabalho avalia o status de otimi
 * Dimensionamento do armazenamento: Inclui camada de armazenamento, espaço livre do sistema de arquivos, tamanho da unidade de Registro e tamanho da unidade TempDB
 * Layout de armazenamento: Inclui posicionamento de arquivos de dados do usuário, posicionamento de arquivos de log e posicionamento TempDB
 * Configuração de storage: Inclui gerenciamento de capacidade, thin Provisioning, política de disposição em categorias, snapshots, status, política e sessões de e/S de vários caminhos e muito mais
-* Computação: Inclui redimensionamento
+* Computação: Inclui correções de dimensionamento e do sistema operacional
+* Aplicações: Inclui licenças do Microsoft SQL Server
 
 
 --
@@ -38,19 +39,18 @@ O que é digitalizado:: A fábrica de carga de trabalho avalia o status de otimi
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
-. Em bancos de dados, selecione a guia *Inventário*.
-. Clique na seta suspensa para expandir a linha do host para exibir suas instâncias gerenciadas.
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Na guia *Inventário*, selecione a seta suspensa para expandir a linha do host para exibir suas instâncias gerenciadas.
 +
-O host se expande e as instâncias do host aparecem.
+O host se expande e as instâncias de host aparecem.
 
-. Selecione o menu de três pontos da instância para digitalizar e, em seguida, selecione *Otimize*.
-. Na página Otimize instance (otimizar instância) do host, revise as descobertas da avaliação de armazenamento.
+. Selecione o menu de três pontos da instância e, em seguida, selecione *Otimize*.
+. Na página Otimize instance (otimizar instância) para a instância do SQL Server, reveja os resultados da avaliação.
 +
-Os filtros estão disponíveis para classificar por categorias, sub-categorias, status, gravidade e tags.
+Você pode filtrar por categorias, subcategorias, status, gravidade e tags.
 
 +
-Se necessário, você pode baixar um relatório das descobertas selecionando *Exportar PDF*.
+Você também pode baixar um relatório dos resultados da avaliação selecionando *Exportar PDF*.
 
 . Selecione a seta suspensa para exibir a recomendação para qualquer configuração. Certifique-se de rever a recomendação com cuidado.
 +

@@ -15,7 +15,7 @@ Visualize e copie as informações de conexão de um clone de sandbox na fábric
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *sandboxes*.
 . Na guia sandboxes, clique no menu de três pontos do clone sandbox para exibir suas informações de conexão.
 . Selecione *Mostrar informações de conexão*.

@@ -23,9 +23,9 @@ Para atualizar um clone de banco de dados de um snapshot, o banco de dados de or
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *sandboxes*.
-. Na guia sandboxes, clique no menu três pontos do clone sandbox que você deseja atualizar.
+. Na guia sandboxes, clique no menu de três pontos do clone sandbox que deseja atualizar.
 . Selecione *Atualizar*.
 . Na caixa de diálogo Atualizar, selecione uma das seguintes opções:
 +

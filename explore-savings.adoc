@@ -13,11 +13,48 @@ summary: 'Explore as economias para suas cargas de trabalho de banco de dados co
 [role="lead"]
 Explore a economia na fábrica de cargas de trabalho do BlueXP  para bancos de dados para suas cargas de trabalho de banco de dados comparando os custos de usar o armazenamento do Amazon Elastic Block Store (EBS) e o FSX for Windows com o armazenamento do FSX for ONTAP.
 
-A fábrica de carga de trabalho fornece uma calculadora de economia para que você possa comparar vários componentes de custo da execução de cargas de trabalho do Microsoft SQL Server, como armazenamento, computação, licença SQL, snapshots e clones para suas cargas de trabalho de banco de dados nos sistemas de arquivos FSX for ONTAP com o Elastic Block Store (EBS) e o FSX for Windows File Server. Dependendo de seus requisitos de armazenamento, você pode descobrir que os sistemas de arquivos do FSX for ONTAP são os mais econômicos para suas cargas de trabalho de banco de dados. A calculadora mostra se o armazenamento para as cargas de trabalho de banco de dados nesses servidores SQL da Microsoft custaria menos se você usou um sistema de arquivos FSX for ONTAP.
+
+
+== Sobre esta tarefa
+
+A fábrica de carga de trabalho fornece uma calculadora de economia para que você possa comparar vários componentes de custo da execução de cargas de trabalho do Microsoft SQL Server, como armazenamento, computação, licença SQL, snapshots e clones para suas cargas de trabalho de banco de dados nos sistemas de arquivos FSX for ONTAP com o Elastic Block Store (EBS) e o FSX for Windows File Server. Dependendo de seus requisitos de armazenamento, você pode descobrir que os sistemas de arquivos do FSX for ONTAP são os mais econômicos para suas cargas de trabalho de banco de dados.
+
+A calculadora mostra se o armazenamento para as cargas de trabalho de banco de dados nesses servidores SQL da Microsoft custaria menos se você usou um sistema de arquivos FSX for ONTAP.
 
 image:screenshot-ebs-savings-calculator.png["Uma captura de tela da página da calculadora de economia mostra a configuração selecionada do Microsoft SQL Server no Amazon Elastic Block Store à esquerda com a opção de personalizar os valores de snapshot e clone. Economia de custos em valor em dólares e economia percentual, bem como o custo mensal total para usar o Microsoft SQL Server no FSX for ONTAP e a exibição de armazenamento Elastic Block Store à esquerda."]
 
 Se a fábrica de carga de trabalho determinar que você poderia economizar dinheiro executando essas cargas de trabalho em um sistema de arquivos FSX for ONTAP, você pode implantar o Microsoft SQL sobre o FSX for ONTAP diretamente da calculadora na fábrica de carga de trabalho. Quando você tem várias instâncias do Microsoft SQL Server sobre armazenamento Elastic Block Store ou FSX for Windows File Server, recomendamos uma configuração do FSX for ONTAP com uma única instância SQL.
+
+
+
+== Análise de implantação do SQL Server
+
+A calculadora executa uma análise abrangente da implantação do SQL Server para garantir que os recursos e recursos que estão sendo utilizados sejam adequadamente compatíveis com a edição do SQL Server. Aqui estão os principais fatores e condições que a calculadora verifica antes de recomendar um downgrade para Standard Edition:
+
+Modelo de implantação:: A calculadora avalia o modelo de implantação e se a edição Enterprise é necessária.
+Recursos alocados:: A calculadora avalia as condições dos seguintes recursos alocados dependentes da licença:
++
+--
+* VCPUs de instância de destino: A instância tem 48 ou menos CPUs virtuais.
+* Alocação de memória: A instância tem 128GB MB ou menos de memória.
+
+
+--
+Uso de recursos empresariais:: A calculadora verifica se algum dos seguintes recursos da empresa está em uso:
++
+--
+* Recursos empresariais em nível de banco de dados
+* Operações de índice online
+* Governador de recursos
+* Replicação ponto a ponto ou Oracle
+* Extensões R/Python
+* TempDB otimizado para memória
+
+
+--
+
+
+Se a instância avaliada do SQL Server não utilizar nenhum dos recursos da Enterprise acima e atender às restrições de recursos, a calculadora recomendará o downgrade da licença para Standard Edition. Esta recomendação é feita para ajudá-lo a otimizar seus custos de licenciamento do SQL Server sem comprometer o desempenho ou a funcionalidade.
 
 
 
@@ -31,7 +68,7 @@ Explore a economia para hosts detetados: A fábrica da carga de trabalho é vinc
 
 
 
-== Explore as poupanças através da personalização
+=== Explore as poupanças através da personalização
 
 Siga as etapas na guia para o tipo de armazenamento.
 
@@ -111,7 +148,7 @@ Além disso, role para baixo até a parte inferior da página para *Exportar PDF
 ====
 
 
-== Explore a economia dos hosts detetados
+=== Explore a economia dos hosts detetados
 
 A fábrica de carga de trabalho insere as caraterísticas de host do Elastic Block Store e do FSX for Windows File Server detetadas para que você possa explorar as economias automaticamente.
 

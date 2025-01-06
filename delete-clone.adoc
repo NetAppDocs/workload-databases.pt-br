@@ -15,7 +15,7 @@ Exclua um clone de sandbox na fábrica de workloads do BlueXP  para bancos de d
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, clique em *ir para Inventário de bancos de dados*.
+. No bloco bancos de dados, clique em *ir para inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *sandboxes*.
 . Clique no menu de três pontos do clone sandbox que você deseja excluir.
 . Selecione *Eliminar*.

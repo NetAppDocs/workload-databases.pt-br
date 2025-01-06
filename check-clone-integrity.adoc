@@ -18,7 +18,7 @@ Quando você cria um clone de sandbox a partir de um banco de dados de origem en
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *sandboxes*.
 . Na guia sandboxes, clique no menu de três pontos do clone sandbox para verificar a integridade.
 . Selecione *Executar verificação de integridade*.

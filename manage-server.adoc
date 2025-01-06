@@ -62,7 +62,7 @@ Complete os seguintes pré-requisitos antes de começar:
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Inventário*.
 . Clique em *Gerenciar* na linha do host a ser gerenciado.
 . Selecione uma ou mais instâncias de host para gerenciar.
@@ -79,7 +79,7 @@ Você pode exibir uma instância gerenciada seguindo estas etapas.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Inventário*.
 . Clique na seta suspensa para expandir a linha do host para exibir suas instâncias gerenciadas.
 +
@@ -99,13 +99,13 @@ Você pode exibir os bancos de dados gerenciados pela instância gerenciada segu
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Inventário*.
 . Clique na seta suspensa para expandir a linha do host para exibir seus bancos de dados.
 +
 O host se expande e as instâncias do host aparecem.
 
-. Clique no menu três pontos da instância que contém os bancos de dados a serem exibidos.
+. Clique no menu de três pontos da instância que contém os bancos de dados a serem exibidos.
 . Selecione *Ver bases de dados*.
 
 
@@ -120,13 +120,13 @@ Desgerencie uma instância de host seguindo estas etapas.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Inventário*.
 . Clique na seta suspensa para expandir a linha da instância do host para desgerenciar.
 +
 O host se expande e as instâncias do host aparecem.
 
-. Clique no menu três pontos da instância para desgerenciar.
+. Clique no menu de três pontos da instância para desgerenciar.
 . Selecione *Unmanage*.
 
 

@@ -14,7 +14,7 @@ summary: Rastreie trabalhos de banco de dados e monitore bancos de dados na fáb
 Rastreie trabalhos de banco de dados e monitore bancos de dados na fábrica de cargas de trabalho do BlueXP  para bancos de dados.
 
 .Sobre esta tarefa
-Os bancos de dados fornecem monitoramento de tarefas para que você possa acompanhar o progresso da tarefa e diagnosticar e solucionar problemas caso ocorra alguma falha. Além disso, filtra por tipo e estado, a função de pesquisa e a opção de transferir a ajuda da tabela de trabalhos com navegação e relatórios de trabalhos de base de dados.
+Os bancos de dados fornecem monitoramento de tarefas para que você possa acompanhar o progresso da tarefa e diagnosticar e solucionar problemas caso ocorra alguma falha. Pode filtrar trabalhos por tipo e estado, localizar trabalhos utilizando a função de pesquisa e transferir a tabela trabalhos.
 
 A monitorização de trabalhos suporta até três níveis de monitorização, dependendo do trabalho. Por exemplo, para a criação de novos clones de banco de dados e sandbox, o monitoramento de tarefas rastreia trabalhos pai e subtarefas.
 
@@ -27,7 +27,7 @@ Níveis de monitorização do trabalho::
 
 
 --
-Estado do trabalho:: O recurso de monitoramento de tarefas rastreia tarefas _em andamento_, _completed_ e _failed_ diárias, semanais, quinzenais e mensais.
+Estado do trabalho:: O recurso de monitoramento de tarefa rastreia _em andamento_, _completed_, _completed with issues_ e _failed_ trabalhos diariamente, semanalmente, quinzenalmente e mensalmente.
 Retenção de eventos de trabalho:: Os eventos de monitorização de trabalhos são mantidos na interface do utilizador durante 30 dias.
 
 
@@ -37,8 +37,8 @@ Retenção de eventos de trabalho:: Os eventos de monitorização de trabalhos s
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Monitoramento de tarefas*.
 . No separador monitorização de trabalhos, utilize os filtros ou procure para restringir os resultados dos trabalhos. Também pode transferir um relatório de trabalhos.
-. Clique no menu três pontos da tarefa e clique em *vá para o CloudFormation* para exibir o log de tarefas no console do AWS CloudFormation.
+. Clique no menu de três pontos da tarefa e clique em *vá para o CloudFormation* para exibir o log de tarefas no console do AWS CloudFormation.
 

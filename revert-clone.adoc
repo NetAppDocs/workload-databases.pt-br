@@ -18,9 +18,9 @@ Quando você clonar um banco de dados, o clone na criação é um clone _Baselin
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para Inventário de bancos de dados*.
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *sandboxes*.
-. Na guia sandboxes, clique no menu três pontos do clone sandbox que você deseja reverter.
+. Na guia sandboxes, clique no menu de três pontos do clone sandbox que deseja reverter.
 . Selecione *Re-Baseline*.
 . Na caixa de diálogo Re-Baseline, clique em *Re-Baseline*.
 
