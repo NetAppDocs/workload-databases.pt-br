@@ -639,7 +639,6 @@
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">Use o Terraform do Codebox</block>
   <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">Saiba como usar o Codebox para automação</block>
-  <block id="b2636246cf1e5e567e3ded4a9d65b1da" category="section-title">Disponibilidade regional para implantação do Microsoft SQL Server em uma rede privada com o Terraform</block>
   <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">* Otimização contínua*: Verifica continuamente o estado do Microsoft SQL Server offline, fornecendo-lhe um relatório abrangente de insights, oportunidades e recomendações para ajudá-lo a alcançar a excelência operacional.</block>
   <block id="13025ba9f92de77af2aeaf1af07a4aa8" category="doc">Otimize as configurações para implantações do Microsoft SQL Server</block>
   <block id="6f2bcb2f8d4f34c036395a199095be9a" category="paragraph">A avaliação é executada automaticamente e continuamente uma vez por dia para instâncias do Microsoft SQL Server com o armazenamento do FSX for ONTAP gerenciado na fábrica de cargas de trabalho. Os relatórios de avaliação estão disponíveis no painel de otimização somente se um trabalho agendado diário tiver sido executado após a implantação ou após o gerenciamento de uma instância.</block>
@@ -901,7 +900,6 @@
   <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">Junte-se à comunidade de fábrica de carga de trabalho para acompanhar discussões em andamento ou criar novas.</block>
   <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">Para usar o recurso *criar um caso*, primeiro você deve se Registrar para obter suporte. Associe as credenciais do site de suporte da NetApp ao login de fábrica da carga de trabalho. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
   <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">No canto superior direito do console de fábrica da carga de trabalho, selecione *Ajuda &gt; suporte*.</block>
-  <block id="eb3607016e0d79a6f82dfbbdd3422282" category="paragraph">A implantação do Microsoft SQL Server em uma rede privada sem conetividade de saída usando o Terraform só é suportada na região US-East-1 (N. Virginia). O PostgreSQL não suporta o Amazon CloudWatch ou a implantação em uma rede privada.</block>
   <block id="e75c7b17297b3cf3a7564e3033ef939f" category="list-text">Clique no menu de três pontos da instância para exibir e selecione *Exibir instância*.</block>
   <block id="6b30d701929b5a35aad77b847528d165" category="list-text">Clique no menu de três pontos da instância que contém os bancos de dados a serem exibidos.</block>
   <block id="77b932b7ecf2d2b3689c445fe72bb66a" category="list-text">Clique no menu de três pontos da instância para desgerenciar.</block>
@@ -926,4 +924,11 @@
   <block id="2cbcc262b0a39ec19c5f69bffccb70fb" category="paragraph">O Registro para suporte não ativa o suporte do NetApp para um serviço de arquivos de provedor de nuvem. Para obter suporte técnico relacionado a um serviço de arquivo de provedor de nuvem, sua infraestrutura ou qualquer solução usando o serviço, consulte "obter ajuda" na documentação de fábrica de carga de trabalho desse produto.</block>
   <block id="195066d54d760bc240b0879aa7a483bf" category="list-text">Na guia sandboxes, clique no menu de três pontos do clone sandbox para exibir suas informações de conexão.</block>
   <block id="13ac5039f81a1aa4ae7419bf17b5b6a0" category="section-title">06 de janeiro de 2025</block>
+  <block id="f2398fe4ddb880ba6c52b376ef9b960c" category="list-text"><block ref="f2398fe4ddb880ba6c52b376ef9b960c" category="inline-link-macro-rx"></block></block>
+  <block id="f7626e6c4414254923965c059c538355" category="section-title">Avaliação de patches do sistema operacional para otimização</block>
+  <block id="caf2103b4a30210f2be52ce13c522aad" category="inline-link-macro">O Blog de operações em nuvem da AWS "como corrigir instâncias do Windows EC2 em sub-redes privadas usando o AWS Systems Manager"</block>
+  <block id="51d9963cd25d44afd5ce890896443f71" category="paragraph">A avaliação de patches do sistema operacional feita para fins de otimização pode não funcionar em uma rede privada. A avaliação depende do AWS Patch Manager. Para entender como corrigir instâncias do Windows EC2 em uma rede privada, <block ref="8e97bc3ab59f50cb9b025f85a2445baf" category="inline-link-macro-rx"></block>consulte .</block>
+  <block id="a61ebf6aa74399e268808d3801b03702" category="section-title">Otimização do dimensionamento correto da computação</block>
+  <block id="f72f493648b25528319887c50a65f0ce" category="inline-link-macro">Documentação do Amazon Elastic Compute Cloud</block>
+  <block id="bd5d7b32e4164faa655582f169744a05" category="paragraph">Ao alterar para certos tipos de instância, a configuração de rede pode ser redefinida, o que pode causar falha na conexão do nó durante a otimização e resultar em falha na tarefa. Pode ser necessária intervenção manual para verificar e atualizar a definição de DNS e sessões iSCSI. <block ref="b8406a09c509d5c1d937367114bd51b3" category="inline-link-macro-rx"></block>Consulte para obter mais informações sobre as limitações de redimensionamento EC2D.</block>
 </blocks>
