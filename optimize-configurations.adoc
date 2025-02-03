@@ -16,7 +16,7 @@ A fábrica de carga de trabalho do BlueXP  para bancos de dados verifica e aval
 .Sobre esta tarefa
 A avaliação é executada automaticamente e continuamente uma vez por dia para instâncias do Microsoft SQL Server com o armazenamento do FSX for ONTAP gerenciado na fábrica de cargas de trabalho. Os relatórios de avaliação estão disponíveis no painel de otimização somente se um trabalho agendado diário tiver sido executado após a implantação ou após o gerenciamento de uma instância.
 
-A fábrica de carga de trabalho fornece recomendações detalhadas para otimizar configurações com base nas práticas recomendadas do FSX for ONTAP.
+A fábrica de carga de trabalho fornece recomendações detalhadas para otimizar configurações com base nas práticas recomendadas do FSX for ONTAP. Você pode analisar as recomendações e optar por otimizar configurações não otimizadas.
 
 O que é digitalizado:: A fábrica de carga de trabalho avalia o status de otimização das seguintes configurações para instâncias do Microsoft SQL Server:
 +
@@ -24,8 +24,8 @@ O que é digitalizado:: A fábrica de carga de trabalho avalia o status de otimi
 * Dimensionamento do armazenamento: Inclui camada de armazenamento, espaço livre do sistema de arquivos, tamanho da unidade de Registro e tamanho da unidade TempDB
 * Layout de armazenamento: Inclui posicionamento de arquivos de dados do usuário, posicionamento de arquivos de log e posicionamento TempDB
 * Configuração de storage: Inclui gerenciamento de capacidade, thin Provisioning, política de disposição em categorias, snapshots, status, política e sessões de e/S de vários caminhos e muito mais
-* Computação: Inclui correções de dimensionamento e do sistema operacional
-* Aplicações: Inclui licenças do Microsoft SQL Server
+* Computação: Inclui redimensionamento, patches do sistema operacional e configurações de adaptador de rede, como Receive Side Scaling (RSS) e descarregamento TCP
+* Aplicações: Inclui licenças Microsoft SQL Server, Microsoft SQL Server patch e configurações MAXDOP
 
 
 --
@@ -34,8 +34,11 @@ O que é digitalizado:: A fábrica de carga de trabalho avalia o status de otimi
 .Antes de começar
 * Você precisa ter credenciais com permissões de leitura ou automação.
 * Para avaliar o armazenamento de uma instância do Microsoft SQL Server, a instância deve ser gerenciada de fábrica de carga de trabalho e o tipo de armazenamento deve ser o FSX for ONTAP.
-* Certifique-se de rever cada recomendação cuidadosamente antes de selecionar para otimizar uma configuração ou configuração.
+* Certifique-se de rever cada recomendação cuidadosamente antes de selecionar para otimizar uma configuração ou configuração. Para as configurações RSS e MAXDOP, sugerimos que você teste as configurações recomendadas para determinar melhorias de desempenho antes de fazer alterações no seu ambiente de produção.
 
+
+
+NOTE: O processo de otimização pode causar tempos de inatividade da instância ou interrupções de serviço. Certifique-se de rever o resumo da otimização e os itens de ação antes de escolher otimizar uma configuração.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].

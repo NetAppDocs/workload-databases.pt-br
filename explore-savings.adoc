@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: explore-savings.html 
-keywords: cost, savings, compare costs, EBS, FSx for ONTAP 
-summary: 'Explore as economias para suas cargas de trabalho de banco de dados comparando os custos de usar o Amazon Elastic Block Store (EBS) e o FSX for Windows File Server com o armazenamento FSX for ONTAP.' 
+keywords: cost, savings, compare costs, EBS, FSx for Windows File Server, SQL Server on-premises, on-premises, FSx for ONTAP 
+summary: 'Compare os custos de usar o Amazon Elastic Block Store (EBS), o FSX for Windows File Server e o armazenamento de banco de dados local do SQL Server com o FSX for ONTAP.' 
 ---
 = Explore a economia na fábrica de workloads da BlueXP  para bancos de dados
 :allow-uri-read: 
@@ -11,19 +11,19 @@ summary: 'Explore as economias para suas cargas de trabalho de banco de dados co
 
 
 [role="lead"]
-Explore a economia na fábrica de cargas de trabalho do BlueXP  para bancos de dados para suas cargas de trabalho de banco de dados comparando os custos de usar o armazenamento do Amazon Elastic Block Store (EBS) e o FSX for Windows com o armazenamento do FSX for ONTAP.
+Explore a economia na fábrica de cargas de trabalho do BlueXP  para bancos de dados para suas cargas de trabalho de banco de dados comparando os custos de uso do Microsoft SQL Server na Amazon Elastic Block Store (EBS), FSX para servidor de arquivos do Windows e armazenamento local com o FSX for ONTAP.
 
 
 
 == Sobre esta tarefa
 
-A fábrica de carga de trabalho fornece uma calculadora de economia para que você possa comparar vários componentes de custo da execução de cargas de trabalho do Microsoft SQL Server, como armazenamento, computação, licença SQL, snapshots e clones para suas cargas de trabalho de banco de dados nos sistemas de arquivos FSX for ONTAP com o Elastic Block Store (EBS) e o FSX for Windows File Server. Dependendo de seus requisitos de armazenamento, você pode descobrir que os sistemas de arquivos do FSX for ONTAP são os mais econômicos para suas cargas de trabalho de banco de dados.
+A fábrica de carga de trabalho fornece uma calculadora de economia para que você possa comparar vários componentes de custo da execução de cargas de trabalho do Microsoft SQL Server, como armazenamento, computação, licença SQL, snapshots e clones para suas cargas de trabalho de banco de dados nos sistemas de arquivos FSX for ONTAP com Elastic Block Store (EBS), FSX for Windows File Server e armazenamento local. Dependendo de seus requisitos de armazenamento, você pode descobrir que os sistemas de arquivos do FSX for ONTAP são os mais econômicos para suas cargas de trabalho de banco de dados.
 
 A calculadora mostra se o armazenamento para as cargas de trabalho de banco de dados nesses servidores SQL da Microsoft custaria menos se você usou um sistema de arquivos FSX for ONTAP.
 
 image:screenshot-ebs-savings-calculator.png["Uma captura de tela da página da calculadora de economia mostra a configuração selecionada do Microsoft SQL Server no Amazon Elastic Block Store à esquerda com a opção de personalizar os valores de snapshot e clone. Economia de custos em valor em dólares e economia percentual, bem como o custo mensal total para usar o Microsoft SQL Server no FSX for ONTAP e a exibição de armazenamento Elastic Block Store à esquerda."]
 
-Se a fábrica de carga de trabalho determinar que você poderia economizar dinheiro executando essas cargas de trabalho em um sistema de arquivos FSX for ONTAP, você pode implantar o Microsoft SQL sobre o FSX for ONTAP diretamente da calculadora na fábrica de carga de trabalho. Quando você tem várias instâncias do Microsoft SQL Server sobre armazenamento Elastic Block Store ou FSX for Windows File Server, recomendamos uma configuração do FSX for ONTAP com uma única instância SQL.
+Se a fábrica de carga de trabalho determinar que você poderia economizar dinheiro executando essas cargas de trabalho em um sistema de arquivos FSX for ONTAP, você pode implantar o Microsoft SQL sobre o FSX for ONTAP diretamente da calculadora na fábrica de carga de trabalho. Quando você tem várias instâncias do Microsoft SQL Server em Elastic Block Store, FSX for Windows File Server ou armazenamento no local, recomendamos uma configuração do FSX for ONTAP com uma única instância do SQL.
 
 
 
@@ -204,6 +204,45 @@ Se as cópias de sombra do FSX for Windows forem detetadas, o valor padrão é *
 
 .. *Frequência de atualização do clone*: Selecione a frequência que os clones atualizam no menu suspenso.
 .. *Número de cópias clonadas*: Insira o número de cópias clonadas na configuração FSX for Windows.
+.. *Taxa de mudança mensal*: Insira a porcentagem que os dados clonados e instantâneos mudam em média por mês.
+
+
+. Reveja os cálculos e recomendações fornecidos na página.
++
+Além disso, role para baixo até a parte inferior da página para *Exportar PDF* ou *Exibir cálculos*.
+
+
+
+--
+.Microsoft SQL Server no local
+--
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco bancos de dados, selecione *explorar economia* e *Microsoft SQL Server on-premises* no menu suspenso.
+. Na guia local do SQL Server, baixe o script para avaliar seus ambientes SQL Server locais.
++
+.. Faça o download do script de avaliação. O script é uma ferramenta de coleta de dados baseada no PowerShell. Ele reúne e, em seguida, carrega dados de configuração e desempenho do SQL Server para a fábrica de carga de trabalho do BlueXP . O consultor de migração avalia os dados e planeja a implantação do FSX for ONTAP para seu ambiente SQL Server.
++
+image:screenshot-download-script-on-premises.png["Uma captura de tela da guia local do SQL Server mostra a opção de baixar o script de avaliação."]
+
+.. Execute o script no host do SQL Server.
+.. Carregue a saída do script na guia local do SQL Server na fábrica da carga de trabalho.
++
+image:screenshot-upload-script-on-premises.png["Uma captura de tela da guia local do SQL Server mostra a opção de carregar o script de avaliação."]
+
+
+
+. Na guia local do SQL Server, selecione *Explore savings* para executar uma análise de custo do host local do SQL Server contra o FSX for ONTAP.
+. Na calculadora de economia, selecione a região para o host local.
+. Para obter resultados mais precisos, atualize as informações do Compute e os detalhes de armazenamento e desempenho.
+. Opcionalmente, forneça os detalhes a seguir sobre clones (cópias de sombra) e snapshots em seu ambiente de banco de dados local para obter uma estimativa de economia de custo mais precisa.
++
+.. *Frequência de instantâneos*: Selecione uma frequência de instantâneos no menu suspenso.
++
+Se as cópias de sombra do FSX for Windows forem detetadas, o valor padrão é *Diário*. Se as cópias sombra não forem detetadas, o valor padrão será *Nenhuma frequência de instantâneos*.
+
+.. *Frequência de atualização do clone*: Selecione a frequência que os clones atualizam no menu suspenso.
+.. *Número de cópias clonadas*: Insira o número de cópias clonadas na configuração local.
 .. *Taxa de mudança mensal*: Insira a porcentagem que os dados clonados e instantâneos mudam em média por mês.
 
 
