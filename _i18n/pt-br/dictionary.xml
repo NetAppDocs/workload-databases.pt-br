@@ -958,4 +958,9 @@
   <block id="7a4fa85db3c457278cffd34e817477ab" category="list-text">Certifique-se de rever cada recomendação cuidadosamente antes de selecionar para otimizar uma configuração ou configuração. Para as configurações RSS e MAXDOP, sugerimos que você teste as configurações recomendadas para determinar melhorias de desempenho antes de fazer alterações no seu ambiente de produção.</block>
   <block id="926cb4c482170392f69cc268b20f8346" category="admonition">O processo de otimização pode causar tempos de inatividade da instância ou interrupções de serviço. Certifique-se de rever o resumo da otimização e os itens de ação antes de escolher otimizar uma configuração.</block>
   <block id="1c8d307950dbef59ce61b6bc729fdb52" category="section-title">03 de fevereiro de 2025</block>
+  <block id="382e51924c0a806fea2a0017322199a5" category="section-title">Limitações da otimização</block>
+  <block id="d65e48d2f6a810cde4c31e5a88aecedb" category="section-title">Otimização da configuração de ONTAP e SO</block>
+  <block id="8e29c0a71b0719e3f6ed28d4a7c0b30d" category="paragraph">A otimização em massa para mais de uma instância do SQL Server não é suportada para configuração do ONTAP e configuração do SO.</block>
+  <block id="7dd6090f4d4627220763b41db74bb898" category="section-title">Cálculo da economia no local</block>
+  <block id="9fb10d1d0413bc062aa3f807aa200e53" category="paragraph">Os cálculos de custo e porcentagem do tamanho do volume para o armazenamento no local do Microsoft SQL Server não são levados em consideração.</block>
 </blocks>

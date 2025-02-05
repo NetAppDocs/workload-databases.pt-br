@@ -100,12 +100,28 @@ O Workload Factory não suporta a criação ou a gravação de configurações p
 
 
 
-== Avaliação de patches do sistema operacional para otimização
+== Limitações da otimização
+
+
+
+=== Otimização do dimensionamento correto da computação
+
+Ao alterar para certos tipos de instância, a configuração de rede pode ser redefinida, o que pode causar falha na conexão do nó durante a otimização e resultar em falha na tarefa. Pode ser necessária intervenção manual para verificar e atualizar a definição de DNS e sessões iSCSI. link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Documentação do Amazon Elastic Compute Cloud"^]Consulte para obter mais informações sobre as limitações de redimensionamento EC2D.
+
+
+
+=== Otimização da configuração de ONTAP e SO
+
+A otimização em massa para mais de uma instância do SQL Server não é suportada para configuração do ONTAP e configuração do SO.
+
+
+
+=== Avaliação de patches do sistema operacional para otimização
 
 A avaliação de patches do sistema operacional feita para fins de otimização pode não funcionar em uma rede privada. A avaliação depende do AWS Patch Manager. Para entender como corrigir instâncias do Windows EC2 em uma rede privada, link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["O Blog de operações em nuvem da AWS "como corrigir instâncias do Windows EC2 em sub-redes privadas usando o AWS Systems Manager""^]consulte .
 
 
 
-== Otimização do dimensionamento correto da computação
+== Cálculo da economia no local
 
-Ao alterar para certos tipos de instância, a configuração de rede pode ser redefinida, o que pode causar falha na conexão do nó durante a otimização e resultar em falha na tarefa. Pode ser necessária intervenção manual para verificar e atualizar a definição de DNS e sessões iSCSI. link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Documentação do Amazon Elastic Compute Cloud"^]Consulte para obter mais informações sobre as limitações de redimensionamento EC2D.
+Os cálculos de custo e porcentagem do tamanho do volume para o armazenamento no local do Microsoft SQL Server não são levados em consideração.
