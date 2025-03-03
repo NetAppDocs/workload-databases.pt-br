@@ -26,6 +26,7 @@ O que é digitalizado:: A fábrica de carga de trabalho avalia o status de otimi
 * Configuração de storage: Inclui gerenciamento de capacidade, thin Provisioning, política de disposição em categorias, snapshots, status, política e sessões de e/S de vários caminhos e muito mais
 * Computação: Inclui redimensionamento, patches do sistema operacional e configurações de adaptador de rede, como Receive Side Scaling (RSS) e descarregamento TCP
 * Aplicações: Inclui licenças Microsoft SQL Server, Microsoft SQL Server patch e configurações MAXDOP
+* Resiliência: Inclui snapshots locais
 
 
 --

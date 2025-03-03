@@ -14,14 +14,16 @@ summary: Crie um novo servidor SQL PostgreSQL na fábrica de cargas de trabalho 
 Criar um novo servidor PostgreSQL, ou host de banco de dados, na fábrica de carga de trabalho do BlueXP  para bancos de dados requer uma implantação do sistema de arquivos FSX for ONTAP e recursos para ative Directory.
 
 .Sobre esta tarefa
-Você precisará de credenciais de conta da AWS e permissões _Automate_.
-
-Antes de começar, saiba mais sobre os tipos de implantação de armazenamento disponíveis para a configuração de host de banco de dados, implantação do ative Directory, modos de operação de fábrica de carga de trabalho e os requisitos para concluir essa operação.
+Antes de criar um servidor PostgreSQL de fábrica de carga de trabalho do BlueXP , saiba mais sobre os tipos de implantação de armazenamento disponíveis para a configuração do host de banco de dados, os modos de operação de fábrica de carga de trabalho e os requisitos para concluir essa operação.
 
 FSX para implantações de sistema de arquivos ONTAP:: Criar um novo servidor PostgreSQL requer um sistema de arquivos FSX for ONTAP como o back-end de armazenamento. Você pode usar um sistema de arquivos FSX for ONTAP existente ou criar um novo sistema de arquivos. Se você selecionar um sistema de arquivos FSX for ONTAP existente como back-end de armazenamento do servidor de banco de dados, nós criamos uma nova VM de armazenamento para as cargas de trabalho do PostgreSQL.
 +
 --
-O FSX para sistemas de arquivos ONTAP suporta implantações _standalone_ para PostgreSQL. A fábrica do Workload cria um sistema de arquivos FSX for ONTAP com zona de disponibilidade única, além de volumes e LUNs separados para dados, log e arquivos tempdb.
+Os sistemas de arquivos FSX para ONTAP têm dois modelos de implantação de servidor PostgreSQL: _Alta disponibilidade (HA)_ ou _instância única_. Diferentes recursos são criados para o sistema de arquivos FSX for ONTAP, dependendo do modelo de implantação do FSX for ONTAP selecionado.
+
+* * Implantação de alta disponibilidade (HA)*: Um sistema de arquivos FSX para NetApp ONTAP de várias zonas de disponibilidade é implantado quando um novo sistema de arquivos FSX for ONTAP é selecionado para implantação HA. Volumes e LUNs separados são criados para dados, log e arquivos tempdb para uma implantação HA. Um volume e LUN adicionais são criados para o Quorum ou o disco testemunha para o cluster do Windows. A implantação DE HA configura a replicação de streaming entre os servidores PostgreSQL primário e secundário.
+* * Implantação de instância única*: Um sistema de arquivos FSX para ONTAP de zona de disponibilidade única é criado quando um novo servidor PostgreSQL é criado. Além disso, volumes e LUNs separados são criados para dados, log e arquivos tempdb.
+
 
 --
 Modos de operação de fábrica da carga de trabalho:: A fábrica de carga de trabalho oferece três modos operacionais, dependendo do quão confortável você está com permitir que a fábrica de carga de trabalho gerencie seus recursos da AWS.
@@ -46,14 +48,113 @@ Credenciais e permissões:: Você precisa link:https://docs.netapp.com/us-en/wor
 
 == Crie um servidor de banco de dados
 
-Você pode usar o modo de implantação _Advanced Create_ para concluir essa tarefa na fábrica de carga de trabalho com permissões do modo _Automate_. Você também pode usar as seguintes ferramentas disponíveis no Codebox: API REST, AWS CLI e AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Saiba como usar o Codebox para automação"^].
+Você pode usar os modos de implantação _Quick Create_ ou _Advanced Create_ para concluir essa tarefa na fábrica de cargas de trabalho com permissões do modo _Automate_. Você também pode usar as seguintes ferramentas disponíveis no Codebox: API REST, AWS CLI, AWS CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Saiba como usar o Codebox para automação"^].
+
+
+NOTE: Ao usar o Terraform do Codebox, o código que você copia ou baixa oculta `fsxadmin` e `vsadmin` senhas. Você precisará digitar novamente as senhas quando executar o código. Você precisará incluir as seguintes permissões para a conta de usuário, além das permissões do modo _Automate_: `iam:TagRole` E `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["Saiba como usar o Terraform do Codebox"^].
+
+[role="tabbed-block"]
+====
+.Criação rápida
+--
+
+NOTE: Em _Quick Create_, o HA é o modelo de implantação padrão, o Windows 2016 é a versão padrão do Windows e o SQL 2019 Standard Edition é a versão padrão do SQL.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *Deploy database host* e, em seguida, selecione *PostgreSQL* no menu suspenso.
+. No bloco bancos de dados, selecione *Deploy database host* e, em seguida, selecione *PostgreSQL Server* no menu suspenso.
+. Selecione *Quick Create*.
+. Em *zona de desembarque*, forneça o seguinte:
++
+.. *Credenciais da AWS*: Selecione credenciais da AWS com permissões de automação para implantar o novo host de banco de dados.
++
+As credenciais da AWS com permissões _Automate_ permitem que a carga de trabalho implante e gerencie o novo host de banco de dados a partir da sua conta da AWS dentro da fábrica de carga de trabalho.
+
++
+As credenciais da AWS com permissões _read_ permitem que a fábrica da carga de trabalho gere um modelo do CloudFormation para você usar no console do AWS CloudFormation.
+
++
+Se você não tiver credenciais da AWS associadas à fábrica de carga de trabalho e quiser criar o novo servidor na fábrica de carga de trabalho, siga a *opção 1* para ir para a página credenciais. Adicione manualmente as credenciais e permissões necessárias para o modo _Automate_ para cargas de trabalho de banco de dados.
+
++
+Se você quiser preencher o formulário criar novo servidor na fábrica de carga de trabalho para que você possa baixar um modelo de arquivo YAML completo para implantação no AWS CloudFormation, siga a *opção 2* para garantir que você tenha as permissões necessárias para criar o novo servidor no AWS CloudFormation. Adicione manualmente as credenciais e permissões necessárias para o modo _read_ para cargas de trabalho de banco de dados.
+
++
+Opcionalmente, você pode baixar um modelo de arquivo YAML parcialmente concluído da caixa de código para criar a pilha fora da fábrica de carga de trabalho sem credenciais ou permissões. Selecione *CloudFormation* no menu suspenso na caixa de código para baixar o arquivo YAML.
+
+.. *Região e VPC*: Selecione uma região e uma rede VPC.
++
+Certifique-se de que os grupos de segurança para um endpoint de interface existente permitem o acesso ao protocolo HTTPS (443) às sub-redes selecionadas.
+
++
+Os endpoints da interface de serviço da AWS (SQS, FSX, EC2, CloudWatch, CloudFormation, SSM) e o endpoint do gateway S3 são criados durante a implantação, se não forem encontrados.
+
++
+Os atributos DNS da VPC `EnableDnsSupport` e `EnableDnsHostnames` são modificados para habilitar a resolução do endereço de endpoint se eles ainda não estiverem definidos como `true`.
+
+.. *Zonas de disponibilidade*: Selecione zonas de disponibilidade e sub-redes.
++
+
+NOTE: As implantações de HA são suportadas apenas em configurações do FSX para várias zonas de disponibilidade (MAZ) para ONTAP.
+
++
+As sub-redes não devem compartilhar a mesma tabela de rotas para alta disponibilidade.
+
++
+... No campo *Configuração de cluster - nó 1*, selecione a zona de disponibilidade primária para a configuração do MAZ FSX for ONTAP no menu suspenso *zona de disponibilidade* e uma sub-rede da zona de disponibilidade primária no menu suspenso *sub-rede*.
+... No campo *Configuração de cluster - nó 2*, selecione a zona de disponibilidade secundária para a configuração do MAZ FSX for ONTAP no menu suspenso *zona de disponibilidade* e uma sub-rede da zona de disponibilidade secundária no menu suspenso *Subnet*.
+
+
+
+
+. Em *Definições da aplicação*, introduza um nome de utilizador e uma palavra-passe para *credenciais da base de dados*.
+. Em *conetividade*, selecione um par de chaves para se conetar com segurança à sua instância.
+. Em *Configurações de infra-estrutura*, forneça o seguinte:
++
+.. *FSX para sistema ONTAP*: Crie um novo sistema de arquivos FSX for ONTAP ou use um sistema de arquivos FSX for ONTAP existente.
++
+... *Criar novo FSX para ONTAP*: Insira o nome de usuário e a senha.
++
+Um novo sistema de arquivos FSX for ONTAP pode adicionar 30 minutos ou mais de tempo de instalação.
+
+... *Selecione um FSX for ONTAP* existente: Selecione o nome FSX for ONTAP no menu suspenso e insira um nome de usuário e senha para o sistema de arquivos.
++
+Para sistemas de arquivos FSX para ONTAP existentes, verifique o seguinte:
+
++
+**** O grupo de roteamento anexado ao FSX for ONTAP permite que as rotas para as sub-redes sejam usadas para implantação.
+**** O grupo de segurança permite o tráfego das sub-redes usadas para implantação, especificamente as portas TCP HTTPS (443) e iSCSI (3260).
+
+
+
+
+.. *Tamanho da unidade de dados*: Insira a capacidade da unidade de dados e selecione a unidade de capacidade.
+
+
+. Resumo:
++
+.. *Pré-visualização padrão*: Revise as configurações padrão definidas pelo Quick Create.
+.. *Custo estimado*: Fornece uma estimativa das cobranças que você pode incorrer se você implantou os recursos mostrados.
+
+
+. Clique em *criar*.
++
+Alternativamente, se você quiser alterar qualquer uma dessas configurações padrão agora, crie o servidor de banco de dados com Advanced Create.
+
++
+Você também pode selecionar *Salvar configuração* para implantar o host mais tarde.
+
+
+
+--
+.Criação avançada
+--
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco bancos de dados, selecione *Deploy database host* e, em seguida, selecione *PostgreSQL Server* no menu suspenso.
 . Selecione *Advanced Create*.
-. Para *modelo de implantação*, *instância independente* é o padrão.
-. Em *configurações da AWS*, forneça o seguinte:
+. Em *modelo de implantação*, selecione *instância independente* ou *alta disponibilidade (HA)*.
+. Em *zona de desembarque*, forneça o seguinte:
 +
 .. *Credenciais da AWS*: Selecione credenciais da AWS com permissões de automação para implantar o novo host de banco de dados.
 +
@@ -86,7 +187,14 @@ Os atributos DNS da VPC `EnableDnsSupport` e `EnableDnsHostnames` são modificad
 Para implantações de uma única instância::
 +
 --
-... No campo *Configuração de cluster - nó 1*, selecione uma zona de disponibilidade no menu suspenso *zona de disponibilidade* e uma sub-rede no menu suspenso *Subnet*.
+No campo *Configuração de cluster - nó 1*, selecione uma zona de disponibilidade no menu suspenso *zona de disponibilidade* e uma sub-rede no menu suspenso *Subnet*.
+
+--
+Para implantações de HA::
++
+--
+... No campo *Configuração de cluster - nó 1*, selecione a zona de disponibilidade primária para a configuração do MAZ FSX for ONTAP no menu suspenso *zona de disponibilidade* e uma sub-rede da zona de disponibilidade primária no menu suspenso *sub-rede*.
+... No campo *Configuração de cluster - nó 2*, selecione a zona de disponibilidade secundária para a configuração do MAZ FSX for ONTAP no menu suspenso *zona de disponibilidade* e uma sub-rede da zona de disponibilidade secundária no menu suspenso *Subnet*.
 
 
 --
@@ -98,7 +206,7 @@ Dois grupos de segurança são anexados aos nós SQL (instâncias EC2) durante a
 
 +
 ... Um grupo de segurança de carga de trabalho é criado para permitir portas e protocolos necessários para o PostgreSQL.
-... Para um sistema de arquivos FSX for ONTAP existente, o grupo de segurança associado a ele é adicionado automaticamente ao nó PostgreSQL, que permite a comunicação com o sistema de arquivos. Quando um novo sistema FSX for ONTAP é criado, um novo grupo de segurança é criado para o sistema de arquivos FSX for ONTAP e o mesmo grupo de segurança também é anexado ao nó SQL.
+... Para um novo sistema de arquivos FSX for ONTAP, um novo grupo de segurança é criado e anexado ao nó SQL. Para um sistema de arquivos FSX for ONTAP existente, o grupo de segurança associado a ele é adicionado automaticamente ao nó PostgreSQL, que permite a comunicação com o sistema de arquivos.
 
 
 
@@ -177,5 +285,7 @@ Alternativamente, você pode salvar a configuração.
 
 
 
+--
+====
 .O que vem a seguir
 Você pode configurar manualmente usuários, acesso remoto e bancos de dados no servidor PostgreSQL implantado.

@@ -17,13 +17,21 @@ Explore a economia na fábrica de cargas de trabalho do BlueXP  para bancos de 
 
 == Sobre esta tarefa
 
-A fábrica de carga de trabalho fornece uma calculadora de economia para que você possa comparar vários componentes de custo da execução de cargas de trabalho do Microsoft SQL Server, como armazenamento, computação, licença SQL, snapshots e clones para suas cargas de trabalho de banco de dados nos sistemas de arquivos FSX for ONTAP com Elastic Block Store (EBS), FSX for Windows File Server e armazenamento local. Dependendo de seus requisitos de armazenamento, você pode descobrir que os sistemas de arquivos do FSX for ONTAP são os mais econômicos para suas cargas de trabalho de banco de dados.
+A fábrica de carga de trabalho tem várias maneiras de você explorar a economia para suas cargas de trabalho de banco de dados em execução no Amazon Elastic Block Store (EBS), no FSX for Windows File Server e no armazenamento local - no Dashboard, na guia Inventário e na guia explorar economia. Em todos os casos, você pode usar a calculadora de economia para comparar vários componentes de custo da execução de cargas de trabalho do Microsoft SQL Server, como armazenamento, computação, licença SQL, snapshots e clones para suas cargas de trabalho de banco de dados nos sistemas de arquivos FSX for ONTAP com Elastic Block Store (EBS), FSX for Windows File Server e armazenamento local.
 
-A calculadora mostra se o armazenamento para as cargas de trabalho de banco de dados nesses servidores SQL da Microsoft custaria menos se você usou um sistema de arquivos FSX for ONTAP.
+Se a fábrica de carga de trabalho determinar que você poderia economizar dinheiro executando essas cargas de trabalho em um sistema de arquivos FSX for ONTAP, você pode implantar o Microsoft SQL sobre o FSX for ONTAP diretamente da calculadora de economia na fábrica de carga de trabalho. Quando você tem várias instâncias do Microsoft SQL Server em Elastic Block Store, FSX for Windows File Server ou armazenamento no local, recomendamos uma configuração do FSX for ONTAP com uma única instância do SQL.
 
-image:screenshot-ebs-savings-calculator.png["Uma captura de tela da página da calculadora de economia mostra a configuração selecionada do Microsoft SQL Server no Amazon Elastic Block Store à esquerda com a opção de personalizar os valores de snapshot e clone. Economia de custos em valor em dólares e economia percentual, bem como o custo mensal total para usar o Microsoft SQL Server no FSX for ONTAP e a exibição de armazenamento Elastic Block Store à esquerda."]
+.Economias potenciais para todos os workloads de banco de dados
+Acesse os bancos de dados *Painel* do console de fábrica de carga de trabalho para obter uma visão geral de possíveis economias de custo para executar todas as suas cargas de trabalho de banco de dados no FSX for ONTAP. No bloco *economias potenciais*, você pode ver o número de todas as cargas de trabalho de banco de dados que você tem no Elastic Block Store e no FSX for Windows File Server, a economia potencial, a porcentagem de economia e a representação visual no gráfico de barras.
 
-Se a fábrica de carga de trabalho determinar que você poderia economizar dinheiro executando essas cargas de trabalho em um sistema de arquivos FSX for ONTAP, você pode implantar o Microsoft SQL sobre o FSX for ONTAP diretamente da calculadora na fábrica de carga de trabalho. Quando você tem várias instâncias do Microsoft SQL Server em Elastic Block Store, FSX for Windows File Server ou armazenamento no local, recomendamos uma configuração do FSX for ONTAP com uma única instância do SQL.
+image:screenshot-dashboard-potential-savings-tile.png["Uma captura de tela do bloco de economia potencial do painel de bancos de dados no console de fábrica da carga de trabalho. O bloco de economia potencial mostra o número de todas as cargas de trabalho de banco de dados que você tem no Elastic Block Store e no FSX for Windows File Server, as economias potenciais, a porcentagem de economia e a representação visual no gráfico de barras."]
+
+.Calculadora de poupança
+Você pode utilizar a calculadora de economia para comparar vários componentes de custo da execução de cargas de trabalho do Microsoft SQL Server, como armazenamento, computação, licença SQL, snapshots e clones para suas cargas de trabalho de banco de dados nos sistemas de arquivos FSX for ONTAP com Elastic Block Store (EBS), FSX for Windows File Server e armazenamento local. Dependendo de seus requisitos de armazenamento, você pode descobrir que os sistemas de arquivos do FSX for ONTAP são os mais econômicos para suas cargas de trabalho de banco de dados.
+
+A calculadora mostra se o armazenamento para as cargas de trabalho de banco de dados nesses servidores SQL da Microsoft custaria menos se você usou um sistema de arquivos FSX for ONTAP. <<Opções de calculadora,Saiba como usar a calculadora.>>
+
+image:screenshot-ebs-savings-calculator-update.png["Uma captura de tela da página da calculadora de economia mostra a configuração selecionada do Microsoft SQL Server no Amazon Elastic Block Store à esquerda com a opção de personalizar os valores de snapshot e clone. Economia de custos em valor em dólares e economia percentual, bem como o custo mensal total para usar o Microsoft SQL Server no FSX for ONTAP e a exibição de armazenamento Elastic Block Store à esquerda."]
 
 
 
@@ -66,6 +74,8 @@ Explore as economias através da personalização: Você fornece as configuraç�
 
 Explore a economia para hosts detetados: A fábrica da carga de trabalho é vinculada aos seus servidores Microsoft SQL existentes e puxa os detalhes para a calculadora para comparação automática. Você precisará conceder permissões de automação para usar essa opção de calculadora. Você pode alterar o caso de uso, mas todos os outros detalhes são determinados automaticamente no cálculo.
 
+Além disso, você pode link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Adicionar credenciais da AWS"^]melhorar a precisão da análise da calculadora. Selecione *Calcule a poupança com base nos recursos existentes*. Você será redirecionado para a página Adicionar credenciais. Depois de adicionar credenciais, selecione os recursos existentes para comparar com o FSX for ONTAP e selecione *explorar economia*.
+
 
 
 === Explore as poupanças através da personalização
@@ -105,10 +115,6 @@ Siga as etapas na guia para o tipo de armazenamento.
 .. Se você selecionou o modelo de implantação de disponibilidade sempre ativa, forneça detalhes para *Especificações secundárias do EC2* e *tipos de volume*.
 
 
-. Reveja os cálculos e recomendações fornecidos na página.
-+
-Além disso, role para baixo até a parte inferior da página para *Exportar PDF* ou *Exibir cálculos*.
-
 
 
 --
@@ -138,14 +144,21 @@ Além disso, role para baixo até a parte inferior da página para *Exportar PDF
 .. Em especificações do EC2, selecione o *tipo de instância* no menu suspenso.
 
 
-. Reveja os cálculos e recomendações fornecidos na página.
-+
-Além disso, role para baixo até a parte inferior da página para *Exportar PDF* ou *Exibir cálculos*.
-
 
 
 --
 ====
+Depois de fornecer detalhes sobre a configuração do host do banco de dados, revise os cálculos e recomendações fornecidos na página.
+
+Além disso, role para baixo até a parte inferior da página para exibir o relatório selecionando uma das seguintes opções:
+
+* * Exportar PDF*
+* *Enviar por e-mail*
+* *Veja os cálculos*
+
+
+Para mudar para o FSX for ONTAP, siga as instruções <<Implante o Microsoft SQL Server no AWS EC2 usando o FSX for ONTAP,Implante o Microsoft SQL Server no AQS EC2 usando o FSX para sistemas de arquivos ONTAP>>para .
+
 
 
 === Explore a economia dos hosts detetados
@@ -180,10 +193,6 @@ Se a fábrica de carga de trabalho detetar hosts EBS, você será redirecionado 
 .. *Taxa de mudança mensal*: Insira a porcentagem que os dados clonados e instantâneos mudam em média por mês.
 
 
-. Reveja os cálculos e recomendações fornecidos na página.
-+
-Além disso, role para baixo até a parte inferior da página para *Exportar PDF* ou *Exibir cálculos*.
-
 
 
 --
@@ -206,10 +215,6 @@ Se as cópias de sombra do FSX for Windows forem detetadas, o valor padrão é *
 .. *Número de cópias clonadas*: Insira o número de cópias clonadas na configuração FSX for Windows.
 .. *Taxa de mudança mensal*: Insira a porcentagem que os dados clonados e instantâneos mudam em média por mês.
 
-
-. Reveja os cálculos e recomendações fornecidos na página.
-+
-Além disso, role para baixo até a parte inferior da página para *Exportar PDF* ou *Exibir cálculos*.
 
 
 
@@ -246,14 +251,21 @@ Se as cópias de sombra do FSX for Windows forem detetadas, o valor padrão é *
 .. *Taxa de mudança mensal*: Insira a porcentagem que os dados clonados e instantâneos mudam em média por mês.
 
 
-. Reveja os cálculos e recomendações fornecidos na página.
-+
-Além disso, role para baixo até a parte inferior da página para *Exportar PDF* ou *Exibir cálculos*.
-
 
 
 --
 ====
+Depois de fornecer detalhes sobre a configuração do host do banco de dados, revise os cálculos e recomendações fornecidos na página.
+
+Além disso, role para baixo até a parte inferior da página para exibir o relatório selecionando uma das seguintes opções:
+
+* * Exportar PDF*
+* *Enviar por e-mail*
+* *Veja os cálculos*
+
+
+Para mudar para o FSX for ONTAP, siga as instruções <<Implante o Microsoft SQL Server no AWS EC2 usando o FSX for ONTAP,Implante o Microsoft SQL Server no AQS EC2 usando o FSX para sistemas de arquivos ONTAP>>para .
+
 
 
 == Implante o Microsoft SQL Server no AWS EC2 usando o FSX for ONTAP
