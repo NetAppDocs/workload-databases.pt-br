@@ -28,4 +28,4 @@ Agora você pode personalizar as configurações do Microsoft SQL Server, Amazon
 
 
 
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explore as economias com o FSX for ONTAP para suas cargas de trabalho de banco de dados"^]
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explore as economias com o FSX for ONTAP para suas cargas de trabalho de banco de dados"]

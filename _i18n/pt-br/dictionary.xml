@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
   <block id="76d820a16128270adf6a061b253cca06" category="inline-link-macro">Saiba mais sobre bancos de dados</block>
-  <block id="9a178ca3815f6aeb284a65e10447f086" category="paragraph"><block ref="9a178ca3815f6aeb284a65e10447f086" category="inline-link-macro-rx"></block></block>
   <block id="4b93fd033dead8dde7a70076fe4dfb36" category="doc">Melhorias na calculadora de economia</block>
   <block id="7aeef6f406aa249df106ff2e48e80f59" category="list-text">Descrições da estimativa de custo</block>
   <block id="797ceaeb99ff17f4fc79415b43e229c3" category="paragraph">Agora você pode aprender como as estimativas de custo são calculadas na calculadora de economia. Você poderá analisar as descrições de todos os cálculos para suas instâncias do Microsoft SQL Server usando o armazenamento do Amazon Elastic Block Store em comparação com o uso do armazenamento do Amazon FSX for ONTAP.</block>
@@ -14,7 +13,6 @@
   <block id="6c8658cb4905e48d7d602b288bfcf8be" category="list-text">Personalizar as definições da calculadora</block>
   <block id="3d97983d64bf9e9b4ee62805c09d1774" category="paragraph">Agora você pode personalizar as configurações do Microsoft SQL Server, Amazon EC2 e Elastic Block Store para explorar a economia manualmente. A calculadora de economia determinará a melhor configuração com base no custo.</block>
   <block id="7d6d6d8a97f883d860bff04c0be1019c" category="inline-link-macro">Explore as economias com o FSX for ONTAP para suas cargas de trabalho de banco de dados</block>
-  <block id="293758d509326f8da42abf75db2d37e6" category="paragraph"><block ref="293758d509326f8da42abf75db2d37e6" category="inline-link-macro-rx"></block></block>
   <block id="f565eb47bc8c215541fe00205d9b37d3" category="doc">Explore as poupanças através da personalização</block>
   <block id="bfbd25ddeba7cedc974f1a5a1d0a295c" category="paragraph">Agora você pode personalizar as configurações do servidor Microsoft SQL no Amazon EC2 com o FSX for Windows File Server e armazenamento Elastic Block Store na calculadora de economia. Dependendo de seus requisitos de armazenamento, você pode descobrir que o FSX for ONTAP é o mais econômico para suas cargas de trabalho de banco de dados.</block>
   <block id="f94c119bb7d164adbb1a390a249741e0" category="section-title">Navegue até a calculadora de poupança a partir da página inicial</block>
@@ -629,9 +627,7 @@
   <block id="72d1af9ffdd277a1cf7789b588da9b4d" category="paragraph"><block ref="72d1af9ffdd277a1cf7789b588da9b4d" category="inline-link-macro-rx"></block></block>
   <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Suporte ao Terraform</block>
   <block id="822802a1673e79cb7dbd54947e4dc32c" category="paragraph">Agora você pode usar o Terraform na caixa Codebox para implantar o Microsoft SQL Server.</block>
-  <block id="d83b54de9b50110195e4bf3c1f3c6a67" category="list-text"><block ref="d83b54de9b50110195e4bf3c1f3c6a67" category="inline-link-macro-rx"></block></block>
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">Use o Terraform do Codebox</block>
-  <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">Saiba como usar o Codebox para automação</block>
   <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">* Otimização contínua*: Verifica continuamente o estado do Microsoft SQL Server offline, fornecendo-lhe um relatório abrangente de insights, oportunidades e recomendações para ajudá-lo a alcançar a excelência operacional.</block>
   <block id="13025ba9f92de77af2aeaf1af07a4aa8" category="doc">Otimize as configurações para implantações do Microsoft SQL Server</block>
@@ -669,7 +665,6 @@
   <block id="35c4b7b7975b86786b96de60f8d9159c" category="doc">Lançamento inicial de fábrica de workloads do BlueXP  para bancos de dados</block>
   <block id="fe582581097e432c4b1b3f3135f39b72" category="paragraph">A versão inicial inclui a funcionalidade de explorar a economia com o Amazon FSX for NetApp ONTAP como o ambiente de armazenamento para suas cargas de trabalho de banco de dados, detetar, gerenciar e implantar servidores Microsoft SQL, implantar e clonar bancos de dados e monitorar essas tarefas na fábrica de workloads.</block>
   <block id="e5d3c7248ff4540f88c13fbf9252d0a3" category="inline-link-macro">console de fábrica do workload</block>
-  <block id="e93e8519fa9c34d76ec0735119a46866" category="paragraph">Agora você pode navegar para a calculadora de economia a partir da <block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block> página inicial. Selecione na Elastic Block Store e no FSX for Windows File Server para começar.</block>
   <block id="ab1e050e49bbc49befbca952f74f0443" category="inline-image-macro">captura de tela da página inicial do console de fábrica da carga de trabalho. A imagem mostra o bloco de bancos de dados com um novo botão explorar economia. Clique no botão para abrir um menu suspenso. O menu suspenso tem duas opções - Microsoft SQL Server no EBS e Microsoft SQL Server no FSX para Windows File Server.</block>
   <block id="923f11c15ceba3bc0e4d37309ab27ed2" category="paragraph"><block ref="923f11c15ceba3bc0e4d37309ab27ed2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8e73a65c2de8a6be7664465f03b5fb30" category="doc">Automatize com o Codebox na fábrica de cargas de trabalho do BlueXP  para bancos de dados</block>
@@ -963,7 +958,6 @@
   <block id="1414de2121340ce91492c56f7800fcc7" category="section-title">Suporte Terraform para criação de servidor PostgreSQL</block>
   <block id="9156ac6cc60e32ed114af1a49af0ffed" category="paragraph">Agora você pode usar o Terraform a partir do Codebox para implantar o PostgreSQL.</block>
   <block id="7a5745faeabd31c33609adf25373d8a1" category="inline-link-macro">Crie um servidor de banco de dados PostgreSQL</block>
-  <block id="61b5b69de9c821f5e486ec9c30a821a4" category="list-text"><block ref="61b5b69de9c821f5e486ec9c30a821a4" category="inline-link-macro-rx"></block></block>
   <block id="6a7893eb24462b3da7dd0a66586c5738" category="section-title">Avaliação de resiliência para agendamento de snapshot local</block>
   <block id="677bceea5ebbea10cf85a91ebf42050e" category="paragraph">Uma nova avaliação de resiliência está disponível para workloads de banco de dados. Avaliamos se os volumes para suas instâncias do Microsoft SQL Server têm políticas de snapshot agendadas válidas. Os snapshots são cópias pontuais de seus dados e ajudam a manter seus ambientes de banco de dados resilientes em caso de perda de dados.</block>
   <block id="90814442b7f0694d712f43efffe9c178" category="section-title">Correção MAXDOP para cargas de trabalho de banco de dados</block>
@@ -1005,4 +999,9 @@
   <block id="593a4cc0b797fa5f4354bae99e3fa42d" category="list-text">Resiliência: Inclui snapshots locais</block>
   <block id="4fbdcdf3c2d8694d5e358b3175b867da" category="section-title">03 de março de 2025</block>
   <block id="5b9ce98e8b3125f8d921be7829ab8a26" category="sidebar">Crie um Microsoft SQL Server</block>
+  <block id="25b3aca23d0668827e396e11779fd3e8" category="paragraph"><block ref="25b3aca23d0668827e396e11779fd3e8" category="inline-link-macro-rx"></block></block>
+  <block id="0cff8121f4037cd80252c2bfd1bbc480" category="paragraph">Agora você pode navegar para a calculadora de economia a partir da <block ref="9086d555f1d70469f26e2dfccd9f366f" category="inline-link-macro-rx"></block> página inicial. Selecione na Elastic Block Store e no FSX for Windows File Server para começar.</block>
+  <block id="05e1e00bdb39e9c766a6a0f69a222a3b" category="list-text"><block ref="05e1e00bdb39e9c766a6a0f69a222a3b" category="inline-link-macro-rx"></block></block>
+  <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
+  <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
 </blocks>

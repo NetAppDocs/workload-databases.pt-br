@@ -35,8 +35,8 @@ link:https://review.docs.netapp.com/us-en/workload-databases_explore-savings-upd
 
 Agora você pode usar o Terraform a partir do Codebox para implantar o PostgreSQL.
 
-* link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html["Crie um servidor de banco de dados PostgreSQL"^]
-* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Use o Terraform do Codebox"^]
+* link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html["Crie um servidor de banco de dados PostgreSQL"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Use o Terraform do Codebox"]
 
 
 
@@ -161,8 +161,8 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 Agora você pode usar o Terraform na caixa Codebox para implantar o Microsoft SQL Server.
 
-* link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html["Crie um servidor de banco de dados"^]
-* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Use o Terraform do Codebox"^]
+* link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html["Crie um servidor de banco de dados"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Use o Terraform do Codebox"]
 
 
 
@@ -175,7 +175,7 @@ Agora você pode usar o Terraform na caixa Codebox para implantar o Microsoft SQ
 
 Agora você pode explorar a economia de servidores Microsoft SQL detetados no Amazon EC2 com o FSX for Windows File Server de armazenamento na calculadora de economia. Dependendo do seu servidor SQL e requisitos de armazenamento, você pode descobrir que o FSX for ONTAP é o mais econômico para suas cargas de trabalho de banco de dados.
 
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explore as economias com o FSX for ONTAP para suas cargas de trabalho de banco de dados"^]
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explore as economias com o FSX for ONTAP para suas cargas de trabalho de banco de dados"]
 
 
 
@@ -187,13 +187,13 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Expl
 
 Agora você pode personalizar as configurações do servidor Microsoft SQL no Amazon EC2 com o FSX for Windows File Server e armazenamento Elastic Block Store na calculadora de economia. Dependendo de seus requisitos de armazenamento, você pode descobrir que o FSX for ONTAP é o mais econômico para suas cargas de trabalho de banco de dados.
 
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explore as economias com o FSX for ONTAP para suas cargas de trabalho de banco de dados"^]
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explore as economias com o FSX for ONTAP para suas cargas de trabalho de banco de dados"]
 
 
 
 === Navegue até a calculadora de poupança a partir da página inicial
 
-Agora você pode navegar para a calculadora de economia a partir da link:https://console.workloads.netapp.com["console de fábrica do workload"^] página inicial. Selecione na Elastic Block Store e no FSX for Windows File Server para começar.
+Agora você pode navegar para a calculadora de economia a partir da link:https://console.workloads.netapp.com["console de fábrica do workload"] página inicial. Selecione na Elastic Block Store e no FSX for Windows File Server para começar.
 
 image:screenshot-explore-savings-home-small.png["captura de tela da página inicial do console de fábrica da carga de trabalho. A imagem mostra o bloco de bancos de dados com um novo botão explorar economia. Clique no botão para abrir um menu suspenso. O menu suspenso tem duas opções - Microsoft SQL Server no EBS e Microsoft SQL Server no FSX para Windows File Server."]
 
@@ -227,7 +227,7 @@ Agora você pode personalizar as configurações do Microsoft SQL Server, Amazon
 
 
 
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explore as economias com o FSX for ONTAP para suas cargas de trabalho de banco de dados"^]
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explore as economias com o FSX for ONTAP para suas cargas de trabalho de banco de dados"]
 
 
 
@@ -239,4 +239,4 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Expl
 
 A versão inicial inclui a funcionalidade de explorar a economia com o Amazon FSX for NetApp ONTAP como o ambiente de armazenamento para suas cargas de trabalho de banco de dados, detetar, gerenciar e implantar servidores Microsoft SQL, implantar e clonar bancos de dados e monitorar essas tarefas na fábrica de workloads.
 
-link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["Saiba mais sobre bancos de dados"^]
+link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["Saiba mais sobre bancos de dados"]
