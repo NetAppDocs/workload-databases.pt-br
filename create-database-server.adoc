@@ -42,6 +42,14 @@ Ative Directory:: O seguinte ocorre para o ative Directory (AD) durante a implan
 
 
 --
+
+
+
+
+== Grupos de segurança do ative Directory gerenciados pelo usuário
+
+Se você selecionar "ative Directory gerenciado pelo usuário" durante a implantação do Microsoft SQL Server na fábrica de carga de trabalho, você deverá fornecer um grupo de segurança que permita o tráfego entre as instâncias EC2 para o serviço de diretório para implantação. A fábrica de carga de trabalho não anexa automaticamente o grupo de segurança para o ative Directory gerenciado pelo usuário, como acontece com o AWS Managed Microsoft AD.
+
 Reversão de recurso:: Se você decidir reverter os recursos do sistema de nomes de domínio (DNS), os Registros de recursos no AD e no DNS não serão removidos automaticamente. Você pode remover os Registros do servidor DNS e do AD da seguinte forma.
 +
 --
@@ -258,10 +266,7 @@ Para implantações de FCI::
 --
 
 
-.. *Grupo de segurança*: Selecione um grupo de segurança existente ou crie um novo grupo de segurança.
-+
-Três grupos de segurança são anexados aos nós SQL (instâncias EC2) durante a implantação do novo servidor.
-
+.. *Grupo de segurança*: Selecione um grupo de segurança existente ou crie um novo grupo de segurança. Três grupos de segurança são anexados aos nós SQL (instâncias EC2) durante a implantação do novo servidor.
 +
 ... Um grupo de segurança de carga de trabalho é criado para permitir portas e protocolos necessários para a comunicação de cluster do Microsoft SQL e Windows nos nós.
 ... No caso do ative Directory gerenciado pela AWS, o grupo de segurança anexado ao serviço de diretório é adicionado automaticamente aos nós do Microsoft SQL para permitir a comunicação com o ative Directory.

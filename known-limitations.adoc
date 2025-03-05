@@ -58,12 +58,6 @@ O gerenciamento de configurações de grupos de disponibilidade sempre ativa nã
 
 
 
-== Grupos de segurança do ative Directory gerenciados pelo usuário
-
-Se você selecionar "ative Directory gerenciado pelo usuário" durante a implantação do Microsoft SQL Server na fábrica de carga de trabalho, você deverá fornecer um grupo de segurança que permita o tráfego entre as instâncias EC2 para o serviço de diretório para implantação. A fábrica de carga de trabalho não anexa automaticamente o grupo de segurança para o ative Directory gerenciado pelo usuário, como acontece com o AWS Managed Microsoft AD.
-
-
-
 == Chaves de criptografia personalizadas
 
 As chaves de criptografia personalizadas para o FSX for ONTAP não estão listadas com base na aplicabilidade do serviço. Você deve escolher a chave apropriada. As chaves gerenciadas da AWS são filtradas com base na aplicabilidade ao serviço.
