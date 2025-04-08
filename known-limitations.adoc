@@ -119,3 +119,17 @@ A avaliação de patches do sistema operacional feita para fins de otimização 
 == Cálculo da economia no local
 
 Os cálculos de custo e porcentagem do tamanho do volume para o armazenamento no local do Microsoft SQL Server não são levados em consideração.
+
+
+
+== Avaliação da replicação entre regiões
+
+* A avaliação de otimização não pode determinar se a replicação entre regiões (CRR) está sendo usada quando o sistema de arquivos FSX for ONTAP de destino está em uma conta diferente da AWS.
+* A fábrica de carga de trabalho avalia apenas a configuração CRR do sistema de arquivos FSX for ONTAP de origem.
+
+
+
+
+== Número de bancos de dados em instâncias do SQL Server
+
+Na guia Inventário e no Dashboard, a fábrica de carga de trabalho suporta até 850 bancos de dados em instâncias do SQL Server.

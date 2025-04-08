@@ -989,7 +989,6 @@
   <block id="3902a76bb589f831b404ce1ec9865654" category="list-text">*Veja os cálculos*</block>
   <block id="68bfcbb9e0f73d04499c64e0bc23d369" category="inline-xref">Implante o Microsoft SQL Server no AQS EC2 usando o FSX para sistemas de arquivos ONTAP</block>
   <block id="a8aa5970e795fc6acbc94959e79d385e" category="paragraph">Para mudar para o FSX for ONTAP, siga as instruções <block ref="111c1b12d181a36b3809e884a469d22f" category="inline-xref-macro-rx"></block>para .</block>
-  <block id="593a4cc0b797fa5f4354bae99e3fa42d" category="list-text">Resiliência: Inclui snapshots locais</block>
   <block id="4fbdcdf3c2d8694d5e358b3175b867da" category="section-title">03 de março de 2025</block>
   <block id="5b9ce98e8b3125f8d921be7829ab8a26" category="sidebar">Crie um Microsoft SQL Server</block>
   <block id="25b3aca23d0668827e396e11779fd3e8" category="paragraph"><block ref="25b3aca23d0668827e396e11779fd3e8" category="inline-link-macro-rx"></block></block>
@@ -998,7 +997,37 @@
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
   <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
   <block id="b344730cd36668c36266c1d50c447eea" category="list-text">*Grupo de segurança*: Selecione um grupo de segurança existente ou crie um novo grupo de segurança. Três grupos de segurança são anexados aos nós SQL (instâncias EC2) durante a implantação do novo servidor.</block>
-  <block id="372b286436aa00cac0e53fa1f2a9c659" category="paragraph">Você pode usar o modo de implantação _Advanced Create_ para concluir essa tarefa na fábrica de carga de trabalho com permissões do modo _Automate_. Você também pode usar as seguintes ferramentas disponíveis no Codebox: API REST, AWS CLI, AWS CloudFormation e Terraform. <block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>.</block>
   <block id="292e876f4d1d5af73b815913bd3d9b26" category="doc">Configuração de alta disponibilidade do PostgreSQL</block>
   <block id="047e8f86b83bb2e8d4c34b1dc560257b" category="paragraph">Agora você pode implantar uma configuração de alta disponibilidade (HA) para o servidor PostgreSQL.</block>
+  <block id="8bb788607f31f673e25d0ba34b09a14d" category="doc">Melhorias na otimização</block>
+  <block id="7e9a755c644cbdbaab2927671606cf89" category="paragraph">Novas avaliações de otimização, correções e a exibição de vários recursos estão disponíveis ao otimizar seus ambientes de banco de dados.</block>
+  <block id="3cde2cfbcdbdd79a3c1d3d6b547ab80d" category="section-title">Avaliações de resiliência</block>
+  <block id="218733e992141498b68631094f232446" category="paragraph">Os aprimoramentos incluem novas avaliações de resiliência para verificar se os recursos de redundância de dados e recuperação de desastres estão configurados para seus ambientes de banco de dados.</block>
+  <block id="a8b36cbcd13facdcd526df9ca0c4aba5" category="list-text">Backups do FSX para ONTAP: Analisa se os sistemas de arquivos FSX for ONTAP que atendem os volumes da instância do SQL Server são configurados com backups programados do FSX para ONTAP.</block>
+  <block id="3ddd695d01877806196cb9bc8be009da" category="list-text">Replicação entre regiões: Avalia se o FSX para sistemas de arquivos ONTAP que atendem instâncias do Microsoft SQL Server estão configurados com replicação entre regiões.</block>
+  <block id="233f3c54635152d78b375495cd0b5580" category="section-title">Correção de computação</block>
+  <block id="c4b982d56748631e5cf80fe05312f901" category="paragraph">A correção de Receive Side Scaling (RSS) configura o RSS para distribuir o processamento de rede entre vários processadores e garantir uma distribuição de carga eficiente.</block>
+  <block id="9ed609dc6760dae060dbad52b3aa2d42" category="section-title">Correção de snapshot local</block>
+  <block id="229b55b063b8208ec58911841f6bad18" category="paragraph">Define políticas de snapshot para volumes para suas instâncias do Microsoft SQL Server para manter seus ambientes de banco de dados resilientes em caso de perda de dados.</block>
+  <block id="14684cd0a52a7f7301e2400ff9ce8c16" category="section-title">Suporte para seleção múltipla de recursos</block>
+  <block id="909e5b19987da9dd66e288802ac9729e" category="paragraph">Ao otimizar as configurações do banco de dados, você poderá selecionar recursos específicos em vez de todos os recursos.</block>
+  <block id="d36362545a72cd1eef4186ca8a99dca1" category="section-title">Visualização de inventário melhorada</block>
+  <block id="9f3b67d6f0d3de869a895be1df755a3b" category="paragraph">A guia Inventário no console de fábrica de carga de trabalho foi simplificada para que ele contenha apenas servidores SQL executados no Amazon FSX for NetApp ONTAP. Agora você encontrará servidores SQL no local e em execução na Amazon Elastic Block Store e no Amazon FSX for Windows File Server na guia explorar economia.</block>
+  <block id="b66e93ffc0672f74db831d8f9d81fdba" category="section-title">Criação rápida disponível para a implantação do servidor PostgreSQL</block>
+  <block id="f7d019f8da84eee0771921896cbb0cd5" category="paragraph">Você pode usar essa opção de implantação rápida para criar um servidor PostgreSQL com configuração de HA e práticas recomendadas incorporadas.</block>
+  <block id="5963667f9fe01282fae9030cccbd24a3" category="paragraph"><block ref="5963667f9fe01282fae9030cccbd24a3" category="inline-link-macro-rx"></block></block>
+  <block id="958f5530e9f1db947c4f18b3cc30b2e9" category="admonition">Em _Quick Create_, o HA é o modelo de implantação padrão, o Windows 2016 é a versão padrão do Windows e o SQL 2019 Standard Edition é a versão padrão do SQL.</block>
+  <block id="a18df64f6d327d9f4d8ffd9736b846f6" category="admonition">As implantações de HA são suportadas apenas em configurações do FSX para várias zonas de disponibilidade (MAZ) para ONTAP.</block>
+  <block id="b06b1cc67628f13db38ca890693627fb" category="section-title">Avaliação da replicação entre regiões</block>
+  <block id="425a11288e6c089ecf9966b89b9be4eb" category="list-text">A avaliação de otimização não pode determinar se a replicação entre regiões (CRR) está sendo usada quando o sistema de arquivos FSX for ONTAP de destino está em uma conta diferente da AWS.</block>
+  <block id="a73971e47314d5a9302d6e0e452948e6" category="list-text">A fábrica de carga de trabalho avalia apenas a configuração CRR do sistema de arquivos FSX for ONTAP de origem.</block>
+  <block id="af64c2575cf7c41d9a388382dfd2aef2" category="section-title">Número de bancos de dados em instâncias do SQL Server</block>
+  <block id="b4f10df58cb8c1f0e0b30bd6fc637ddd" category="paragraph">Na guia Inventário e no Dashboard, a fábrica de carga de trabalho suporta até 850 bancos de dados em instâncias do SQL Server.</block>
+  <block id="fb090b715eaceea73761a137a2eb45c0" category="list-text">Resiliência: Inclui snapshots locais, backups do FSX para ONTAP e replicação entre regiões (CRR)</block>
+  <block id="765282496f8377d23a4dec7887b9cea8" category="paragraph">*Selecionar tudo* é o padrão, mas você pode selecionar recursos específicos para otimizar.</block>
+  <block id="c69c68bea63a58faad0233887cb8a9aa" category="section-title">04 de abril de 2025</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blogs &amp; comunidade</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Comunidade NetApp</block>
+  <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">BlueXP  blogs</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Webinars na nuvem</block>
 </blocks>

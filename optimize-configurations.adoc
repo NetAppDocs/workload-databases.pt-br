@@ -26,7 +26,7 @@ O que é digitalizado:: A fábrica de carga de trabalho avalia o status de otimi
 * Configuração de storage: Inclui gerenciamento de capacidade, thin Provisioning, política de disposição em categorias, snapshots, status, política e sessões de e/S de vários caminhos e muito mais
 * Computação: Inclui redimensionamento, patches do sistema operacional e configurações de adaptador de rede, como Receive Side Scaling (RSS) e descarregamento TCP
 * Aplicações: Inclui licenças Microsoft SQL Server, Microsoft SQL Server patch e configurações MAXDOP
-* Resiliência: Inclui snapshots locais
+* Resiliência: Inclui snapshots locais, backups do FSX para ONTAP e replicação entre regiões (CRR)
 
 
 --
@@ -61,6 +61,9 @@ Você também pode baixar um relatório dos resultados da avaliação selecionan
 A recomendação explica as práticas recomendadas e possíveis armadilhas de configurações não otimizadas.
 
 . Selecione para *otimizar* configurações não otimizadas.
++
+*Selecionar tudo* é o padrão, mas você pode selecionar recursos específicos para otimizar.
+
 . Revise o resumo da otimização e os itens de ação que aparecem na caixa de diálogo de otimização para saber o que acontecerá se você optar por otimizar. Algumas operações de otimização podem causar tempos de inatividade de instâncias ou interrupções de serviço.
 . Selecione *continuar* para otimizar a configuração.
 
