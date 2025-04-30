@@ -58,14 +58,45 @@ Complete os seguintes pré-requisitos antes de começar:
 * PowerShell7 é necessário para gerenciar a instância do banco de dados. Instale o PowerShell7 manualmente consultando link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4["Documentação do Microsoft PowerShell para Windows"^]a .
 * Todas as operações de gerenciamento são executadas pelo AWS System Manager Agent usando `NT Authority\SYSTEM` privilégios de usuário. Forneça as seguintes permissões para `NT Authority\SYSTEM` o usuário no servidor de banco de dados:
 +
-** `“ALTER SETTINGS”`
-** `“CONTROL SERVER”`
-** `“ALTER ANY DATABASE”`
-** `“VIEW ANY DEFINITION”`
-** `“CONNECT ANY DATABASE”`
-** `“CREATE ANY DATABASE”`
+[cols="2,2a"]
+|===
+| Login securables | Onde necessário? 
 
 
+| `VIEW ANY DEFINITION`  a| 
+Inventário, avaliação, remediação, criar banco de dados, criar clone sandbox, explorar economia
+
+
+
+| `CONNECT ANY DATABASE`  a| 
+Inventário, avaliação, remediação, criar banco de dados, criar clone sandbox
+
+
+
+| `VIEW SERVER STATE`  a| 
+Inventário, avaliação, remediação, criar banco de dados, criar clone sandbox
+
+
+
+| `CREATE ANY DATABASE`  a| 
+Criar banco de dados, criar clone sandbox
+
+
+
+| `CONTROL SERVER`  a| 
+Crie um clone de sandbox
+
+
+
+| `ALTER ANY DATABASE`  a| 
+Crie um clone de sandbox
+
+
+
+| `ALTER SETTINGS`  a| 
+Crie clone sandbox, remediação para MAXDOP
+
+|===
 
 
 .Passos
