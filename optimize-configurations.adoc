@@ -27,6 +27,7 @@ O que é digitalizado:: A fábrica de carga de trabalho avalia o status de otimi
 * Computação: Inclui redimensionamento, patches do sistema operacional e configurações de adaptador de rede, como Receive Side Scaling (RSS) e descarregamento TCP
 * Aplicações: Inclui licenças Microsoft SQL Server, Microsoft SQL Server patch e configurações MAXDOP
 * Resiliência: Inclui snapshots locais, backups do FSX para ONTAP e replicação entre regiões (CRR)
+* Clones: Inclui opções para atualizar e excluir clones (sandboxes) com mais de 60 dias
 
 
 --
@@ -44,11 +45,8 @@ NOTE: O processo de otimização pode causar tempos de inatividade da instância
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
-. Na guia *Inventário*, selecione a seta suspensa para expandir a linha do host para exibir suas instâncias gerenciadas.
-+
-O host se expande e as instâncias de host aparecem.
-
-. Selecione o menu de três pontos da instância e, em seguida, selecione *Otimize*.
+. Na guia *Inventário*, selecione a guia *instâncias*.
+. Selecione o menu de três pontos da instância para otimizar e, em seguida, selecione *Otimize*.
 . Na página Otimize instance (otimizar instância) para a instância do SQL Server, reveja os resultados da avaliação.
 +
 Você pode filtrar por categorias, subcategorias, status, gravidade e tags.
@@ -64,7 +62,16 @@ A recomendação explica as práticas recomendadas e possíveis armadilhas de co
 +
 *Selecionar tudo* é o padrão, mas você pode selecionar recursos específicos para otimizar.
 
-. Revise o resumo da otimização e os itens de ação que aparecem na caixa de diálogo de otimização para saber o que acontecerá se você optar por otimizar. Algumas operações de otimização podem causar tempos de inatividade de instâncias ou interrupções de serviço.
++
+.. Para todas as configurações, exceto limpeza de clones, revise os detalhes de otimização na caixa de diálogo de otimização para saber o que acontecerá se você optar por otimizar. Algumas operações de otimização podem causar tempos de inatividade de instâncias ou interrupções de serviço.
+.. Para limpeza de clones, selecione bancos de dados clonados (caixas de areia) para atualizar ou excluir.
++
+*** Atualizar um clone sincroniza-o com seu banco de dados de origem. A atualização está disponível apenas para clones criados na fábrica de workloads.
+*** A exclusão de um clone remove-o permanentemente, libera espaço de armazenamento e reduz custos. Você pode excluir clones criados dentro e fora do workload de fábrica.
+
+
+
+
 . Selecione *continuar* para otimizar a configuração.
 
 

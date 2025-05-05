@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: postpone-analysis.html 
+keywords: postpone configuration analysis, dismiss configuration analysis, postpone, dismiss, stop, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
+summary: Adie ou ignore a análise de configurações de banco de dados específicas que não se aplicam ao ambiente de banco de dados para evitar alertas desnecessários e resultados de otimização imprecisos. 
+---
+= Adiar ou ignorar a análise das configurações do banco de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Adie ou ignore a análise de configurações de banco de dados específicas que não se aplicam ao ambiente de banco de dados para evitar alertas desnecessários e resultados de otimização imprecisos. Você pode reativar uma análise de configuração adiada ou descartada a qualquer momento.
+
+.Sobre esta tarefa
+Os requisitos do aplicativo para configurações de banco de dados variam. A fábrica de carga de trabalho oferece duas opções para ignorar a análise de configurações específicas de banco de dados, para que você possa monitorar apenas problemas relevantes e obter uma visão precisa da integridade das configurações relevantes. Quando uma análise de configuração específica é adiada ou descartada, a configuração não é incluída na pontuação total de otimização.
+
+Você pode adiar, descartar e reativar a análise de configuração no nível de configuração e no nível de instância do SQL Server.
+
+* *Adiar por 30 dias*: Adiar a análise interromperá a análise por 30 dias. Após 30 dias, a análise será reiniciada automaticamente.
+* *Dismiss*: Rejeitar a análise adia a análise indefinidamente. Você pode reiniciar a análise, se necessário.
+
+
+Você pode adiar ou ignorar as seguintes configurações para instâncias do Microsoft SQL Server:
+
+* Dimensionamento do armazenamento: Inclui camada de armazenamento, espaço livre do sistema de arquivos, tamanho da unidade de Registro e tamanho da unidade TempDB
+* Layout de armazenamento: Inclui posicionamento de arquivos de dados do usuário, posicionamento de arquivos de log e posicionamento TempDB
+* Configuração de storage: Inclui gerenciamento de capacidade, thin Provisioning, política de disposição em categorias, snapshots, status, política e sessões de e/S de vários caminhos e muito mais
+* Computação: Inclui redimensionamento, patches do sistema operacional e configurações de adaptador de rede, como Receive Side Scaling (RSS) e descarregamento TCP
+* Aplicações: Inclui licenças Microsoft SQL Server, Microsoft SQL Server patch e configurações MAXDOP
+* Resiliência: Inclui snapshots locais, backups do FSX para ONTAP e replicação entre regiões (CRR)
+* Clones
+
+
+As instruções a seguir descrevem como adiar, descartar ou reativar uma análise no nível de configuração. Para concluir as seguintes tarefas para instâncias específicas do SQL Server, inicie na guia *Dashboard*.
+
+[role="tabbed-block"]
+====
+.Adiar
+Adiar para parar uma análise de configuração por 30 dias. Após 30 dias, a análise será reiniciada automaticamente.
+
+--
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Na guia *Inventário*, role para baixo até a configuração para adiar, selecione o menu de três pontos e, em seguida, selecione *adiar por 30 dias*.
+. Selecione *continuar*.
+
+
+.Resultado
+A análise de configuração pára por 30 dias.
+
+--
+.Dispensar
+Ignorar para interromper uma análise de configuração indefinidamente. Você pode reiniciar a análise quando necessário.
+
+--
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Na guia *Inventory*, role para baixo até a configuração a ser descartada, selecione o menu de três pontos e selecione *Dismiss*.
+. Selecione *continuar*.
+
+
+.Resultado
+A análise de configuração pára.
+
+--
+.Reativar
+Reative uma análise de configuração adiada ou descartada a qualquer momento.
+
+--
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Na guia *Inventário*, role para baixo até a configuração para reativar, selecione o menu de três pontos e, em seguida, selecione *reativar*.
+. Selecione *continuar*.
+
+
+.Resultado
+A análise de configuração é reativada e ocorre diariamente a avançar.
+
+--
+====

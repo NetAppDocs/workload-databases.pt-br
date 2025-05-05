@@ -633,7 +633,6 @@
   <block id="5f4f392649432d3064fdf2a04015472b" category="list-text">Selecione a seta suspensa para exibir a recomendação para qualquer configuração. Certifique-se de rever a recomendação com cuidado.</block>
   <block id="c9e425055996f71ecfc858708d926276" category="paragraph">A recomendação explica as práticas recomendadas e possíveis armadilhas de configurações não otimizadas.</block>
   <block id="ea3bf0643d3540c97b9b92a3fb2bbf75" category="list-text">Selecione para *otimizar* configurações não otimizadas.</block>
-  <block id="fa01f4b57079f7ca82b8d852cbf4ed43" category="list-text">Revise o resumo da otimização e os itens de ação que aparecem na caixa de diálogo de otimização para saber o que acontecerá se você optar por otimizar. Algumas operações de otimização podem causar tempos de inatividade de instâncias ou interrupções de serviço.</block>
   <block id="78a5af6b8a486797f81f9b0dff06821e" category="list-text">Selecione *continuar* para otimizar a configuração.</block>
   <block id="c6ff3995f3c633f2808f96020f887fd9" category="paragraph">O processo de otimização é iniciado. Selecione o separador *monitorização de trabalhos* para ver o estado da operação.</block>
   <block id="0c47496112bcf6ed0b29fe1fe1d65d62" category="summary">A fábrica de workloads do BlueXP  para bancos de dados oferece otimização contínua para implantações do Microsoft SQL Server no armazenamento do Amazon FSX para NetApp ONTAP.</block>
@@ -875,8 +874,6 @@
   <block id="10f9689e79d67ec4a1651805229939e6" category="list-text">Clique no menu de três pontos da tarefa e clique em *vá para o CloudFormation* para exibir o log de tarefas no console do AWS CloudFormation.</block>
   <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">A fábrica de carga de trabalho do BlueXP  para bancos de dados verifica as configurações do Microsoft SQL Server, fornecendo informações e recomendações para ajudá-lo a alcançar a excelência operacional.</block>
   <block id="d156d1de362b4c66bc3effc1835aafe1" category="paragraph">A fábrica de carga de trabalho do BlueXP  para bancos de dados verifica e avalia continuamente as configurações de implantação do Microsoft SQL Server em execução no Amazon FSX for NetApp ONTAP. Esse recurso fornece insights e recomendações com a opção de otimizar automaticamente configurações não otimizadas para que seus workloads de banco de dados possam alcançar excelência operacional.</block>
-  <block id="53c8dd8acbb0f2913fab098279485e71" category="list-text">Na guia *Inventário*, selecione a seta suspensa para expandir a linha do host para exibir suas instâncias gerenciadas.</block>
-  <block id="14237fbd8e1fcf850f132ae839f0337b" category="list-text">Selecione o menu de três pontos da instância e, em seguida, selecione *Otimize*.</block>
   <block id="162d1fe2bfd40fdaf4d1507dff7ac010" category="list-text">Na página Otimize instance (otimizar instância) para a instância do SQL Server, reveja os resultados da avaliação.</block>
   <block id="1d40c1f145e4257a51df779ce509811e" category="paragraph">Você pode filtrar por categorias, subcategorias, status, gravidade e tags.</block>
   <block id="2c43db36710e9c59ec3e8117665a6dd6" category="paragraph">Você também pode baixar um relatório dos resultados da avaliação selecionando *Exportar PDF*.</block>
@@ -1038,4 +1035,51 @@
   <block id="3f21b90f61021d5dd0aefe08d40a11a9" category="cell"><block ref="83a834b3af30dbb7c2007ab7f9bc913b" prefix="" category="inline-code"></block></block>
   <block id="eb0cdf74b605d67e1444197ac2f77c91" category="cell"><block ref="8fdca9c0332e9935139d7384c2a814df" prefix="" category="inline-code"></block></block>
   <block id="538b18c6800ad42458e0bf0bc8a311b6" category="paragraph">Crie clone sandbox, remediação para MAXDOP</block>
+  <block id="25696569671071b8bd3db9a4c5f6613e" category="doc">Melhorias no painel de instrumentos</block>
+  <block id="04f9acced28b52e064ba8ccb957a615c" category="list-text">As visualizações entre contas e entre regiões estão disponíveis à medida que você navega entre guias no console de fábrica da carga de trabalho do BlueXP . As novas visualizações melhoram o gerenciamento, o monitoramento e a otimização de recursos.</block>
+  <block id="6e21267988cadc818dd398393c695465" category="list-text">A partir do bloco *economias potenciais* no painel, você poderá revisar rapidamente o que você pode economizar mudando para o FSX for ONTAP da Amazon Elastic Block Store ou do Amazon FSX for Windows File Server.</block>
+  <block id="255a96bb0a74416846fbad7e40f8ddf4" category="section-title">Análise ad hoc disponível para configurações de banco de dados</block>
+  <block id="2b1a16b6cd72c9555872ec61d3334af5" category="paragraph">A fábrica de carga de trabalho do BlueXP  para bancos de dados verifica automaticamente instâncias gerenciadas do Microsoft SQL Server com o armazenamento do FSX for ONTAP para possíveis problemas de configuração. Agora, além da digitalização diária, você pode digitalizar a qualquer momento.</block>
+  <block id="365d8fe4130e8c12f4a3defc920178dd" category="section-title">Remoção de registos de avaliação no local</block>
+  <block id="c4fd25bd6650f0eaedfd01e29fbecddd" category="paragraph">Depois de explorar a economia de um host no local do Microsoft SQL Server, você tem a opção de remover o Registro de host no local da fábrica de workloads do BlueXP .</block>
+  <block id="ae548505379d0043460d8c15540cb546" category="section-title">Limpeza de clones</block>
+  <block id="0d003b1e16a8cf8a4b6c0774ee3a0f41" category="paragraph">A avaliação e a correção da limpeza de clones identifica e gerencia clones antigos e caros. Os clones com mais de 60 dias podem ser atualizados ou excluídos do console de fábrica do workload do BlueXP .</block>
+  <block id="6da89f0beda0fbec41b06125b0b7ad32" category="section-title">Adiar e descartar a análise de configuração</block>
+  <block id="4a9a50cea48d9e2ded3becc284af4e41" category="paragraph">Algumas configurações podem não se aplicar aos ambientes de banco de dados. Agora você tem opções para adiar uma análise de configuração específica em 30 dias ou ignorar a análise.</block>
+  <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">Terminologia de permissões atualizada</block>
+  <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">A interface do usuário e a documentação de fábrica da carga de trabalho agora usam "somente leitura" para se referir a permissões de leitura e "leitura-gravação" para se referir a permissões de automação.</block>
+  <block id="2d07fc9146d02690dffeffa52fbd2ec4" category="list-text">Remoção de host no local</block>
+  <block id="1c28fa92b25f4914c091b667402466d3" category="list-text">Depois de explorar a economia de um host no local do Microsoft SQL Server, você tem a opção de remover o Registro de host no local da fábrica de workloads do BlueXP . Selecione o menu de três pontos do host local do Microsoft SQL Server e selecione *Excluir*.</block>
+  <block id="d824014300a5fc7a6853a9182b4be5ef" category="list-text">Clones: Inclui opções para atualizar e excluir clones (sandboxes) com mais de 60 dias</block>
+  <block id="04467e563313dfe5a1da17bd70a4de75" category="list-text">Na guia *Inventário*, selecione a guia *instâncias*.</block>
+  <block id="8e3db49aef4ba359c0140eea33f2459c" category="list-text">Selecione o menu de três pontos da instância para otimizar e, em seguida, selecione *Otimize*.</block>
+  <block id="77b2be525ee3461ec499242fca3978f8" category="list-text">Para todas as configurações, exceto limpeza de clones, revise os detalhes de otimização na caixa de diálogo de otimização para saber o que acontecerá se você optar por otimizar. Algumas operações de otimização podem causar tempos de inatividade de instâncias ou interrupções de serviço.</block>
+  <block id="c5d0b906e655aeb0e712fdc99742d179" category="list-text">Para limpeza de clones, selecione bancos de dados clonados (caixas de areia) para atualizar ou excluir.</block>
+  <block id="64b911fb444d2ba4347dbcba8d839d9c" category="list-text">Atualizar um clone sincroniza-o com seu banco de dados de origem. A atualização está disponível apenas para clones criados na fábrica de workloads.</block>
+  <block id="b11d77d1a514a3b0bdf01908bc4826e9" category="list-text">A exclusão de um clone remove-o permanentemente, libera espaço de armazenamento e reduz custos. Você pode excluir clones criados dentro e fora do workload de fábrica.</block>
+  <block id="cf00508631c0415d4089fb10cbe0511d" category="summary">Adie ou ignore a análise de configurações de banco de dados específicas que não se aplicam ao ambiente de banco de dados para evitar alertas desnecessários e resultados de otimização imprecisos.</block>
+  <block id="0cdf26a09e8e4cde6653e44f4abd73fb" category="doc">Adiar ou ignorar a análise das configurações do banco de dados</block>
+  <block id="77df5d7dfd76cd0e6a1a7a837c509672" category="paragraph">Adie ou ignore a análise de configurações de banco de dados específicas que não se aplicam ao ambiente de banco de dados para evitar alertas desnecessários e resultados de otimização imprecisos. Você pode reativar uma análise de configuração adiada ou descartada a qualquer momento.</block>
+  <block id="54498ab3155b38b14174ab9dd5caef5a" category="paragraph">Os requisitos do aplicativo para configurações de banco de dados variam. A fábrica de carga de trabalho oferece duas opções para ignorar a análise de configurações específicas de banco de dados, para que você possa monitorar apenas problemas relevantes e obter uma visão precisa da integridade das configurações relevantes. Quando uma análise de configuração específica é adiada ou descartada, a configuração não é incluída na pontuação total de otimização.</block>
+  <block id="47112685bf756c67c8ac297ef60e48dc" category="paragraph">Você pode adiar, descartar e reativar a análise de configuração no nível de configuração e no nível de instância do SQL Server.</block>
+  <block id="8a219fba8bbd202ad1f7a47267ff5a2d" category="list-text">*Adiar por 30 dias*: Adiar a análise interromperá a análise por 30 dias. Após 30 dias, a análise será reiniciada automaticamente.</block>
+  <block id="71e07950d625dfcf829cac7019fb6f26" category="list-text">*Dismiss*: Rejeitar a análise adia a análise indefinidamente. Você pode reiniciar a análise, se necessário.</block>
+  <block id="cd5a81e0d9eeff49759cb9a6eaa2e1e2" category="paragraph">Você pode adiar ou ignorar as seguintes configurações para instâncias do Microsoft SQL Server:</block>
+  <block id="999cc42b236c7aee1157ff02d6f1bcd5" category="list-text">Clones</block>
+  <block id="75d9a01908e416c932fa5ee3fa0c77a3" category="paragraph">As instruções a seguir descrevem como adiar, descartar ou reativar uma análise no nível de configuração. Para concluir as seguintes tarefas para instâncias específicas do SQL Server, inicie na guia *Dashboard*.</block>
+  <block id="43d86b2167e8a3464a552ee706d46d88" category="paragraph-title">Adiar</block>
+  <block id="38d07dc1916e6ca30a9f936368828d18" category="paragraph">Adiar para parar uma análise de configuração por 30 dias. Após 30 dias, a análise será reiniciada automaticamente.</block>
+  <block id="b8bad4787f04ab4d4933464f551ed74c" category="list-text">Na guia *Inventário*, role para baixo até a configuração para adiar, selecione o menu de três pontos e, em seguida, selecione *adiar por 30 dias*.</block>
+  <block id="136dc09835924029e4299fa28f17233d" category="list-text">Selecione *continuar*.</block>
+  <block id="8dca288df860b62f4b631d87b4320f91" category="paragraph">A análise de configuração pára por 30 dias.</block>
+  <block id="c8a59e7135a20b362f9c768b09454fdb" category="paragraph-title">Dispensar</block>
+  <block id="26765b6cc82b68114c879d49f83b0e5a" category="paragraph">Ignorar para interromper uma análise de configuração indefinidamente. Você pode reiniciar a análise quando necessário.</block>
+  <block id="fd9eed8a1f28cfe92f0d2d738455682b" category="list-text">Na guia *Inventory*, role para baixo até a configuração a ser descartada, selecione o menu de três pontos e selecione *Dismiss*.</block>
+  <block id="bfc2ef5a56455cfacfde13cf1612e36b" category="paragraph">A análise de configuração pára.</block>
+  <block id="8e88e8d3ce1694ab82d525e91ae7c572" category="paragraph-title">Reativar</block>
+  <block id="54a679b97854ca1a358ef23dc83cfce6" category="paragraph">Reative uma análise de configuração adiada ou descartada a qualquer momento.</block>
+  <block id="58e2f7c25b65ba2e36fc6778b985ab34" category="list-text">Na guia *Inventário*, role para baixo até a configuração para reativar, selecione o menu de três pontos e, em seguida, selecione *reativar*.</block>
+  <block id="f01282bfdabc9c97224d922f36d898b8" category="paragraph">A análise de configuração é reativada e ocorre diariamente a avançar.</block>
+  <block id="822748e99c70e9162ce5432b2e1eff5c" category="section-title">04 de maio de 2025</block>
+  <block id="f865802ec5f0fe104a096589d51b39a4" category="sidebar">Adiar a análise de configuração</block>
 </blocks>

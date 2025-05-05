@@ -266,6 +266,9 @@ Além disso, role para baixo até a parte inferior da página para exibir o rela
 
 Para mudar para o FSX for ONTAP, siga as instruções <<Implante o Microsoft SQL Server no AWS EC2 usando o FSX for ONTAP,Implante o Microsoft SQL Server no AQS EC2 usando o FSX para sistemas de arquivos ONTAP>>para .
 
+Remoção de host no local:: Depois de explorar a economia de um host no local do Microsoft SQL Server, você tem a opção de remover o Registro de host no local da fábrica de workloads do BlueXP . Selecione o menu de três pontos do host local do Microsoft SQL Server e selecione *Excluir*.
+
+
 
 
 == Implante o Microsoft SQL Server no AWS EC2 usando o FSX for ONTAP
