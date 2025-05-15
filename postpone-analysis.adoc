@@ -38,9 +38,9 @@ As instruções a seguir descrevem como adiar, descartar ou reativar uma anális
 [role="tabbed-block"]
 ====
 .Adiar
+--
 Adiar para parar uma análise de configuração por 30 dias. Após 30 dias, a análise será reiniciada automaticamente.
 
---
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
@@ -53,9 +53,9 @@ A análise de configuração pára por 30 dias.
 
 --
 .Dispensar
+--
 Ignorar para interromper uma análise de configuração indefinidamente. Você pode reiniciar a análise quando necessário.
 
---
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
@@ -68,9 +68,9 @@ A análise de configuração pára.
 
 --
 .Reativar
+--
 Reative uma análise de configuração adiada ou descartada a qualquer momento.
 
---
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
