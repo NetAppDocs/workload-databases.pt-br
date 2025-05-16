@@ -132,4 +132,4 @@ Os cálculos de custo e porcentagem do tamanho do volume para o armazenamento no
 
 == Número de bancos de dados em instâncias do SQL Server
 
-Na guia Inventário e no Dashboard, a fábrica de carga de trabalho suporta até 850 bancos de dados em instâncias do SQL Server.
+Na guia Inventário e no Dashboard, a fábrica de carga de trabalho suporta até 1.500 bancos de dados em instâncias do SQL Server.

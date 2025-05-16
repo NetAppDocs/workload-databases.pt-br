@@ -1002,7 +1002,6 @@
   <block id="425a11288e6c089ecf9966b89b9be4eb" category="list-text">A avaliação de otimização não pode determinar se a replicação entre regiões (CRR) está sendo usada quando o sistema de arquivos FSX for ONTAP de destino está em uma conta diferente da AWS.</block>
   <block id="a73971e47314d5a9302d6e0e452948e6" category="list-text">A fábrica de carga de trabalho avalia apenas a configuração CRR do sistema de arquivos FSX for ONTAP de origem.</block>
   <block id="af64c2575cf7c41d9a388382dfd2aef2" category="section-title">Número de bancos de dados em instâncias do SQL Server</block>
-  <block id="b4f10df58cb8c1f0e0b30bd6fc637ddd" category="paragraph">Na guia Inventário e no Dashboard, a fábrica de carga de trabalho suporta até 850 bancos de dados em instâncias do SQL Server.</block>
   <block id="fb090b715eaceea73761a137a2eb45c0" category="list-text">Resiliência: Inclui snapshots locais, backups do FSX para ONTAP e replicação entre regiões (CRR)</block>
   <block id="765282496f8377d23a4dec7887b9cea8" category="paragraph">*Selecionar tudo* é o padrão, mas você pode selecionar recursos específicos para otimizar.</block>
   <block id="c69c68bea63a58faad0233887cb8a9aa" category="section-title">04 de abril de 2025</block>
@@ -1081,4 +1080,5 @@
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*API REST*: Use as APIs REST de fábrica de carga de trabalho para implantar e gerenciar seus sistemas de arquivos FSX for ONTAP e outros recursos da AWS.</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation*: Use o código do AWS CloudFormation para executar as ações definidas no console de fábrica de carga de trabalho para modelar, provisionar e gerenciar recursos da AWS e de terceiros a partir da pilha do CloudFormation em sua conta da AWS.</block>
   <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">*Fornecedor de fábrica de carga de trabalho do Terraform BlueXP *: Use o Terraform para criar e gerenciar fluxos de trabalho de infraestrutura gerados no console de fábrica de carga de trabalho.</block>
+  <block id="5614519834733a69bfb8911eae5d33b8" category="paragraph">Na guia Inventário e no Dashboard, a fábrica de carga de trabalho suporta até 1.500 bancos de dados em instâncias do SQL Server.</block>
 </blocks>
