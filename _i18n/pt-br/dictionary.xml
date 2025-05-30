@@ -277,8 +277,6 @@
   <block id="a5d2a4e28080feba2d0ba29a55f0eeab" category="list-text">Em especificações do EC2, selecione o *tipo de instância* no menu suspenso.</block>
   <block id="0e98c2470a9fecd3035980d6c9bd5dfe" category="section-title">Explore a economia dos hosts detetados</block>
   <block id="bfe3baeb9acd99f2f2bce618befc4139" category="paragraph">Complete os seguintes pré-requisitos antes de começar:</block>
-  <block id="def9511b261c88922ac5674a45135773" category="inline-link-macro">Saiba como detetar hosts</block>
-  <block id="70cd361d4d146e35701d6144f1c0ab2b" category="list-text">Detecte hosts no EBS e no FSX for Windows em seu inventário de bancos de dados. <block ref="c3d02703f332265b4bfd19fd03e6dd21" category="inline-link-macro-rx"></block>.</block>
   <block id="8f334cc9204ebef849d5d29b3d23b485" category="list-text">No bloco bancos de dados, selecione *explorar economia* e, em seguida, *Microsoft SQL Server no FSX para Windows* no menu suspenso.</block>
   <block id="bd0005565e08b9807da651535d09e628" category="inline-xref">explore as poupanças através da personalização</block>
   <block id="b2b254b73e406acc574452e9f29f5d9a" category="list-text">Na guia explorar economia, clique em *explorar economia* do servidor de banco de dados usando armazenamento EBS.</block>
@@ -1079,6 +1077,11 @@
   <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">*CLI do CloudShell*: A fábrica de carga de trabalho inclui uma CLI do CloudShell para gerenciar e operar ambientes AWS e NetApp em contas a partir de uma única CLI baseada em navegador. Acesse o CloudShell a partir da barra superior do console de fábrica de carga de trabalho.</block>
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*API REST*: Use as APIs REST de fábrica de carga de trabalho para implantar e gerenciar seus sistemas de arquivos FSX for ONTAP e outros recursos da AWS.</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation*: Use o código do AWS CloudFormation para executar as ações definidas no console de fábrica de carga de trabalho para modelar, provisionar e gerenciar recursos da AWS e de terceiros a partir da pilha do CloudFormation em sua conta da AWS.</block>
-  <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">*Fornecedor de fábrica de carga de trabalho do Terraform BlueXP *: Use o Terraform para criar e gerenciar fluxos de trabalho de infraestrutura gerados no console de fábrica de carga de trabalho.</block>
   <block id="5614519834733a69bfb8911eae5d33b8" category="paragraph">Na guia Inventário e no Dashboard, a fábrica de carga de trabalho suporta até 1.500 bancos de dados em instâncias do SQL Server.</block>
+  <block id="905bc3578e603008d83976307778ddcc" category="list-text">Para obter recomendações de tipo de instância e melhorar a precisão de custos, faça o seguinte:</block>
+  <block id="10d9194778791c152af2c0be1806e0b1" category="list-text">Conceda permissões ao Amazon CloudWatch e ao AWS Compute Optimizer.</block>
+  <block id="1dffe1578c264cd074d1fbf2823deeca" category="list-text">Entre no AWS Management Console e abra o serviço IAM.</block>
+  <block id="429fc992484e56fc5119b7b343df8bab" category="list-text">Edite a política para a função do IAM. Copie e adicione as seguintes permissões do Amazon CloudWatch e do AWS Compute Optimizer.</block>
+  <block id="948ce9adc60f5781dbfbd99d2c9d74d5" category="list-text">Inclua a conta faturável da AWS no AWS Compute Optimizer.</block>
+  <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Fornecedor de fábrica de carga de trabalho do Terraform BlueXP *: Use o Terraform para criar e gerenciar fluxos de trabalho de infraestrutura gerados no console de fábrica de carga de trabalho.</block>
 </blocks>
