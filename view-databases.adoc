@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: view-databases.html 
+keywords:  
+summary: Para obter um resumo dos recursos do banco de dados na fábrica de carga de trabalho, visualize todos os bancos de dados no inventário de bancos de dados. Você também pode visualizar os bancos de dados por instância registrada. 
+---
+= Exibir bancos de dados na fábrica de carga de trabalho para bancos de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para obter um resumo dos recursos do banco de dados na fábrica de carga de trabalho, visualize todos os bancos de dados no inventário de bancos de dados. Você também pode visualizar os bancos de dados por instância registrada.
+
+.Antes de começar
+* Instâncias de host que contêm recursos de banco de dados devem ter FSx para armazenamento do sistema de arquivos ONTAP.
+* As instâncias do host devem ser registradas na fábrica de carga de trabalho. Aprenda a link:register-instance.html["registrar instâncias de host"].
+
+
+.Passos
+[role="tabbed-block"]
+====
+.Exibir bancos de dados para uma única instância
+--
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *Inventário*.
+. Clique na seta suspensa para expandir a linha do host para exibir seus bancos de dados.
++
+O host se expande e as instâncias do host aparecem.
+
+. Clique no menu de três pontos da instância que contém os bancos de dados a serem exibidos.
+. Selecione *Ver bases de dados*.
+
+
+--
+.Exibir bancos de dados para todas as instâncias
+--
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *Inventário*.
+. Clique na seta suspensa para expandir a linha do host para exibir seus bancos de dados.
++
+O host se expande e as instâncias do host aparecem.
+
+. Clique no menu de três pontos da instância que contém os bancos de dados a serem exibidos.
+. Selecione *Ver bases de dados*.
+
+
+--
+====
+.Resultado
+Você visualizou os recursos do banco de dados na fábrica de carga de trabalho.

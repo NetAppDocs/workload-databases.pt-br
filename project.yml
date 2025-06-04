@@ -38,20 +38,36 @@ sidebar:
         url: "/create-database-server.html"
       - title: Crie o servidor PostgreSQL
         url: "/create-postgresql-server.html"
-    - title: Detectar um servidor de banco de dados
-      url: "/detect-host.html"
-    - title: Crie um banco de dados
-      url: "/create-database.html"
+    - title: Gerenciar instâncias
+      entries:
+      - title: Gerenciamento de instâncias
+        url: manage-instance.html
+      - title: Registrar uma instância
+        url: "/register-instance.html"
+      - title: Exibir bancos de dados
+        url: "/view-databases.html"
+      - title: Crie um banco de dados
+        url: "/create-database.html"
+      - title: Crie um clone de sandbox
+        url: "/create-sandbox-clone.html"
     - title: Automatize com Codebox
       url: "/automate-codebox.html"
   - title: Administrar e monitorar
     entries:
+    - title: Monitorar bancos de dados
+      url: "/monitor-databases.html"
+    - title: Implementar as melhores práticas de configuração
+      entries:
+      - title: Análise de configuração para bancos de dados
+        url: "/optimize-overview.html"
+      - title: Implementar configurações de banco de dados bem arquitetadas
+        url: "/optimize-configurations.html"
+      - title: Adiar a análise de configuração
+        url: "/postpone-analysis.html"
     - title: Gerenciar um Microsoft SQL Server
       url: "/manage-server.html"
     - title: Gerenciar clones
       entries:
-      - title: Crie um clone de sandbox
-        url: "/create-sandbox-clone.html"
       - title: Verifique a integridade de um clone de sandbox
         url: "/check-clone-integrity.html"
       - title: Reverter um clone de sandbox
@@ -66,16 +82,6 @@ sidebar:
         url: "/split-clone.html"
       - title: Exclua um clone de sandbox
         url: "/delete-clone.html"
-    - title: Monitorar bancos de dados
-      url: "/monitor-databases.html"
-    - title: Otimize o servidor SQL
-      entries:
-      - title: Visão geral da otimização contínua
-        url: "/optimize-overview.html"
-      - title: Otimizar configurações
-        url: "/optimize-configurations.html"
-      - title: Adiar a análise de configuração
-        url: "/postpone-analysis.html"
   - title: Conhecimento e apoio
     entries:
     - title: Registre-se para obter suporte

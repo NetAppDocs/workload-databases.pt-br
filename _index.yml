@@ -17,14 +17,12 @@ indexpage:
     links:
     - title: Explore as poupanças
       url: "/explore-savings.html"
+    - title: Registrar uma instância
+      url: "/register-instance.html"
     - title: Crie um Microsoft SQL Server
       url: "/create-database-server.html"
     - title: Crie um servidor PostgreSQL
       url: "/create-postgresql-server.html"
-    - title: Crie um banco de dados
-      url: "/create-database.html"
-    - title: Otimizar configurações
-      url: "/optimize-configurations.html"
   - title: Conhecimento e apoio
     links:
     - title: Registre-se para obter suporte

@@ -4,21 +4,21 @@ permalink: optimize-configurations.html
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
 summary: A fábrica de carga de trabalho do BlueXP  para bancos de dados verifica as configurações do Microsoft SQL Server, fornecendo informações e recomendações para ajudá-lo a alcançar a excelência operacional. 
 ---
-= Otimize as configurações para implantações do Microsoft SQL Server
+= Implementar configurações de banco de dados bem arquitetadas na fábrica de carga de trabalho
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-A fábrica de carga de trabalho do BlueXP  para bancos de dados verifica e avalia continuamente as configurações de implantação do Microsoft SQL Server em execução no Amazon FSX for NetApp ONTAP. Esse recurso fornece insights e recomendações com a opção de otimizar automaticamente configurações não otimizadas para que seus workloads de banco de dados possam alcançar excelência operacional.
+Usando insights e recomendações de análise de configuração, aproveite a fábrica de carga de trabalho para implementar as melhores práticas para suas configurações de banco de dados. Você pode facilmente encontrar problemas e tomar medidas para melhorar a arquitetura de quaisquer configurações que não estejam otimizadas para confiabilidade, segurança, eficiência, desempenho e custo.
 
 .Sobre esta tarefa
-A avaliação é executada automaticamente e continuamente uma vez por dia para instâncias do Microsoft SQL Server com o armazenamento do FSX for ONTAP gerenciado na fábrica de cargas de trabalho. Os relatórios de avaliação estão disponíveis no painel de otimização somente se um trabalho agendado diário tiver sido executado após a implantação ou após o gerenciamento de uma instância.
+A Workload Factory analisa as configurações do banco de dados diariamente. A análise diária fornece insights e recomendações com opções para corrigir problemas de configuração automaticamente, para que suas configurações atendam às práticas recomendadas.
 
-A fábrica de carga de trabalho fornece recomendações detalhadas para otimizar configurações com base nas práticas recomendadas do FSX for ONTAP. Você pode analisar as recomendações e optar por otimizar configurações não otimizadas.
+Você tem opções para revisar as recomendações para problemas de configuração e corrigir esses problemas no inventário de bancos de dados no console do workload factory.
 
-O que é digitalizado:: A fábrica de carga de trabalho avalia o status de otimização das seguintes configurações para instâncias do Microsoft SQL Server:
+O que é analisado:: A fábrica de carga de trabalho analisa o status bem arquitetado das seguintes configurações para instâncias do Microsoft SQL Server:
 +
 --
 * Dimensionamento do armazenamento: Inclui camada de armazenamento, espaço livre do sistema de arquivos, tamanho da unidade de Registro e tamanho da unidade TempDB
@@ -27,43 +27,40 @@ O que é digitalizado:: A fábrica de carga de trabalho avalia o status de otimi
 * Computação: Inclui redimensionamento, patches do sistema operacional e configurações de adaptador de rede, como Receive Side Scaling (RSS) e descarregamento TCP
 * Aplicações: Inclui licenças Microsoft SQL Server, Microsoft SQL Server patch e configurações MAXDOP
 * Resiliência: Inclui snapshots locais, backups do FSX para ONTAP e replicação entre regiões (CRR)
-* Clones: Inclui opções para atualizar e excluir clones (sandboxes) com mais de 60 dias
+* Clones: inclui opções para atualizar e excluir clones (sandboxes) que foram criados dentro ou fora da fábrica de carga de trabalho e têm mais de 60 dias
 
 
 --
 
 
 .Antes de começar
-* Você precisa ter credenciais com permissões de leitura ou automação.
-* Para avaliar o armazenamento de uma instância do Microsoft SQL Server, a instância deve ser gerenciada de fábrica de carga de trabalho e o tipo de armazenamento deve ser o FSX for ONTAP.
-* Certifique-se de rever cada recomendação cuidadosamente antes de selecionar para otimizar uma configuração ou configuração. Para as configurações RSS e MAXDOP, sugerimos que você teste as configurações recomendadas para determinar melhorias de desempenho antes de fazer alterações no seu ambiente de produção.
+* Você deve ter link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de leitura/gravação"^] para analisar as configurações do seu banco de dados.
+* Para avaliar o armazenamento de uma instância do Microsoft SQL Server, a instância deve ser registrada no workload factory e o tipo de armazenamento deve ser FSx para ONTAP. link:register-instance.html["Aprenda como registrar uma instância de host."]
+* Certifique-se de rever cada recomendação cuidadosamente antes de selecionar para corrigir uma configuração ou configuração. Para as configurações RSS e MAXDOP, sugerimos que você teste as configurações recomendadas para determinar melhorias de desempenho antes de fazer alterações no seu ambiente de produção.
 
 
 
-NOTE: O processo de otimização pode causar tempos de inatividade da instância ou interrupções de serviço. Certifique-se de rever o resumo da otimização e os itens de ação antes de escolher otimizar uma configuração.
+NOTE: O processo de remediação pode causar tempos de inatividade da instância ou interrupções de serviço. Certifique-se de revisar a recomendação cuidadosamente antes de decidir corrigir uma configuração.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Na guia *Inventário*, selecione a guia *instâncias*.
-. Selecione o menu de três pontos da instância para otimizar e, em seguida, selecione *Otimize*.
-. Na página Otimize instance (otimizar instância) para a instância do SQL Server, reveja os resultados da avaliação.
+. Selecione *Corrigir problemas* para visualizar os problemas de configuração da instância.
+. Na página de status Bem-arquitetado da instância do host, revise as descobertas da análise.
 +
-Você pode filtrar por categorias, subcategorias, status, gravidade e tags.
+Você pode filtrar problemas de configuração por categorias, subcategorias, status, gravidade e tags.
 
 +
-Você também pode baixar um relatório dos resultados da avaliação selecionando *Exportar PDF*.
+Você também pode baixar um relatório das descobertas selecionando *Exportar PDF*.
 
-. Selecione a seta suspensa para exibir a recomendação para qualquer configuração. Certifique-se de rever a recomendação com cuidado.
-+
-A recomendação explica as práticas recomendadas e possíveis armadilhas de configurações não otimizadas.
-
-. Selecione para *otimizar* configurações não otimizadas.
+. Selecione a seta suspensa para exibir a recomendação para qualquer configuração. As recomendações incluem práticas recomendadas, possíveis armadilhas de configurações não otimizadas e considerações importantes. Certifique-se de rever a recomendação com cuidado.
+. Selecione *Visualizar e corrigir* problemas de configuração quando a opção estiver disponível.
 +
 *Selecionar tudo* é o padrão, mas você pode selecionar recursos específicos para otimizar.
 
 +
-.. Para todas as configurações, exceto limpeza de clones, revise os detalhes de otimização na caixa de diálogo de otimização para saber o que acontecerá se você optar por otimizar. Algumas operações de otimização podem causar tempos de inatividade de instâncias ou interrupções de serviço.
+.. Para todas as configurações, exceto a limpeza de clones, revise os detalhes da recomendação para saber o que acontecerá se você optar pela otimização. Algumas operações de remediação podem causar inatividade da instância ou interrupções do serviço.
 .. Para limpeza de clones, selecione bancos de dados clonados (caixas de areia) para atualizar ou excluir.
 +
 *** Atualizar um clone sincroniza-o com seu banco de dados de origem. A atualização está disponível apenas para clones criados na fábrica de workloads.
@@ -72,8 +69,8 @@ A recomendação explica as práticas recomendadas e possíveis armadilhas de co
 
 
 
-. Selecione *continuar* para otimizar a configuração.
+. Selecione *continuar* para corrigir o problema de configuração.
 
 
 .Resultado
-O processo de otimização é iniciado. Selecione o separador *monitorização de trabalhos* para ver o estado da operação.
+O processo de remediação é iniciado. Selecione o separador *monitorização de trabalhos* para ver o estado da operação.

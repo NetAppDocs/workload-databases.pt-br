@@ -62,7 +62,6 @@
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Antes de começar</block>
   <block id="b2f899f972527ed53c986fff0ea809c9" category="paragraph">Certifique-se de que você tem os seguintes pré-requisitos antes de criar um novo host de banco de dados.</block>
   <block id="ee87d4c496da752f756c502bf6d73599" category="list-text">Credenciais e permissões</block>
-  <block id="1b3eca0f21789e391339e536902a0773" category="inline-link-macro">Credenciais de conta da AWS e permissões de modo de automação</block>
   <block id="4e79c01286f2a10af230320a37d7ce30" category="inline-link-macro">Saiba mais sobre a automação Codebox</block>
   <block id="6aa474bc798ba983a2979f974d7af008" category="list-text">Ao se conetar ao ative Directory, você deve ter acesso administrativo com permissões para fazer o seguinte:</block>
   <block id="711b4926fa677fe43f56947d4d5cafe7" category="list-text">Junte-se ao domínio</block>
@@ -222,26 +221,6 @@
   <block id="5697f3fa0c3bfd3435b1268d395d044b" category="doc">Divida um clone de sandbox do banco de dados de origem</block>
   <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">Selecione *Eliminar*.</block>
   <block id="1aef21babcea64bea2aff92468198535" category="list-text">Na caixa de diálogo Excluir, clique em *Excluir*.</block>
-  <block id="107c83bbd5efd331077f3ba178a657b5" category="doc">Detectar uma instância do Microsoft SQL Server</block>
-  <block id="89d4e8decf00d1ba7948a89df7b705a6" category="paragraph">Esta tarefa é para detetar uma instância _não detetada_.</block>
-  <block id="36df1b975561708b246ef1801ea416e5" category="list-text">FSX para ONTAP</block>
-  <block id="4b222d59a012c5cc128037a5a473cde7" category="list-text">Armazenamento de blocos elásticos (EBS)</block>
-  <block id="abef82f89770aefd53c1cafe296c05f7" category="list-text">FSX para Windows File Server</block>
-  <block id="0c58524f460d0dca6bc74f75070e81b4" category="paragraph">Em bancos de dados, as instâncias descobertas são categorizadas da seguinte forma:</block>
-  <block id="8482966e54e535a17c37e8a9e60719d9" category="list-text">Falha na autenticação do Microsoft SQL Server.</block>
-  <block id="d7d2bdfad20e8678423a16803cafd735" category="paragraph">Os requisitos para detetar uma instância de servidor de banco de dados não detetada são os seguintes:</block>
-  <block id="38a12b37ae4221c5fda46c9430a61d47" category="inline-link-macro">Credenciais da conta AWS</block>
-  <block id="dc009403919a36e84e394bfc7dac9390" category="list-text">O tipo de armazenamento para a instância deve ser um dos seguintes:</block>
-  <block id="3962b6fab28418ee6542523fce705073" category="list-text">As instâncias EC2 devem ter um perfil de função/instância que permita que a conexão SSM para deteção funcione.</block>
-  <block id="5dff7dc03e6adf7d4ca469820cdba620" category="inline-link-macro">Saiba mais sobre a solução de problemas de SSM</block>
-  <block id="a218784743407787312891b174efa23d" category="paragraph">Quando uma instância do Microsoft SQL é detetada, o ambiente existente não é modificado. A deteção acontece por meio do AWS Systems Manager Session Manager (SSM). Sem o perfil de instância do IAM certo, a deteção falhará. <block ref="6d65103434cb07e7afb870839cad8f12" category="inline-link-macro-rx"></block>.</block>
-  <block id="95b565a5e9864d62ea1fb7e39b926b3b" category="list-text">Clique na seta suspensa para expandir a linha do host para detetar.</block>
-  <block id="8dbec57fc4c47759d905a8c83da70c0f" category="paragraph">O host se expande e as instâncias de host aparecem.</block>
-  <block id="a01b2b217874340f2cbed78113cf3f07" category="list-text">Clique em *detectar*.</block>
-  <block id="52f93363b11de846f37617dc280f35b6" category="list-text">Na caixa de diálogo *detectar instância*, forneça o nome de usuário e a senha do Microsoft SQL Server ou o nome de usuário e a senha do FSX for ONTAP.</block>
-  <block id="aee0a08114ee057480ece887eabe9d05" category="paragraph">As informações de instância detetadas são exibidas.</block>
-  <block id="1fed0bc2c72e36c6e777e5a1e7def8f8" category="list-text">Selecione *Sim, Gerenciar instância via Workload Factory* ou *não*.</block>
-  <block id="e13a15252a4dbf9779c44afe477e3343" category="list-text">Clique em *Concluído*.</block>
   <block id="e7310dc180b25aba87aadafb96fb45f4" category="inline-image-macro">Uma captura de tela da página da calculadora de economia mostra a configuração selecionada do Microsoft SQL Server no Amazon Elastic Block Store à esquerda com a opção de personalizar os valores de snapshot e clone. Economia de custos em valor em dólares e economia percentual, bem como o custo mensal total para usar o Microsoft SQL Server no FSX for ONTAP e a exibição de armazenamento Elastic Block Store à esquerda.</block>
   <block id="9c34331abb32017c0949af1d664fefb5" category="section-title">Opções de calculadora</block>
   <block id="b68e42fa600661a13849ea15c997cea3" category="paragraph">Duas opções de calculadora estão disponíveis para fazer a comparação de custo entre seus sistemas e o FSX for ONTAP - personalização e deteção.</block>
@@ -462,41 +441,15 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Código aberto</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Os arquivos de aviso fornecem informações sobre direitos autorais de terceiros e licenças usadas no software NetApp.</block>
-  <block id="6130b5542240619621b88baf10547d84" category="paragraph">Os bancos de dados só podem gerenciar instâncias do Microsoft SQL Server com o FSX for ONTAP armazenamento do sistema de arquivos.</block>
-  <block id="b43307219a7b65a8301c057d6f6b5478" category="section-title">Gerenciamento de instâncias do Microsoft SQL Server</block>
-  <block id="7c6c9edd9611134efa9dc1ed2f630486" category="paragraph">O gerenciamento de instâncias do Microsoft SQL Server inclui as seguintes tarefas:</block>
-  <block id="4c2074388cf4ff8bed676ca933f2b317" category="list-text">Gerenciar uma instância de host</block>
-  <block id="994fd8f490177306769be0a7cbfcc3e6" category="list-text">Exibir uma instância gerenciada</block>
   <block id="948d113c0ab3cb85650dda6912a734c5" category="list-text">Exibir bancos de dados</block>
-  <block id="516bc1905150a9c47ed4ba785d304c08" category="list-text">Desgerenciar uma instância de host</block>
-  <block id="327ffbd91edd4e33d5518e4e2ffe32a7" category="inline-link-macro">detectar uma ou mais instâncias de host</block>
-  <block id="f55f72ac990fbff5b0fa9fa6ef2a43f8" category="paragraph">Para concluir qualquer uma dessas tarefas, você deve <block ref="7590173c3966c31656f7462bb5d71596" category="inline-link-macro-rx"></block>.</block>
-  <block id="9ee949a52ce818bc3dc8adf7994630ff" category="paragraph">Gerencie instâncias do Microsoft SQL Server detetadas ou não gerenciadas para um host.</block>
-  <block id="55376293ec338d45989562b49241fa71" category="paragraph">Para gerenciar uma instância de host em uma rede privada sem conetividade externa, os seguintes endpoints precisam estar disponíveis na VPC com associação às sub-redes em que os servidores SQL estão presentes. Certifique-se de que os pontos de extremidade da interface permitem a porta 443 no grupo de segurança anexado.</block>
   <block id="021cd7b44c92e0977eee47344e7f4a7b" category="list-text"><block ref="d2c8dc6d0833da0998d37357f2d65fca" prefix="" category="inline-code"></block></block>
   <block id="afe3dddd43fed2e0f76617fa08ab254a" category="list-text"><block ref="078aab7ae8c1a0df339ac8525790d5e1" prefix="" category="inline-code"></block></block>
   <block id="cfa54b7dd19dd91bb87ede68126951eb" category="list-text"><block ref="25f6388206f436c2d1de63216302b13d" prefix="" category="inline-code"></block></block>
   <block id="8d461d34b0f2c02565383f3301044282" category="list-text"><block ref="fea0543b0b4b9d4c240c6219de0db41c" prefix="" category="inline-code"></block></block>
-  <block id="cd78ff90ddf6720085af92558142d117" category="list-text">Você deve ter uma instância detetada no host que esteja disponível para gerenciamento.</block>
-  <block id="ec23fcbca926c2c56578aa4b009e5426" category="inline-link-macro">Documentação do Microsoft PowerShell para Windows</block>
-  <block id="0a2076265c3748f47dd0af532c7aface" category="list-text">PowerShell7 é necessário para gerenciar a instância do banco de dados. Instale o PowerShell7 manualmente consultando <block ref="83fcecee5da20c347486b34eede460ed" category="inline-link-macro-rx"></block>a .</block>
-  <block id="14018e7d1ee628c58a60c375fd95df80" category="list-text">Todas as operações de gerenciamento são executadas pelo AWS System Manager Agent usando<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> privilégios de usuário. Forneça as seguintes permissões para<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> o usuário no servidor de banco de dados:</block>
-  <block id="aac2a7646728f5a7e043cf96134ccdb3" category="list-text">Clique em *Gerenciar* na linha do host a ser gerenciado.</block>
-  <block id="2fb4e3404c1ed4190dc6ef818393c670" category="list-text">Selecione uma ou mais instâncias de host para gerenciar.</block>
-  <block id="5a71da60e1bd3ad61adeed4b3b25dfd4" category="list-text">Clique em *Gerenciar*.</block>
-  <block id="c08e85e895d76938ea6dece5bb44d66e" category="paragraph">Você pode exibir uma instância gerenciada seguindo estas etapas.</block>
-  <block id="8719fc3365176d7b81bdcbf4c1ff4a2f" category="list-text">Clique na seta suspensa para expandir a linha do host para exibir suas instâncias gerenciadas.</block>
   <block id="7a85061671bf8d085efe2cb8dfd1c79e" category="paragraph">O host se expande e as instâncias do host aparecem.</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Resultado</block>
-  <block id="124a4b88b8d9e1fc268a022789dfa437" category="paragraph">A visão geral da instância é exibida na guia Inventário.</block>
-  <block id="12d2adb5a33b1aa2d5dffa5f023e36e4" category="paragraph">Você pode exibir os bancos de dados gerenciados pela instância gerenciada seguindo estas etapas.</block>
   <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">Clique na seta suspensa para expandir a linha do host para exibir seus bancos de dados.</block>
   <block id="bab47e98a40b74089a0df1373390d048" category="list-text">Selecione *Ver bases de dados*.</block>
-  <block id="c86b7424c07159a13fb442303997ee5e" category="paragraph">A lista de bancos de dados na instância aparece na guia Inventário.</block>
-  <block id="1654b38c29f5708868d01a77911262a6" category="paragraph">Desgerencie uma instância de host seguindo estas etapas.</block>
-  <block id="65cc39a76868117dd307472ad16886fe" category="list-text">Clique na seta suspensa para expandir a linha da instância do host para desgerenciar.</block>
-  <block id="15dbb4d45ce02c5b74e74fc25c85c667" category="list-text">Selecione *Unmanage*.</block>
-  <block id="96a30701e83b6fe09ce36fcd863cb65b" category="paragraph">A instância do host agora não é gerenciada.</block>
   <block id="252215232d636a7c096b2327e9a20b42" category="doc">Monitorar bancos de dados</block>
   <block id="67b0a66954400448325457f930e0f82b" category="paragraph">A monitorização de trabalhos suporta até três níveis de monitorização, dependendo do trabalho. Por exemplo, para a criação de novos clones de banco de dados e sandbox, o monitoramento de tarefas rastreia trabalhos pai e subtarefas.</block>
   <block id="b830a8f027299af6d1d8ffbb130bcc58" category="list-text">Níveis de monitorização do trabalho</block>
@@ -509,22 +462,15 @@
   <block id="4639d0e2e2909a747265c2f704128bca" category="section-title">Monitorizar trabalhos</block>
   <block id="96ea9efb359a91a00480c8f67e682c8f" category="list-text">Em bancos de dados, selecione a guia *Monitoramento de tarefas*.</block>
   <block id="59d6e1b8f6bd894db211d6ad27845f97" category="list-text">No separador monitorização de trabalhos, utilize os filtros ou procure para restringir os resultados dos trabalhos. Também pode transferir um relatório de trabalhos.</block>
-  <block id="22358702cb945913fe9b03fc1642777a" category="summary">Bancos de dados têm três modos diferentes que têm requisitos diferentes.</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Um</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Dois</block>
   <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Adicione credenciais e permissões</block>
-  <block id="ef10fd0583cb29fae9962398dccb7949" category="inline-link-macro">_basic_, _read_ e _automate_ modos operacionais</block>
-  <block id="bdb2387bd633174e2bf3ed30c7e23fcd" category="paragraph">Escolha entre <block ref="c3b5a6253a0d0b0237f0d9c1e9a7dfa2" category="inline-link-macro-rx"></block>.</block>
   <block id="f13bb46705b371ce5ebc0ccc10f09bb0" category="inline-link-macro">Saiba como implantar um servidor de banco de dados</block>
   <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">adicione credenciais a uma conta manualmente</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Três</block>
   <block id="6f6390592b833a81a0bda8c296a3c5b6" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Implantar um servidor de banco de dados</block>
-  <block id="078f40fa23e0672777adc7c05d4773dd" category="inline-link-macro">implantar</block>
-  <block id="84c21b8cc296c1da3bb78060284eaac1" category="inline-link-macro">detectar um servidor de banco de dados</block>
-  <block id="fb4bdf4175298f0102e06e87845aa4d6" category="paragraph">Por último, se você optar por operar no modo _Automate_, você deve <block ref="59bd3d71ec0b7c2f2cdc48f826101be3" category="inline-link-macro-rx"></block> ou <block ref="ce52b47cf84b17846dfd2d3004a17efa" category="inline-link-macro-rx"></block> para gerenciar seus recursos de host e antes de adicionar bancos de dados de usuários.</block>
   <block id="76e0353f7732c65129a16b1dee5f98f2" category="inline-link-macro">crie um banco de dados de usuários</block>
   <block id="9099614931eafcd02d62211a634872c7" category="inline-link-macro">clone seu host para criar uma sandbox</block>
-  <block id="64cae7d199a0b43d21cb5921156fe660" category="paragraph">Quando você tem hosts gerenciados do FSX for ONTAP em seu inventário de bancos de dados, você pode <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block> ou <block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block>.</block>
   <block id="24ba9febbdf4f0bdec223ad9cf7f746f" category="paragraph">Atualizar um clone atualiza o clone para o banco de dados de origem no momento atual ou para um instantâneo do banco de dados de origem obtido em um ponto anterior no tempo. Quaisquer alterações feitas no clone da sandbox serão excluídas.</block>
   <block id="397fb4bed63b1f030827aee0d3d2a9f3" category="paragraph">Uma atualização só é possível quando o banco de dados de origem está ativo.</block>
   <block id="745d72e1ba4e4047caaf9e8b73eca0e0" category="paragraph">Para atualizar um clone de banco de dados de um snapshot, o banco de dados de origem deve ter pelo menos um snapshot para a operação.</block>
@@ -598,7 +544,6 @@
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">O que há de novo</block>
   <block id="991fc877b6135bcda7435016745ae066" category="sidebar">Use cargas de trabalho de banco de dados</block>
   <block id="fbe27670bf06b7e38d268c77e7f002f0" category="sidebar">Crie um novo servidor de banco de dados</block>
-  <block id="4564dd7bc0da251c3d18fb2269904a81" category="sidebar">Detectar um servidor de banco de dados</block>
   <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">Administrar e monitorar</block>
   <block id="077bbf8da979e97e9f7ec7239eb76073" category="sidebar">Gerenciar um Microsoft SQL Server</block>
   <block id="6ea5d3d06add60328b6497a58edc5878" category="sidebar">Gerenciar clones</block>
@@ -619,36 +564,17 @@
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">Use o Terraform do Codebox</block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">Saiba como usar o Codebox para automação</block>
   <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">* Otimização contínua*: Verifica continuamente o estado do Microsoft SQL Server offline, fornecendo-lhe um relatório abrangente de insights, oportunidades e recomendações para ajudá-lo a alcançar a excelência operacional.</block>
-  <block id="13025ba9f92de77af2aeaf1af07a4aa8" category="doc">Otimize as configurações para implantações do Microsoft SQL Server</block>
-  <block id="6f2bcb2f8d4f34c036395a199095be9a" category="paragraph">A avaliação é executada automaticamente e continuamente uma vez por dia para instâncias do Microsoft SQL Server com o armazenamento do FSX for ONTAP gerenciado na fábrica de cargas de trabalho. Os relatórios de avaliação estão disponíveis no painel de otimização somente se um trabalho agendado diário tiver sido executado após a implantação ou após o gerenciamento de uma instância.</block>
-  <block id="246db1206cb640c61b32f7cea2560b8e" category="list-text">O que é digitalizado</block>
-  <block id="af27bafd548aa3e366e582049aeb65f1" category="list-text">A fábrica de carga de trabalho avalia o status de otimização das seguintes configurações para instâncias do Microsoft SQL Server:</block>
   <block id="04dff47f9a41cfa54b616dd86a4a6043" category="list-text">Dimensionamento do armazenamento: Inclui camada de armazenamento, espaço livre do sistema de arquivos, tamanho da unidade de Registro e tamanho da unidade TempDB</block>
   <block id="b1107628010e55afc5ec740439838f10" category="list-text">Layout de armazenamento: Inclui posicionamento de arquivos de dados do usuário, posicionamento de arquivos de log e posicionamento TempDB</block>
   <block id="8bc38d27c74401312cd5c45bfd8a7d05" category="list-text">Configuração de storage: Inclui gerenciamento de capacidade, thin Provisioning, política de disposição em categorias, snapshots, status, política e sessões de e/S de vários caminhos e muito mais</block>
-  <block id="1a0e703f0bdb101f4848a5510dd8ec1c" category="list-text">Você precisa ter credenciais com permissões de leitura ou automação.</block>
-  <block id="86bd4600548ee1b734f704338ab13665" category="list-text">Para avaliar o armazenamento de uma instância do Microsoft SQL Server, a instância deve ser gerenciada de fábrica de carga de trabalho e o tipo de armazenamento deve ser o FSX for ONTAP.</block>
-  <block id="5f4f392649432d3064fdf2a04015472b" category="list-text">Selecione a seta suspensa para exibir a recomendação para qualquer configuração. Certifique-se de rever a recomendação com cuidado.</block>
-  <block id="c9e425055996f71ecfc858708d926276" category="paragraph">A recomendação explica as práticas recomendadas e possíveis armadilhas de configurações não otimizadas.</block>
-  <block id="ea3bf0643d3540c97b9b92a3fb2bbf75" category="list-text">Selecione para *otimizar* configurações não otimizadas.</block>
-  <block id="78a5af6b8a486797f81f9b0dff06821e" category="list-text">Selecione *continuar* para otimizar a configuração.</block>
-  <block id="c6ff3995f3c633f2808f96020f887fd9" category="paragraph">O processo de otimização é iniciado. Selecione o separador *monitorização de trabalhos* para ver o estado da operação.</block>
-  <block id="0c47496112bcf6ed0b29fe1fe1d65d62" category="summary">A fábrica de workloads do BlueXP  para bancos de dados oferece otimização contínua para implantações do Microsoft SQL Server no armazenamento do Amazon FSX para NetApp ONTAP.</block>
-  <block id="9d62eb1e78c18c53c2bc3d807f4d5b04" category="doc">Otimização contínua para workloads da BlueXP  de fábrica para bancos de dados</block>
-  <block id="b97ec9fa7955169dbb93f4727a02e87d" category="paragraph">A otimização contínua verifica e avalia automaticamente a infraestrutura de banco de dados em escala para garantir que grandes propriedades atinjam o máximo de desempenho, eficiência de custo e conformidade com as práticas recomendadas. O recurso fornece um relatório abrangente de insights e recomendações para otimização.</block>
-  <block id="638c7d8777be813a6cc36be0ae2ccf68" category="paragraph">Com a otimização contínua, você pode detetar problemas na sua infraestrutura de banco de dados, entender o que precisa mudar e agir.</block>
   <block id="1c11d2e59190fe6a4e37f1e68abafcb4" category="paragraph">Os principais recursos incluem:</block>
-  <block id="5767d06d754465b4eceaed828d43069f" category="list-text">Avaliação contínua</block>
   <block id="8c0981b34ea19373e1dcf1c3d034f097" category="list-text">Validações automáticas de melhores práticas</block>
   <block id="029d49350caff46ab3e1f31c9c60f494" category="list-text">Recomendações para o dimensionamento correto</block>
   <block id="3583e4a3e4e2e122cff65b8ad9045348" category="list-text">Observabilidade proativa</block>
   <block id="16fcd85dc9469370b62b4b46381f8e2a" category="list-text">Insights para ação</block>
   <block id="7a3fc3cf12e9da54628c7311398bee5c" category="list-text">Consultor do AWS Well-Architected Framework</block>
   <block id="de29686d1474303323860ff8044fc4ed" category="paragraph">O escopo da otimização é diferente dependendo de qual componente está sendo avaliado. Por exemplo, a otimização de storage ocorre no nível de instância SQL, enquanto a otimização de computação ocorre no nível de host.</block>
-  <block id="ca3feda4f22b6d2a240006fa0a33f99e" category="paragraph"><block ref="ca3feda4f22b6d2a240006fa0a33f99e" category="inline-link-macro-rx"></block></block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">3 de novembro de 2024</block>
-  <block id="372aea905d324ed9cf6878e3f3ed7abc" category="sidebar">Otimize o servidor SQL</block>
-  <block id="6ca43380ae924ff967599986889184b3" category="sidebar">Visão geral da otimização contínua</block>
   <block id="d1e68728a28b7936858b1484445ef50f" category="sidebar">Otimizar configurações</block>
   <block id="35c4b7b7975b86786b96de60f8d9159c" category="doc">Lançamento inicial de fábrica de workloads do BlueXP  para bancos de dados</block>
   <block id="fe582581097e432c4b1b3f3135f39b72" category="paragraph">A versão inicial inclui a funcionalidade de explorar a economia com o Amazon FSX for NetApp ONTAP como o ambiente de armazenamento para suas cargas de trabalho de banco de dados, detetar, gerenciar e implantar servidores Microsoft SQL, implantar e clonar bancos de dados e monitorar essas tarefas na fábrica de workloads.</block>
@@ -662,15 +588,7 @@
   <block id="e1e54933838bb7ba662301d01c937d2d" category="list-text">Inicie sessão utilizando uma das <block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>.</block>
   <block id="842cadd8705fae5a3bbfb5a3b59568fe" category="paragraph">Conecte um clone de sandbox a um pipeline de CI/CD (integração contínua e entrega contínua) com código API REST para aprimorar a entrega de software por meio da automação na fábrica de workloads da BlueXP  para bancos de dados.</block>
   <block id="920d5db87e34d780e98c3efabde9041b" category="summary">Crie um novo Microsoft SQL Server na fábrica de cargas de trabalho do BlueXP  para bancos de dados.</block>
-  <block id="0eafa9073db40c1542192aa961e80360" category="doc">Crie um servidor de banco de dados na fábrica de carga de trabalho do BlueXP  para bancos de dados</block>
-  <block id="c3882e9ef595e2071c5d33931b535f75" category="paragraph">A criação de um novo servidor Microsoft SQL, ou host de banco de dados, na fábrica de cargas de trabalho do BlueXP  para bancos de dados, requer uma implantação do sistema de arquivos FSX for ONTAP e recursos para o ative Directory.</block>
   <block id="e688adbe92be47aae67ff0624dc5033a" category="list-text">Ambos os modelos de implantação do Microsoft SQL Server exigem a criação de LUN usando o protocolo de armazenamento iSCSI. A fábrica configura o Microsoft Multi-path I/o (MPIO) como parte da configuração de LUNs para SQL Server sobre o FSX for ONTAP. O MPIO é configurado com base nas práticas recomendadas da AWS e do NetApp.</block>
-  <block id="0d52db4b096880e69c4e146f0ba49f37" category="list-text">Modos de operação de fábrica da carga de trabalho</block>
-  <block id="f9d2517e544fb26af8171abd3daf978c" category="list-text">A fábrica de carga de trabalho oferece três modos operacionais, dependendo do quão confortável você está com permitir que a fábrica de carga de trabalho gerencie seus recursos da AWS.</block>
-  <block id="22d129236109e381371997931d9e2552" category="paragraph">*_Basic_ mode*: Neste modo de operação, você não precisa associar nenhuma credencial de conta da AWS na fábrica de carga de trabalho. Você pode copiar ou baixar um modelo YAML parcialmente preenchido da caixa de códigos para ser concluído fora da fábrica de carga de trabalho.</block>
-  <block id="a538aa1311e84c0f42a362aece349223" category="paragraph">*_Read_ mode*: Neste modo de operação, você fornece credenciais de conta da AWS com permissões de leitura que permitem concluir o formulário _Quick Create_ ou _Advanced Create_ e depois copiá-lo ou baixá-lo. Você também pode redirecionar para o CloudFormation da fábrica de carga de trabalho com os detalhes do formulário preenchido. E você será capaz de gerenciar o servidor de banco de dados implantado na fábrica de carga de trabalho.</block>
-  <block id="02b7989729e7d5233996b9d03d093fc1" category="paragraph">*_Automate_ mode*: Neste modo de operação, você fornece credenciais de conta da AWS com permissões de automação, que permitem criar e gerenciar recursos da AWS na fábrica de cargas de trabalho.</block>
-  <block id="6e604948d399e1365a2d5a11ee7838d8" category="list-text">Você precisa <block ref="6d0e9cd8cac3e1654b2b4423d6d0dc45" category="inline-link-macro-rx"></block>criar um novo host de banco de dados na fábrica de workloads.</block>
   <block id="cef4156e4fa9e5869d4dee02c1b39d6e" category="paragraph">As credenciais da AWS com permissões _Automate_ permitem que a carga de trabalho implante e gerencie o novo host de banco de dados a partir da sua conta da AWS dentro da fábrica de carga de trabalho.</block>
   <block id="cc04c98a943715d655ef7f99796aae2a" category="paragraph">As credenciais da AWS com permissões _read_ permitem que a fábrica da carga de trabalho gere um modelo do CloudFormation para você usar no console do AWS CloudFormation.</block>
   <block id="b4db11619512665a02befd7699ec1538" category="paragraph">Se você não tiver credenciais da AWS associadas à fábrica de carga de trabalho e quiser criar o novo servidor na fábrica de carga de trabalho, siga a *opção 1* para ir para a página credenciais. Adicione manualmente as credenciais e permissões necessárias para o modo _Automate_ para cargas de trabalho de banco de dados.</block>
@@ -697,18 +615,6 @@
   <block id="23fb636062a19e5367fc7e960e315c4c" category="list-text">*Mount*: Ao clonar um banco de dados SQL que tenha vários dados e/ou arquivos de log, a fábrica da carga de trabalho clona todos os arquivos sob a letra de unidade definida ou atribuída automaticamente.</block>
   <block id="f18c09ef6c0024eb6c989751920a14b8" category="summary">Exclua um clone de sandbox na fábrica de workloads do BlueXP  quando não precisar mais dele.</block>
   <block id="b77d65b48658772b1938bb5f92515cad" category="paragraph">Exclua um clone de sandbox na fábrica de workloads do BlueXP  para bancos de dados quando não precisar mais e quiser liberar a capacidade de storage.</block>
-  <block id="fbb4a1d64b556827c605ba040ca56ae4" category="summary">Detecte uma instância do Microsoft SQL Server na fábrica de cargas de trabalho do BlueXP  para bancos de dados.</block>
-  <block id="178414bb543c963fec57976ea2336e31" category="paragraph">Quando as credenciais da AWS são associadas na fábrica de carga de trabalho, os bancos de dados permitem a descoberta automatizada de Microsoft SQL Servers a partir do SQL Server 2016 com os seguintes tipos de armazenamento da AWS:</block>
-  <block id="89431105385d4cca92651e5744f72524" category="list-text">_Instâncias não detetadas_: Instâncias não detetadas que foram descobertas automaticamente pela fábrica da carga de trabalho. As instâncias não são detetadas nos seguintes casos:</block>
-  <block id="419a941115159d4985613564bc390429" category="list-text">O sistema de arquivos FSX for ONTAP para o Microsoft SQL Server não está registrado com sua conta na fábrica de carga de trabalho.</block>
-  <block id="ed7308cd20331dcb0eda88490074a613" category="list-text">_Instâncias não gerenciadas_: Instâncias detetadas que não são gerenciadas pela fábrica da carga de trabalho</block>
-  <block id="05a7af3bced3936cf1cba360e81ad241" category="list-text">_Instâncias gerenciadas_: Instâncias detetadas que são gerenciadas pela fábrica da carga de trabalho</block>
-  <block id="1469195c081bd9ee6ffd6a3cb8fb9125" category="paragraph">O primeiro passo para gerenciar uma instância do Microsoft SQL Server, ou instância de host, na fábrica de carga de trabalho para bancos de dados é detetar uma instância de servidor de banco de dados não detetada.</block>
-  <block id="9a7295dfae67ffbc9b3db0308d671d81" category="list-text">É necessário <block ref="8daf2318f1eb74a04bc7cb12c8d5f7c1" category="inline-link-macro-rx"></block>detetar uma instância de servidor de banco de dados na fábrica de carga de trabalho.</block>
-  <block id="9a5427eccfb5f1515fe411b7234b8d16" category="paragraph">A fábrica de carga de trabalho valida suas credenciais Microsoft SQL ou FSX for ONTAP.</block>
-  <block id="e16048662fe75d93a18c006c49a59e5b" category="paragraph">Se qualquer uma dessas credenciais não estiver disponível, a fábrica de carga de trabalho tentará instalar o<block ref="80caa08185fe6ba2da6b227f3c292956" prefix=" " category="inline-code"></block> módulo no PowerShell.</block>
-  <block id="ee7e8786e2029f74d5565c2e6e78c36b" category="inline-link-macro">gerencie a instância por meio da fábrica de carga de trabalho</block>
-  <block id="64fc7ef1abfec5624461bb34e030bb56" category="paragraph">Quando o tipo de armazenamento para a instância de host é FSX for ONTAP, você pode <block ref="ff12e6f62a651f5b7e33780a9c5be656" category="inline-link-macro-rx"></block>.</block>
   <block id="51bdfc0a469b2ea10ef9ab2e5263224e" category="doc">Explore a economia na fábrica de workloads da BlueXP  para bancos de dados</block>
   <block id="5817c5b26a2a7f4c1334dc3c03403f64" category="paragraph">A fábrica de carga de trabalho insere as caraterísticas de host do Elastic Block Store e do FSX for Windows File Server detetadas para que você possa explorar as economias automaticamente.</block>
   <block id="02cb01a24a3bd2f230f64c9dacb47b9b" category="paragraph">Se a fábrica de carga de trabalho detetar hosts EBS, você será redirecionado para a guia explorar economia. Se a fábrica de carga de trabalho não detetar hosts EBS, você será redirecionado para <block ref="1aa155ccc357a88465786c9c4e421569" category="inline-xref-macro-rx"></block>a calculadora para .</block>
@@ -723,10 +629,6 @@
   <block id="4a50857e1707616ee60a78ae42c9b8a0" category="paragraph">O gerenciamento de configurações de grupos de disponibilidade sempre ativa não é compatível com os workloads de fábrica.</block>
   <block id="620aae64a79a6a9f3dd3cbcf536b15df" category="paragraph">Se você selecionar "ative Directory gerenciado pelo usuário" durante a implantação do Microsoft SQL Server na fábrica de carga de trabalho, você deverá fornecer um grupo de segurança que permita o tráfego entre as instâncias EC2 para o serviço de diretório para implantação. A fábrica de carga de trabalho não anexa automaticamente o grupo de segurança para o ative Directory gerenciado pelo usuário, como acontece com o AWS Managed Microsoft AD.</block>
   <block id="647fea922cff8e907550de558b4cd653" category="paragraph">A deteção do Microsoft SQL Server não é salva. Cada vez que você acessa bancos de dados na fábrica de carga de trabalho, a deteção do Microsoft SQL Server é executada novamente para identificar instalações SQL na região.</block>
-  <block id="2d2f2539dd2892084fc34cbfe31682b2" category="summary">A fábrica de workloads da BlueXP  para bancos de dados é um serviço completo de implantação e manutenção de banco de dados com práticas recomendadas incorporadas para otimização, thin cloning automática e funcionalidades de monitoramento e resolução.</block>
-  <block id="9917001ac32006ffab5f623defff5594" category="doc">Saiba mais sobre a fábrica de cargas de trabalho do BlueXP  para bancos de dados</block>
-  <block id="ca48023f43ae7d0f01c30714fa4362cc" category="section-title">O que é a fábrica de carga de trabalho do BlueXP  para bancos de dados?</block>
-  <block id="61a2b695c9f4d3466b19505da26ac088" category="paragraph">Detecta, avalia, planeja, provisiona e move os dados do BlueXP  para implantações do Amazon FSX for NetApp ONTAP (FSX for ONTAP) otimizadas para atender às suas expetativa de desempenho e custo, aderindo às práticas recomendadas do setor. Durante todo o ciclo de vida, a fábrica de carga de trabalho oferece otimização e gerenciamento contínuos para bancos de dados no FSX for ONTAP.</block>
   <block id="70cb57a8d5d75d8762d6b082d319dec7" category="inline-link-macro">visão geral de fábrica do workload</block>
   <block id="092d6885b847467d6999738db9651764" category="paragraph">Para obter mais informações sobre a fábrica da carga de trabalho, consulte o <block ref="f3c978a33f5f67b2b7f311b0ac6d0acd" category="inline-link-macro-rx"></block>.</block>
   <block id="ebfbd585b037101117706b78fcfab22b" category="section-title">Benefícios de fábrica do workload para bancos de dados autogerenciados</block>
@@ -743,27 +645,20 @@
   <block id="11366d0688d978b3372702f5c4d33b84" category="inline-link-macro">Saiba mais sobre o FSX for ONTAP para fábrica de carga de trabalho</block>
   <block id="27dfabff613e2389e886e5b797252438" category="paragraph"><block ref="2e826ed2a2f94b608ac7d80f7c1db3b6" category="inline-link-macro-rx"></block>.</block>
   <block id="5e403a4c3b152d7f395a9974ccfd4e4c" category="section-title">Modos operacionais na fábrica da carga de trabalho</block>
-  <block id="63aab450b65202ef9696852b9418f590" category="paragraph">Três modos operacionais diferentes - _Basic_, _read_ e _Automate_ - oferecem opções flexíveis para implantação dentro e fora da fábrica de carga de trabalho. Obtenha valor imediato com confiança zero no modo _básico_ com snippets de código para uso fora da fábrica de carga de trabalho. Obtenha valor incremental com confiança incremental nos modos _read_ e _Automate_.</block>
   <block id="eb6e457556694fbc8d187534ac1188e1" category="inline-link-macro">modos operacionais na fábrica da carga de trabalho</block>
   <block id="7bb004aef4b112c40189995d006d040c" category="paragraph">Saiba mais <block ref="eda3e48a35318d9f8306be63aaa1ab6b" category="inline-link-macro-rx"></block>sobre o .</block>
   <block id="b5a374f3f5b31b5057808689d26fe2c4" category="paragraph">Você pode usar a fábrica do workload do BlueXP  com as seguintes ferramentas:</block>
   <block id="37c0391f707d07b4c1d64a02e6944c56" category="paragraph">A fábrica de carga de trabalho para o Microsoft SQL Server suporta implementações de alta disponibilidade (sempre em instâncias de cluster de failover) e de instância única de acordo com as práticas recomendadas da AWS, NetApp ONTAP e SQL Server.</block>
   <block id="b9aff8d3c5ff2dd2a4ce0963f381f957" category="paragraph">Para obter perguntas gerais sobre os aplicativos e serviços de fábrica de carga de trabalho ou de fábrica, <block ref="b9da93c3ce08d7fb81177157f233c056" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="71e2f5eacc9fc09317bbe70e053aeb1e" category="summary">Gerencie instâncias do Microsoft SQL Server na fábrica de cargas de trabalho do BlueXP  para bancos de dados.</block>
-  <block id="6dfa042d17c941d5173ba2a408668399" category="doc">Gerenciar instâncias do Microsoft SQL Server na fábrica de carga de trabalho do BlueXP </block>
-  <block id="83cfe3edf099a1d48675a62ae60f03ce" category="paragraph">Gerencie instâncias do Microsoft SQL Server para monitorar o status da instância e do banco de dados, a utilização de recursos, a proteção e o desempenho do storage na fábrica de cargas de trabalho do BlueXP  para bancos de dados.</block>
-  <block id="23528eaa34e1b5044421f8a835380bbd" category="paragraph">A operação falha quando o Microsoft SQL Server está faltando determinados módulos do PowerShell e scripts de gerenciamento. A fábrica de carga de trabalho aciona uma tarefa preparar recurso para instalar módulos e scripts ausentes que você pode exibir na guia Monitoramento de trabalho. Quando a tarefa for concluída, tente gerenciar a instância do host novamente.</block>
   <block id="72f7ef1037108c5eeefad1bcee23a0a8" category="summary">Rastreie trabalhos de banco de dados e monitore bancos de dados na fábrica de cargas de trabalho do BlueXP  para bancos de dados.</block>
   <block id="671ef5b67f2b7cbf660faa04c3d4622a" category="doc">Monitore bancos de dados na fábrica de workloads do BlueXP </block>
-  <block id="a4ed8b9b5c07e17e147e982e5e6be7b7" category="doc">Início rápido do workload do BlueXP  de fábrica para bancos de dados</block>
-  <block id="a84f8251adb867b65a51f661db71e24f" category="paragraph">Com a fábrica de carga de trabalho do BlueXP  para bancos de dados, você pode começar imediatamente no modo _básico_. Se você quiser usar a fábrica de carga de trabalho para descobrir hosts, gerenciar recursos e muito mais, comece em algumas etapas.</block>
   <block id="eb7ed5d3b1a2ff72006245ad37f9817b" category="paragraph">Você precisa ter uma conta da AWS para usar bancos de dados.</block>
   <block id="c37e590e9c50960a15f3292676cc0c18" category="paragraph">Siga estes passos para começar.</block>
   <block id="3e7340039619cc08d8c1c5a3cd4bfb43" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Faça login na fábrica de workloads da BlueXP </block>
   <block id="d9eebdefd5feceb309eadc305ce81e6f" category="inline-link-macro">configure uma conta com a fábrica de carga de trabalho</block>
   <block id="f6c71053fa21be1c35ee95758a3d1050" category="paragraph">Você precisará <block ref="782deaad814daa4f2ae09237c9394f09" category="inline-link-macro-rx"></block>fazer login usando um dos <block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>.</block>
   <block id="a4470118de925b41004832644492fcab" category="paragraph">Se você operar no modo _básico_, não precisa ir mais longe. Você pode começar a usar bancos de dados para copiar amostras de código parcialmente concluídas. No bloco bancos de dados, clique em *Deploy database host*. <block ref="cf724fcba48c8dc4cbe06a87f2c5df99" category="inline-link-macro-rx"></block>.</block>
-  <block id="32a8aefac32feaf1c84e6e0e9a9f24c1" category="paragraph">Se você operar no modo _read_ ou _Automate_, será necessário <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>selecionar recursos de carga de trabalho, como bancos de dados e GenAI, e criar as políticas do IAM para garantir que você tenha as permissões corretas para operar no modo _read_ ou _Automate_.</block>
   <block id="c1b68fc67f0e2b970d81dd29c91edb3c" category="summary">Atualize um clone de sandbox na fábrica de workloads do BlueXP  para bancos de dados.</block>
   <block id="6aa117cc6340cd2479e82444cbbadea9" category="doc">Atualize um clone de sandbox na fábrica de workloads do BlueXP  para bancos de dados</block>
   <block id="99ce2cd9a13526e0582af2c9fa2a4382" category="paragraph">Atualize um clone de banco de dados na fábrica de workloads do BlueXP  para bancos de dados de modo que ele seja equivalente ao banco de dados de origem no momento atual ou a um ponto anterior no tempo.</block>
@@ -831,7 +726,6 @@
   <block id="5e85f9bc067e4ee023078ba85e21857b" category="list-text">Clique no menu de três pontos da instância gerenciada e selecione *criar banco de dados de usuários*.</block>
   <block id="934fed95fff79f45510cc744c25ff3f4" category="list-text">No bloco bancos de dados, clique em *ir para inventário de bancos de dados*.</block>
   <block id="6e07e3cf1d291785f594756e71522cfe" category="list-text">Clique no menu de três pontos do clone sandbox que você deseja excluir.</block>
-  <block id="ff3a68054c116e7f9e9ea8cf123e0963" category="list-text">Clique no menu de três pontos da instância para detetar.</block>
   <block id="770dee3f954306dca2e369d2ef823c94" category="section-title">Análise de implantação do SQL Server</block>
   <block id="1d93f11e5331c46990f076ad4257106e" category="paragraph">A calculadora executa uma análise abrangente da implantação do SQL Server para garantir que os recursos e recursos que estão sendo utilizados sejam adequadamente compatíveis com a edição do SQL Server. Aqui estão os principais fatores e condições que a calculadora verifica antes de recomendar um downgrade para Standard Edition:</block>
   <block id="a0e3089d312c100208595d685b4104d2" category="list-text">Modelo de implantação</block>
@@ -856,17 +750,11 @@
   <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">Junte-se à comunidade de fábrica de carga de trabalho para acompanhar discussões em andamento ou criar novas.</block>
   <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">Para usar o recurso *criar um caso*, primeiro você deve se Registrar para obter suporte. Associe as credenciais do site de suporte da NetApp ao login de fábrica da carga de trabalho. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
   <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">No canto superior direito do console de fábrica da carga de trabalho, selecione *Ajuda &gt; suporte*.</block>
-  <block id="e75c7b17297b3cf3a7564e3033ef939f" category="list-text">Clique no menu de três pontos da instância para exibir e selecione *Exibir instância*.</block>
   <block id="6b30d701929b5a35aad77b847528d165" category="list-text">Clique no menu de três pontos da instância que contém os bancos de dados a serem exibidos.</block>
-  <block id="77b932b7ecf2d2b3689c445fe72bb66a" category="list-text">Clique no menu de três pontos da instância para desgerenciar.</block>
   <block id="5f08a8bbfa89b18958e70a8c6cbc44c3" category="paragraph">Os bancos de dados fornecem monitoramento de tarefas para que você possa acompanhar o progresso da tarefa e diagnosticar e solucionar problemas caso ocorra alguma falha. Pode filtrar trabalhos por tipo e estado, localizar trabalhos utilizando a função de pesquisa e transferir a tabela trabalhos.</block>
   <block id="5ade2a57e46cf328c900013574754aa9" category="list-text">O recurso de monitoramento de tarefa rastreia _em andamento_, _completed_, _completed with issues_ e _failed_ trabalhos diariamente, semanalmente, quinzenalmente e mensalmente.</block>
   <block id="10f9689e79d67ec4a1651805229939e6" category="list-text">Clique no menu de três pontos da tarefa e clique em *vá para o CloudFormation* para exibir o log de tarefas no console do AWS CloudFormation.</block>
   <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">A fábrica de carga de trabalho do BlueXP  para bancos de dados verifica as configurações do Microsoft SQL Server, fornecendo informações e recomendações para ajudá-lo a alcançar a excelência operacional.</block>
-  <block id="d156d1de362b4c66bc3effc1835aafe1" category="paragraph">A fábrica de carga de trabalho do BlueXP  para bancos de dados verifica e avalia continuamente as configurações de implantação do Microsoft SQL Server em execução no Amazon FSX for NetApp ONTAP. Esse recurso fornece insights e recomendações com a opção de otimizar automaticamente configurações não otimizadas para que seus workloads de banco de dados possam alcançar excelência operacional.</block>
-  <block id="162d1fe2bfd40fdaf4d1507dff7ac010" category="list-text">Na página Otimize instance (otimizar instância) para a instância do SQL Server, reveja os resultados da avaliação.</block>
-  <block id="1d40c1f145e4257a51df779ce509811e" category="paragraph">Você pode filtrar por categorias, subcategorias, status, gravidade e tags.</block>
-  <block id="2c43db36710e9c59ec3e8117665a6dd6" category="paragraph">Você também pode baixar um relatório dos resultados da avaliação selecionando *Exportar PDF*.</block>
   <block id="7bbfa484f6d4f2fd489e0f9cbab2b174" category="inline-link-macro">explore as poupanças com a calculadora de poupança</block>
   <block id="7634b96d2de45d4657e04dff8ecded5f" category="paragraph">Quando você tiver hosts do Elastic Block Store ou do FSX for Windows File Server em seu inventário de bancos de dados, você pode <block ref="481992ff67d8db3be48d151b768f7ce5" category="inline-link-macro-rx"></block>.</block>
   <block id="1f14f9d15a2087e9bbf3c4dd4b699191" category="list-text">Na guia sandboxes, clique no menu de três pontos do clone sandbox que deseja atualizar.</block>
@@ -910,11 +798,8 @@
   <block id="222ef17ae6eab247553156232cd650e1" category="list-text">Para obter resultados mais precisos, atualize as informações do Compute e os detalhes de armazenamento e desempenho.</block>
   <block id="b0398f49dbe9d04be8ddd17378899545" category="list-text">Opcionalmente, forneça os detalhes a seguir sobre clones (cópias de sombra) e snapshots em seu ambiente de banco de dados local para obter uma estimativa de economia de custo mais precisa.</block>
   <block id="7240997fa0d75a11f0b991615772d5d3" category="list-text">*Número de cópias clonadas*: Insira o número de cópias clonadas na configuração local.</block>
-  <block id="2eb9a2599d85acb350f462d9f474f6c6" category="paragraph">A fábrica de carga de trabalho fornece recomendações detalhadas para otimizar configurações com base nas práticas recomendadas do FSX for ONTAP. Você pode analisar as recomendações e optar por otimizar configurações não otimizadas.</block>
   <block id="4597adc0f9f3096964b3b3efbe708588" category="list-text">Computação: Inclui redimensionamento, patches do sistema operacional e configurações de adaptador de rede, como Receive Side Scaling (RSS) e descarregamento TCP</block>
   <block id="af022f8b2257d68b04e48e672c457177" category="list-text">Aplicações: Inclui licenças Microsoft SQL Server, Microsoft SQL Server patch e configurações MAXDOP</block>
-  <block id="7a4fa85db3c457278cffd34e817477ab" category="list-text">Certifique-se de rever cada recomendação cuidadosamente antes de selecionar para otimizar uma configuração ou configuração. Para as configurações RSS e MAXDOP, sugerimos que você teste as configurações recomendadas para determinar melhorias de desempenho antes de fazer alterações no seu ambiente de produção.</block>
-  <block id="926cb4c482170392f69cc268b20f8346" category="admonition">O processo de otimização pode causar tempos de inatividade da instância ou interrupções de serviço. Certifique-se de rever o resumo da otimização e os itens de ação antes de escolher otimizar uma configuração.</block>
   <block id="1c8d307950dbef59ce61b6bc729fdb52" category="section-title">03 de fevereiro de 2025</block>
   <block id="382e51924c0a806fea2a0017322199a5" category="section-title">Limitações da otimização</block>
   <block id="d65e48d2f6a810cde4c31e5a88aecedb" category="section-title">Otimização da configuração de ONTAP e SO</block>
@@ -937,7 +822,6 @@
   <block id="3231190e9014bf678d835272ec7c9234" category="paragraph">A fábrica de carga de trabalho do BlueXP  para bancos de dados agora suporta correção para a configuração de servidor de grau máximo de paralelismo (MAXDOP). Quando a configuração MAXDOP é subótima, você pode permitir que a carga de trabalho do BlueXP  otimize a configuração para você.</block>
   <block id="4a21bedf189bb26f9f4aeb26c0dc26a2" category="section-title">Relatório de análise de economia de e-mail</block>
   <block id="5b89ef008454fd9a61723d3572865363" category="paragraph">Ao explorar a economia para seus ambientes de armazenamento do Amazon Elastic Block Store e do FSX for Windows, em comparação com o FSX for ONTAP, você pode enviar o relatório de recomendação por e-mail para você, membros da equipe e clientes.</block>
-  <block id="11ddb0c16aeebaa5c378a44c0d6300d8" category="paragraph">Antes de criar um Microsoft SQL Server de fábrica de carga de trabalho, saiba mais sobre os tipos de implantação de armazenamento disponíveis para a configuração do host de banco de dados, implantação do ative Directory, modos de operação de fábrica de carga de trabalho e os requisitos para concluir essa operação.</block>
   <block id="d165069c83b8bcdcdac74dac0647a6f8" category="paragraph">Antes de criar um servidor PostgreSQL de fábrica de carga de trabalho do BlueXP , saiba mais sobre os tipos de implantação de armazenamento disponíveis para a configuração do host de banco de dados, os modos de operação de fábrica de carga de trabalho e os requisitos para concluir essa operação.</block>
   <block id="a54a2d2457f861c5ced69c71edee65c9" category="paragraph">Os sistemas de arquivos FSX para ONTAP têm dois modelos de implantação de servidor PostgreSQL: _Alta disponibilidade (HA)_ ou _instância única_. Diferentes recursos são criados para o sistema de arquivos FSX for ONTAP, dependendo do modelo de implantação do FSX for ONTAP selecionado.</block>
   <block id="7081d1beb2d41751a0211b5a5c5f3b56" category="list-text">* Implantação de alta disponibilidade (HA)*: Um sistema de arquivos FSX para NetApp ONTAP de várias zonas de disponibilidade é implantado quando um novo sistema de arquivos FSX for ONTAP é selecionado para implantação HA. Volumes e LUNs separados são criados para dados, log e arquivos tempdb para uma implantação HA. Um volume e LUN adicionais são criados para o Quorum ou o disco testemunha para o cluster do Windows. A implantação DE HA configura a replicação de streaming entre os servidores PostgreSQL primário e secundário.</block>
@@ -999,7 +883,6 @@
   <block id="b06b1cc67628f13db38ca890693627fb" category="section-title">Avaliação da replicação entre regiões</block>
   <block id="425a11288e6c089ecf9966b89b9be4eb" category="list-text">A avaliação de otimização não pode determinar se a replicação entre regiões (CRR) está sendo usada quando o sistema de arquivos FSX for ONTAP de destino está em uma conta diferente da AWS.</block>
   <block id="a73971e47314d5a9302d6e0e452948e6" category="list-text">A fábrica de carga de trabalho avalia apenas a configuração CRR do sistema de arquivos FSX for ONTAP de origem.</block>
-  <block id="af64c2575cf7c41d9a388382dfd2aef2" category="section-title">Número de bancos de dados em instâncias do SQL Server</block>
   <block id="fb090b715eaceea73761a137a2eb45c0" category="list-text">Resiliência: Inclui snapshots locais, backups do FSX para ONTAP e replicação entre regiões (CRR)</block>
   <block id="765282496f8377d23a4dec7887b9cea8" category="paragraph">*Selecionar tudo* é o padrão, mas você pode selecionar recursos específicos para otimizar.</block>
   <block id="c69c68bea63a58faad0233887cb8a9aa" category="section-title">04 de abril de 2025</block>
@@ -1010,20 +893,6 @@
   <block id="bcfa2187892cfb20acb57dea1d6a38b4" category="paragraph">Explore a economia para hosts detetados: A fábrica da carga de trabalho é vinculada aos seus servidores Microsoft SQL existentes e puxa os detalhes para a calculadora para comparação automática. Você precisará conceder permissões _somente leitura_ ou _leitura/gravação_ para usar essa opção de calculadora. Você pode alterar o caso de uso, mas todos os outros detalhes são determinados automaticamente no cálculo.</block>
   <block id="f2f8123dee39336570b9e59a3326fd18" category="inline-link-macro">Conceda permissões _somente leitura_ ou _leitura/gravação_</block>
   <block id="f557e9f26b531156ccdbc9c32935d13a" category="list-text"><block ref="6a1dbb436eb1da80c34b82a70d7d9175" category="inline-link-macro-rx"></block> Na sua conta da AWS para detetar os sistemas Elastic Block Store (EBS) e FSX para Windows na guia *Explore Savings* e mostrar o cálculo de economia na calculadora de economia.</block>
-  <block id="3c424272d86dd628323516001aa99e6e" category="cell">Login securables</block>
-  <block id="7b749fcc97c5c2a0bb8e16cb377f5a71" category="cell">Onde necessário?</block>
-  <block id="c9bc7594ee62d0c351dae6b83370562b" category="cell"><block ref="ef51f73dd4b173855a32e89075ae6d6a" prefix="" category="inline-code"></block></block>
-  <block id="55b9e1ad0e3385fe9e930e60422bf964" category="paragraph">Inventário, avaliação, remediação, criar banco de dados, criar clone sandbox, explorar economia</block>
-  <block id="52dbdba9f8efc424e3647d5fa9481b33" category="cell"><block ref="997eaa81353e01df1a3834bc67b02895" prefix="" category="inline-code"></block></block>
-  <block id="9c63fb58881db7f963fbc50219125431" category="paragraph">Inventário, avaliação, remediação, criar banco de dados, criar clone sandbox</block>
-  <block id="c2d30b0b254c8547b9acbbdd90603d7a" category="cell"><block ref="60c6c6d38d8a5aa079b31fa10cc7c20a" prefix="" category="inline-code"></block></block>
-  <block id="8a2d6633dcb68e6ff0d85222e7082082" category="cell"><block ref="29eaac47a48cb18afd7ccf57582f12e4" prefix="" category="inline-code"></block></block>
-  <block id="fa51fd57abb0283d815c171a4b309940" category="paragraph">Criar banco de dados, criar clone sandbox</block>
-  <block id="c95188979745727b537f665c08755be5" category="cell"><block ref="af0cad6b0855295d542d0a31e5d61e2b" prefix="" category="inline-code"></block></block>
-  <block id="fa778d6d07c47f1228af4ce6bcb13480" category="paragraph">Crie um clone de sandbox</block>
-  <block id="3f21b90f61021d5dd0aefe08d40a11a9" category="cell"><block ref="83a834b3af30dbb7c2007ab7f9bc913b" prefix="" category="inline-code"></block></block>
-  <block id="eb0cdf74b605d67e1444197ac2f77c91" category="cell"><block ref="8fdca9c0332e9935139d7384c2a814df" prefix="" category="inline-code"></block></block>
-  <block id="538b18c6800ad42458e0bf0bc8a311b6" category="paragraph">Crie clone sandbox, remediação para MAXDOP</block>
   <block id="25696569671071b8bd3db9a4c5f6613e" category="doc">Melhorias no painel de instrumentos</block>
   <block id="04f9acced28b52e064ba8ccb957a615c" category="list-text">As visualizações entre contas e entre regiões estão disponíveis à medida que você navega entre guias no console de fábrica da carga de trabalho do BlueXP . As novas visualizações melhoram o gerenciamento, o monitoramento e a otimização de recursos.</block>
   <block id="6e21267988cadc818dd398393c695465" category="list-text">A partir do bloco *economias potenciais* no painel, você poderá revisar rapidamente o que você pode economizar mudando para o FSX for ONTAP da Amazon Elastic Block Store ou do Amazon FSX for Windows File Server.</block>
@@ -1039,10 +908,7 @@
   <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">A interface do usuário e a documentação de fábrica da carga de trabalho agora usam "somente leitura" para se referir a permissões de leitura e "leitura-gravação" para se referir a permissões de automação.</block>
   <block id="2d07fc9146d02690dffeffa52fbd2ec4" category="list-text">Remoção de host no local</block>
   <block id="1c28fa92b25f4914c091b667402466d3" category="list-text">Depois de explorar a economia de um host no local do Microsoft SQL Server, você tem a opção de remover o Registro de host no local da fábrica de workloads do BlueXP . Selecione o menu de três pontos do host local do Microsoft SQL Server e selecione *Excluir*.</block>
-  <block id="d824014300a5fc7a6853a9182b4be5ef" category="list-text">Clones: Inclui opções para atualizar e excluir clones (sandboxes) com mais de 60 dias</block>
   <block id="04467e563313dfe5a1da17bd70a4de75" category="list-text">Na guia *Inventário*, selecione a guia *instâncias*.</block>
-  <block id="8e3db49aef4ba359c0140eea33f2459c" category="list-text">Selecione o menu de três pontos da instância para otimizar e, em seguida, selecione *Otimize*.</block>
-  <block id="77b2be525ee3461ec499242fca3978f8" category="list-text">Para todas as configurações, exceto limpeza de clones, revise os detalhes de otimização na caixa de diálogo de otimização para saber o que acontecerá se você optar por otimizar. Algumas operações de otimização podem causar tempos de inatividade de instâncias ou interrupções de serviço.</block>
   <block id="c5d0b906e655aeb0e712fdc99742d179" category="list-text">Para limpeza de clones, selecione bancos de dados clonados (caixas de areia) para atualizar ou excluir.</block>
   <block id="64b911fb444d2ba4347dbcba8d839d9c" category="list-text">Atualizar um clone sincroniza-o com seu banco de dados de origem. A atualização está disponível apenas para clones criados na fábrica de workloads.</block>
   <block id="b11d77d1a514a3b0bdf01908bc4826e9" category="list-text">A exclusão de um clone remove-o permanentemente, libera espaço de armazenamento e reduz custos. Você pode excluir clones criados dentro e fora do workload de fábrica.</block>
@@ -1077,11 +943,152 @@
   <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">*CLI do CloudShell*: A fábrica de carga de trabalho inclui uma CLI do CloudShell para gerenciar e operar ambientes AWS e NetApp em contas a partir de uma única CLI baseada em navegador. Acesse o CloudShell a partir da barra superior do console de fábrica de carga de trabalho.</block>
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*API REST*: Use as APIs REST de fábrica de carga de trabalho para implantar e gerenciar seus sistemas de arquivos FSX for ONTAP e outros recursos da AWS.</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation*: Use o código do AWS CloudFormation para executar as ações definidas no console de fábrica de carga de trabalho para modelar, provisionar e gerenciar recursos da AWS e de terceiros a partir da pilha do CloudFormation em sua conta da AWS.</block>
-  <block id="5614519834733a69bfb8911eae5d33b8" category="paragraph">Na guia Inventário e no Dashboard, a fábrica de carga de trabalho suporta até 1.500 bancos de dados em instâncias do SQL Server.</block>
   <block id="905bc3578e603008d83976307778ddcc" category="list-text">Para obter recomendações de tipo de instância e melhorar a precisão de custos, faça o seguinte:</block>
   <block id="10d9194778791c152af2c0be1806e0b1" category="list-text">Conceda permissões ao Amazon CloudWatch e ao AWS Compute Optimizer.</block>
   <block id="1dffe1578c264cd074d1fbf2823deeca" category="list-text">Entre no AWS Management Console e abra o serviço IAM.</block>
   <block id="429fc992484e56fc5119b7b343df8bab" category="list-text">Edite a política para a função do IAM. Copie e adicione as seguintes permissões do Amazon CloudWatch e do AWS Compute Optimizer.</block>
   <block id="948ce9adc60f5781dbfbd99d2c9d74d5" category="list-text">Inclua a conta faturável da AWS no AWS Compute Optimizer.</block>
   <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Fornecedor de fábrica de carga de trabalho do Terraform BlueXP *: Use o Terraform para criar e gerenciar fluxos de trabalho de infraestrutura gerados no console de fábrica de carga de trabalho.</block>
+  <block id="938691193541892254da342a65418ef3" category="doc">Detecção de PostgreSQL e Oracle</block>
+  <block id="a35833d039b2504ef8c787b30e723967" category="paragraph">Agora você pode descobrir as instâncias que executam bancos de dados do servidor PostgreSQL e implantações de bancos de dados Oracle na sua conta da AWS no console do Workload Factory. As instâncias descobertas aparecerão no inventário de bancos de dados.</block>
+  <block id="fd1fe4efcf471a552598d4396db84a26" category="section-title">Terminologia de "Otimização" atualizada</block>
+  <block id="a832a618559e9b6325bfe90eb3e86587" category="paragraph">Anteriormente chamado de "Otimização", o workload factory agora usa "problemas bem arquitetados" e "status bem arquitetados" para descrever a análise de configurações de banco de dados e "correção" para descrever a correção de oportunidades para melhorar as configurações de banco de dados para atender às recomendações de melhores práticas.</block>
+  <block id="c551233916d554410ddca9f767142b1a" category="inline-link-macro">Análise de configuração para ambientes de banco de dados em fábrica de carga de trabalho</block>
+  <block id="2cfa2ba77f1346dd5f1a96ad6f3af2b2" category="paragraph"><block ref="2cfa2ba77f1346dd5f1a96ad6f3af2b2" category="inline-link-macro-rx"></block></block>
+  <block id="f0b8560f05681c5a0a0de7a2cb0d761e" category="section-title">Integração aprimorada para instâncias de host</block>
+  <block id="2acb806aac138a6758718c6f833095ab" category="paragraph">Em vez dos termos "não detectado", "não gerenciado" ou "gerenciado" para o gerenciamento de instâncias de host, o Workload Factory agora usa "registro" para integrar instâncias de host. O novo processo de registro inclui a autenticação e a preparação de instâncias de host para que você possa criar, monitorar, analisar e corrigir recursos nas configurações do seu banco de dados no console do Workload Factory. A etapa de preparação no processo de registro indica se suas instâncias de host estão prontas para gerenciamento.</block>
+  <block id="4f91bce4a20615964f35d2fd97ddb2e1" category="inline-link-macro">Gerenciamento de instâncias</block>
+  <block id="68d9261728b0a851ce7bc78b7cfd2a69" category="paragraph"><block ref="68d9261728b0a851ce7bc78b7cfd2a69" category="inline-link-macro-rx"></block></block>
+  <block id="a037440b0e452d149e3d4cdec9e6a911" category="doc">Crie um Microsoft SQL Server na fábrica de carga de trabalho para bancos de dados</block>
+  <block id="5d89a931c9c04b55c06760675a1ace5a" category="paragraph">A criação de um novo Microsoft SQL Server, ou host de banco de dados, no workload factory para bancos de dados requer uma implantação do sistema de arquivos FSx for ONTAP e recursos para o Active Directory.</block>
+  <block id="633d049f8d85b55877f18aabc34b1da8" category="paragraph">Antes de criar um Microsoft SQL Server a partir do Workload Factory, saiba mais sobre os tipos de implantação de armazenamento disponíveis para a configuração do host do banco de dados, a configuração de E/S de vários caminhos da Microsoft, a implantação do Active Directory, os detalhes de rede e os requisitos para concluir esta operação.</block>
+  <block id="ccac5f43f95e209ed7e8f8ddd1b75d8b" category="inline-link-macro">Credenciais da conta AWS e permissões de modo _leitura/gravação_</block>
+  <block id="b949760a108bef94fc7f866ca09b5155" category="list-text">Você precisa <block ref="09d2f3d3c667abb40f8d2ba111b9c06b" category="inline-link-macro-rx"></block>criar um novo host de banco de dados na fábrica de workloads.</block>
+  <block id="f8c2bea89896f4c645e761417ab6d4bd" category="paragraph">Certifique-se de que as sub-redes de implantação estejam associadas aos pontos de extremidade de interface existentes e que os grupos de segurança permitam acesso ao protocolo HTTPS (443) às sub-redes selecionadas.</block>
+  <block id="e2aadc51c2249a0d2d63030bd046d5b5" category="paragraph">Ao usar um DNS entre VPCs, o grupo de segurança para endpoints na outra VPC onde o DNS reside deve permitir a porta 443 para sub-redes de implantação. Caso contrário, você deve fornecer um resolvedor de DNS da VPC local ao ingressar em um Active Directory entre VPCs. Em um ambiente com vários Controladores de Domínio replicados, se alguns controladores de domínio não estiverem acessíveis a partir da sub-rede, você pode *Redirecionar para o CloudFormation* e inserir <block ref="a756f9902f1db5a37f12d3f459f172a5" prefix=" " category="inline-code"></block> para conectar-se ao Active Directory.</block>
+  <block id="83e91497a1333c0a1b677d8c63d846d9" category="list-text">Clique no menu de três pontos da instância gerenciada e selecione *Criar banco de dados do usuário*.</block>
+  <block id="ed3f634cbd31e15d5053aa9ab9457edd" category="summary">Cancele o registro de uma instância de host se não quiser mais implantar ou monitorar recursos da instância.</block>
+  <block id="179df01f4b6338c16193d13eebec699f" category="doc">Cancelar o registro de uma instância de host no workload factory</block>
+  <block id="d5b67e9f32aa7f075a02dc0f4ccc6c3a" category="paragraph">Cancele o registro de uma instância de host se não quiser mais implantar ou monitorar os recursos da instância. O cancelamento do registro de instâncias também remove a capacidade de armazenamento usada pela instância de host.</block>
+  <block id="db8588c095bdb42680df1d8ae6e6c242" category="paragraph">Você pode registrar a instância novamente mais tarde.</block>
+  <block id="8271201bd0a4537e2de1fc26930a2ba9" category="list-text">Clique na seta suspensa para expandir a linha da instância do host a ser cancelada.</block>
+  <block id="6e58f833a8c88963786858e4cd0820f1" category="list-text">Clique no menu de três pontos da instância para cancelar o registro.</block>
+  <block id="a20e9b47d2ae2e8dcad4b38296aada53" category="list-text">Selecione *Cancelar registro*.</block>
+  <block id="ac142b4fd3c523bd0cca87e5783c6edf" category="paragraph">A instância do host foi cancelada. Você poderá registrá-la novamente mais tarde.</block>
+  <block id="57b8b12d92efb891c61703846230423a" category="section-title">Suporte para detecção de instância de host</block>
+  <block id="7d02c7321e50b7c2fa346dd9edc083f2" category="paragraph">O Workload Factory oferece suporte à detecção de instâncias do PostgreSQL em execução somente em sistemas operacionais Amazon Linux e instâncias do Oracle em execução somente no Red Hat Enterprise Linux.</block>
+  <block id="6923ba19fe8a091f76827ff8c86785de" category="summary">O Workload Factory for Databases é um serviço completo de implantação e manutenção de banco de dados com práticas recomendadas integradas para otimização, clonagem fina automática e recursos de monitoramento e resolução.</block>
+  <block id="bb3a81d6ea3e61933815d8c7984727a3" category="section-title">O que é fábrica de carga de trabalho para bancos de dados?</block>
+  <block id="2d2ef55c7d048aa8eb19ea9e98550603" category="paragraph">O Workload Factory para bancos de dados detecta, avalia, planeja, provisiona e move dados do Microsoft SQL Server para implantações do Amazon FSx para NetApp ONTAP (FSx para ONTAP) otimizadas para atender às suas expectativas de desempenho e custo, ao mesmo tempo em que aderem às melhores práticas do setor. Durante todo o ciclo de vida, a fábrica de carga de trabalho oferece otimização e gerenciamento contínuos para bancos de dados no FSX for ONTAP.</block>
+  <block id="9d31d07638cfa37e022a93f50a24a37a" category="paragraph">Três modos operacionais diferentes — _básico_, _somente leitura_ e _leitura/gravação_ — oferecem opções flexíveis para implantação dentro e fora da fábrica de carga de trabalho. Obtenha valor imediato com confiança zero no modo _básico_ com snippets de código para uso fora da fábrica de carga de trabalho. Obtenha valor incremental com confiança incremental nos modos _somente leitura_ e _leitura/gravação_.</block>
+  <block id="a114eda0d7b20c56bc3d8d99fe48b64a" category="summary">Saiba mais sobre gerenciamento de instâncias no Workload Factory para bancos de dados.</block>
+  <block id="88425651b441fbd6a0bc45cd78baf191" category="doc">Gerenciamento de instâncias na fábrica de carga de trabalho para bancos de dados</block>
+  <block id="90df9f628849131025aeded82280eaa8" category="paragraph">O gerenciamento de instâncias de host registradas no Workload Factory inclui a implantação de recursos para suas instâncias, como a criação de bancos de dados e clones de bancos de dados, além do monitoramento do status da instância e do banco de dados, da utilização de recursos, da proteção e do desempenho do armazenamento. Além disso, você pode analisar o status bem arquitetado das configurações do seu banco de dados e implementar as melhores práticas de configuração para melhorar o desempenho e reduzir os custos operacionais. O gerenciamento de instâncias é exclusivo para instâncias com FSx para armazenamento do sistema de arquivos ONTAP.</block>
+  <block id="c68f5f76376c72c5e7b3bfeebbd4b69f" category="inline-link-macro">registrar uma instância de host</block>
+  <block id="9dafbc056db1eec54c306ae9f92c0be1" category="paragraph">Você deve <block ref="44c655052a7d5397fca0e24c93e80dee" category="inline-link-macro-rx"></block> para executar qualquer uma das seguintes tarefas de gerenciamento.</block>
+  <block id="a40a9332a94e9ee509dd52088052022f" category="paragraph">As tarefas de gerenciamento incluem:</block>
+  <block id="32b73a9b89aeca54ae1906ac5b5c40a3" category="inline-link-macro">Criando um banco de dados</block>
+  <block id="d0a9d2136da399d9e73cfadd54adfb7a" category="list-text"><block ref="d0a9d2136da399d9e73cfadd54adfb7a" category="inline-link-macro-rx"></block></block>
+  <block id="45e1b252e76746345363ea0d06920684" category="inline-link-macro">Criando um clone de banco de dados (sandbox)</block>
+  <block id="fd8a54c517020c653ae1776e8e00d343" category="list-text"><block ref="fd8a54c517020c653ae1776e8e00d343" category="inline-link-macro-rx"></block></block>
+  <block id="050cc3957bb212dc2758e7dd27f7faf8" category="inline-link-macro">Visualizando bancos de dados</block>
+  <block id="7a403e4f1f2e0af187fa5a95116054cc" category="list-text"><block ref="7a403e4f1f2e0af187fa5a95116054cc" category="inline-link-macro-rx"></block></block>
+  <block id="f4a7fa0c2cfabd3c771238fbdb6c7ae5" category="inline-link-macro">Monitoramento de operações de banco de dados</block>
+  <block id="b92726505ce75a5aa80c8086ae979c25" category="list-text"><block ref="b92726505ce75a5aa80c8086ae979c25" category="inline-link-macro-rx"></block></block>
+  <block id="2f2280ee27b03fc450cd69afae071e39" category="inline-link-macro">Implementando configurações de banco de dados bem arquitetadas</block>
+  <block id="d3379f7eb15b947ec99d4daad00317b3" category="list-text"><block ref="d3379f7eb15b947ec99d4daad00317b3" category="inline-link-macro-rx"></block></block>
+  <block id="c4363ade7c2d208d79dee9b60bc51922" category="doc">Implementar configurações de banco de dados bem arquitetadas na fábrica de carga de trabalho</block>
+  <block id="0006f418861a6fb47d59a74b3db28869" category="paragraph">Usando insights e recomendações de análise de configuração, aproveite a fábrica de carga de trabalho para implementar as melhores práticas para suas configurações de banco de dados. Você pode facilmente encontrar problemas e tomar medidas para melhorar a arquitetura de quaisquer configurações que não estejam otimizadas para confiabilidade, segurança, eficiência, desempenho e custo.</block>
+  <block id="bffcd6aaeac8e97cf82007491fd97512" category="paragraph">A Workload Factory analisa as configurações do banco de dados diariamente. A análise diária fornece insights e recomendações com opções para corrigir problemas de configuração automaticamente, para que suas configurações atendam às práticas recomendadas.</block>
+  <block id="622529f53e43499d3ab7bec3ddade638" category="paragraph">Você tem opções para revisar as recomendações para problemas de configuração e corrigir esses problemas no inventário de bancos de dados no console do workload factory.</block>
+  <block id="681f8e0d48f8a5609d29d038dfdb7354" category="list-text">O que é analisado</block>
+  <block id="f6e75af7aefeb95ed6d70c67eae48cbc" category="list-text">A fábrica de carga de trabalho analisa o status bem arquitetado das seguintes configurações para instâncias do Microsoft SQL Server:</block>
+  <block id="eb39e8dfd54bf78043b2372b30f7b2b6" category="list-text">Clones: inclui opções para atualizar e excluir clones (sandboxes) que foram criados dentro ou fora da fábrica de carga de trabalho e têm mais de 60 dias</block>
+  <block id="05733d6679707441838e3ca92fcb1e85" category="inline-link-macro">Credenciais da conta AWS e permissões de leitura/gravação</block>
+  <block id="e6ff59cff1eb616f7a9d6b770313807a" category="list-text">Você deve ter <block ref="6428f71963510d960d64cd03bb6513ae" category="inline-link-macro-rx"></block> para analisar as configurações do seu banco de dados.</block>
+  <block id="bb4dc454356e65051d8e22516b60a260" category="inline-link-macro">Aprenda como registrar uma instância de host.</block>
+  <block id="606bc152b33b9976e88d57b374a1d46f" category="list-text">Para avaliar o armazenamento de uma instância do Microsoft SQL Server, a instância deve ser registrada no workload factory e o tipo de armazenamento deve ser FSx para ONTAP. <block ref="f22f9817b1d52aa896a88fe9442f70ef" category="inline-link-macro-rx"></block></block>
+  <block id="663c686f4608ad8e700ed1cd99a57fcc" category="list-text">Certifique-se de rever cada recomendação cuidadosamente antes de selecionar para corrigir uma configuração ou configuração. Para as configurações RSS e MAXDOP, sugerimos que você teste as configurações recomendadas para determinar melhorias de desempenho antes de fazer alterações no seu ambiente de produção.</block>
+  <block id="55900adb296775523b32b30486b0de17" category="admonition">O processo de remediação pode causar tempos de inatividade da instância ou interrupções de serviço. Certifique-se de revisar a recomendação cuidadosamente antes de decidir corrigir uma configuração.</block>
+  <block id="da0f3dbe0b914fb78e47ff54702db3df" category="list-text">Selecione *Corrigir problemas* para visualizar os problemas de configuração da instância.</block>
+  <block id="a85bf70a610b181df621eea76d0068e4" category="list-text">Na página de status Bem-arquitetado da instância do host, revise as descobertas da análise.</block>
+  <block id="8cdf23f9dd4f98a6b709a0a9d53ecd88" category="paragraph">Você pode filtrar problemas de configuração por categorias, subcategorias, status, gravidade e tags.</block>
+  <block id="dd78deb6ef5fa791112d358b2eccdf97" category="paragraph">Você também pode baixar um relatório das descobertas selecionando *Exportar PDF*.</block>
+  <block id="f73028254f9c4297e3f60654068105e0" category="list-text">Selecione a seta suspensa para exibir a recomendação para qualquer configuração. As recomendações incluem práticas recomendadas, possíveis armadilhas de configurações não otimizadas e considerações importantes. Certifique-se de rever a recomendação com cuidado.</block>
+  <block id="dae891145ffbf1b1653fc3da2a87faac" category="list-text">Selecione *Visualizar e corrigir* problemas de configuração quando a opção estiver disponível.</block>
+  <block id="af60fff54046e840f7e220def239ff80" category="list-text">Para todas as configurações, exceto a limpeza de clones, revise os detalhes da recomendação para saber o que acontecerá se você optar pela otimização. Algumas operações de remediação podem causar inatividade da instância ou interrupções do serviço.</block>
+  <block id="45b5dce37159255d07342e3102124571" category="list-text">Selecione *continuar* para corrigir o problema de configuração.</block>
+  <block id="94450f16c61ccd686586b6a304d73bda" category="paragraph">O processo de remediação é iniciado. Selecione o separador *monitorização de trabalhos* para ver o estado da operação.</block>
+  <block id="79d26843be417ff5c9a9e3a3deda3e50" category="summary">O Workload Factory para bancos de dados analisa as configurações do Microsoft SQL Server regularmente para determinar se há algum problema.</block>
+  <block id="dd79b42f7eeac8287405a50984fca176" category="paragraph">O Workload Factory para Bancos de Dados analisa as configurações do banco de dados regularmente para determinar se há problemas com implantações do Microsoft SQL Server no Amazon FSx para armazenamento NetApp ONTAP. Quando problemas são encontrados, o Workload Factory mostra quais são os problemas e explica o que precisa ser alterado para garantir que as configurações do seu banco de dados atinjam o desempenho máximo, a eficiência de custos e a conformidade com as práticas recomendadas.</block>
+  <block id="ebc3bf5de769bc75ad8e36a90a0ed695" category="list-text">Análise de configuração diária</block>
+  <block id="fc34f37e0124ad3486b3476b4c3bf8ba" category="section-title">Status bem arquitetado</block>
+  <block id="766f78d394e3aa97e328026acbda4d55" category="paragraph">No console de fábrica da carga de trabalho no nível do sistema de arquivos, o status bem arquitetado é listado para todos os sistemas de arquivos FSX for ONTAP. Os Estados bem arquitetados são categorizados como "questões", "não analisadas" ou "bem arquitetadas". A seleção do status bem arquitetado redireciona você para a guia de status bem arquitetado dentro do sistema de arquivos, onde você pode encontrar a pontuação bem arquitetada, categorias de configuração, todas as configurações para o sistema de arquivos.</block>
+  <block id="a64cfe5c8ae4b3445ff288e9acf4b12e" category="list-text">Pontuação bem arquitetada</block>
+  <block id="3ae4c18410c2fa4fdf19fa3a943ef362" category="list-text">A pontuação inclui todas as configurações analisadas atualmente e aparece como uma porcentagem. Uma pontuação de 25% significa que 25% das configurações do sistema de arquivos são bem arquitetadas.</block>
+  <block id="a4394e01049a42d14bd6258585de98b7" category="list-text">Categorias de configuração</block>
+  <block id="d24dfe9869a3af3c94d86b476bc18a3d" category="list-text">As configurações do sistema de arquivos são organizadas em categorias alinhadas com os cinco pilares a seguir do AWS Well-Architected Framework.</block>
+  <block id="b88f659b2eb7813471f331b19c9d7f02" category="list-text">_Confiabilidade_: Garante que as cargas de trabalho executem suas funções pretendidas de forma correta e consistente, mesmo quando há interrupções. Um exemplo de configuração é o FSX for ONTAP backups.</block>
+  <block id="6a940b53f011e22baccafe058e7df66e" category="list-text">_Security_: Enfatiza a proteção de dados, sistemas e ativos por meio de avaliações de risco e estratégias de mitigação.</block>
+  <block id="d5f464c28ed994054fe98db4934a7da1" category="list-text">_Excelência operacional_: Concentra-se em fornecer a arquitetura e o valor de negócios mais ideais.</block>
+  <block id="03be89b5f488a61c9b35832aa58745c1" category="list-text">_Otimização de custos_: Visa fornecer valor de negócio ao mesmo tempo que minimiza custos.</block>
+  <block id="49c47aadfeff1e01313108c157d381b4" category="list-text">_Eficiência de desempenho_: Se concentra em usar recursos de forma eficiente para atender aos requisitos do sistema e manter o desempenho ideal à medida que as demandas mudam.</block>
+  <block id="8b75b787538a5ee0eb97dc541694c82a" category="list-text">Escopo de análise</block>
+  <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">Requisitos de análise</block>
+  <block id="389751c9d4b8ea76783de1b291cac92f" category="paragraph">Para uma análise completa do ambiente de banco de dados, as instâncias do host devem estar registradas e online.</block>
+  <block id="f22f9817b1d52aa896a88fe9442f70ef" category="paragraph"><block ref="f22f9817b1d52aa896a88fe9442f70ef" category="inline-link-macro-rx"></block></block>
+  <block id="4eadd345921a1f4292d9b98892d3b84e" category="inline-link-macro">Implementar configurações de banco de dados bem arquitetadas</block>
+  <block id="9f79767d5e4eb4d13f2a6d925ed59d0f" category="paragraph"><block ref="9f79767d5e4eb4d13f2a6d925ed59d0f" category="inline-link-macro-rx"></block></block>
+  <block id="27cb094655bbfaa4d3b2c3b34d1c1557" category="summary">Comece a usar o Workload Factory para bancos de dados para usar snippets de infraestrutura como código, descobrir hosts, gerenciar recursos e muito mais.</block>
+  <block id="9581188088644b11d46ac4ae29789386" category="doc">Início rápido para fábrica de carga de trabalho para bancos de dados</block>
+  <block id="0bf39c9f8183add14af5a19ad4c80ff7" category="paragraph">Com o Workload Factory para Bancos de Dados, você pode começar imediatamente no modo _básico_. Se você quiser usar a fábrica de carga de trabalho para descobrir hosts, gerenciar recursos e muito mais, comece em algumas etapas.</block>
+  <block id="742b9524a4ab93b49eb1614d2aa4287b" category="inline-link-macro">Modos operacionais _básico_, _somente leitura_ e _leitura/gravação_</block>
+  <block id="e19be16b30ba3a27ed29174edef4c120" category="paragraph">Escolha entre <block ref="5653101a5bec855c555e8762c96ccdfc" category="inline-link-macro-rx"></block>.</block>
+  <block id="b60b67e70947e6a46c89e0d1c15f532f" category="paragraph">Se você operar no modo _somente leitura_ ou _leitura/gravação_, você precisará <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> que inclui selecionar recursos de carga de trabalho, como bancos de dados e GenAI, e criar políticas de IAM para garantir que você tenha as permissões corretas para operar no modo _somente leitura_ ou _leitura/gravação_.</block>
+  <block id="32077805607c935c0ac59dd7b4a3fdc6" category="inline-link-macro">implantar um servidor host</block>
+  <block id="d53bce2cf4a36ab74378d06b70255899" category="inline-link-macro">registrar uma instância</block>
+  <block id="d4e3cc6f64d77dfb90b8f3a54369d97f" category="paragraph">Por último, se você escolher operar no modo _leitura/gravação_, você deve <block ref="086045f9b9433534ba0bc16ba8744718" category="inline-link-macro-rx"></block> ou <block ref="70dc6f6bba18b4f574a867d694f53a80" category="inline-link-macro-rx"></block> para gerenciar seus recursos de host e antes de adicionar bancos de dados de usuários.</block>
+  <block id="db04547f806a50b5e3c5bbceb867c6c9" category="paragraph">Quando você tiver registrado instâncias de host com FSx para armazenamento do sistema de arquivos ONTAP em seu inventário de bancos de dados, você pode <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block> ou <block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block> .</block>
+  <block id="8373481dd509f9b495f59748db1aa76d" category="doc">Registrar instâncias na fábrica de carga de trabalho para bancos de dados</block>
+  <block id="794053eb13ca148da7e2fcaea90530b3" category="paragraph">Registre instâncias de host para que você possa monitorar o status da instância e do banco de dados, a utilização de recursos, a proteção e o desempenho do armazenamento na fábrica de carga de trabalho para bancos de dados.</block>
+  <block id="42c8e35152475231ef5a183766c9bebc" category="paragraph">Os bancos de dados só podem registrar instâncias com o FSx para armazenamento do sistema de arquivos ONTAP.</block>
+  <block id="91a3069301b0dd7ee29890c4b610ba27" category="section-title">Sobre a tarefa</block>
+  <block id="29e386e963401779c0de5dccb7b701a0" category="paragraph">O registro de uma instância de host inclui duas etapas: autenticação da instância e preparação da instância, certificando-se de que todos os módulos AWS, NetApp e PowerShell estejam instalados na instância.</block>
+  <block id="dda5f7103fa5228c52d16c80f09cc5ad" category="paragraph">Você pode autenticar links usando credenciais do SQL Server ou com credenciais do Windows.</block>
+  <block id="2a627091d8c05a05162dae18a0e3dc31" category="admonition">O Workload Factory oferece suporte apenas ao registro e gerenciamento de instâncias de host do Microsoft SQL Server. Dependendo das credenciais da conta AWS selecionadas no Workload Factory, hosts PostgreSQL e Oracle podem aparecer no inventário. Atualmente, o Workload Factory oferece suporte a instâncias PostgreSQL não registradas executadas apenas em sistemas operacionais Amazon Linux e instâncias Oracle executadas apenas no Red Hat Enterprise Linux.</block>
+  <block id="5e6ee18c02f118771f0e10235d44bd14" category="section-title">Registrando instância de host em uma rede privada</block>
+  <block id="0af95213cc557c61a7ba3ca92d68f09e" category="paragraph">Para registrar uma instância de host em uma rede privada sem conectividade externa, os seguintes endpoints precisam estar disponíveis na VPC com associação às sub-redes onde os servidores SQL estão presentes. Certifique-se de que os pontos de extremidade da interface permitem a porta 443 no grupo de segurança anexado.</block>
+  <block id="d38541ea862d6762d01f5f9d42fbd683" category="inline-link-macro">você deve adicionar credenciais de conta AWS e permissões de modo _leitura_ ou _automatização_</block>
+  <block id="36bfb43c49e597b3bb45a5bb2997033b" category="paragraph">O host da instância deve aparecer na aba Inventário. Para que os hosts apareçam no inventário, <block ref="dd302a73ba9dc99cb46da731db0bf41c" category="inline-link-macro-rx"></block> .</block>
+  <block id="6a408aaa659cc5010ab5ed464d20688c" category="section-title">Registrar uma instância de host</block>
+  <block id="75cd4168051c5052e88a17b464261a1b" category="paragraph">O registro de uma instância de host inclui autenticação e preparação da instância.</block>
+  <block id="573898775af774ec571967393eb2000b" category="list-text">Na guia Inventário, selecione a guia *Instâncias*.</block>
+  <block id="c5058b99cc6deeedc6528c1f97fb85d0" category="list-text">Navegue até a instância a ser gerenciada e selecione *Registrar instância*.</block>
+  <block id="aade5563fc6aa38dd34cae4243205c2f" category="list-text">Na página Registrar instância, insira o nome de usuário e a senha do SQL Server, e o nome de usuário e a senha do sistema de arquivos FSx para ONTAP.</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">Selecione *seguinte*.</block>
+  <block id="572a54088f94488130d1ac3055b373ac" category="list-text">Prepare a instância, certificando-se de que ela atenda aos pré-requisitos necessários. Se todos os módulos necessários estiverem instalados e os pré-requisitos forem atendidos, selecione *Avançar* para registrar a instância. Se precisar tomar alguma providência, siga estas etapas.</block>
+  <block id="6f46b8383b008a103c4bdd369e5fa92e" category="list-text">Se ausente, selecione a fábrica de carga de trabalho para *Instalar os módulos AWS e NetApp PowerShell ausentes*.</block>
+  <block id="32ab85eda4f533657c12e81e940cffd6" category="list-text">Se estiver ausente, selecione a fábrica de carga de trabalho para *Instalar o PowerShell 7 ausente*. A instalação do módulo 7 do PowerShell ausente requer uma reinicialização do sistema.</block>
+  <block id="3a36d2a0f50b8674db7030efa3481a16" category="list-text">Revise a lista de pré-requisitos para os seguintes recursos. Um pré-requisito deve ser atendido para registrar a instância.</block>
+  <block id="63d045fa5e972b158cfb23097e222ca7" category="list-text">*Revise problemas e recomendações bem arquitetados*</block>
+  <block id="fadeabdd0af8696756351a03b6a3e38f" category="list-text">*Corrija problemas bem arquitetados*</block>
+  <block id="682848268cf27965cff502f178244a95" category="list-text">*Criar banco de dados*</block>
+  <block id="e1f772db4ebe33be8870db0341b57f2e" category="list-text">*Criar cópias do banco de dados (sandbox)*</block>
+  <block id="bbd75173916a59e2d03d0aa3c8453950" category="paragraph">A conclusão dos pré-requisitos inclui a atualização das permissões da política do AWS IAM, das permissões do perfil da instância do EC2 IAM, das permissões do SQL Server e dos módulos do PowerShell.</block>
+  <block id="00e81f5539f96548498b7f28a5b0bf73" category="list-text">Conclua pelo menos um pré-requisito que falta para continuar.</block>
+  <block id="efad96be420cc388123ecddd686d794e" category="list-text">Quando um ou mais pré-requisitos estiverem concluídos e as verificações estiverem *Prontas*, você pode selecionar *Registrar* a instância.</block>
+  <block id="a037e794bf828053866493b8452ab9c7" category="paragraph">A solicitação de registro da instância é iniciada. Selecione a aba *Monitoramento de tarefas* para acompanhar o progresso.</block>
+  <block id="5dfcf5a53e6a3c94eb359647b453a807" category="summary">Para obter um resumo dos recursos do banco de dados na fábrica de carga de trabalho, visualize todos os bancos de dados no inventário de bancos de dados. Você também pode visualizar os bancos de dados por instância registrada.</block>
+  <block id="34f8798aab35970d27e00ecdf2a9f526" category="doc">Exibir bancos de dados na fábrica de carga de trabalho para bancos de dados</block>
+  <block id="0ab190804913b1145bf64c21befa3286" category="list-text">Instâncias de host que contêm recursos de banco de dados devem ter FSx para armazenamento do sistema de arquivos ONTAP.</block>
+  <block id="682d1e77482e7088c166b62c34287660" category="inline-link-macro">registrar instâncias de host</block>
+  <block id="13e6dec9f19066e3153eb07ec978ea2b" category="list-text">As instâncias do host devem ser registradas na fábrica de carga de trabalho. Aprenda a <block ref="2dbc08dda5209ee806e4433f973c765a" category="inline-link-macro-rx"></block>.</block>
+  <block id="87301bee2c9587d1e63d873a81c4e6fa" category="open-title">Exibir bancos de dados para uma única instância</block>
+  <block id="25734f9761801ac27c5c548d5c1829ca" category="open-title">Exibir bancos de dados para todas as instâncias</block>
+  <block id="91063ca7fb76f05148ae179b2f84b160" category="paragraph">Você visualizou os recursos do banco de dados na fábrica de carga de trabalho.</block>
+  <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">03 de junho de 2025</block>
+  <block id="ebb5d0c39395173ae9cea85bcf7d498e" category="sidebar">Registrar uma instância</block>
+  <block id="c38254582571637e4bded341a22ff035" category="sidebar">Gerenciar instâncias</block>
+  <block id="414fc89f66239e288860442b939928c9" category="sidebar">Implementar as melhores práticas de configuração</block>
+  <block id="a78c9036bfa9cb64272150072bb64123" category="sidebar">Análise de configuração para bancos de dados</block>
 </blocks>

@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: register-instance.html 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, manage host, view host, database host, database instance, manage, unregister 
+summary: Gerencie instâncias do Microsoft SQL Server na fábrica de cargas de trabalho do BlueXP  para bancos de dados. 
+---
+= Registrar instâncias na fábrica de carga de trabalho para bancos de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Registre instâncias de host para que você possa monitorar o status da instância e do banco de dados, a utilização de recursos, a proteção e o desempenho do armazenamento na fábrica de carga de trabalho para bancos de dados.
+
+Os bancos de dados só podem registrar instâncias com o FSx para armazenamento do sistema de arquivos ONTAP.
+
+
+
+== Sobre a tarefa
+
+O registro de uma instância de host inclui duas etapas: autenticação da instância e preparação da instância, certificando-se de que todos os módulos AWS, NetApp e PowerShell estejam instalados na instância.
+
+Você pode autenticar links usando credenciais do SQL Server ou com credenciais do Windows.
+
+
+NOTE: O Workload Factory oferece suporte apenas ao registro e gerenciamento de instâncias de host do Microsoft SQL Server. Dependendo das credenciais da conta AWS selecionadas no Workload Factory, hosts PostgreSQL e Oracle podem aparecer no inventário. Atualmente, o Workload Factory oferece suporte a instâncias PostgreSQL não registradas executadas apenas em sistemas operacionais Amazon Linux e instâncias Oracle executadas apenas no Red Hat Enterprise Linux.
+
+
+
+== Registrando instância de host em uma rede privada
+
+Para registrar uma instância de host em uma rede privada sem conectividade externa, os seguintes endpoints precisam estar disponíveis na VPC com associação às sub-redes onde os servidores SQL estão presentes. Certifique-se de que os pontos de extremidade da interface permitem a porta 443 no grupo de segurança anexado.
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
+
+
+Se você usar um servidor proxy para todas as conexões de saída de instâncias EC2, deverá permitir o acesso aos seguintes domínios para que as operações de gerenciamento funcionem:
+
+* ``.microsoft.com``
+* ``.powershellgallery.com``
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
+
+
+
+
+== Antes de começar
+
+O host da instância deve aparecer na aba Inventário. Para que os hosts apareçam no inventário, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["você deve adicionar credenciais de conta AWS e permissões de modo _leitura_ ou _automatização_"^] .
+
+
+
+== Registrar uma instância de host
+
+O registro de uma instância de host inclui autenticação e preparação da instância.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *Inventário*.
+. Na guia Inventário, selecione a guia *Instâncias*.
+. Navegue até a instância a ser gerenciada e selecione *Registrar instância*.
+. Na página Registrar instância, insira o nome de usuário e a senha do SQL Server, e o nome de usuário e a senha do sistema de arquivos FSx para ONTAP.
+. Selecione *seguinte*.
+. Prepare a instância, certificando-se de que ela atenda aos pré-requisitos necessários. Se todos os módulos necessários estiverem instalados e os pré-requisitos forem atendidos, selecione *Avançar* para registrar a instância. Se precisar tomar alguma providência, siga estas etapas.
++
+.. Se ausente, selecione a fábrica de carga de trabalho para *Instalar os módulos AWS e NetApp PowerShell ausentes*.
+.. Se estiver ausente, selecione a fábrica de carga de trabalho para *Instalar o PowerShell 7 ausente*. A instalação do módulo 7 do PowerShell ausente requer uma reinicialização do sistema.
+.. Revise a lista de pré-requisitos para os seguintes recursos. Um pré-requisito deve ser atendido para registrar a instância.
++
+*** *Revise problemas e recomendações bem arquitetados*
+*** *Corrija problemas bem arquitetados*
+*** *Criar banco de dados*
+*** *Criar cópias do banco de dados (sandbox)*
++
+A conclusão dos pré-requisitos inclui a atualização das permissões da política do AWS IAM, das permissões do perfil da instância do EC2 IAM, das permissões do SQL Server e dos módulos do PowerShell.
+
+
+
+.. Conclua pelo menos um pré-requisito que falta para continuar.
+.. Quando um ou mais pré-requisitos estiverem concluídos e as verificações estiverem *Prontas*, você pode selecionar *Registrar* a instância.
+
+
+
+
+.Resultado
+A solicitação de registro da instância é iniciada. Selecione a aba *Monitoramento de tarefas* para acompanhar o progresso.

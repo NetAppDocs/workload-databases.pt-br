@@ -4,17 +4,17 @@ permalink: create-database-server.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
 summary: Crie um novo Microsoft SQL Server na fábrica de cargas de trabalho do BlueXP  para bancos de dados. 
 ---
-= Crie um servidor de banco de dados na fábrica de carga de trabalho do BlueXP  para bancos de dados
+= Crie um Microsoft SQL Server na fábrica de carga de trabalho para bancos de dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-A criação de um novo servidor Microsoft SQL, ou host de banco de dados, na fábrica de cargas de trabalho do BlueXP  para bancos de dados, requer uma implantação do sistema de arquivos FSX for ONTAP e recursos para o ative Directory.
+A criação de um novo Microsoft SQL Server, ou host de banco de dados, no workload factory para bancos de dados requer uma implantação do sistema de arquivos FSx for ONTAP e recursos para o Active Directory.
 
 .Sobre esta tarefa
-Antes de criar um Microsoft SQL Server de fábrica de carga de trabalho, saiba mais sobre os tipos de implantação de armazenamento disponíveis para a configuração do host de banco de dados, implantação do ative Directory, modos de operação de fábrica de carga de trabalho e os requisitos para concluir essa operação.
+Antes de criar um Microsoft SQL Server a partir do Workload Factory, saiba mais sobre os tipos de implantação de armazenamento disponíveis para a configuração do host do banco de dados, a configuração de E/S de vários caminhos da Microsoft, a implantação do Active Directory, os detalhes de rede e os requisitos para concluir esta operação.
 
 Após a implantação, você precisará <<Passo 2: Ative a conexão remota no Microsoft SQL Server,Ative a conexão remota no Microsoft SQL Server>>.
 
@@ -58,19 +58,12 @@ Reversão de recurso:: Se você decidir reverter os recursos do sistema de nomes
 
 
 --
-Modos de operação de fábrica da carga de trabalho:: A fábrica de carga de trabalho oferece três modos operacionais, dependendo do quão confortável você está com permitir que a fábrica de carga de trabalho gerencie seus recursos da AWS.
 
-
-*_Basic_ mode*: Neste modo de operação, você não precisa associar nenhuma credencial de conta da AWS na fábrica de carga de trabalho. Você pode copiar ou baixar um modelo YAML parcialmente preenchido da caixa de códigos para ser concluído fora da fábrica de carga de trabalho.
-
-*_Read_ mode*: Neste modo de operação, você fornece credenciais de conta da AWS com permissões de leitura que permitem concluir o formulário _Quick Create_ ou _Advanced Create_ e depois copiá-lo ou baixá-lo. Você também pode redirecionar para o CloudFormation da fábrica de carga de trabalho com os detalhes do formulário preenchido. E você será capaz de gerenciar o servidor de banco de dados implantado na fábrica de carga de trabalho.
-
-*_Automate_ mode*: Neste modo de operação, você fornece credenciais de conta da AWS com permissões de automação, que permitem criar e gerenciar recursos da AWS na fábrica de cargas de trabalho.
 
 .Antes de começar
 Certifique-se de que você tem os seguintes pré-requisitos antes de criar um novo host de banco de dados.
 
-Credenciais e permissões:: Você precisa link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais de conta da AWS e permissões de modo de automação"^]criar um novo host de banco de dados na fábrica de workloads.
+Credenciais e permissões:: Você precisa link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de modo _leitura/gravação_"^]criar um novo host de banco de dados na fábrica de workloads.
 Ative Directory:: Ao se conetar ao ative Directory, você deve ter acesso administrativo com permissões para fazer o seguinte:
 +
 --
@@ -125,13 +118,16 @@ Opcionalmente, você pode baixar um modelo de arquivo YAML parcialmente concluí
 
 .. *Região e VPC*: Selecione uma região e uma rede VPC.
 +
-Certifique-se de que os grupos de segurança para um endpoint de interface existente permitem o acesso ao protocolo HTTPS (443) às sub-redes selecionadas.
+Certifique-se de que as sub-redes de implantação estejam associadas aos pontos de extremidade de interface existentes e que os grupos de segurança permitam acesso ao protocolo HTTPS (443) às sub-redes selecionadas.
 
 +
 Os endpoints da interface de serviço da AWS (SQS, FSX, EC2, CloudWatch, CloudFormation, SSM) e o endpoint do gateway S3 são criados durante a implantação, se não forem encontrados.
 
 +
 Os atributos DNS da VPC `EnableDnsSupport` e `EnableDnsHostnames` são modificados para habilitar a resolução do endereço de endpoint se eles ainda não estiverem definidos como `true`.
+
++
+Ao usar um DNS entre VPCs, o grupo de segurança para endpoints na outra VPC onde o DNS reside deve permitir a porta 443 para sub-redes de implantação. Caso contrário, você deve fornecer um resolvedor de DNS da VPC local ao ingressar em um Active Directory entre VPCs. Em um ambiente com vários Controladores de Domínio replicados, se alguns controladores de domínio não estiverem acessíveis a partir da sub-rede, você pode *Redirecionar para o CloudFormation* e inserir  `Preferred domain controller` para conectar-se ao Active Directory.
 
 .. *Zonas de disponibilidade*: Selecione zonas de disponibilidade e sub-redes de acordo com o modelo de implantação de instância de cluster de failover (FCI).
 +

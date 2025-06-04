@@ -52,7 +52,7 @@ Você pode usar os modos de implantação _Quick Create_ ou _Advanced Create_ pa
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Inventário*.
 . Na guia Inventário, selecione um servidor de banco de dados com uma instância de servidor SQL gerenciado para criar o banco de dados.
-. Clique no menu de três pontos da instância gerenciada e selecione *criar banco de dados de usuários*.
+. Clique no menu de três pontos da instância gerenciada e selecione *Criar banco de dados do usuário*.
 . Na página criar banco de dados do usuário, em informações do banco de dados, forneça o seguinte:
 +
 .. *Nome do banco de dados*: Insira o nome do banco de dados.

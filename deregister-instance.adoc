@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: deregister-instance.html 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, deregister instance, unregister instance, remove instance 
+summary: Cancele o registro de uma instância de host se não quiser mais implantar ou monitorar recursos da instância. 
+---
+= Cancelar o registro de uma instância de host no workload factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cancele o registro de uma instância de host se não quiser mais implantar ou monitorar os recursos da instância. O cancelamento do registro de instâncias também remove a capacidade de armazenamento usada pela instância de host.
+
+Você pode registrar a instância novamente mais tarde.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *Inventário*.
+. Clique na seta suspensa para expandir a linha da instância do host a ser cancelada.
++
+O host se expande e as instâncias do host aparecem.
+
+. Clique no menu de três pontos da instância para cancelar o registro.
+. Selecione *Cancelar registro*.
+
+
+.Resultado
+A instância do host foi cancelada. Você poderá registrá-la novamente mais tarde.

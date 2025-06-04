@@ -15,6 +15,12 @@ As limitações conhecidas identificam plataformas, dispositivos ou funções qu
 
 
 
+== Suporte para detecção de instância de host
+
+O Workload Factory oferece suporte à detecção de instâncias do PostgreSQL em execução somente em sistemas operacionais Amazon Linux e instâncias do Oracle em execução somente no Red Hat Enterprise Linux.
+
+
+
 == Suporte à versão de imagem AMI
 
 Mostramos apenas até quatro versões recentes ou revisões de imagens AMI para cada versão SQL. Não permitimos a instalação a partir de uma imagem AMI mais antiga do que as quatro versões mais recentes.
@@ -127,9 +133,3 @@ Os cálculos de custo e porcentagem do tamanho do volume para o armazenamento no
 * A avaliação de otimização não pode determinar se a replicação entre regiões (CRR) está sendo usada quando o sistema de arquivos FSX for ONTAP de destino está em uma conta diferente da AWS.
 * A fábrica de carga de trabalho avalia apenas a configuração CRR do sistema de arquivos FSX for ONTAP de origem.
 
-
-
-
-== Número de bancos de dados em instâncias do SQL Server
-
-Na guia Inventário e no Dashboard, a fábrica de carga de trabalho suporta até 1.500 bancos de dados em instâncias do SQL Server.

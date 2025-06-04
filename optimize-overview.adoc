@@ -1,25 +1,21 @@
 ---
 sidebar: sidebar 
 permalink: optimize-overview.html 
-keywords: continuous optimization, optimize, assess, assessment, scan, optimization, Microsoft SQL Server, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
-summary: A fábrica de workloads do BlueXP  para bancos de dados oferece otimização contínua para implantações do Microsoft SQL Server no armazenamento do Amazon FSX para NetApp ONTAP. 
+keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance 
+summary: O Workload Factory para bancos de dados analisa as configurações do Microsoft SQL Server regularmente para determinar se há algum problema. 
 ---
-= Otimização contínua para workloads da BlueXP  de fábrica para bancos de dados
+= Análise de configuração para ambientes de banco de dados em fábrica de carga de trabalho
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-A fábrica de workloads do BlueXP  para bancos de dados oferece otimização contínua para implantações do Microsoft SQL Server no armazenamento do Amazon FSX para NetApp ONTAP.
-
-A otimização contínua verifica e avalia automaticamente a infraestrutura de banco de dados em escala para garantir que grandes propriedades atinjam o máximo de desempenho, eficiência de custo e conformidade com as práticas recomendadas. O recurso fornece um relatório abrangente de insights e recomendações para otimização.
-
-Com a otimização contínua, você pode detetar problemas na sua infraestrutura de banco de dados, entender o que precisa mudar e agir.
+O Workload Factory para Bancos de Dados analisa as configurações do banco de dados regularmente para determinar se há problemas com implantações do Microsoft SQL Server no Amazon FSx para armazenamento NetApp ONTAP. Quando problemas são encontrados, o Workload Factory mostra quais são os problemas e explica o que precisa ser alterado para garantir que as configurações do seu banco de dados atinjam o desempenho máximo, a eficiência de custos e a conformidade com as práticas recomendadas.
 
 Os principais recursos incluem:
 
-* Avaliação contínua
+* Análise de configuração diária
 * Validações automáticas de melhores práticas
 * Recomendações para o dimensionamento correto
 * Observabilidade proativa
@@ -27,6 +23,34 @@ Os principais recursos incluem:
 * Consultor do AWS Well-Architected Framework
 
 
-O escopo da otimização é diferente dependendo de qual componente está sendo avaliado. Por exemplo, a otimização de storage ocorre no nível de instância SQL, enquanto a otimização de computação ocorre no nível de host.
 
-link:optimize-configurations.html["Otimize as configurações para implantações do Microsoft SQL Server"]
+
+== Status bem arquitetado
+
+No console de fábrica da carga de trabalho no nível do sistema de arquivos, o status bem arquitetado é listado para todos os sistemas de arquivos FSX for ONTAP. Os Estados bem arquitetados são categorizados como "questões", "não analisadas" ou "bem arquitetadas". A seleção do status bem arquitetado redireciona você para a guia de status bem arquitetado dentro do sistema de arquivos, onde você pode encontrar a pontuação bem arquitetada, categorias de configuração, todas as configurações para o sistema de arquivos.
+
+Pontuação bem arquitetada:: A pontuação inclui todas as configurações analisadas atualmente e aparece como uma porcentagem. Uma pontuação de 25% significa que 25% das configurações do sistema de arquivos são bem arquitetadas.
+Categorias de configuração:: As configurações do sistema de arquivos são organizadas em categorias alinhadas com os cinco pilares a seguir do AWS Well-Architected Framework.
++
+--
+* _Confiabilidade_: Garante que as cargas de trabalho executem suas funções pretendidas de forma correta e consistente, mesmo quando há interrupções. Um exemplo de configuração é o FSX for ONTAP backups.
+* _Security_: Enfatiza a proteção de dados, sistemas e ativos por meio de avaliações de risco e estratégias de mitigação.
+* _Excelência operacional_: Concentra-se em fornecer a arquitetura e o valor de negócios mais ideais.
+* _Otimização de custos_: Visa fornecer valor de negócio ao mesmo tempo que minimiza custos.
+* _Eficiência de desempenho_: Se concentra em usar recursos de forma eficiente para atender aos requisitos do sistema e manter o desempenho ideal à medida que as demandas mudam.
+
+
+--
+Escopo de análise:: O escopo da otimização é diferente dependendo de qual componente está sendo avaliado. Por exemplo, a otimização de storage ocorre no nível de instância SQL, enquanto a otimização de computação ocorre no nível de host.
+
+
+
+
+== Requisitos de análise
+
+Para uma análise completa do ambiente de banco de dados, as instâncias do host devem estar registradas e online.
+
+link:register-instance.html["Aprenda como registrar uma instância de host."]
+
+.O que vem a seguir
+link:optimize-configurations.html["Implementar configurações de banco de dados bem arquitetadas"]
