@@ -50,7 +50,7 @@ Se você usar um servidor proxy para todas as conexões de saída de instâncias
 
 == Antes de começar
 
-O host da instância deve aparecer na aba Inventário. Para que os hosts apareçam no inventário, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["você deve adicionar credenciais de conta AWS e permissões de modo _leitura_ ou _automatização_"^] .
+O host da instância deve aparecer na aba Inventário. Para que os hosts apareçam no inventário, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["você deve adicionar credenciais de conta AWS e permissões de modo _somente leitura_ ou _leitura/gravação_"^] .
 
 
 
