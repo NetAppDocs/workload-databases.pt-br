@@ -449,7 +449,6 @@
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Resultado</block>
   <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">Clique na seta suspensa para expandir a linha do host para exibir seus bancos de dados.</block>
   <block id="bab47e98a40b74089a0df1373390d048" category="list-text">Selecione *Ver bases de dados*.</block>
-  <block id="252215232d636a7c096b2327e9a20b42" category="doc">Monitorar bancos de dados</block>
   <block id="67b0a66954400448325457f930e0f82b" category="paragraph">A monitorização de trabalhos suporta até três níveis de monitorização, dependendo do trabalho. Por exemplo, para a criação de novos clones de banco de dados e sandbox, o monitoramento de tarefas rastreia trabalhos pai e subtarefas.</block>
   <block id="b830a8f027299af6d1d8ffbb130bcc58" category="list-text">Níveis de monitorização do trabalho</block>
   <block id="f52bf93027629736a089ef7f590091e0" category="list-text">Nível 1 (trabalho pai): Controla o trabalho de implantação do host.</block>
@@ -544,7 +543,6 @@
   <block id="991fc877b6135bcda7435016745ae066" category="sidebar">Use cargas de trabalho de banco de dados</block>
   <block id="fbe27670bf06b7e38d268c77e7f002f0" category="sidebar">Crie um novo servidor de banco de dados</block>
   <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">Administrar e monitorar</block>
-  <block id="077bbf8da979e97e9f7ec7239eb76073" category="sidebar">Gerenciar um Microsoft SQL Server</block>
   <block id="6ea5d3d06add60328b6497a58edc5878" category="sidebar">Gerenciar clones</block>
   <block id="7375873088079584bbffaf102f0fdae4" category="sidebar">Crie um clone de sandbox</block>
   <block id="566d7361c862d8d2bd63be4cb3f852cd" category="sidebar">Verifique a integridade de um clone de sandbox</block>
@@ -645,8 +643,6 @@
   <block id="37c0391f707d07b4c1d64a02e6944c56" category="paragraph">A fábrica de carga de trabalho para o Microsoft SQL Server suporta implementações de alta disponibilidade (sempre em instâncias de cluster de failover) e de instância única de acordo com as práticas recomendadas da AWS, NetApp ONTAP e SQL Server.</block>
   <block id="b9aff8d3c5ff2dd2a4ce0963f381f957" category="paragraph">Para obter perguntas gerais sobre os aplicativos e serviços de fábrica de carga de trabalho ou de fábrica, <block ref="b9da93c3ce08d7fb81177157f233c056" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="71e2f5eacc9fc09317bbe70e053aeb1e" category="summary">Gerencie instâncias do Microsoft SQL Server na fábrica de cargas de trabalho do BlueXP  para bancos de dados.</block>
-  <block id="72f7ef1037108c5eeefad1bcee23a0a8" category="summary">Rastreie trabalhos de banco de dados e monitore bancos de dados na fábrica de cargas de trabalho do BlueXP  para bancos de dados.</block>
-  <block id="671ef5b67f2b7cbf660faa04c3d4622a" category="doc">Monitore bancos de dados na fábrica de workloads do BlueXP </block>
   <block id="eb7ed5d3b1a2ff72006245ad37f9817b" category="paragraph">Você precisa ter uma conta da AWS para usar bancos de dados.</block>
   <block id="c37e590e9c50960a15f3292676cc0c18" category="paragraph">Siga estes passos para começar.</block>
   <block id="3e7340039619cc08d8c1c5a3cd4bfb43" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Faça login na fábrica de workloads da BlueXP </block>
@@ -986,8 +982,6 @@
   <block id="fd8a54c517020c653ae1776e8e00d343" category="list-text"><block ref="fd8a54c517020c653ae1776e8e00d343" category="inline-link-macro-rx"></block></block>
   <block id="050cc3957bb212dc2758e7dd27f7faf8" category="inline-link-macro">Visualizando bancos de dados</block>
   <block id="7a403e4f1f2e0af187fa5a95116054cc" category="list-text"><block ref="7a403e4f1f2e0af187fa5a95116054cc" category="inline-link-macro-rx"></block></block>
-  <block id="f4a7fa0c2cfabd3c771238fbdb6c7ae5" category="inline-link-macro">Monitoramento de operações de banco de dados</block>
-  <block id="b92726505ce75a5aa80c8086ae979c25" category="list-text"><block ref="b92726505ce75a5aa80c8086ae979c25" category="inline-link-macro-rx"></block></block>
   <block id="2f2280ee27b03fc450cd69afae071e39" category="inline-link-macro">Implementando configurações de banco de dados bem arquitetadas</block>
   <block id="d3379f7eb15b947ec99d4daad00317b3" category="list-text"><block ref="d3379f7eb15b947ec99d4daad00317b3" category="inline-link-macro-rx"></block></block>
   <block id="c4363ade7c2d208d79dee9b60bc51922" category="doc">Implementar configurações de banco de dados bem arquitetadas na fábrica de carga de trabalho</block>
@@ -1093,4 +1087,7 @@
   <block id="1ecac8592ecd595bc4f53507e476fc53" category="list-text">Você precisa <block ref="9c62e895201e97f6c74e26e0f3de2d15" category="inline-link-macro-rx"></block>criar um clone de sandbox na fábrica de carga de trabalho.</block>
   <block id="b2a6b8ac31e0bf9968f6f80649cc61cd" category="inline-link-macro">você deve adicionar credenciais de conta AWS e permissões de modo _somente leitura_ ou _leitura/gravação_</block>
   <block id="b6693184dc0e8cc975fb8e936b04d129" category="paragraph">O host da instância deve aparecer na aba Inventário. Para que os hosts apareçam no inventário, <block ref="99382ab95f660f372dfed7d2289ac38a" category="inline-link-macro-rx"></block> .</block>
+  <block id="a38d5cfb962091710b5c8c4cae183d64" category="summary">Rastreie trabalhos de banco de dados e monitore bancos de dados dentro da fábrica de carga de trabalho para bancos de dados.</block>
+  <block id="bcdf66d04230e723b2fc5152ae10a7ef" category="doc">Monitorar trabalhos de banco de dados na fábrica de carga de trabalho</block>
+  <block id="9ae4e4b9fdc398feb3be344b26cbf99f" category="sidebar">Monitorar trabalhos de banco de dados</block>
 </blocks>

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: Rastreie trabalhos de banco de dados e monitore bancos de dados na fábrica de cargas de trabalho do BlueXP  para bancos de dados. 
+summary: Rastreie trabalhos de banco de dados e monitore bancos de dados dentro da fábrica de carga de trabalho para bancos de dados. 
 ---
-= Monitore bancos de dados na fábrica de workloads do BlueXP 
+= Monitorar trabalhos de banco de dados na fábrica de carga de trabalho
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Rastreie trabalhos de banco de dados e monitore bancos de dados na fábrica de cargas de trabalho do BlueXP  para bancos de dados.
+Rastreie trabalhos de banco de dados e monitore bancos de dados dentro da fábrica de carga de trabalho para bancos de dados.
 
 .Sobre esta tarefa
 Os bancos de dados fornecem monitoramento de tarefas para que você possa acompanhar o progresso da tarefa e diagnosticar e solucionar problemas caso ocorra alguma falha. Pode filtrar trabalhos por tipo e estado, localizar trabalhos utilizando a função de pesquisa e transferir a tabela trabalhos.

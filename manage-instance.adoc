@@ -20,6 +20,5 @@ As tarefas de gerenciamento incluem:
 * link:create-database.html["Criando um banco de dados"]
 * link:create-sandbox-clone.html["Criando um clone de banco de dados (sandbox)"]
 * link:view-databases.html["Visualizando bancos de dados"]
-* link:monitor-databases.html["Monitoramento de operações de banco de dados"]
 * link:optimize-configurations.html["Implementando configurações de banco de dados bem arquitetadas"]
 
