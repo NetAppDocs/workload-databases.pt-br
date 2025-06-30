@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-instance.html 
-keywords: host instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
+keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
 summary: Saiba mais sobre gerenciamento de instâncias no Workload Factory para bancos de dados. 
 ---
 = Gerenciamento de instâncias na fábrica de carga de trabalho para bancos de dados
@@ -11,9 +11,9 @@ summary: Saiba mais sobre gerenciamento de instâncias no Workload Factory para 
 
 
 [role="lead"]
-O gerenciamento de instâncias de host registradas no Workload Factory inclui a implantação de recursos para suas instâncias, como a criação de bancos de dados e clones de bancos de dados, além do monitoramento do status da instância e do banco de dados, da utilização de recursos, da proteção e do desempenho do armazenamento. Além disso, você pode analisar o status bem arquitetado das configurações do seu banco de dados e implementar as melhores práticas de configuração para melhorar o desempenho e reduzir os custos operacionais. O gerenciamento de instâncias é exclusivo para instâncias com FSx para armazenamento do sistema de arquivos ONTAP.
+O gerenciamento de instâncias registradas no workload factory inclui a implantação de recursos para suas instâncias, como a criação de bancos de dados e clones de bancos de dados, além do monitoramento do status da instância e do banco de dados, da utilização de recursos, da proteção e do desempenho do armazenamento. Além disso, você pode analisar o status bem arquitetado das configurações do seu banco de dados e implementar as melhores práticas de configuração para melhorar o desempenho e reduzir os custos operacionais. O gerenciamento de instâncias é exclusivo para instâncias com FSx para armazenamento do sistema de arquivos ONTAP.
 
-Você deve link:register-instance.html["registrar uma instância de host"] para executar qualquer uma das seguintes tarefas de gerenciamento.
+Você deve link:register-instance.html["registrar uma instância"] para executar qualquer uma das seguintes tarefas de gerenciamento.
 
 As tarefas de gerenciamento incluem:
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-configurations.html 
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
-summary: A fábrica de carga de trabalho do BlueXP  para bancos de dados verifica as configurações do Microsoft SQL Server, fornecendo informações e recomendações para ajudá-lo a alcançar a excelência operacional. 
+summary: A fábrica de carga de trabalho para bancos de dados verifica as configurações do Microsoft SQL Server, fornecendo insights e recomendações para ajudar você a atingir a excelência operacional. 
 ---
 = Implementar configurações de banco de dados bem arquitetadas na fábrica de carga de trabalho
 :allow-uri-read: 
@@ -23,7 +23,7 @@ O que é analisado:: A fábrica de carga de trabalho analisa o status bem arquit
 --
 * Dimensionamento do armazenamento: Inclui camada de armazenamento, espaço livre do sistema de arquivos, tamanho da unidade de Registro e tamanho da unidade TempDB
 * Layout de armazenamento: Inclui posicionamento de arquivos de dados do usuário, posicionamento de arquivos de log e posicionamento TempDB
-* Configuração de storage: Inclui gerenciamento de capacidade, thin Provisioning, política de disposição em categorias, snapshots, status, política e sessões de e/S de vários caminhos e muito mais
+* Configuração de armazenamento: inclui gerenciamento de capacidade, provisionamento fino, política de camadas, instantâneos, status do Microsoft Multipath I/O (MPIO) e configuração de tempo limite do MPIO
 * Computação: Inclui redimensionamento, patches do sistema operacional e configurações de adaptador de rede, como Receive Side Scaling (RSS) e descarregamento TCP
 * Aplicações: Inclui licenças Microsoft SQL Server, Microsoft SQL Server patch e configurações MAXDOP
 * Resiliência: Inclui snapshots locais, backups do FSX para ONTAP e replicação entre regiões (CRR)
@@ -57,10 +57,10 @@ Você também pode baixar um relatório das descobertas selecionando *Exportar P
 . Selecione a seta suspensa para exibir a recomendação para qualquer configuração. As recomendações incluem práticas recomendadas, possíveis armadilhas de configurações não otimizadas e considerações importantes. Certifique-se de rever a recomendação com cuidado.
 . Selecione *Visualizar e corrigir* problemas de configuração quando a opção estiver disponível.
 +
-*Selecionar tudo* é o padrão, mas você pode selecionar recursos específicos para otimizar.
+*Selecionar tudo* é o padrão, mas você pode selecionar recursos específicos para corrigir.
 
 +
-.. Para todas as configurações, exceto a limpeza de clones, revise os detalhes da recomendação para saber o que acontecerá se você optar pela otimização. Algumas operações de remediação podem causar inatividade da instância ou interrupções do serviço.
+.. Para todas as configurações, exceto a limpeza de clones, revise os detalhes da recomendação para saber o que acontecerá se você decidir corrigir o problema. Algumas operações de remediação podem causar inatividade da instância ou interrupções do serviço.
 .. Para limpeza de clones, selecione bancos de dados clonados (caixas de areia) para atualizar ou excluir.
 +
 *** Atualizar um clone sincroniza-o com seu banco de dados de origem. A atualização está disponível apenas para clones criados na fábrica de workloads.
@@ -73,4 +73,4 @@ Você também pode baixar um relatório das descobertas selecionando *Exportar P
 
 
 .Resultado
-O processo de remediação é iniciado. Selecione o separador *monitorização de trabalhos* para ver o estado da operação.
+A fábrica de carga de trabalho começa a corrigir o(s) problema(s). Selecione o separador *monitorização de trabalhos* para ver o estado da operação.
