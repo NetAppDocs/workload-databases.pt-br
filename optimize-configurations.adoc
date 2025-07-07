@@ -35,7 +35,7 @@ O que é analisado:: A fábrica de carga de trabalho analisa o status bem arquit
 
 .Antes de começar
 * Você deve ter link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de leitura/gravação"^] para analisar as configurações do seu banco de dados.
-* Para avaliar o armazenamento de uma instância do Microsoft SQL Server, a instância deve ser registrada no workload factory e o tipo de armazenamento deve ser FSx para ONTAP. link:register-instance.html["Aprenda como registrar uma instância de host."]
+* Para avaliar o armazenamento de uma instância do Microsoft SQL Server, a instância deve ser registrada no workload factory e o tipo de armazenamento deve ser FSx para ONTAP. link:register-instance.html["Aprenda como registrar uma instância."]
 * Certifique-se de rever cada recomendação cuidadosamente antes de selecionar para corrigir uma configuração ou configuração. Para as configurações RSS e MAXDOP, sugerimos que você teste as configurações recomendadas para determinar melhorias de desempenho antes de fazer alterações no seu ambiente de produção.
 
 
@@ -47,7 +47,7 @@ NOTE: O processo de remediação pode causar tempos de inatividade da instância
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Na guia *Inventário*, selecione a guia *instâncias*.
 . Selecione *Corrigir problemas* para visualizar os problemas de configuração da instância.
-. Na página de status Bem-arquitetado da instância do host, revise as descobertas da análise.
+. Na página de status Bem arquitetado da instância, revise as descobertas da análise.
 +
 Você pode filtrar problemas de configuração por categorias, subcategorias, status, gravidade e tags.
 

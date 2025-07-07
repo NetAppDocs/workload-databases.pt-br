@@ -36,6 +36,6 @@ Se você operar no modo _somente leitura_ ou _leitura/gravação_, você precisa
 Por último, se você escolher operar no modo _leitura/gravação_, você deve link:create-database-server.html["implantar um servidor host"] ou link:register-instance.html["registrar uma instância"] para gerenciar seus recursos de host e antes de adicionar bancos de dados de usuários.
 
 .O que vem a seguir
-Quando você tiver registrado instâncias de host com FSx para armazenamento do sistema de arquivos ONTAP em seu inventário de bancos de dados, você pode link:create-database.html["crie um banco de dados de usuários"] ou link:create-sandbox-clone.html["clone seu host para criar uma sandbox"] .
+Quando você tiver registrado instâncias com FSx para armazenamento do sistema de arquivos ONTAP em seu inventário de bancos de dados, você pode link:create-database.html["crie um banco de dados de usuários"] ou link:create-sandbox-clone.html["clone seu host para criar uma sandbox"] .
 
 Quando você tiver hosts do Elastic Block Store ou do FSX for Windows File Server em seu inventário de bancos de dados, você pode link:explore-savings.html["explore as poupanças com a calculadora de poupança"].

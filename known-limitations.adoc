@@ -15,7 +15,7 @@ As limitações conhecidas identificam plataformas, dispositivos ou funções qu
 
 
 
-== Suporte para detecção de instância de host
+== Suporte para detecção de instância
 
 O Workload Factory oferece suporte à detecção de instâncias do PostgreSQL em execução somente em sistemas operacionais Amazon Linux e instâncias do Oracle em execução somente no Red Hat Enterprise Linux.
 

@@ -14,8 +14,8 @@ summary: Para obter um resumo dos recursos do banco de dados na fábrica de carg
 Para obter um resumo dos recursos do banco de dados na fábrica de carga de trabalho, visualize todos os bancos de dados no inventário de bancos de dados. Você também pode visualizar os bancos de dados por instância registrada.
 
 .Antes de começar
-* Instâncias de host que contêm recursos de banco de dados devem ter FSx para armazenamento do sistema de arquivos ONTAP.
-* As instâncias do host devem ser registradas na fábrica de carga de trabalho. Aprenda a link:register-instance.html["registrar instâncias de host"].
+* Instâncias que contêm recursos de banco de dados devem ter FSx para armazenamento do sistema de arquivos ONTAP.
+* As instâncias devem ser registradas na fábrica de carga de trabalho. Aprenda a link:register-instance.html["registrar uma instância"].
 
 
 .Passos
@@ -28,7 +28,7 @@ Para obter um resumo dos recursos do banco de dados na fábrica de carga de trab
 . Em bancos de dados, selecione a guia *Inventário*.
 . Clique na seta suspensa para expandir a linha do host para exibir seus bancos de dados.
 +
-O host se expande e as instâncias do host aparecem.
+O host se expande e as instâncias aparecem.
 
 . Clique no menu de três pontos da instância que contém os bancos de dados a serem exibidos.
 . Selecione *Ver bases de dados*.
@@ -42,7 +42,7 @@ O host se expande e as instâncias do host aparecem.
 . Em bancos de dados, selecione a guia *Inventário*.
 . Clique na seta suspensa para expandir a linha do host para exibir seus bancos de dados.
 +
-O host se expande e as instâncias do host aparecem.
+O host se expande e as instâncias aparecem.
 
 . Clique no menu de três pontos da instância que contém os bancos de dados a serem exibidos.
 . Selecione *Ver bases de dados*.

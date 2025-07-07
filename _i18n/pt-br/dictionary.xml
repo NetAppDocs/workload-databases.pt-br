@@ -445,7 +445,6 @@
   <block id="afe3dddd43fed2e0f76617fa08ab254a" category="list-text"><block ref="078aab7ae8c1a0df339ac8525790d5e1" prefix="" category="inline-code"></block></block>
   <block id="cfa54b7dd19dd91bb87ede68126951eb" category="list-text"><block ref="25f6388206f436c2d1de63216302b13d" prefix="" category="inline-code"></block></block>
   <block id="8d461d34b0f2c02565383f3301044282" category="list-text"><block ref="fea0543b0b4b9d4c240c6219de0db41c" prefix="" category="inline-code"></block></block>
-  <block id="7a85061671bf8d085efe2cb8dfd1c79e" category="paragraph">O host se expande e as instâncias do host aparecem.</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Resultado</block>
   <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">Clique na seta suspensa para expandir a linha do host para exibir seus bancos de dados.</block>
   <block id="bab47e98a40b74089a0df1373390d048" category="list-text">Selecione *Ver bases de dados*.</block>
@@ -955,7 +954,6 @@
   <block id="db8588c095bdb42680df1d8ae6e6c242" category="paragraph">Você pode registrar a instância novamente mais tarde.</block>
   <block id="6e58f833a8c88963786858e4cd0820f1" category="list-text">Clique no menu de três pontos da instância para cancelar o registro.</block>
   <block id="a20e9b47d2ae2e8dcad4b38296aada53" category="list-text">Selecione *Cancelar registro*.</block>
-  <block id="57b8b12d92efb891c61703846230423a" category="section-title">Suporte para detecção de instância de host</block>
   <block id="7d02c7321e50b7c2fa346dd9edc083f2" category="paragraph">O Workload Factory oferece suporte à detecção de instâncias do PostgreSQL em execução somente em sistemas operacionais Amazon Linux e instâncias do Oracle em execução somente no Red Hat Enterprise Linux.</block>
   <block id="6923ba19fe8a091f76827ff8c86785de" category="summary">O Workload Factory for Databases é um serviço completo de implantação e manutenção de banco de dados com práticas recomendadas integradas para otimização, clonagem fina automática e recursos de monitoramento e resolução.</block>
   <block id="bb3a81d6ea3e61933815d8c7984727a3" category="section-title">O que é fábrica de carga de trabalho para bancos de dados?</block>
@@ -981,12 +979,9 @@
   <block id="eb39e8dfd54bf78043b2372b30f7b2b6" category="list-text">Clones: inclui opções para atualizar e excluir clones (sandboxes) que foram criados dentro ou fora da fábrica de carga de trabalho e têm mais de 60 dias</block>
   <block id="05733d6679707441838e3ca92fcb1e85" category="inline-link-macro">Credenciais da conta AWS e permissões de leitura/gravação</block>
   <block id="e6ff59cff1eb616f7a9d6b770313807a" category="list-text">Você deve ter <block ref="6428f71963510d960d64cd03bb6513ae" category="inline-link-macro-rx"></block> para analisar as configurações do seu banco de dados.</block>
-  <block id="bb4dc454356e65051d8e22516b60a260" category="inline-link-macro">Aprenda como registrar uma instância de host.</block>
-  <block id="606bc152b33b9976e88d57b374a1d46f" category="list-text">Para avaliar o armazenamento de uma instância do Microsoft SQL Server, a instância deve ser registrada no workload factory e o tipo de armazenamento deve ser FSx para ONTAP. <block ref="f22f9817b1d52aa896a88fe9442f70ef" category="inline-link-macro-rx"></block></block>
   <block id="663c686f4608ad8e700ed1cd99a57fcc" category="list-text">Certifique-se de rever cada recomendação cuidadosamente antes de selecionar para corrigir uma configuração ou configuração. Para as configurações RSS e MAXDOP, sugerimos que você teste as configurações recomendadas para determinar melhorias de desempenho antes de fazer alterações no seu ambiente de produção.</block>
   <block id="55900adb296775523b32b30486b0de17" category="admonition">O processo de remediação pode causar tempos de inatividade da instância ou interrupções de serviço. Certifique-se de revisar a recomendação cuidadosamente antes de decidir corrigir uma configuração.</block>
   <block id="da0f3dbe0b914fb78e47ff54702db3df" category="list-text">Selecione *Corrigir problemas* para visualizar os problemas de configuração da instância.</block>
-  <block id="a85bf70a610b181df621eea76d0068e4" category="list-text">Na página de status Bem-arquitetado da instância do host, revise as descobertas da análise.</block>
   <block id="8cdf23f9dd4f98a6b709a0a9d53ecd88" category="paragraph">Você pode filtrar problemas de configuração por categorias, subcategorias, status, gravidade e tags.</block>
   <block id="dd78deb6ef5fa791112d358b2eccdf97" category="paragraph">Você também pode baixar um relatório das descobertas selecionando *Exportar PDF*.</block>
   <block id="f73028254f9c4297e3f60654068105e0" category="list-text">Selecione a seta suspensa para exibir a recomendação para qualquer configuração. As recomendações incluem práticas recomendadas, possíveis armadilhas de configurações não otimizadas e considerações importantes. Certifique-se de rever a recomendação com cuidado.</block>
@@ -1008,8 +1003,6 @@
   <block id="49c47aadfeff1e01313108c157d381b4" category="list-text">_Eficiência de desempenho_: Se concentra em usar recursos de forma eficiente para atender aos requisitos do sistema e manter o desempenho ideal à medida que as demandas mudam.</block>
   <block id="8b75b787538a5ee0eb97dc541694c82a" category="list-text">Escopo de análise</block>
   <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">Requisitos de análise</block>
-  <block id="389751c9d4b8ea76783de1b291cac92f" category="paragraph">Para uma análise completa do ambiente de banco de dados, as instâncias do host devem estar registradas e online.</block>
-  <block id="f22f9817b1d52aa896a88fe9442f70ef" category="paragraph"><block ref="f22f9817b1d52aa896a88fe9442f70ef" category="inline-link-macro-rx"></block></block>
   <block id="4eadd345921a1f4292d9b98892d3b84e" category="inline-link-macro">Implementar configurações de banco de dados bem arquitetadas</block>
   <block id="9f79767d5e4eb4d13f2a6d925ed59d0f" category="paragraph"><block ref="9f79767d5e4eb4d13f2a6d925ed59d0f" category="inline-link-macro-rx"></block></block>
   <block id="27cb094655bbfaa4d3b2c3b34d1c1557" category="summary">Comece a usar o Workload Factory para bancos de dados para usar snippets de infraestrutura como código, descobrir hosts, gerenciar recursos e muito mais.</block>
@@ -1021,7 +1014,6 @@
   <block id="32077805607c935c0ac59dd7b4a3fdc6" category="inline-link-macro">implantar um servidor host</block>
   <block id="d53bce2cf4a36ab74378d06b70255899" category="inline-link-macro">registrar uma instância</block>
   <block id="d4e3cc6f64d77dfb90b8f3a54369d97f" category="paragraph">Por último, se você escolher operar no modo _leitura/gravação_, você deve <block ref="086045f9b9433534ba0bc16ba8744718" category="inline-link-macro-rx"></block> ou <block ref="70dc6f6bba18b4f574a867d694f53a80" category="inline-link-macro-rx"></block> para gerenciar seus recursos de host e antes de adicionar bancos de dados de usuários.</block>
-  <block id="db04547f806a50b5e3c5bbceb867c6c9" category="paragraph">Quando você tiver registrado instâncias de host com FSx para armazenamento do sistema de arquivos ONTAP em seu inventário de bancos de dados, você pode <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block> ou <block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block> .</block>
   <block id="8373481dd509f9b495f59748db1aa76d" category="doc">Registrar instâncias na fábrica de carga de trabalho para bancos de dados</block>
   <block id="42c8e35152475231ef5a183766c9bebc" category="paragraph">Os bancos de dados só podem registrar instâncias com o FSx para armazenamento do sistema de arquivos ONTAP.</block>
   <block id="91a3069301b0dd7ee29890c4b610ba27" category="section-title">Sobre a tarefa</block>
@@ -1040,9 +1032,6 @@
   <block id="a037e794bf828053866493b8452ab9c7" category="paragraph">A solicitação de registro da instância é iniciada. Selecione a aba *Monitoramento de tarefas* para acompanhar o progresso.</block>
   <block id="5dfcf5a53e6a3c94eb359647b453a807" category="summary">Para obter um resumo dos recursos do banco de dados na fábrica de carga de trabalho, visualize todos os bancos de dados no inventário de bancos de dados. Você também pode visualizar os bancos de dados por instância registrada.</block>
   <block id="34f8798aab35970d27e00ecdf2a9f526" category="doc">Exibir bancos de dados na fábrica de carga de trabalho para bancos de dados</block>
-  <block id="0ab190804913b1145bf64c21befa3286" category="list-text">Instâncias de host que contêm recursos de banco de dados devem ter FSx para armazenamento do sistema de arquivos ONTAP.</block>
-  <block id="682d1e77482e7088c166b62c34287660" category="inline-link-macro">registrar instâncias de host</block>
-  <block id="13e6dec9f19066e3153eb07ec978ea2b" category="list-text">As instâncias do host devem ser registradas na fábrica de carga de trabalho. Aprenda a <block ref="2dbc08dda5209ee806e4433f973c765a" category="inline-link-macro-rx"></block>.</block>
   <block id="87301bee2c9587d1e63d873a81c4e6fa" category="open-title">Exibir bancos de dados para uma única instância</block>
   <block id="25734f9761801ac27c5c548d5c1829ca" category="open-title">Exibir bancos de dados para todas as instâncias</block>
   <block id="91063ca7fb76f05148ae179b2f84b160" category="paragraph">Você visualizou os recursos do banco de dados na fábrica de carga de trabalho.</block>
@@ -1074,19 +1063,10 @@
   <block id="c836d737c77c0dbce2c99a2b01c719fd" category="paragraph">A fábrica de carga de trabalho fornece as seguintes notificações para bancos de dados:</block>
   <block id="33e3371223dba19c723617802e06af8d" category="list-text">Relatório bem arquitetado</block>
   <block id="d415d128365eca1587931ed756de7819" category="list-text">Implantação de host</block>
-  <block id="83f1d9ca1a0c4c2fc51a371c0d773f76" category="list-text">Proteção</block>
   <block id="8306ce5f84163ec6839ec7518f30183a" category="section-title">Aprimoramento de integração para registro de instâncias</block>
-  <block id="0a969bb4f7ed7e29d7225c0409a1750b" category="paragraph">O Workload Factory para Bancos de Dados aprimorou seu processo de integração para registro de instâncias em execução no Amazon FSx para armazenamento NetApp ONTAP. Agora você pode selecionar instâncias em massa para registro. Após o registro de uma instância, você pode criar e gerenciar recursos de host do banco de dados no console do Workload Factory.</block>
   <block id="2e91c32877a8bf4a56c1853f92a414ba" category="section-title">Análise e correção para configuração de tempo limite de E/S do Microsoft Multipath</block>
-  <block id="221618cb9e519d5c3dd0fcbb1e4f1205" category="paragraph">O status bem arquitetado para suas instâncias de host de banco de dados agora inclui a análise e a correção para a configuração de tempo limite do Microsoft Multipath I/O (MPIO). Definir o tempo limite do MPIO para 60 segundos garante a conectividade e a estabilidade do armazenamento FSx for ONTAP durante failovers. Se a configuração do MPIO não estiver definida corretamente, o Workload Factory fornecerá uma correção para definir o valor do tempo limite do MPIO para 60 segundos.</block>
   <block id="a05724b342c36062e480732f660ae9d4" category="paragraph"><block ref="a05724b342c36062e480732f660ae9d4" category="inline-link-macro-rx"></block></block>
-  <block id="2bf19cd7fefccda37a9e51c8d6ae9ef1" category="section-title">Melhorias nos gráficos do inventário do host</block>
-  <block id="29a6225f1f6846093fcfd562090e8654" category="paragraph">Na tela de inventário do host, vários gráficos de utilização de recursos, como throughput e IOPS, agora exibem dados de 7 dias, para que você possa monitorar o desempenho dos nós SQL a partir do console da fábrica de carga de trabalho com mais eficiência. As métricas de desempenho coletadas dos nós SQL serão salvas no Amazon CloudWatch, que pode ser usado para o Logs Insights ou para integração com outros serviços analíticos em seu ambiente.</block>
-  <block id="02212e54266ecdf641215b97bf4ab24e" category="paragraph">Nas guias Instâncias e Bancos de dados no inventário do host, aprimoramos a descrição e a visualização da proteção do host.</block>
   <block id="4698c78219bd6bc2a4fb47e8f4149213" category="section-title">Suporte para autenticação do Windows na fábrica de carga de trabalho</block>
-  <block id="b3a0e7d1a5170a15143af7a7f86f02b8" category="paragraph">Agora, o Workload Factory oferece suporte à autenticação do SQL Server usando usuários autenticados do Windows para registrar instâncias de host e se beneficiar dos recursos de gerenciamento de host.</block>
-  <block id="47668721b89b4afabeb23e27f6ac9b38" category="inline-link-macro">Registrar instâncias de host na fábrica de carga de trabalho para bancos de dados</block>
-  <block id="4f178ea0296d3da0481606b8e3df7542" category="paragraph"><block ref="4f178ea0296d3da0481606b8e3df7542" category="inline-link-macro-rx"></block></block>
   <block id="f7b79998a8d6049aa7838e93bde48d38" category="paragraph">Durante a implantação, a fábrica de carga de trabalho habilita o CredSSP para delegação de credenciais a scripts para provisionamento de SQL. Quando a delegação do CredSSP é bloqueada para todos os computadores do domínio com a política de grupo, a implantação falha. Após a implantação, a fábrica de carga de trabalho desabilita o CredSSP.</block>
   <block id="b6705e62a5d2c7330d2d39782b5e5ea5" category="summary">Cancele o registro de uma instância se não quiser mais implantar ou monitorar recursos da instância.</block>
   <block id="aa76a1c51b277c90780c0553dba1e6a6" category="doc">Cancelar o registro de uma instância na fábrica de carga de trabalho</block>
@@ -1121,4 +1101,20 @@
   <block id="1e72ee2b188273bc05d5a58836ef28ea" category="list-text">*Autenticação do Windows*: Digite o nome de usuário e a senha do Windows, e o nome de usuário e a senha do sistema de arquivos FSx para ONTAP.</block>
   <block id="3325d27939065e1573633813a5123834" category="list-text">Na etapa 3, prepare a instância certificando-se de que ela atende aos pré-requisitos necessários. Se todos os módulos necessários estiverem instalados e os pré-requisitos forem atendidos, selecione *Avançar* para registrar a instância. Se precisar tomar alguma providência, siga estas etapas.</block>
   <block id="b77e8ec0a3425747f32b3dbc303adecb" category="section-title">30 de junho de 2025</block>
+  <block id="d2240cc857b28c2cc0c761811ebb0e4d" category="paragraph">O Workload Factory para Bancos de Dados aprimorou seu processo de integração para registro de instâncias em execução no Amazon FSx para armazenamento NetApp ONTAP. Agora você pode selecionar instâncias em massa para registro. Depois que uma instância é registrada, você pode criar e gerenciar recursos de banco de dados no console do Workload Factory.</block>
+  <block id="55dedf6eed5a2ce8c260a3944723e099" category="paragraph">O status bem arquitetado para suas instâncias de banco de dados agora inclui a análise e a correção para a configuração de tempo limite do Microsoft Multipath I/O (MPIO). Definir o tempo limite do MPIO para 60 segundos garante a conectividade e a estabilidade do armazenamento FSx for ONTAP durante failovers. Se a configuração do MPIO não estiver definida corretamente, o Workload Factory fornecerá uma correção para definir o valor do tempo limite do MPIO para 60 segundos.</block>
+  <block id="0f6f8a7d2c62793903fd07b4a68f2192" category="section-title">Melhorias nos gráficos do inventário de instâncias</block>
+  <block id="6bb06f6a313d1245a77bdcc02f151dcd" category="paragraph">Na tela de inventário de instâncias, vários gráficos de utilização de recursos, como taxa de transferência e IOPS, agora exibem 7 dias de dados para que você possa monitorar o desempenho dos nós SQL no console do workload factory com mais eficiência. As métricas de desempenho coletadas dos nós SQL serão salvas no Amazon CloudWatch, que pode ser usado para o Logs Insights ou para integração com outros serviços analíticos em seu ambiente.</block>
+  <block id="8984f42ceef01f063ea7a1078e620318" category="paragraph">Nas guias Instâncias e Bancos de dados no inventário, aprimoramos a descrição e a visualização para proteção.</block>
+  <block id="e6884d3b77d68ac903da5836a6c33345" category="paragraph">Agora, o Workload Factory oferece suporte à autenticação do SQL Server usando usuários autenticados do Windows para registrar instâncias e se beneficiar dos recursos de gerenciamento.</block>
+  <block id="b8419cf58039d1a67d2046abd157e28b" category="paragraph"><block ref="b8419cf58039d1a67d2046abd157e28b" category="inline-link-macro-rx"></block></block>
+  <block id="2e1bd7e9b2f7897e3fbd2f64db19746c" category="section-title">Suporte para detecção de instância</block>
+  <block id="e5872a50d5d45d5b9d394ddc65dfee1f" category="inline-link-macro">Aprenda como registrar uma instância.</block>
+  <block id="09ea6435a2780f6e0f876796133da036" category="list-text">Para avaliar o armazenamento de uma instância do Microsoft SQL Server, a instância deve ser registrada no workload factory e o tipo de armazenamento deve ser FSx para ONTAP. <block ref="4dede94da0834ecd430bec6189bab6cc" category="inline-link-macro-rx"></block></block>
+  <block id="e6b1ed7d667d6b75280f0be1619fde20" category="list-text">Na página de status Bem arquitetado da instância, revise as descobertas da análise.</block>
+  <block id="a26f09029b7e444a21db17eb62e9d2d5" category="paragraph">Para uma análise completa do ambiente de banco de dados, as instâncias devem ser registradas e estar online.</block>
+  <block id="4dede94da0834ecd430bec6189bab6cc" category="paragraph"><block ref="4dede94da0834ecd430bec6189bab6cc" category="inline-link-macro-rx"></block></block>
+  <block id="897c69f19b2f39fbf3080a555a679d8e" category="paragraph">Quando você tiver registrado instâncias com FSx para armazenamento do sistema de arquivos ONTAP em seu inventário de bancos de dados, você pode <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block> ou <block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block> .</block>
+  <block id="621bb50103e94b947974d2656fb451ec" category="list-text">Instâncias que contêm recursos de banco de dados devem ter FSx para armazenamento do sistema de arquivos ONTAP.</block>
+  <block id="dd36ed4d606eb4686fae0a7232af1eac" category="list-text">As instâncias devem ser registradas na fábrica de carga de trabalho. Aprenda a <block ref="e24144bf29586c3fb748c1e1cf493cb5" category="inline-link-macro-rx"></block>.</block>
 </blocks>

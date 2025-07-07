@@ -48,9 +48,9 @@ Escopo de análise:: O escopo da otimização é diferente dependendo de qual co
 
 == Requisitos de análise
 
-Para uma análise completa do ambiente de banco de dados, as instâncias do host devem estar registradas e online.
+Para uma análise completa do ambiente de banco de dados, as instâncias devem ser registradas e estar online.
 
-link:register-instance.html["Aprenda como registrar uma instância de host."]
+link:register-instance.html["Aprenda como registrar uma instância."]
 
 .O que vem a seguir
 link:optimize-configurations.html["Implementar configurações de banco de dados bem arquitetadas"]
