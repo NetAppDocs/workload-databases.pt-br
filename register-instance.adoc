@@ -26,24 +26,23 @@ Você pode autenticar links usando credenciais do SQL Server ou com credenciais 
 
 NOTE: O Workload Factory oferece suporte apenas ao registro e gerenciamento de instâncias do Microsoft SQL Server. Dependendo das credenciais da conta AWS selecionadas no Workload Factory, hosts PostgreSQL e Oracle podem aparecer no inventário. Atualmente, o Workload Factory oferece suporte a instâncias PostgreSQL não registradas executadas apenas em sistemas operacionais Amazon Linux e instâncias Oracle executadas apenas no Red Hat Enterprise Linux.
 
-
-
-== Registrando uma instância em uma rede privada
-
-Para registrar uma instância em uma rede privada sem conectividade externa, os seguintes endpoints precisam estar disponíveis na VPC com associação às sub-redes onde os servidores SQL estão presentes. Certifique-se de que os pontos de extremidade da interface permitem a porta 443 no grupo de segurança anexado.
-
+Registrando uma instância em uma rede privada:: Para registrar uma instância em uma rede privada sem conectividade externa, os seguintes endpoints precisam estar disponíveis na VPC com associação às sub-redes onde os servidores SQL estão presentes. Certifique-se de que os pontos de extremidade da interface permitem a porta 443 no grupo de segurança anexado.
++
+--
 * `S3 Gateway/endpoint`
 * `ssm`
 * `ssmmessages`
 * `fsx`
-
-
++
 Se você usar um servidor proxy para todas as conexões de saída de instâncias EC2, deverá permitir o acesso aos seguintes domínios para que as operações de gerenciamento funcionem:
 
 * ``.microsoft.com``
 * ``.powershellgallery.com``
 * ``.aws.amazon.com``
 * ``.amazonaws.com``
+
+
+--
 
 
 
