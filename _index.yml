@@ -19,6 +19,8 @@ indexpage:
       url: "/explore-savings.html"
     - title: Registrar uma instância
       url: "/register-instance.html"
+    - title: Visualize o status bem arquitetado de suas instâncias
+      url: "/optimize-configurations.html"
     - title: Crie um Microsoft SQL Server
       url: "/create-database-server.html"
     - title: Crie um servidor PostgreSQL

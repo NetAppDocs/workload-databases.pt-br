@@ -11,10 +11,12 @@ summary: A fábrica de carga de trabalho para bancos de dados verifica as config
 
 
 [role="lead"]
-Usando insights e recomendações de análise de configuração, aproveite a fábrica de carga de trabalho para implementar as melhores práticas para suas configurações de banco de dados. Você pode facilmente encontrar problemas e tomar medidas para melhorar a arquitetura de quaisquer configurações que não estejam otimizadas para confiabilidade, segurança, eficiência, desempenho e custo.
+Usando insights e recomendações de análise de configuração, aproveite a fábrica de carga de trabalho para implementar as melhores práticas para suas configurações de banco de dados. Você pode facilmente revisar o status bem arquitetado, aprender sobre problemas com configurações de banco de dados e tomar medidas para melhorar quaisquer configurações que não estejam otimizadas para confiabilidade, segurança, eficiência, desempenho e custo.
+
+link:optimize-overview.html["Aprenda sobre a análise de configuração e o status bem arquitetado na fábrica de carga de trabalho."]
 
 .Sobre esta tarefa
-A Workload Factory analisa as configurações do banco de dados diariamente. A análise diária fornece insights e recomendações com opções para corrigir problemas de configuração automaticamente, para que suas configurações atendam às práticas recomendadas.
+A Workload Factory analisa as configurações do banco de dados diariamente. A análise diária fornece o status bem arquitetado, insights e recomendações com opções para corrigir automaticamente problemas de configuração para que suas configurações atendam às melhores práticas.
 
 Você tem opções para revisar as recomendações para problemas de configuração e corrigir esses problemas no inventário de bancos de dados no console do workload factory.
 
