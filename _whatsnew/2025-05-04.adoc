@@ -40,12 +40,6 @@ Algumas configurações podem não se aplicar aos ambientes de banco de dados. A
 
 
 
-=== Remoção de registos de avaliação no local
-
-Depois de explorar a economia de um host no local do Microsoft SQL Server, você tem a opção de remover o Registro de host no local da fábrica de workloads do BlueXP .
-
-
-
 === Terminologia de permissões atualizada
 
 A interface do usuário e a documentação do Workload Factory agora usam "somente leitura" para se referir às permissões de leitura e "leitura/gravação" para se referir às permissões de automação.

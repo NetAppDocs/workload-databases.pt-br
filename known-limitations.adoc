@@ -133,3 +133,9 @@ Os cálculos de custo e porcentagem do tamanho do volume para o armazenamento no
 * A avaliação de otimização não pode determinar se a replicação entre regiões (CRR) está sendo usada quando o sistema de arquivos FSX for ONTAP de destino está em uma conta diferente da AWS.
 * A fábrica de carga de trabalho avalia apenas a configuração CRR do sistema de arquivos FSX for ONTAP de origem.
 
+
+
+
+== Autenticação do host do banco de dados no Explore Savings
+
+Em alguns casos, com permissões limitadas, a página de exploração de economias não carrega dados após a autenticação bem-sucedida.

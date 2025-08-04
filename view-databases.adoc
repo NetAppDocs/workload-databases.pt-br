@@ -15,7 +15,7 @@ Para obter um resumo dos recursos do banco de dados na fábrica de carga de trab
 
 .Antes de começar
 * Instâncias que contêm recursos de banco de dados devem ter FSx para armazenamento do sistema de arquivos ONTAP.
-* As instâncias devem ser registradas na fábrica de carga de trabalho. Aprenda a link:register-instance.html["registrar uma instância"].
+* Você deve registrar instâncias no workload factory para visualizar bancos de dados. Saiba como link:register-instance.html["registrar uma instância"] .
 
 
 .Passos
@@ -26,13 +26,10 @@ Para obter um resumo dos recursos do banco de dados na fábrica de carga de trab
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Inventário*.
-. Clique na seta suspensa para expandir a linha do host para exibir seus bancos de dados.
-+
-O host se expande e as instâncias aparecem.
+. Clique no menu de três pontos da instância e selecione *Exibir bancos de dados*.
 
-. Clique no menu de três pontos da instância que contém os bancos de dados a serem exibidos.
-. Selecione *Ver bases de dados*.
 
+Os bancos de dados são exibidos para a instância única na guia Bancos de dados.
 
 --
 .Exibir bancos de dados para todas as instâncias
@@ -40,15 +37,11 @@ O host se expande e as instâncias aparecem.
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
 . Em bancos de dados, selecione a guia *Inventário*.
-. Clique na seta suspensa para expandir a linha do host para exibir seus bancos de dados.
+. Selecione a aba *Bancos de dados*.
 +
-O host se expande e as instâncias aparecem.
+Os bancos de dados são exibidos para todas as instâncias registradas.
 
-. Clique no menu de três pontos da instância que contém os bancos de dados a serem exibidos.
-. Selecione *Ver bases de dados*.
 
 
 --
 ====
-.Resultado
-Você visualizou os recursos do banco de dados na fábrica de carga de trabalho.

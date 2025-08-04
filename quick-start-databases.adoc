@@ -26,16 +26,22 @@ Você precisará link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up
 Escolha entre link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Modos operacionais _básico_, _somente leitura_ e _leitura/gravação_"^].
 
 [role="quick-margin-para"]
-Se você operar no modo _básico_, não precisa ir mais longe. Você pode começar a usar bancos de dados para copiar amostras de código parcialmente concluídas. No bloco bancos de dados, clique em *Deploy database host*. link:create-database-server.html["Saiba como implantar um servidor de banco de dados"].
+Se você operar no modo _somente leitura_ ou _leitura/gravação_, você precisarálink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["adicione credenciais a uma conta manualmente"^] selecione recursos de carga de trabalho, como bancos de dados e GenAI, e crie políticas de IAM para as permissões necessárias.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]Descobrir ou implantar recursos
+[role="quick-margin-para"]
+Com credenciais e políticas de IAM, você pode descobrir recursos de banco de dados existentes no inventário oulink:create-database-server.html["implantar um servidor host"] .  O inventário fornece uma interface unificada para gerenciar recursos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]Explore oportunidades de economia de custos
+[role="quick-margin-para"]
+Quando você tem bancos de dados em execução no local ou na AWS com armazenamento no Amazon Elastic Block Store (EBS) ou FSx para Windows File Server, você podelink:explore-savings.html["use a calculadora de economia Explore"] para analisar custos e planejar migrações de forma eficaz.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]Implementar configurações de banco de dados bem arquitetadas
+[role="quick-margin-para"]
+O Workload Factory for Databases analisa regularmente implantações do Microsoft SQL Server no Amazon FSx for NetApp ONTAP a partir do painel Well-architected.  Para solucionar problemas do painel bem arquitetado para seus recursos de banco de dados, primeiro você precisalink:register-instance.html["registrar instâncias"] .
 
 [role="quick-margin-para"]
-Se você operar no modo _somente leitura_ ou _leitura/gravação_, você precisará link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["adicione credenciais a uma conta manualmente"^] que inclui selecionar recursos de carga de trabalho, como bancos de dados e GenAI, e criar políticas de IAM para garantir que você tenha as permissões corretas para operar no modo _somente leitura_ ou _leitura/gravação_.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Implantar um servidor de banco de dados
-[role="quick-margin-para"]
-Por último, se você escolher operar no modo _leitura/gravação_, você deve link:create-database-server.html["implantar um servidor host"] ou link:register-instance.html["registrar uma instância"] para gerenciar seus recursos de host e antes de adicionar bancos de dados de usuários.
+Após registrar as instâncias, você pode visualizar o status bem arquitetado e tomar medidas paralink:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["implementar configurações de banco de dados bem arquitetadas"] na fábrica de carga de trabalho.
 
 .O que vem a seguir
 Quando você tiver registrado instâncias com FSx para armazenamento do sistema de arquivos ONTAP em seu inventário de bancos de dados, você pode link:create-database.html["crie um banco de dados de usuários"] ou link:create-sandbox-clone.html["clone seu host para criar uma sandbox"] .
-
-Quando você tiver hosts do Elastic Block Store ou do FSX for Windows File Server em seu inventário de bancos de dados, você pode link:explore-savings.html["explore as poupanças com a calculadora de poupança"].

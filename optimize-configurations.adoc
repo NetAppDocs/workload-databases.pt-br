@@ -28,7 +28,7 @@ O que é analisado:: A fábrica de carga de trabalho analisa o status bem arquit
 * Configuração de armazenamento: inclui gerenciamento de capacidade, provisionamento fino, política de camadas, instantâneos, status do Microsoft Multipath I/O (MPIO) e configuração de tempo limite do MPIO
 * Computação: Inclui redimensionamento, patches do sistema operacional e configurações de adaptador de rede, como Receive Side Scaling (RSS) e descarregamento TCP
 * Aplicações: Inclui licenças Microsoft SQL Server, Microsoft SQL Server patch e configurações MAXDOP
-* Resiliência: Inclui snapshots locais, backups do FSX para ONTAP e replicação entre regiões (CRR)
+* Resiliência: inclui snapshots locais, FSx para backups ONTAP , replicação entre regiões (CRR) e alta disponibilidade do Microsoft SQL.
 * Clones: inclui opções para atualizar e excluir clones (sandboxes) que foram criados dentro ou fora da fábrica de carga de trabalho e têm mais de 60 dias
 
 

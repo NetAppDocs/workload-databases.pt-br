@@ -234,10 +234,14 @@ Siga as etapas na guia para o tipo de armazenamento.
 Se a fábrica de carga de trabalho detetar hosts EBS, você será redirecionado para a guia explorar economia. Se a fábrica de carga de trabalho não detetar hosts EBS, você será redirecionado para <<Explore as poupanças através da personalização,explore as poupanças através da personalização>>a calculadora para .
 
 . Na guia explorar economia, clique em *explorar economia* do servidor de banco de dados usando armazenamento EBS.
+. Se necessário, autentique o host do banco de dados com credenciais do SQL Server, credenciais do Windows ou adicionando permissões ausentes do SQL Server.
++
+Se a página Explorar economias não carregar dados após a autenticação bem-sucedida, selecione a aba *Inventário* para recarregar os dados e, em seguida, selecione a aba *Explorar economias* novamente.
+
 . Na calculadora de economia, opcionalmente, forneça os seguintes detalhes sobre clones e instantâneos no seu armazenamento EBS para uma estimativa de economia de custos mais precisa.
 +
-.. *Frequência de instantâneos*: Selecione uma frequência de instantâneos no menu suspenso.
-.. *Frequência de atualização do clone*: Selecione a frequência que os clones atualizam no menu suspenso.
+.. *Frequência de instantâneo*: Selecione uma frequência de instantâneo no menu.
+.. *Frequência de atualização do clone*: Selecione a frequência de atualização dos clones no menu.
 .. *Número de cópias clonadas*: Insira o número de cópias clonadas na configuração do EBS.
 .. *Taxa de mudança mensal*: Insira a porcentagem que os dados clonados e instantâneos mudam em média por mês.
 
@@ -249,18 +253,22 @@ Se a fábrica de carga de trabalho detetar hosts EBS, você será redirecionado 
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *explorar economia* e, em seguida, *Microsoft SQL Server no FSX para Windows* no menu suspenso.
+. No bloco Bancos de dados, selecione *Explorar economias* e depois *Microsoft SQL Server no FSx para Windows* no menu.
 +
 Se a fábrica de carga de trabalho detetar o FSX for Windows hosts, você será redirecionado para a guia explorar economia. Se a fábrica de carga de trabalho não detetar o FSX para hosts do Windows, você será redirecionado para <<Explore as poupanças através da personalização,explore as poupanças através da personalização>>a calculadora para .
 
-. Na guia explorar economia, clique em *explorar economia* do servidor de banco de dados usando o FSX para Windows File Server armazenamento.
+. Na guia Explorar economias, selecione *Explorar economias* do host do banco de dados usando o FSx para armazenamento do Windows File Server.
+. Se necessário, autentique o host do banco de dados com credenciais do SQL Server, credenciais do Windows ou adicionando permissões ausentes do SQL Server.
++
+Se a página Explorar economias não carregar dados após a autenticação bem-sucedida, selecione a aba *Inventário* para recarregar os dados e, em seguida, selecione a aba *Explorar economias* novamente.
+
 . Na calculadora de economia, opcionalmente, forneça os seguintes detalhes sobre clones (cópias de sombra) e snapshots no seu armazenamento no FSX for Windows para uma estimativa de economia de custos mais precisa.
 +
-.. *Frequência de instantâneos*: Selecione uma frequência de instantâneos no menu suspenso.
+.. *Frequência de instantâneo*: Selecione uma frequência de instantâneo no menu.
 +
 Se as cópias de sombra do FSX for Windows forem detetadas, o valor padrão é *Diário*. Se as cópias sombra não forem detetadas, o valor padrão será *Nenhuma frequência de instantâneos*.
 
-.. *Frequência de atualização do clone*: Selecione a frequência que os clones atualizam no menu suspenso.
+.. *Frequência de atualização do clone*: Selecione a frequência de atualização dos clones no menu.
 .. *Número de cópias clonadas*: Insira o número de cópias clonadas na configuração FSX for Windows.
 .. *Taxa de mudança mensal*: Insira a porcentagem que os dados clonados e instantâneos mudam em média por mês.
 
@@ -272,7 +280,7 @@ Se as cópias de sombra do FSX for Windows forem detetadas, o valor padrão é *
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *explorar economia* e *Microsoft SQL Server on-premises* no menu suspenso.
+. No bloco Bancos de dados, selecione *Explorar economias* e depois *Microsoft SQL Server local* no menu.
 . Na guia local do SQL Server, baixe o script para avaliar seus ambientes SQL Server locais.
 +
 .. Faça o download do script de avaliação. O script é uma ferramenta de coleta de dados baseada no PowerShell. Ele reúne e, em seguida, carrega dados de configuração e desempenho do SQL Server para a fábrica de carga de trabalho do BlueXP . O consultor de migração avalia os dados e planeja a implantação do FSX for ONTAP para seu ambiente SQL Server.
@@ -291,11 +299,11 @@ image:screenshot-upload-script-on-premises.png["Uma captura de tela da guia loca
 . Para obter resultados mais precisos, atualize as informações do Compute e os detalhes de armazenamento e desempenho.
 . Opcionalmente, forneça os detalhes a seguir sobre clones (cópias de sombra) e snapshots em seu ambiente de banco de dados local para obter uma estimativa de economia de custo mais precisa.
 +
-.. *Frequência de instantâneos*: Selecione uma frequência de instantâneos no menu suspenso.
+.. *Frequência de instantâneo*: Selecione uma frequência de instantâneo no menu.
 +
 Se as cópias de sombra do FSX for Windows forem detetadas, o valor padrão é *Diário*. Se as cópias sombra não forem detetadas, o valor padrão será *Nenhuma frequência de instantâneos*.
 
-.. *Frequência de atualização do clone*: Selecione a frequência que os clones atualizam no menu suspenso.
+.. *Frequência de atualização do clone*: Selecione a frequência de atualização dos clones no menu.
 .. *Número de cópias clonadas*: Insira o número de cópias clonadas na configuração local.
 .. *Taxa de mudança mensal*: Insira a porcentagem que os dados clonados e instantâneos mudam em média por mês.
 
