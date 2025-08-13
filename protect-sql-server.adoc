@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: protect-sql-server.html 
+keywords: protect, server, Microsoft SQL Server, SQL Server, protect instance, protect database 
+summary: Proteja instâncias e bancos de dados do Microsoft SQL Server. 
+---
+= Proteja as cargas de trabalho do Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Proteja os dados dos seus aplicativos do Microsoft SQL Server usando o BlueXP backup and recovery no console do Workload Factory.  Os backups são gerados automaticamente e armazenados em um repositório de objetos na sua conta de nuvem pública ou privada com base nas políticas que você cria.
+
+
+
+== Sobre esta tarefa
+
+O BlueXP backup and recovery aproveitam a tecnologia de replicação de dados NetApp SnapMirror para garantir que todos os backups estejam totalmente sincronizados, criando cópias instantâneas e transferindo-as para os locais de backup.
+
+Para obter detalhes sobre a proteção com BlueXP backup and recovery, consulte olink:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html["Visão geral da proteção de cargas de trabalho do Microsoft SQL com BlueXP backup and recovery"^] .
+
+
+
+== Antes de começar
+
+A seguir estão os requisitos para começar a proteger cargas de trabalho do Microsoft SQL Server com BlueXP backup and recovery:
+
+* Um conector BlueXP
++
+Consultelink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Aprenda a configurar um conector BlueXP"^] elink:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["requisitos padrão do BlueXP"^] .
+
++
+O sistema operacional Ubuntu 22.04 LTS é necessário para o Connector.
+
+* Uma licença para BlueXP backup and recovery
++
+link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["Configurar licenciamento para BlueXP backup and recovery"^]
+
+* Configurando a resolução do host no conector
++
+Para descobrir bancos de dados, você deve definir a resolução do host no Conector.  No dispositivo hospedado, adicione o mapeamento do endereço IP ao nome do host no `/etc/hosts` arquivo.
+
+
+
+
+
+== Proteja instâncias e bancos de dados do Microsoft SQL Server
+
+A proteção de instâncias e bancos de dados do Microsoft SQL Server envolve descoberta de recursos, validação de pré-requisitos e configuração e instalação do Plug-in para Microsoft SQL Server.  O plug-in é um componente do lado do host do NetApp Software que permite proteger suas cargas de trabalho do Microsoft SQL Server.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *Inventário*.
+. Filtre o *Tipo de mecanismo* para *Microsoft SQL Server*.
+. Selecione *Proteger* no menu da instância a ser protegida.
+. Selecione o *Conector* onde você deseja que a carga de trabalho seja registrada e protegida.
+. Para se preparar para a proteção de dados, o Workload Factory registra automaticamente seus recursos do SQL Server no BlueXP backup and recovery, configura e instala o Plug-in para Microsoft SQL Server e descobre recursos para atender aos pré-requisitos de proteção da sua instância do SQL Server.  Selecione *Iniciar* para começar o processo.
+. Após os pré-requisitos serem atendidos, selecione *Redirecionar* para ser redirecionado ao BlueXP backup and recovery.
+
+
+.O que vem a seguir
+No BlueXP backup and recovery, crie uma política para proteger sua instância e bancos de dados do Microsoft SQL Server.
+
+link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-policies-create.html["Aprenda a criar uma política para proteger sua instância e bancos de dados do Microsoft SQL Server"^] .
+
+Para obter informações relacionadas, consulte olink:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html["Documentação de BlueXP backup and recovery"^] para gerenciar cargas de trabalho do Microsoft SQL Server.

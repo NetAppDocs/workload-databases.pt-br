@@ -139,3 +139,9 @@ Os cálculos de custo e porcentagem do tamanho do volume para o armazenamento no
 == Autenticação do host do banco de dados no Explore Savings
 
 Em alguns casos, com permissões limitadas, a página de exploração de economias não carrega dados após a autenticação bem-sucedida.
+
+
+
+== Integração com BlueXP backup and recovery
+
+Após adicionar hosts ao backup e recuperação do BlueXP para proteção, a descoberta do banco de dados às vezes falha.
