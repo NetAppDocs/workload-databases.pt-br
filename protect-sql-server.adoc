@@ -17,7 +17,7 @@ Proteja os dados dos seus aplicativos do Microsoft SQL Server usando o BlueXP ba
 
 == Sobre esta tarefa
 
-O Workload Factory ajuda a automatizar o processo de descoberta de recursos de instância e banco de dados, validação de pré-requisitos e configuração e instalação do Plug-in para Microsoft SQL Server, tudo isso faz parte do processo de preparação para proteger suas cargas de trabalho do Microsoft SQL Server com BlueXP backup and recovery. O plug-in é um componente do lado do host do NetApp Software que permite proteger suas cargas de trabalho do Microsoft SQL Server.
+A fábrica de carga de trabalho automatiza a descoberta de recursos, a validação de pré-requisitos e a configuração e instalação do plug-in para Microsoft SQL Server, para preparar a proteção de suas cargas de trabalho com BlueXP backup and recovery. O plug-in é um componente do lado do host do NetApp Software que permite proteger suas cargas de trabalho do Microsoft SQL Server.
 
 O BlueXP backup and recovery aproveitam a tecnologia de replicação de dados NetApp SnapMirror para garantir que todos os backups estejam totalmente sincronizados, criando cópias instantâneas e transferindo-as para os locais de backup.
 
@@ -27,23 +27,22 @@ Para obter detalhes sobre a proteção com BlueXP backup and recovery, consulte 
 
 == Antes de começar
 
-A seguir estão os requisitos para começar a proteger cargas de trabalho do Microsoft SQL Server com BlueXP backup and recovery:
+Os seguintes requisitos devem ser atendidos para proteger cargas de trabalho do Microsoft SQL Server com BlueXP backup and recovery.
 
-* Um conector BlueXP
+* Garanta que seu ambiente atendalink:https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["os requisitos de BlueXP backup and recovery SQL Server"^] .
+* link:https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-start-prereq.html#in-bluexp["Requisitos completos do BlueXP"^]incluindo a configuração do BlueXP, funções do IAM e um conector BlueXP .
 +
-Consultelink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Aprenda a configurar um conector BlueXP"^] elink:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["requisitos padrão do BlueXP"^] .
+Se você tiver acesso de administrador da organização à conta BlueXP , o `backup and recovery super admin` a função é atribuída automaticamente quando você<<Prepare-se para proteção com BlueXP backup and recovery,prepare-se para proteção com BlueXP backup and recovery>> .
 
 +
-O sistema operacional Ubuntu 22.04 LTS é necessário para o Connector.
-
-* Uma licença para BlueXP backup and recovery
-+
-link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["Configurar licenciamento para BlueXP backup and recovery"^]
-
-* Configurando a resolução do host no conector
+** Defina a resolução do host no conector
 +
 Para descobrir bancos de dados, você deve definir a resolução do host no Conector.  No dispositivo hospedado, adicione o mapeamento do endereço IP ao nome do host no `/etc/hosts` arquivo.
 
+
+
+* link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["Configurar licenciamento para BlueXP backup and recovery"^]
+* No Workload Factory para Bancos de Dados, certifique-se de registrar instâncias usando credenciais do Windows.  Para fornecer credenciais do Windows, acesse a guia Instâncias no Inventário.  Identifique a instância, selecione *Gerenciar instâncias* e, em seguida, selecione *Painel de instâncias*.  No painel da instância, selecione o menu de três pontos e, em seguida, selecione *Atualizar senha do Microsoft SQL Server*.  Atualize a senha usando a autenticação do Windows.
 
 
 
@@ -60,7 +59,7 @@ Conclua o processo de preparação para proteger seus recursos do Microsoft SQL 
 . Selecione *Proteger* no menu da instância a ser protegida.
 . Selecione o *Conector* onde você deseja que a carga de trabalho seja registrada e protegida.
 . Para se preparar para a proteção de dados, o Workload Factory registra automaticamente seus recursos do SQL Server no BlueXP backup and recovery, configura e instala o Plug-in para Microsoft SQL Server e descobre recursos para atender aos pré-requisitos de proteção da sua instância do SQL Server.  Selecione *Iniciar* para começar o processo.
-. Após os pré-requisitos serem atendidos, selecione *Redirecionar* para ser redirecionado ao BlueXP backup and recovery.
+. Após atender aos pré-requisitos, selecione *Redirecionar* para acessar o BlueXP backup and recovery.
 
 
 .O que vem a seguir
