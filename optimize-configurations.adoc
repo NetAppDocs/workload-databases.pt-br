@@ -11,38 +11,59 @@ summary: A fábrica de carga de trabalho para bancos de dados verifica as config
 
 
 [role="lead"]
-Usando insights e recomendações de análise de configuração, aproveite a fábrica de carga de trabalho para implementar as melhores práticas para suas configurações de banco de dados. Você pode facilmente revisar o status bem arquitetado, aprender sobre problemas com configurações de banco de dados e tomar medidas para melhorar quaisquer configurações que não estejam otimizadas para confiabilidade, segurança, eficiência, desempenho e custo.
+Usando insights e recomendações de análise de configuração, aproveite o Workload Factory para implementar práticas recomendadas para suas configurações de banco de dados com Microsoft SQL Server e Oracle.  Você pode facilmente revisar o status bem arquitetado, aprender sobre problemas com configurações de banco de dados e tomar medidas para melhorar quaisquer configurações que não estejam otimizadas para confiabilidade, segurança, eficiência, desempenho e custo.
+
+Você também pode descartar a análise de configurações específicas que não se aplicam ao seu ambiente para evitar alertas desnecessários e resultados de otimização imprecisos.
 
 link:optimize-overview.html["Aprenda sobre a análise de configuração e o status bem arquitetado na fábrica de carga de trabalho."]
 
-.Sobre esta tarefa
+
+
+== Sobre esta tarefa
+
 A Workload Factory analisa as configurações do banco de dados diariamente. A análise diária fornece o status bem arquitetado, insights e recomendações com opções para corrigir automaticamente problemas de configuração para que suas configurações atendam às melhores práticas.
 
 Você tem opções para revisar as recomendações para problemas de configuração e corrigir esses problemas no inventário de bancos de dados no console do workload factory.
 
-O que é analisado:: A fábrica de carga de trabalho analisa o status bem arquitetado das seguintes configurações para instâncias do Microsoft SQL Server:
-+
---
+.O que é analisado
+A fábrica de carga de trabalho analisa o status bem arquitetado das seguintes configurações:
+
+Para instâncias do Microsoft SQL Server:
+
 * Dimensionamento do armazenamento: Inclui camada de armazenamento, espaço livre do sistema de arquivos, tamanho da unidade de Registro e tamanho da unidade TempDB
 * Layout de armazenamento: Inclui posicionamento de arquivos de dados do usuário, posicionamento de arquivos de log e posicionamento TempDB
 * Configuração de armazenamento: inclui gerenciamento de capacidade, provisionamento fino, política de camadas, instantâneos, status do Microsoft Multipath I/O (MPIO) e configuração de tempo limite do MPIO
-* Computação: Inclui redimensionamento, patches do sistema operacional e configurações de adaptador de rede, como Receive Side Scaling (RSS) e descarregamento TCP
+* Computação: inclui redimensionamento, patches do sistema operacional e configurações do adaptador de rede, como dimensionamento do lado do recebimento (RSS), descarregamento de TCP e alinhamento de MTU
 * Aplicações: Inclui licenças Microsoft SQL Server, Microsoft SQL Server patch e configurações MAXDOP
 * Resiliência: inclui snapshots locais, FSx para backups ONTAP , replicação entre regiões (CRR) e alta disponibilidade do Microsoft SQL.
 * Clones: inclui opções para atualizar e excluir clones (sandboxes) que foram criados dentro ou fora da fábrica de carga de trabalho e têm mais de 60 dias
 
 
---
+Para bancos de dados Oracle:
+
+* Configuração de armazenamento: inclui gerenciamento de capacidade, provisionamento fino, política de níveis, instantâneos e eficiências de armazenamento
 
 
-.Antes de começar
+
+
+== Antes de começar
+
 * Você deve ter link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de leitura/gravação"^] para analisar as configurações do seu banco de dados.
-* Para avaliar o armazenamento de uma instância do Microsoft SQL Server, a instância deve ser registrada no workload factory e o tipo de armazenamento deve ser FSx para ONTAP. link:register-instance.html["Aprenda como registrar uma instância."]
+* Para avaliar o armazenamento de uma instância do Microsoft SQL Server ou banco de dados Oracle, o recurso deve ser registrado no workload factory e o tipo de armazenamento deve ser FSx para ONTAP.link:register-instance.html["Aprenda como registrar recursos."]
 * Certifique-se de rever cada recomendação cuidadosamente antes de selecionar para corrigir uma configuração ou configuração. Para as configurações RSS e MAXDOP, sugerimos que você teste as configurações recomendadas para determinar melhorias de desempenho antes de fazer alterações no seu ambiente de produção.
 
 
 
 NOTE: O processo de remediação pode causar tempos de inatividade da instância ou interrupções de serviço. Certifique-se de revisar a recomendação cuidadosamente antes de decidir corrigir uma configuração.
+
+
+
+== Corrigir um problema de configuração
+
+Corrija problemas de configuração para ambientes SQL Server ou Oracle em execução no FSx para armazenamento ONTAP .
+
+
+NOTE: O processo de correção pode causar tempos de inatividade da instância ou interrupções de serviço.  Certifique-se de revisar a recomendação cuidadosamente antes de decidir corrigir um problema de configuração.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -76,3 +97,68 @@ Você também pode baixar um relatório das descobertas selecionando *Exportar P
 
 .Resultado
 A fábrica de carga de trabalho começa a corrigir o(s) problema(s). Selecione o separador *monitorização de trabalhos* para ver o estado da operação.
+
+
+
+== Adiar ou ignorar a análise das configurações do banco de dados
+
+Adie ou ignore a análise de configurações de banco de dados específicas que não se aplicam ao ambiente de banco de dados para evitar alertas desnecessários e resultados de otimização imprecisos. Você pode reativar uma análise de configuração adiada ou descartada a qualquer momento.
+
+Os requisitos do aplicativo para configurações de banco de dados variam. A fábrica de carga de trabalho oferece duas opções para ignorar a análise de configurações específicas de banco de dados, para que você possa monitorar apenas problemas relevantes e obter uma visão precisa da integridade das configurações relevantes. Quando uma análise de configuração específica é adiada ou descartada, a configuração não é incluída na pontuação total de otimização.
+
+Você pode adiar, descartar e reativar a análise de configuração no nível de configuração e na instância do SQL Server ou no nível do banco de dados Oracle.
+
+* *Adiar por 30 dias*: Adiar a análise interromperá a análise por 30 dias. Após 30 dias, a análise será reiniciada automaticamente.
+* *Dismiss*: Rejeitar a análise adia a análise indefinidamente. Você pode reiniciar a análise, se necessário.
+
+
+As instruções a seguir descrevem como adiar, descartar ou reativar uma análise no nível de configuração.  Para concluir as seguintes tarefas para instâncias específicas do SQL Server ou bancos de dados Oracle, comece na guia *Painel*.
+
+[role="tabbed-block"]
+====
+.Adiar
+--
+Adiar para parar uma análise de configuração por 30 dias. Após 30 dias, a análise será reiniciada automaticamente.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Na guia *Inventário*, role para baixo até a configuração para adiar, selecione o menu de três pontos e, em seguida, selecione *adiar por 30 dias*.
+. Selecione *continuar*.
+
+
+.Resultado
+A análise de configuração pára por 30 dias.
+
+--
+.Dispensar
+--
+Ignorar para interromper uma análise de configuração indefinidamente. Você pode reiniciar a análise quando necessário.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Na guia *Inventory*, role para baixo até a configuração a ser descartada, selecione o menu de três pontos e selecione *Dismiss*.
+. Selecione *continuar*.
+
+
+.Resultado
+A análise de configuração pára.
+
+--
+.Reativar
+--
+Reative uma análise de configuração adiada ou descartada a qualquer momento.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Na guia *Inventário*, role para baixo até a configuração para reativar, selecione o menu de três pontos e, em seguida, selecione *reativar*.
+. Selecione *continuar*.
+
+
+.Resultado
+A análise de configuração é reativada e ocorre diariamente a avançar.
+
+--
+====

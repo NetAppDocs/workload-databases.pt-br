@@ -42,7 +42,6 @@ Para descobrir bancos de dados, você deve definir a resolução do host no Cone
 
 
 * link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["Configurar licenciamento para BlueXP backup and recovery"^]
-* No Workload Factory para Bancos de Dados, certifique-se de registrar instâncias usando credenciais do Windows.  Para fornecer credenciais do Windows, acesse a guia Instâncias no Inventário.  Identifique a instância, selecione *Gerenciar instâncias* e, em seguida, selecione *Painel de instâncias*.  No painel da instância, selecione o menu de três pontos e, em seguida, selecione *Atualizar senha do Microsoft SQL Server*.  Atualize a senha usando a autenticação do Windows.
 
 
 
@@ -57,7 +56,11 @@ Conclua o processo de preparação para proteger seus recursos do Microsoft SQL 
 . Em bancos de dados, selecione a guia *Inventário*.
 . Filtre o *Tipo de mecanismo* para *Microsoft SQL Server*.
 . Selecione *Proteger* no menu da instância a ser protegida.
-. Selecione o *Conector* onde você deseja que a carga de trabalho seja registrada e protegida.
+. Se solicitado, forneça credenciais do Windows com acesso administrativo.
++
+Para usar o BlueXP backup and recovery para proteção, as instâncias do SQL Server devem ser registradas no workload factory com credenciais do Windows.
+
+. Se vários Conectores estiverem ativos e disponíveis, selecione o *Conector* onde deseja que a carga de trabalho seja registrada e protegida.
 . Para se preparar para a proteção de dados, o Workload Factory registra automaticamente seus recursos do SQL Server no BlueXP backup and recovery, configura e instala o Plug-in para Microsoft SQL Server e descobre recursos para atender aos pré-requisitos de proteção da sua instância do SQL Server.  Selecione *Iniciar* para começar o processo.
 . Após atender aos pré-requisitos, selecione *Redirecionar* para acessar o BlueXP backup and recovery.
 

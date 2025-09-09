@@ -39,12 +39,10 @@ sidebar:
         url: "/create-postgresql-server.html"
     - title: Gerenciar instâncias
       entries:
-      - title: Gerenciamento de instâncias
+      - title: Gestão de recursos
         url: manage-instance.html
-      - title: Registrar uma instância
+      - title: Registrar recursos
         url: "/register-instance.html"
-      - title: Exibir bancos de dados
-        url: "/view-databases.html"
       - title: Crie um banco de dados
         url: "/create-database.html"
       - title: Crie um clone de sandbox
@@ -65,6 +63,8 @@ sidebar:
         url: "/optimize-configurations.html"
       - title: Adiar a análise de configuração
         url: "/postpone-analysis.html"
+    - title: Analisar logs de erros
+      url: "/analyze-error-logs.html"
     - title: Gerenciar clones
       entries:
       - title: Verifique a integridade de um clone de sandbox
@@ -81,6 +81,8 @@ sidebar:
         url: "/split-clone.html"
       - title: Exclua um clone de sandbox
         url: "/delete-clone.html"
+    - title: Cancelar o registro de recursos
+      url: "/deregister-instance.html"
   - title: Conhecimento e apoio
     entries:
     - title: Registre-se para obter suporte

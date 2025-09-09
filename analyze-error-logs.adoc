@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: analyze-error-logs.html 
+keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, smart analysis, Agentic AI 
+summary: Analisar logs de erros na fábrica de carga de trabalho para bancos de dados. 
+---
+= Analisar logs de erros na fábrica de carga de trabalho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Use o Smart Error Log Analyzer para interpretar automaticamente os logs de erros do Microsoft SQL Server para que você possa identificar e resolver problemas rapidamente.  A análise baseada em IA da Agentic requer integração com o Amazon Bedrock.
+
+.Sobre esta tarefa
+A análise e a correção do log de erros ajudam a manter a integridade e o desempenho das instâncias do SQL Server.  Interpretar logs de erros do SQL Server de forma eficaz requer análise cuidadosa e experiência.  O monitoramento manual, a detecção de erros e a análise da causa raiz consomem muito tempo e são propensos a erros.  Esses desafios podem atrasar a resolução de problemas, aumentar o tempo de inatividade e causar ineficiências operacionais.  O analisador de log de erros inteligente aborda esses desafios com estes benefícios principais:
+
+* Agrupamento inteligente: consolida erros de forma inteligente por exclusividade, gravidade e categoria e simplifica o processo de solução de problemas para resoluções mais rápidas e eficazes.
+* Investigação orientada por IA: utiliza IA para analisar erros proativamente, fornecendo insights claros e práticos para acelerar a identificação de problemas sem exigir conhecimento profundo.
+* Enriquecimento de erros: aprimora registros de erros com referências externas, oferecendo clareza contextual para melhorar a compreensão e a tomada de decisões.
+* Correção de melhores práticas: fornece recomendações de correção personalizadas para cargas de trabalho do SQL Server em execução no FSx para ONTAP, capacitando usuários de todos os níveis de habilidade a resolver problemas com confiança.
+
+
+Sempre que você usa o analisador de log de erros inteligente, você mantém controle total sobre seu ambiente enquanto se beneficia da análise avançada de IA.
+
+Para usar o Smart error log analyzer, você precisa ativar o Amazon Bedrock, selecionar o modelo que a fábrica de carga de trabalho usa, criar um endpoint privado para se conectar ao Amazon Bedrock, adicionar permissões e criar uma licença corporativa.
+
+link:https://aws.amazon.com/bedrock/pricing/["Preços do Amazon Bedrock"^]
+
+.Antes de começar
+Para usar o analisador de log de erros inteligente, você deve atender aos seguintes pré-requisitos:
+
+* Você precisa link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de modo _leitura/gravação_"^]criar um novo host de banco de dados na fábrica de workloads.
+* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registrar uma instância do SQL Server"^]na fábrica de carga de trabalho. *
+
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Em bancos de dados, selecione a guia *Inventário*.
+. Selecione *SQL Server* como o mecanismo de banco de dados.
+. Na guia Instâncias, localize a instância específica do SQL Server que você deseja analisar e selecione *Investigar erros* no menu.
+. Na aba *Investigação de erros*, complete os seguintes pré-requisitos conforme descrito no console:
++
+** Base rochosa da Amazônia
+** Rede: endpoint privado para Amazon Bedrock
+** Permissões para a função de perfil de instância do EC2
+** Credenciais associadas ao Gerenciamento de Banco de Dados de Carga de Trabalho (wlmdb)
+
+
+. Quando os pré-requisitos forem atendidos, selecione *Investigar agora* para usar o analisador de log de erros inteligente para obter insights sobre seus logs de erros do SQL Server.
++
+Após a verificação, os erros são exibidos no console, fornecendo uma visão abrangente dos problemas detectados pelo analisador de log de erros inteligente.
+
+. Use filtros para refinar os erros exibidos com base em critérios como gravidade, período e código de erro.
+. Revise as informações detalhadas do erro, incluindo a mensagem de erro original, a explicação baseada em IA e as etapas de correção sugeridas para resolver os erros.
+
