@@ -1,9 +1,9 @@
 ---
 indexpage:
-  title: Fábrica de carga de trabalho do BlueXP  para documentação de bancos de dados
+  title: Documentação do NetApp Workload Factory para bancos de dados
   lead: Implante configurações do Microsoft SQL Server e gerencie ambientes de banco
-    de dados em cima do FSX for ONTAP file system storage na fábrica de carga de trabalho
-    do BlueXP .
+    de dados no FSx para armazenamento do sistema de arquivos ONTAP no NetApp Workload
+    Factory.
   tiles:
   - title: Comece agora
     links:
@@ -33,9 +33,9 @@ indexpage:
       url: "/get-help.html"
   - title: Blogs & comunidade
     links:
+    - title: Console NetApp
+      url: https://www.netapp.com/console
+    - title: Serviços de dados NetApp
+      url: https://www.netapp.com/data-services/
     - title: Comunidade NetApp
-      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
-    - title: BlueXP  blogs
-      url: https://bluexp.netapp.com/blog
-    - title: Webinars na nuvem
-      url: https://bluexp.netapp.com/events
+      url: https://community.netapp.com/

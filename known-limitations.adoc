@@ -4,14 +4,14 @@ permalink: known-limitations.html
 keywords: limitations, databases 
 summary: As limitações conhecidas identificam plataformas, dispositivos ou funções que não são suportadas por esta versão do produto ou que não interoperam corretamente com ele. Revise essas limitações com cuidado. 
 ---
-= Limitações conhecidas da fábrica de workloads do BlueXP  para bancos de dados
+= Limitações conhecidas do NetApp Workload Factory para bancos de dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-As limitações conhecidas identificam plataformas, dispositivos ou funções que não são suportadas por esta versão do produto ou que não interoperam corretamente com ele. Revise essas limitações com cuidado.
+Limitações conhecidas identificam plataformas, dispositivos ou funções que não são compatíveis com o NetApp Workload Factory for Databases ou que não interoperam corretamente com ele. Revise essas limitações cuidadosamente.
 
 
 
@@ -35,13 +35,13 @@ A implementação com uma AMI personalizada assume que a Mídia de instalação 
 * Ao selecionar uma ordenação diferente do conjunto de ordenação na imagem para implementação autónoma
 
 
-Como parte da implantação, a fábrica de carga de trabalho não instala uma AMI personalizada com várias instâncias do Microsoft SQL Server. Somente a instância padrão do Microsoft SQL Server é selecionada e configurada como parte da implantação.
+Como parte da implantação, o Workload Factory não instala uma AMI personalizada com várias instâncias do Microsoft SQL Server.  Somente a instância padrão do Microsoft SQL Server é selecionada e configurada como parte da implantação.
 
 
 
 == Reverter e tentar novamente para implantações com falha
 
-A reversão e a tentativa de implantação com falha não são suportadas na fábrica da carga de trabalho. Você pode reverter ou tentar novamente uma pilha com falha no console do CloudFormation na AWS.
+A reversão e a nova tentativa para implantações com falha não são suportadas no Workload Factory.  Você pode reverter ou tentar novamente uma pilha com falha no console do CloudFormation na AWS.
 
 
 
@@ -60,7 +60,7 @@ Você precisará limpá-los manualmente ou esperar que o domínio limpe as entra
 
 == Suporte à configuração de grupos de disponibilidade sempre ativa
 
-O gerenciamento de configurações de grupos de disponibilidade sempre ativa não é compatível com os workloads de fábrica.
+O gerenciamento de configurações de grupos de disponibilidade Always On não é suportado no Workload Factory.
 
 
 
@@ -84,7 +84,7 @@ O número máximo de clones sandbox que podem ser criados a partir de um servido
 
 == Detecção e gerenciamento do Microsoft SQL Server
 
-A deteção do Microsoft SQL Server não é salva. Cada vez que você acessa bancos de dados na fábrica de carga de trabalho, a deteção do Microsoft SQL Server é executada novamente para identificar instalações SQL na região.
+A detecção do Microsoft SQL Server não é salva.  Cada vez que você acessa bancos de dados no Workload Factory, a detecção do Microsoft SQL Server é executada novamente para identificar instalações do SQL na região.
 
 
 
@@ -118,7 +118,7 @@ A otimização em massa para mais de uma instância do SQL Server não é suport
 
 === Avaliação de patches do sistema operacional para otimização
 
-A avaliação de patches do sistema operacional feita para fins de otimização pode não funcionar em uma rede privada. A avaliação depende do AWS Patch Manager. Para entender como corrigir instâncias do Windows EC2 em uma rede privada, link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["O Blog de operações em nuvem da AWS "como corrigir instâncias do Windows EC2 em sub-redes privadas usando o AWS Systems Manager""^]consulte .
+A avaliação de patches do sistema operacional feita para fins de otimização pode não funcionar em uma rede privada.  A avaliação depende do AWS Patch Manager.  Para entender como corrigir instâncias do Windows EC2 em uma rede privada, consulte o Blog de Operações de Nuvem da AWSlink:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["Como corrigir instâncias do Windows EC2 em sub-redes privadas usando o AWS Systems Manager"^] .
 
 
 
@@ -131,17 +131,35 @@ Os cálculos de custo e porcentagem do tamanho do volume para o armazenamento no
 == Avaliação da replicação entre regiões
 
 * A avaliação de otimização não pode determinar se a replicação entre regiões (CRR) está sendo usada quando o sistema de arquivos FSX for ONTAP de destino está em uma conta diferente da AWS.
-* A fábrica de carga de trabalho avalia apenas a configuração CRR do sistema de arquivos FSX for ONTAP de origem.
+* O Workload Factory avalia apenas a configuração CRR do sistema de arquivos FSx de origem para ONTAP .
 
 
 
 
-== Autenticação do host do banco de dados no Explore Savings
+== Autenticação do host do banco de dados ao explorar economias
 
 Em alguns casos, com permissões limitadas, a página de exploração de economias não carrega dados após a autenticação bem-sucedida.
 
 
 
-== Integração com BlueXP backup and recovery
+== Integração com NetApp Backup and Recovery
 
-Após adicionar hosts ao backup e recuperação do BlueXP para proteção, a descoberta do banco de dados às vezes falha.
+Após adicionar hosts ao NetApp Backup and Recovery para proteção, a descoberta do banco de dados às vezes falha.
+
+
+
+== Suporte regional
+
+As seguintes regiões da AWS não são suportadas:
+
+* Regiões da China
+* Regiões GovCloud (EUA)
+* Nuvem secreta
+* Ultra secreto
+
+
+
+
+== Registrando o Oracle no SUSE Linux Enterprise Server 12
+
+Ao registrar o Oracle Database no SUSE Linux Enterprise Server 12, o Workload Factory não instala dependências do Python.  Você deve configurar manualmente a versão necessária do Python.  O Workload Factory requer a versão mínima 3.6; no entanto, recomendamos a versão 3.11.

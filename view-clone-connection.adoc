@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: view-clone-connection.html 
 keywords: view clone connection, copy connection information 
-summary: Visualize e copie as informações de conexão de um clone de sandbox na fábrica de cargas de trabalho do BlueXP  para bancos de dados. 
+summary: Visualize e copie as informações de conexão de um clone de banco de dados no NetApp Workload Factory for Databases. 
 ---
-= Exibir informações de conexão de um clone de sandbox
+= Exibir informações de conexão de um clone de banco de dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Visualize e copie as informações de conexão de um clone de sandbox na fábrica de cargas de trabalho do BlueXP  para bancos de dados.
+Visualize e copie as informações de conexão de um clone de banco de dados no NetApp Workload Factory for Databases.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
-. Em bancos de dados, selecione a guia *sandboxes*.
-. Na guia sandboxes, clique no menu de três pontos do clone sandbox para exibir suas informações de conexão.
+. No menu Bancos de dados, selecione *Sandboxes*.
+. Em Sandboxes, selecione o menu de ação do clone do sandbox para visualizar suas informações de conexão.
 . Selecione *Mostrar informações de conexão*.
 . Na caixa de diálogo Mostrar informações de conexão, copie as informações de conexão, se necessário.
-. Clique em *Fechar*.
+. Selecione *Fechar*.
 

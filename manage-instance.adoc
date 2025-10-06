@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: manage-instance.html 
 keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
-summary: Saiba mais sobre gerenciamento de instâncias e bancos de dados no Workload Factory para Bancos de Dados. 
+summary: Saiba mais sobre gerenciamento de instâncias e bancos de dados no NetApp Workload Factory for Databases. 
 ---
-= Gerenciamento de recursos em fábrica de carga de trabalho para bancos de dados
+= Gerenciamento de recursos no NetApp Workload Factory para bancos de dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-O gerenciamento de recursos no Workload Factory permite que você use recursos avançados, incluindo criação de banco de dados e clones, utilização e monitoramento de recursos.  Além disso, você pode analisar o status bem arquitetado das configurações do seu banco de dados e implementar as melhores práticas de configuração para melhorar o desempenho e reduzir os custos operacionais.  O gerenciamento de recursos é somente para ambientes Microsoft SQL Server e Oracle em execução no FSx para armazenamento do sistema de arquivos ONTAP .
+O gerenciamento de recursos no NetApp Workload Factory for Databases permite que você use recursos avançados, incluindo criação de banco de dados e clones, utilização e monitoramento de recursos. Além disso, você pode analisar o status bem arquitetado das configurações do seu banco de dados e implementar as melhores práticas de configuração para melhorar o desempenho e reduzir os custos operacionais. O gerenciamento de recursos é somente para ambientes Microsoft SQL Server e Oracle em execução no FSx para armazenamento do sistema de arquivos ONTAP .
 
 Você develink:register-instance.html["registrar recursos"] para executar qualquer uma das seguintes tarefas de gerenciamento.
 
 As tarefas de gerenciamento incluem:
 
-* Visualização de bancos de dados do inventário
+* Visualizando bancos de dados do Inventário
 * link:create-database.html["Criando um banco de dados"]
 * link:create-sandbox-clone.html["Criando um clone de banco de dados (sandbox)"]
 * link:optimize-configurations.html["Implementando configurações de banco de dados bem arquitetadas"]

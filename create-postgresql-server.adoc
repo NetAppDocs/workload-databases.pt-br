@@ -2,41 +2,41 @@
 sidebar: sidebar 
 permalink: create-postgresql-server.html 
 keywords: create, server, PostgreSQL, deploy, host, deploy a database host, database host 
-summary: Crie um novo servidor SQL PostgreSQL na fábrica de cargas de trabalho do BlueXP  para bancos de dados. 
+summary: Crie um novo servidor SQL PostgreSQL dentro do NetApp Workload Factory for Databases. 
 ---
-= Crie um servidor PostgreSQL na fábrica de carga de trabalho do BlueXP 
+= Crie um servidor PostgreSQL no NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Criar um novo servidor PostgreSQL, ou host de banco de dados, na fábrica de carga de trabalho do BlueXP  para bancos de dados requer uma implantação do sistema de arquivos FSX for ONTAP e recursos para ative Directory.
+A criação de um novo servidor PostgreSQL ou host de banco de dados no NetApp Workload Factory for Databases requer uma implantação do sistema de arquivos FSx for ONTAP e recursos para o Active Directory.
 
-.Sobre esta tarefa
-Antes de criar um servidor PostgreSQL de fábrica de carga de trabalho do BlueXP , saiba mais sobre os tipos de implantação de armazenamento disponíveis para a configuração do host de banco de dados, os modos de operação de fábrica de carga de trabalho e os requisitos para concluir essa operação.
 
-FSX para implantações de sistema de arquivos ONTAP:: Criar um novo servidor PostgreSQL requer um sistema de arquivos FSX for ONTAP como o back-end de armazenamento. Você pode usar um sistema de arquivos FSX for ONTAP existente ou criar um novo sistema de arquivos. Se você selecionar um sistema de arquivos FSX for ONTAP existente como back-end de armazenamento do servidor de banco de dados, nós criamos uma nova VM de armazenamento para as cargas de trabalho do PostgreSQL.
-+
---
-Os sistemas de arquivos FSX para ONTAP têm dois modelos de implantação de servidor PostgreSQL: _Alta disponibilidade (HA)_ ou _instância única_. Diferentes recursos são criados para o sistema de arquivos FSX for ONTAP, dependendo do modelo de implantação do FSX for ONTAP selecionado.
+
+== Sobre esta tarefa
+
+Antes de criar um servidor PostgreSQL a partir do Workload Factory, saiba mais sobre os tipos de implantação de armazenamento disponíveis para a configuração do host do banco de dados, os modos de operação do Workload Factory e os requisitos para concluir esta operação.
+
+.FSX para implantações de sistema de arquivos ONTAP
+Criar um novo servidor PostgreSQL requer um sistema de arquivos FSX for ONTAP como o back-end de armazenamento. Você pode usar um sistema de arquivos FSX for ONTAP existente ou criar um novo sistema de arquivos. Se você selecionar um sistema de arquivos FSX for ONTAP existente como back-end de armazenamento do servidor de banco de dados, nós criamos uma nova VM de armazenamento para as cargas de trabalho do PostgreSQL.
+
++ O FSx para sistemas de arquivos ONTAP tem dois modelos de implantação de servidor PostgreSQL: _Alta Disponibilidade (HA)_ ou _instância única_.  Diferentes recursos são criados para o sistema de arquivos FSx for ONTAP dependendo do modelo de implantação do FSx for ONTAP selecionado.
 
 * * Implantação de alta disponibilidade (HA)*: Um sistema de arquivos FSX para NetApp ONTAP de várias zonas de disponibilidade é implantado quando um novo sistema de arquivos FSX for ONTAP é selecionado para implantação HA. Volumes e LUNs separados são criados para dados, log e arquivos tempdb para uma implantação HA. Um volume e LUN adicionais são criados para o Quorum ou o disco testemunha para o cluster do Windows. A implantação DE HA configura a replicação de streaming entre os servidores PostgreSQL primário e secundário.
 * * Implantação de instância única*: Um sistema de arquivos FSX para ONTAP de zona de disponibilidade única é criado quando um novo servidor PostgreSQL é criado. Além disso, volumes e LUNs separados são criados para dados, log e arquivos tempdb.
 
 
---
 
 
-.Antes de começar
-Certifique-se de que você tem os seguintes pré-requisitos antes de criar um novo host de banco de dados.
+== Antes de começar
 
-Credenciais e permissões:: Você precisa link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de modo _leitura/gravação_"^]criar um novo host de banco de dados na fábrica de workloads.
-
+Você precisa link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de modo _leitura/gravação_"^]criar um novo host de banco de dados na fábrica de workloads.
 
 
 
-== Crie um servidor de banco de dados
+== Crie um servidor PostgreSQL
 
 Você pode usar os modos de implantação _Quick Create_ ou _Advanced Create_ para concluir essa tarefa na fábrica de cargas de trabalho com permissões do modo _Automate_. Você também pode usar as seguintes ferramentas disponíveis no Codebox: API REST, AWS CLI, AWS CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Saiba como usar o Codebox para automação"^].
 
@@ -52,7 +52,7 @@ NOTE: Em _Quick Create_, o HA é o modelo de implantação padrão, o Windows 20
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *Deploy database host* e, em seguida, selecione *PostgreSQL Server* no menu suspenso.
+. No bloco Bancos de dados, selecione *Implantar host* e, em seguida, selecione *Servidor PostgreSQL* no menu.
 . Selecione *Quick Create*.
 . Em *zona de desembarque*, forneça o seguinte:
 +
@@ -141,7 +141,7 @@ Você também pode selecionar *Salvar configuração* para implantar o host mais
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *Deploy database host* e, em seguida, selecione *PostgreSQL Server* no menu suspenso.
+. No bloco Bancos de dados, selecione *Implantar host* e, em seguida, selecione *Servidor PostgreSQL* no menu.
 . Selecione *Advanced Create*.
 . Em *modelo de implantação*, selecione *instância independente* ou *alta disponibilidade (HA)*.
 . Em *zona de desembarque*, forneça o seguinte:
@@ -174,20 +174,17 @@ Os atributos DNS da VPC `EnableDnsSupport` e `EnableDnsHostnames` são modificad
 
 .. *Zonas de disponibilidade*: Selecione zonas de disponibilidade e sub-redes.
 +
-Para implantações de uma única instância::
+*Para implantações de instância única*
+
 +
---
 No campo *Configuração de cluster - nó 1*, selecione uma zona de disponibilidade no menu suspenso *zona de disponibilidade* e uma sub-rede no menu suspenso *Subnet*.
 
---
-Para implantações de HA::
 +
---
+*Para implantações de HA*
+
++
 ... No campo *Configuração de cluster - nó 1*, selecione a zona de disponibilidade primária para a configuração do MAZ FSX for ONTAP no menu suspenso *zona de disponibilidade* e uma sub-rede da zona de disponibilidade primária no menu suspenso *sub-rede*.
 ... No campo *Configuração de cluster - nó 2*, selecione a zona de disponibilidade secundária para a configuração do MAZ FSX for ONTAP no menu suspenso *zona de disponibilidade* e uma sub-rede da zona de disponibilidade secundária no menu suspenso *Subnet*.
-
-
---
 
 
 .. *Grupo de segurança*: Selecione um grupo de segurança existente ou crie um novo grupo de segurança.

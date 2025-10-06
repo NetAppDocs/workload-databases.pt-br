@@ -2,24 +2,24 @@
 sidebar: sidebar 
 permalink: quick-start-databases.html 
 keywords: requirements, basic mode, read-only mode, read/write mode 
-summary: Comece a usar o Workload Factory para bancos de dados para usar snippets de infraestrutura como código, descobrir hosts, gerenciar recursos e muito mais. 
+summary: Comece a usar o NetApp Workload Factory for Databases para usar snippets de infraestrutura como código, descobrir hosts, gerenciar recursos e muito mais. 
 ---
-= Início rápido para fábrica de carga de trabalho para bancos de dados
+= Início rápido do NetApp Workload Factory para bancos de dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Com o Workload Factory para Bancos de Dados, você pode começar imediatamente no modo _básico_. Se você quiser usar a fábrica de carga de trabalho para descobrir hosts, gerenciar recursos e muito mais, comece em algumas etapas.
+Com o NetApp Workload Factory for Databases, você pode começar imediatamente no modo _básico_.  Se quiser usar o Workload Factory para descobrir hosts, gerenciar recursos e muito mais, você pode começar em algumas etapas.
 
 Você precisa ter uma conta da AWS para usar bancos de dados.
 
 Siga estes passos para começar.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Faça login na fábrica de workloads da BlueXP 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]Efetue login no NetApp Workload Factory
 [role="quick-margin-para"]
-Você precisará link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configure uma conta com a fábrica de carga de trabalho"^]fazer login usando um dos link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+Você precisarálink:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configurar uma conta no NetApp Workload Factory"^] e faça login usando um doslink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Adicione credenciais e permissões
 [role="quick-margin-para"]
@@ -38,10 +38,10 @@ Quando você tem bancos de dados em execução no local ou na AWS com armazename
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]Implementar configurações de banco de dados bem arquitetadas
 [role="quick-margin-para"]
-O Workload Factory for Databases analisa regularmente implantações do Microsoft SQL Server no Amazon FSx for NetApp ONTAP a partir do painel Well-architected.  Para solucionar problemas do painel bem arquitetado para seus recursos de banco de dados, primeiro você precisalink:register-instance.html["registrar instâncias"] .
+O Workload Factory for Databases analisa regularmente implantações do Microsoft SQL Server e Oracle no Amazon FSx for NetApp ONTAP a partir do painel Well-architected. Para solucionar problemas do painel bem arquitetado para seus recursos de banco de dados, primeiro você precisalink:register-instance.html["registrar instâncias"] .
 
 [role="quick-margin-para"]
-Após registrar as instâncias, você pode visualizar o status bem arquitetado e tomar medidas paralink:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["implementar configurações de banco de dados bem arquitetadas"] na fábrica de carga de trabalho.
+Após registrar as instâncias, você pode visualizar o status bem arquitetado e tomar medidas paralink:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["implementar configurações de banco de dados bem arquitetadas"] na Fábrica de Carga de Trabalho.
 
 .O que vem a seguir
-Quando você tiver registrado instâncias com FSx para armazenamento do sistema de arquivos ONTAP em seu inventário de bancos de dados, você pode link:create-database.html["crie um banco de dados de usuários"] ou link:create-sandbox-clone.html["clone seu host para criar uma sandbox"] .
+Quando você tiver registrado recursos com o FSx para armazenamento do sistema de arquivos ONTAP em seu inventário de bancos de dados, você podelink:create-database.html["crie um banco de dados de usuários"] oulink:create-sandbox-clone.html["clone seu host para criar uma sandbox"] .

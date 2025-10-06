@@ -11,7 +11,7 @@ summary: Conecte um clone de sandbox a um pipeline de CI/CD com código API REST
 
 
 [role="lead"]
-Conecte um clone de sandbox a um pipeline de CI/CD (integração contínua e entrega contínua) com código API REST para aprimorar a entrega de software por meio da automação na fábrica de workloads da BlueXP  para bancos de dados.
+Conecte um clone de sandbox a um pipeline de integração e entrega contínuas (CI/CD) com código REST API para melhorar a entrega de software por meio da automação no NetApp Workload Factory for Databases.
 
 .Sobre esta tarefa
 Para fornecer uma nova versão do software automaticamente ao clone do banco de dados, você deve se conectar a um pipeline de CI/CD. Use o código API REST fornecido a partir desta operação para fazer a conexão.
@@ -19,8 +19,8 @@ Para fornecer uma nova versão do software automaticamente ao clone do banco de 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
-. Em bancos de dados, selecione a guia *sandboxes*.
-. Na guia sandboxes, clique no menu de três pontos do clone sandbox para se conetar às ferramentas CI/CD.
+. No menu Bancos de dados, selecione *Sandboxes*.
+. Em Sandboxes, selecione o menu de ações do clone do sandbox para conectar-se às ferramentas de CI/CD.
 . Selecione *conetar a ferramentas CI/CD*.
 . Na caixa de diálogo CI/CD, copie ou baixe o código API REST necessário para se conetar a ferramentas CI/CD.
 . Clique em *Fechar*.

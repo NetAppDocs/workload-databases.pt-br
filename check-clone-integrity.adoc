@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: check-clone-integrity.html 
 keywords: integrity check, data corruption 
-summary: Execute uma verificação de integridade para determinar se os dados de clone de sandbox estão intactos ou corrompidos na fábrica de workloads do BlueXP  para bancos de dados. 
+summary: Execute uma verificação de integridade para determinar se os dados do clone do sandbox estão intactos ou corrompidos no NetApp Workload Factory for Databases. 
 ---
 = Verifique a integridade dos dados em um clone de sandbox
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Execute uma verificação de integridade para determinar se os dados de
 
 
 [role="lead"]
-Execute uma verificação de integridade para determinar se os dados de clone de sandbox estão intactos ou corrompidos na fábrica de workloads do BlueXP  para bancos de dados.
+Execute uma verificação de integridade para determinar se os dados do clone do sandbox estão intactos ou corrompidos no NetApp Workload Factory for Databases.
 
 .Sobre esta tarefa
 Quando você cria um clone de sandbox a partir de um banco de dados de origem enquanto ele está ocupado, os dados do clone podem não estar sincronizados com o snapshot mais recente do banco de dados de origem. Essa operação verifica a integridade de todos os objetos no clone sandbox para determinar se os dados do clone sandbox são atuais.
@@ -19,8 +19,8 @@ Quando você cria um clone de sandbox a partir de um banco de dados de origem en
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
-. Em bancos de dados, selecione a guia *sandboxes*.
-. Na guia sandboxes, clique no menu de três pontos do clone sandbox para verificar a integridade.
+. No menu Bancos de dados, selecione *Sandboxes*.
+. Em Sandboxes, selecione o menu de ações do clone do sandbox para verificar a integridade.
 . Selecione *Executar verificação de integridade*.
 . Na caixa de diálogo Verificação de integridade, clique em *Verificação de integridade*.
 . Marque o status da verificação integridade nas caixas de areia ou em Monitoramento de trabalhos.

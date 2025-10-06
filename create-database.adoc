@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-database.html 
 keywords: create, database, creation, Microsoft SQL 
-summary: Crie um banco de dados Microsoft SQL com a fábrica de carga de trabalho do BlueXP  para bancos de dados. 
+summary: Crie um banco de dados Microsoft SQL com o NetApp Workload Factory for Databases. 
 ---
-= Crie um banco de dados Microsoft SQL na fábrica de cargas de trabalho do BlueXP  para bancos de dados
+= Crie um banco de dados Microsoft SQL no NetApp Workload Factory for Databases
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-A criação de um novo banco de dados Microsoft SQL permite gerenciar o recurso na fábrica de carga de trabalho do BlueXP  para bancos de dados.
+Criar um novo banco de dados Microsoft SQL permite que você gerencie o recurso no NetApp Workload Factory for Databases.
 
 .Sobre esta tarefa
 Após a criação do banco de dados, dois novos volumes são criados no sistema de arquivos FSX for ONTAP que consiste em LUNs independentes para hospedar dados e arquivos de log para o banco de dados. Os arquivos de banco de dados no novo banco de dados são thin-provisionados e consomem apenas alguns MBs do tamanho total alocado para o novo banco de dados.
@@ -26,15 +26,13 @@ NOTE: Os servidores Microsoft SQL que usam o protocolo SMB não suportam a cria�
 .Antes de começar
 Certifique-se de concluir os seguintes pré-requisitos antes de criar um novo banco de dados.
 
-Credenciais e permissões:: Você precisa link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de modo _somente leitura_ ou _leitura/gravação_"^]criar um novo banco de dados na fábrica de workloads.
+* *Credenciais e permissões*: Você deve terlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de modo _somente leitura_ ou _leitura/gravação_"^] para criar um novo banco de dados na fábrica de carga de trabalho.
 +
---
 Como alternativa, você pode usar o Codebox para copiar um modelo para que você possa implantar um banco de dados fora da fábrica de carga de trabalho usando a API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Saiba mais sobre a automação Codebox"^].
 
---
-Host Windows:: Você deve ter letras de unidade suficientes disponíveis no Microsoft SQL Server para criar novas unidades para o novo banco de dados se você usar o modo _Quick Create_.
-Microsoft SQL Server:: Você deve ter um Microsoft SQL Server gerenciado na fábrica de carga de trabalho para que os bancos de dados hospedem o novo banco de dados.
-AWS Systems Manager:: Certifique-se de que o `NT Authority\SYSTEM user` privilégio esteja habilitado no host Microsoft SQL por meio do AWS System Manager.
+* *Host do Windows*: Você deve ter letras de unidade suficientes disponíveis no Microsoft SQL Server para criar novas unidades para o novo banco de dados se usar o modo _Criação rápida_.
+* *Microsoft SQL Server*: Você deve ter um Microsoft SQL Server gerenciado na fábrica de carga de trabalho para bancos de dados para hospedar o novo banco de dados.
+* *Gerente de Sistemas AWS*: Garanta que `NT Authority\SYSTEM` o privilégio de usuário é habilitado no host do Microsoft SQL via AWS Systems Manager.
 
 
 
@@ -50,9 +48,10 @@ Você pode usar os modos de implantação _Criação rápida_ ou _Criação avan
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
-. Em bancos de dados, selecione a guia *Inventário*.
-. Na guia Inventário, selecione um servidor de banco de dados com uma instância de servidor SQL gerenciado para criar o banco de dados.
-. Clique no menu de três pontos da instância gerenciada e selecione *Criar banco de dados do usuário*.
+. No menu Bancos de dados, selecione *Inventário*.
+. No Inventário, selecione *Microsoft SQL Server* como o tipo de mecanismo de banco de dados.
+. Selecione um servidor de banco de dados com uma instância de servidor SQL gerenciada para criar o banco de dados.
+. Clique no menu de ação da instância gerenciada e selecione *Criar banco de dados do usuário*.
 . Na página criar banco de dados do usuário, em informações do banco de dados, forneça o seguinte:
 +
 .. *Nome do banco de dados*: Insira o nome do banco de dados.
@@ -83,9 +82,10 @@ Alternativamente, se você quiser alterar qualquer uma dessas configurações pa
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
-. Em bancos de dados, selecione a guia *Inventário*.
-. Na guia Inventário, selecione um servidor de banco de dados com uma instância de servidor SQL gerenciado para criar o banco de dados.
-. Clique no menu de três pontos da instância gerenciada e selecione *criar banco de dados de usuários*.
+. No menu Bancos de dados, selecione *Inventário*.
+. No Inventário, selecione *Microsoft SQL Server* como o tipo de mecanismo de banco de dados.
+. Selecione um servidor de banco de dados com uma instância de servidor SQL gerenciada para criar o banco de dados.
+. Clique no menu de ação da instância gerenciada e selecione *Criar banco de dados do usuário*.
 . Selecione *criar banco de dados de usuários*.
 . Na página criar banco de dados do usuário, em informações do banco de dados, forneça o seguinte:
 +

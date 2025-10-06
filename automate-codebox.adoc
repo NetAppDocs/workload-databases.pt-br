@@ -4,13 +4,13 @@ permalink: automate-codebox.html
 keywords: automation, code automation, automate 
 summary: Você pode automatizar a implantação de host, a criação de banco de dados e muito mais com o Codebox. 
 ---
-= Automatize com o Codebox na fábrica de cargas de trabalho do BlueXP  para bancos de dados
+= Automatize com o Codebox no NetApp Workload Factory para bancos de dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Você pode automatizar a implantação de host, a criação de banco de dados e muito mais com o Codebox na fábrica de cargas de trabalho do BlueXP  para bancos de dados. Codebox é um copiloto de infraestrutura como código (IAC) que ajuda a gerar código para executar qualquer operação suportada pela fábrica de carga de trabalho.
+Você pode automatizar a implantação do host, a criação do banco de dados e muito mais com o Codebox no NetApp Workload Factory for Databases. O Codebox é um copiloto de infraestrutura como código (IaC) que ajuda você a gerar código para executar qualquer operação suportada pelo Workload Factory.
 
 Saiba mais sobre link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Automação Codebox"^] e como usá-lo.

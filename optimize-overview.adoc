@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: optimize-overview.html 
 keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance 
-summary: O Workload Factory para bancos de dados analisa as configurações do Microsoft SQL Server e do Oracle regularmente para determinar se há algum problema. 
+summary: O Workload Factory for Databases analisa as configurações do Microsoft SQL Server e do Oracle regularmente para determinar se há algum problema. 
 ---
-= Análise de configuração para ambientes de banco de dados em fábrica de carga de trabalho
+= Análise de configuração para ambientes de banco de dados no Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-O Workload Factory para bancos de dados analisa as configurações do banco de dados regularmente para determinar se há problemas com implantações do Microsoft SQL Server e do Oracle no Amazon FSx for NetApp ONTAP .  Quando problemas são encontrados, o Workload Factory mostra quais são os problemas e explica o que precisa ser alterado para garantir que as configurações do seu banco de dados atinjam o desempenho máximo, a eficiência de custos e a conformidade com as práticas recomendadas.
+O Workload Factory for Databases analisa as configurações do banco de dados regularmente para determinar se há algum problema com as implantações do Microsoft SQL Server e do Oracle no Amazon FSx for NetApp ONTAP .  Quando problemas são encontrados, o Workload Factory mostra quais são os problemas e explica o que precisa ser alterado para garantir que as configurações do seu banco de dados atinjam o desempenho máximo, a eficiência de custos e a conformidade com as práticas recomendadas.
 
 Os principais recursos incluem:
 
@@ -27,7 +27,7 @@ Os principais recursos incluem:
 
 == Status bem arquitetado
 
-No console de fábrica da carga de trabalho no nível do sistema de arquivos, o status bem arquitetado é listado para todos os sistemas de arquivos FSX for ONTAP. Os Estados bem arquitetados são categorizados como "questões", "não analisadas" ou "bem arquitetadas". A seleção do status bem arquitetado redireciona você para a guia de status bem arquitetado dentro do sistema de arquivos, onde você pode encontrar a pontuação bem arquitetada, categorias de configuração, todas as configurações para o sistema de arquivos.
+No console do Workload Factory, no nível do sistema de arquivos, o status bem arquitetado é listado para todos os sistemas de arquivos FSx para ONTAP . Os status bem arquitetados são categorizados como "problemas", "não analisados" ou "bem arquitetados". Selecionar o status bem-arquitetado redireciona você para a guia de status bem-arquitetado no sistema de arquivos, onde você pode encontrar a pontuação bem-arquitetada, categorias de configuração e todas as configurações do sistema de arquivos.
 
 
 

@@ -2,43 +2,47 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: Rastreie trabalhos de banco de dados e monitore bancos de dados dentro da fábrica de carga de trabalho para bancos de dados. 
+summary: Rastreie trabalhos de banco de dados e monitore bancos de dados no NetApp Workload Factory for Databases. 
 ---
-= Monitorar trabalhos de banco de dados na fábrica de carga de trabalho
+= Monitorar trabalhos de banco de dados no Workload Factory for Databases
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Rastreie trabalhos de banco de dados e monitore bancos de dados dentro da fábrica de carga de trabalho para bancos de dados.
+Rastreie trabalhos de banco de dados e monitore bancos de dados no NetApp Workload Factory for Databases para melhor visibilidade e controle sobre as operações do banco de dados.
 
-.Sobre esta tarefa
+
+
+== Sobre esta tarefa
+
 Os bancos de dados fornecem monitoramento de tarefas para que você possa acompanhar o progresso da tarefa e diagnosticar e solucionar problemas caso ocorra alguma falha. Pode filtrar trabalhos por tipo e estado, localizar trabalhos utilizando a função de pesquisa e transferir a tabela trabalhos.
 
 A monitorização de trabalhos suporta até três níveis de monitorização, dependendo do trabalho. Por exemplo, para a criação de novos clones de banco de dados e sandbox, o monitoramento de tarefas rastreia trabalhos pai e subtarefas.
 
-Níveis de monitorização do trabalho::
-+
---
+.Níveis de monitorização do trabalho
 * Nível 1 (trabalho pai): Controla o trabalho de implantação do host.
 * Nível 2 (subtarefa): Controla os sub-trabalhos relacionados com a tarefa principal de implementação do host.
 * Nível 3 (tarefa): Lista a sequência de ações realizadas em cada recurso.
 
 
---
-Estado do trabalho:: O recurso de monitoramento de tarefa rastreia _em andamento_, _completed_, _completed with issues_ e _failed_ trabalhos diariamente, semanalmente, quinzenalmente e mensalmente.
-Retenção de eventos de trabalho:: Os eventos de monitorização de trabalhos são mantidos na interface do utilizador durante 30 dias.
+.Estado do trabalho
+O recurso de monitoramento de tarefa rastreia _em andamento_, _completed_, _completed with issues_ e _failed_ trabalhos diariamente, semanalmente, quinzenalmente e mensalmente.
 
+.Retenção de eventos de trabalho
+Os eventos de monitorização de trabalhos são mantidos na interface do utilizador durante 30 dias.
 
 
 
 == Monitorizar trabalhos
 
+Monitore tarefas para acompanhar o progresso das operações do banco de dados e diagnostique e solucione problemas caso ocorra alguma falha.
+
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
-. Em bancos de dados, selecione a guia *Monitoramento de tarefas*.
-. No separador monitorização de trabalhos, utilize os filtros ou procure para restringir os resultados dos trabalhos. Também pode transferir um relatório de trabalhos.
-. Clique no menu de três pontos da tarefa e clique em *vá para o CloudFormation* para exibir o log de tarefas no console do AWS CloudFormation.
+. No menu Bancos de dados, selecione *Monitoramento de tarefas*.
+. No monitoramento de tarefas, use os filtros ou pesquise para restringir os resultados das tarefas. Você também pode baixar um relatório de empregos.
+. Opcionalmente, selecione o menu de ação do trabalho e clique em *Ir para CloudFormation* para visualizar o log do trabalho no console do AWS CloudFormation.
 
