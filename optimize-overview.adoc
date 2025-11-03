@@ -25,27 +25,13 @@ Os principais recursos incluem:
 
 
 
-== Status bem arquitetado
+== Componentes da análise de configuração
 
-No console do Workload Factory, no nível do sistema de arquivos, o status bem arquitetado é listado para todos os sistemas de arquivos FSx para ONTAP . Os status bem arquitetados são categorizados como "problemas", "não analisados" ou "bem arquitetados". Selecionar o status bem-arquitetado redireciona você para a guia de status bem-arquitetado no sistema de arquivos, onde você pode encontrar a pontuação bem-arquitetada, categorias de configuração e todas as configurações do sistema de arquivos.
+A análise de configuração inclui os seguintes componentes:
 
-
-
-== Pontuação bem arquitetada
-
-A pontuação inclui todas as configurações analisadas atualmente e aparece como uma porcentagem. Uma pontuação de 25% significa que 25% das configurações do sistema de arquivos são bem arquitetadas.
-
-
-
-== Categorias de configuração
-
-As configurações do sistema de arquivos são organizadas em categorias alinhadas com os cinco pilares a seguir do AWS Well-Architected Framework.
-
-* _Confiabilidade_: Garante que as cargas de trabalho executem suas funções pretendidas de forma correta e consistente, mesmo quando há interrupções. Um exemplo de configuração é o FSX for ONTAP backups.
-* _Security_: Enfatiza a proteção de dados, sistemas e ativos por meio de avaliações de risco e estratégias de mitigação.
-* _Excelência operacional_: Concentra-se em fornecer a arquitetura e o valor de negócios mais ideais.
-* _Otimização de custos_: Visa fornecer valor de negócio ao mesmo tempo que minimiza custos.
-* _Eficiência de desempenho_: Se concentra em usar recursos de forma eficiente para atender aos requisitos do sistema e manter o desempenho ideal à medida que as demandas mudam.
+Status bem arquitetado:: O status de "bem arquitetado" refere-se à saúde geral das configurações do seu banco de dados; as configurações são categorizadas como "otimizadas", "não otimizadas" ou "com recursos em excesso". O status de arquitetura adequada de uma configuração é referenciado a partir de uma instância do Microsoft SQL Server ou de um banco de dados Oracle no console do Workload Factory.
+Pontuação bem arquitetada:: A pontuação inclui todas as configurações analisadas até o momento e é apresentada em porcentagem. Uma pontuação de 25% significa que 25% das suas implementações de banco de dados estão bem arquitetadas. A pontuação de boa arquitetura é referenciada na tela *Bem arquitetado* e em uma instância do Microsoft SQL Server ou banco de dados Oracle no console do Workload Factory.
+Categorias de configuração:: As configurações estão organizadas nas seguintes categorias: armazenamento, computação, aplicação, resiliência e clonagem. Cada categoria inclui avaliações de configuração específicas que são analisadas regularmente. As categorias de configuração são referenciadas na tela *Bem arquitetado* e em uma instância do Microsoft SQL Server ou banco de dados Oracle no console do Workload Factory.
 
 
 

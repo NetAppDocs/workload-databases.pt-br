@@ -104,6 +104,6 @@ Use o console do Workload Factory para analisar logs de erros do SQL Server.
 +
 Após a verificação, os erros são exibidos no console, fornecendo uma visão abrangente dos problemas detectados pelo analisador de log de erros inteligente.
 
-. Use filtros para refinar os erros exibidos com base em critérios como gravidade, período e código de erro.
+. Utilize filtros para refinar os erros exibidos com base em critérios como gravidade, período e código de erro, ou por tags relacionadas à infraestrutura, como computação, armazenamento, rede e segurança.
 . Revise as informações detalhadas do erro, incluindo a mensagem de erro original, a explicação baseada em IA e as etapas de correção sugeridas para resolver os erros.
 

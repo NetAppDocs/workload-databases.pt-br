@@ -41,7 +41,7 @@ Para instâncias do Microsoft SQL Server:
 
 Para bancos de dados Oracle:
 
-* Configuração de armazenamento: inclui gerenciamento de capacidade, provisionamento fino, política de camadas, instantâneos, eficiências de armazenamento e configurações de sistema operacional para implantações usando iSCSI com ou sem Gerenciamento Automático de Armazenamento (ASM), incluindo status e configurações do Microsoft Multipath I/O (MPIO)
+* Configuração de armazenamento: inclui gerenciamento de capacidade, provisionamento dinâmico, política de camadas, snapshots, eficiência de armazenamento e configurações do sistema operacional para implantações usando NFS ou iSCSI com ou sem Gerenciamento Automático de Armazenamento (ASM), incluindo o status e as configurações do Microsoft Multipath I/O (MPIO).
 * Layout de armazenamento: inclui posicionamento de log de refazer, posicionamento de espaço de tabela temporário, posicionamento de arquivos de dados, posicionamento de log de arquivamento, posicionamento de arquivos de controle e posicionamento de binários, contagem de LUN de grupos de discos ASM
 
 
