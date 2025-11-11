@@ -62,7 +62,7 @@ Duas opções de calculadora estão disponíveis para fazer a comparação de cu
 
 Explore as economias através da personalização: Você fornece as configurações para o servidor Microsoft SQL no Amazon EC2 com EBS ou FSX para Windows File Server, incluindo a região, modelo de implantação, edição do servidor SQL, taxa de alteração de dados mensal, frequência de snapshot e muito mais.
 
-Explore economias para hosts detectados: o Workload Factory se conecta aos seus servidores Microsoft SQL existentes e extrai os detalhes para a calculadora para comparação automática.  Você precisará conceder permissões _somente leitura_ ou _leitura/gravação_ para usar esta opção da calculadora. Você pode alterar o caso de uso, mas todos os outros detalhes são determinados automaticamente no cálculo.
+Descubra as economias para hosts detectados: o Workload Factory se conecta aos seus servidores Microsoft SQL existentes e importa os detalhes para a calculadora para comparação automática. Você precisará conceder permissões de _visualização, planejamento e análise_ para usar esta opção da calculadora. Você pode alterar o caso de uso, mas todos os outros detalhes são determinados automaticamente no cálculo.
 
 Além disso, você pode link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Adicionar credenciais da AWS"^]melhorar a precisão da análise da calculadora. Selecione *Calcule a poupança com base nos recursos existentes*. Você será redirecionado para a página Adicionar credenciais. Depois de adicionar credenciais, selecione os recursos existentes para comparar com o FSX for ONTAP e selecione *explorar economia*.
 
@@ -158,7 +158,7 @@ O Workload Factory insere as características detectadas do host Elastic Block S
 .Antes de começar
 Complete os seguintes pré-requisitos antes de começar:
 
-* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceda permissões _somente leitura_ ou _leitura/gravação_"^] Na sua conta da AWS para detetar os sistemas Elastic Block Store (EBS) e FSX para Windows na guia *Explore Savings* e mostrar o cálculo de economia na calculadora de economia.
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceder permissões de _visualização, planejamento e análise_"^] Em sua conta da AWS, configure a detecção do Elastic Block Store (EBS) e do FSx para sistemas Windows na guia *Explorar economias* e a exibição do cálculo de economia na calculadora de economia.
 * Para obter recomendações de tipo de instância e melhorar a precisão de custos, faça o seguinte:
 +
 .. Conceda permissões ao Amazon CloudWatch e ao AWS Compute Optimizer.
@@ -326,6 +326,9 @@ Se você quiser mudar para o FSX for ONTAP para obter economia de custos, clique
 NOTE: O Workload Factory não oferece suporte para salvar ou criar vários FSx para sistemas de arquivos ONTAP .
 
 .Métodos de implantação
-No modo _leitura/gravação_, você pode implantar o novo servidor Microsoft SQL no AWS EC2 usando o FSx para ONTAP diretamente do Workload Factory.  Você também pode copiar o conteúdo da janela Codebox e implantar a configuração recomendada usando um dos métodos do Codebox.
+Com as permissões de criação de host de banco de dados, você pode implantar o novo servidor Microsoft SQL no AWS EC2 usando o FSx para ONTAP diretamente do Workload Factory. Você também pode copiar o conteúdo da janela do Codebox e implantar a configuração recomendada usando um dos métodos do Codebox.
 
-+ No modo _básico_, você pode copiar o conteúdo da janela Codebox e implantar a configuração recomendada usando um dos métodos do Codebox.
+Sem permissões, você pode copiar o conteúdo da janela do Codebox e implantar a configuração recomendada usando um dos métodos do Codebox.
+
+.Informações relacionadas
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Referência de permissões do Workload Factory"^]

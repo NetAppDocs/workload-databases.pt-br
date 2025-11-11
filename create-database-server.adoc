@@ -60,7 +60,7 @@ Se você decidir reverter os recursos do sistema de nomes de domínio (DNS), os 
 Certifique-se de que você tem os seguintes pré-requisitos antes de criar um novo host de banco de dados.
 
 .Credenciais e permissões
-Você deve terlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de modo _leitura/gravação_"^] para criar um novo host de banco de dados no Workload Factory.
+Você deve link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["conceder permissões de _criação de host de banco de dados_"^] Na sua conta da AWS, crie um novo host de banco de dados no Workload Factory.
 
 .Ative Directory
 Ao se conetar ao ative Directory, você deve ter acesso administrativo com permissões para fazer o seguinte:

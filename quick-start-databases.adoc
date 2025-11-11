@@ -23,10 +23,13 @@ Você precisarálink:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Adicione credenciais e permissões
 [role="quick-margin-para"]
-Escolha entre link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Modos operacionais _básico_, _somente leitura_ e _leitura/gravação_"^].
+Escolha olink:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["políticas de permissão"^] Para atender às suas necessidades.
 
 [role="quick-margin-para"]
-Se você operar no modo _somente leitura_ ou _leitura/gravação_, você precisarálink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["adicione credenciais a uma conta manualmente"^] selecione recursos de carga de trabalho, como bancos de dados e GenAI, e crie políticas de IAM para as permissões necessárias.
+Se optar por não conceder permissões, você poderá começar a usar o Workload Factory for Databases para copiar exemplos de código parcialmente concluídos.
+
+[role="quick-margin-para"]
+Se optar por conceder permissões, você precisarálink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["adicione credenciais a uma conta manualmente"^] Isso inclui selecionar as capacidades da carga de trabalho, como Bancos de Dados e IA, e criar as políticas de IAM para as permissões necessárias.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]Descobrir ou implantar recursos
 [role="quick-margin-para"]

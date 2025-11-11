@@ -49,7 +49,7 @@ Os dados do cliente não são usados para treinar ou melhorar modelos.  O Amazon
 
 Para usar o analisador de log de erros, você deve atender aos seguintes pré-requisitos:
 
-* Você deve terlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de modo _leitura/gravação_"^] para criar um novo host de banco de dados no Workload Factory.
+* Você deve link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceder permissões de _visualização, planejamento e análise_"^] Na sua conta da AWS, crie um novo host de banco de dados no Workload Factory.
 * link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registrar uma instância do SQL Server"^]na Fábrica de Carga de Trabalho.
 * Os seguintes pré-requisitos também devem ser atendidos.  Você será solicitado a concluir esses pré-requisitos como parte das etapas para analisar erros de log.
 +

@@ -18,7 +18,7 @@ Após a criação do banco de dados, dois novos volumes são criados no sistema 
 
 Se você quiser segregar o armazenamento para o banco de dados, você pode fazer isso usando um _ponto de montagem virtual_. O ponto de montagem virtual permite consolidar bancos de dados em algumas unidades comuns no host.
 
-Criar um banco de dados na fábrica de cargas de trabalho requer permissões de modo automático. Como alternativa, no modo básico, você pode copiar ou baixar um modelo de código parcialmente concluído para concluir a operação fora da fábrica de carga de trabalho. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Saiba mais sobre os modos operacionais na fábrica da carga de trabalho"^] para decidir qual modo você gostaria de usar.
+A criação de um banco de dados no Workload Factory requer permissões de _visualização, planejamento e análise_. Alternativamente, você pode copiar ou baixar um modelo de código parcialmente preenchido para concluir a operação fora do ambiente de produção. link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Saiba mais sobre as permissões do Workload Factory"^] Para decidir qual modo você gostaria de usar.
 
 
 NOTE: Os servidores Microsoft SQL que usam o protocolo SMB não suportam a criação de banco de dados.
@@ -26,7 +26,7 @@ NOTE: Os servidores Microsoft SQL que usam o protocolo SMB não suportam a cria�
 .Antes de começar
 Certifique-se de concluir os seguintes pré-requisitos antes de criar um novo banco de dados.
 
-* *Credenciais e permissões*: Você deve terlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de modo _somente leitura_ ou _leitura/gravação_"^] para criar um novo banco de dados na fábrica de carga de trabalho.
+* *Credenciais e permissões*: Você precisa ter link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de _visualização, planejamento e análise_"^] Para criar um novo banco de dados no Workload Factory.
 +
 Como alternativa, você pode usar o Codebox para copiar um modelo para que você possa implantar um banco de dados fora da fábrica de carga de trabalho usando a API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Saiba mais sobre a automação Codebox"^].
 
@@ -39,7 +39,7 @@ Como alternativa, você pode usar o Codebox para copiar um modelo para que você
 
 == Crie um banco de dados
 
-Você pode usar os modos de implantação _Criação rápida_ ou _Criação avançada_ para concluir esta tarefa no factory de carga de trabalho com permissões de modo _somente leitura_ ou _leitura/gravação_.
+Você pode usar os modos de implantação _Criação rápida_ ou _Criação avançada_ para concluir essa tarefa no Workload Factory.
 
 [role="tabbed-block"]
 ====
