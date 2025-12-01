@@ -219,11 +219,11 @@ Siga as etapas na guia para o tipo de armazenamento.
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *explorar economia* e, em seguida, *Microsoft SQL Server no FSX para Windows* no menu suspenso.
+. No bloco Bancos de dados, selecione *Explorar economias* e depois *Microsoft SQL Server no FSx para Windows* no menu.
 +
 Se o Workload Factory detectar hosts EBS, você será redirecionado para a guia Explorar economias.  Se o Workload Factory não detectar hosts EBS, você será redirecionado para a calculadora para<<Explore as poupanças através da personalização,explore as poupanças através da personalização>> .
 
-. Na guia explorar economia, clique em *explorar economia* do servidor de banco de dados usando armazenamento EBS.
+. Em *Explorar economias*, selecione um ou mais hosts de banco de dados em execução no EBS e, em seguida, selecione *Explorar economias*.
 . Se necessário, autentique o host do banco de dados com credenciais do SQL Server, credenciais do Windows ou adicionando permissões ausentes do SQL Server.
 +
 Se a página Explorar economias não carregar dados após a autenticação bem-sucedida, selecione a aba *Inventário* para recarregar os dados e, em seguida, selecione a aba *Explorar economias* novamente.
@@ -234,6 +234,10 @@ Se a página Explorar economias não carregar dados após a autenticação bem-s
 .. *Frequência de atualização do clone*: Selecione a frequência de atualização dos clones no menu.
 .. *Número de cópias clonadas*: Insira o número de cópias clonadas na configuração do EBS.
 .. *Taxa de mudança mensal*: Insira a porcentagem que os dados clonados e instantâneos mudam em média por mês.
+.. *Adicionar hosts*: Opcionalmente, selecione até cinco hosts EBS detectados para incluir no cálculo da economia.
++
+O Workload Factory consolida vários hosts do SQL Server em uma única recomendação de configuração do FSx for ONTAP para otimizar a economia de custos, a menos que os hosts EBS selecionados excedam os limites de throughput, capacidade ou IOPS para um único sistema de arquivos FSx for ONTAP .
+
 
 
 
