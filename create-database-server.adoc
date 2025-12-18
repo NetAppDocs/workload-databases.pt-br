@@ -285,6 +285,9 @@ NOTE: Se o conjunto de agrupamento selecionado não for compatível para instala
 
 .. *Nome do banco de dados*: Insira o nome do cluster do banco de dados.
 .. *Credenciais da base de dados*: Introduza um nome de utilizador e uma palavra-passe para uma nova conta de serviço ou utilize credenciais de conta de serviço existentes no ative Directory.
++
+Opcional: Selecione *Usar conta de serviço gerenciada* para a conta de serviço do SQL Server. Use esta opção se o seu ambiente usar MSA (Conta de Serviço Gerenciada) ou Contas de Serviço Gerenciadas em Grupo (gMSA), onde o gerenciamento de senhas é feito pelo Active Directory.
+
 
 
 . Em *conetividade*, forneça o seguinte:
@@ -304,6 +307,9 @@ Para diretórios ativos gerenciados pela AWS, os endereços IP DNS aparecem no m
 
 ... No campo *Nome de usuário*, insira o nome de usuário do domínio do ative Directory.
 ... No campo *Senha*, insira uma senha para o domínio do ative Directory.
+... *Controlador de domínio preferencial*: Opcionalmente, insira o controlador de domínio preferencial a ser usado para o Active Directory ingressar.
+... *Caminho da unidade organizacional preferencial*: Opcionalmente, insira a unidade organizacional (UO) preferencial no Active Directory à qual deseja ingressar.
+... *Grupo do Active Directory de destino*: Opcionalmente, insira o grupo do Active Directory ao qual deseja adicionar os computadores.
 
 
 
