@@ -1351,4 +1351,7 @@
   <block id="ae41853f33cf42c1d6ea60e021ce20b3" category="list-text">*Caminho da unidade organizacional preferencial*: Opcionalmente, insira a unidade organizacional (UO) preferencial no Active Directory à qual deseja ingressar.</block>
   <block id="5da5a84735de60ec35b817899791d509" category="list-text">*Grupo do Active Directory de destino*: Opcionalmente, insira o grupo do Active Directory ao qual deseja adicionar os computadores.</block>
   <block id="bfcc9fa5a3178fd803540af87a6b6ab7" category="section-title">18 de dezembro de 2025</block>
+  <block id="5e3b7f958129022f75fe2931c55615b2" category="doc">Integração da página inicial do assistente de IA "Pergunte-me"</block>
+  <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">A página inicial do console do Workload Factory incorpora o assistente de IA "Pergunte-me", permitindo que você faça perguntas sobre seu próprio ambiente de armazenamento, obtenha insights personalizados diretamente do seu ambiente e consulte conversas anteriores. Você pode interagir com o recurso "Pergunte-me" para entender suas cargas de trabalho, solucionar problemas e aprender mais sobre o Workload Factory — tudo isso sem sair do console.</block>
+  <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">04 de janeiro de 2026</block>
 </blocks>
