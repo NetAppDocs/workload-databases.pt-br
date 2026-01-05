@@ -53,7 +53,7 @@ Conclua o processo de preparação para proteger seus recursos do Microsoft SQL 
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
 . No menu Bancos de dados, selecione *Inventário*.
 . No Inventário, selecione *Microsoft SQL Server* como o tipo de mecanismo.
 . Localize a instância que você deseja proteger e selecione *Proteger* no menu.
@@ -80,7 +80,7 @@ Para obter informações relacionadas, consulte o link:https://docs.netapp.com/u
 Você pode editar a proteção para instâncias e bancos de dados do Microsoft SQL Server que já estão protegidos no NetApp Backup and Recovery. A proteção de edição permite modificar a política ou o agendamento de proteção para suas instâncias protegidas do SQL Server.
 
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
 . No menu Bancos de dados, selecione *Inventário*.
 . No Inventário, selecione *Microsoft SQL Server* como o tipo de mecanismo.
 . Selecione a aba *Bancos de dados*.

@@ -561,7 +561,6 @@
   <block id="5c89f4f6af1a71c2ed6cfac605e94c16" category="paragraph"><block ref="5c89f4f6af1a71c2ed6cfac605e94c16" category="inline-link-macro-rx"></block></block>
   <block id="fd3039d7fbe9d24b3141aca3c62383a2" category="section-title">Avaliação e otimização para licenças do Microsoft SQL Server superprovisionadas</block>
   <block id="f90a806c02db45741274868bc065ab90" category="paragraph">A calculadora de economia agora avalia se a edição Enterprise é necessária para a implantação do Microsoft SQL Server. Se uma licença estiver superprovisionada, a calculadora recomenda a downgrade. Você será capaz de fazer downgrade automaticamente da licença em bancos de dados otimizando o aplicativo.</block>
-  <block id="f319ba887c03b66fa6a83807c78f65e9" category="list-text">No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.</block>
   <block id="770dee3f954306dca2e369d2ef823c94" category="section-title">Análise de implantação do SQL Server</block>
   <block id="1d93f11e5331c46990f076ad4257106e" category="paragraph">A calculadora executa uma análise abrangente da implantação do SQL Server para garantir que os recursos e recursos que estão sendo utilizados sejam adequadamente compatíveis com a edição do SQL Server. Aqui estão os principais fatores e condições que a calculadora verifica antes de recomendar um downgrade para Standard Edition:</block>
   <block id="a0e3089d312c100208595d685b4104d2" category="list-text">Modelo de implantação</block>
@@ -1354,4 +1353,7 @@
   <block id="5e3b7f958129022f75fe2931c55615b2" category="doc">Integração da página inicial do assistente de IA "Pergunte-me"</block>
   <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">A página inicial do console do Workload Factory incorpora o assistente de IA "Pergunte-me", permitindo que você faça perguntas sobre seu próprio ambiente de armazenamento, obtenha insights personalizados diretamente do seu ambiente e consulte conversas anteriores. Você pode interagir com o recurso "Pergunte-me" para entender suas cargas de trabalho, solucionar problemas e aprender mais sobre o Workload Factory — tudo isso sem sair do console.</block>
   <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">04 de janeiro de 2026</block>
+  <block id="342a19841e494c61bf9c06a5879eaffa" category="inline-image-macro">O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração.</block>
+  <block id="1d59c9bea900e36e3d5b9ca53cd55587" category="list-text">Selecione o menu <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> Em seguida, selecione *Bancos de dados*.</block>
+  <block id="757a7ffb20a279d7239febb013141ad5" category="list-text">Selecione o menu <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> Em seguida, selecione *Armazenamento*.</block>
 </blocks>

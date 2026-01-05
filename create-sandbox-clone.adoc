@@ -30,7 +30,7 @@ Como alternativa, você pode usar o Codebox para copiar um modelo parcialmente c
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
 . Em bancos de dados, selecione a guia *sandboxes*.
 . Na guia sandboxes, selecione *Create new sandbox*.
 . Na página criar nova sandbox, em fonte de banco de dados, forneça o seguinte:

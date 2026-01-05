@@ -41,7 +41,7 @@ Monitore tarefas para acompanhar o progresso das operações do banco de dados e
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
 . No menu Bancos de dados, selecione *Monitoramento de tarefas*.
 . No monitoramento de tarefas, use os filtros ou pesquise para restringir os resultados das tarefas. Você também pode baixar um relatório de empregos.
 . Opcionalmente, selecione o menu de ação do trabalho e clique em *Ir para CloudFormation* para visualizar o log do trabalho no console do AWS CloudFormation.

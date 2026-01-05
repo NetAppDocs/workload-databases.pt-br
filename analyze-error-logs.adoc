@@ -92,7 +92,7 @@ Use o console do Workload Factory para analisar logs de erros do SQL Server.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
 . No menu Bancos de dados, selecione *Inventário*.
 . No inventário, selecione *Microsoft SQL Server* ou *Oracle* como o tipo de mecanismo de banco de dados.
 . Na guia Instâncias, localize a instância específica do SQL Server ou o banco de dados Oracle que deseja analisar e selecione *Investigar erros* no menu.

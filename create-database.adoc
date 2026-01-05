@@ -47,7 +47,7 @@ Você pode usar os modos de implantação _Criação rápida_ ou _Criação avan
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
 . No menu Bancos de dados, selecione *Inventário*.
 . No Inventário, selecione *Microsoft SQL Server* como o tipo de mecanismo de banco de dados.
 . Selecione um servidor de banco de dados com uma instância de servidor SQL gerenciada para criar o banco de dados.
@@ -81,7 +81,7 @@ Alternativamente, se você quiser alterar qualquer uma dessas configurações pa
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco bancos de dados, selecione *ir para inventário de bancos de dados*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
 . No menu Bancos de dados, selecione *Inventário*.
 . No Inventário, selecione *Microsoft SQL Server* como o tipo de mecanismo de banco de dados.
 . Selecione um servidor de banco de dados com uma instância de servidor SQL gerenciada para criar o banco de dados.
