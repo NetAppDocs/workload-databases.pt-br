@@ -45,12 +45,20 @@ A calculadora avalia o modelo de implantação e se a edição Enterprise é nec
 .Recursos alocados
 A calculadora avalia as condições dos seguintes recursos alocados dependentes da licença:
 
-+ * vCPUs da instância de destino: a instância tem 48 ou menos CPUs virtuais.  * Alocação de memória: a instância tem 128 GB ou menos de memória.
+* VCPUs da instância alvo: a instância possui 48 ou menos CPUs virtuais.
+* Alocação de memória: a instância possui 128GB ou menos de memória.
+
 
 .Uso de recursos empresariais
 A calculadora verifica se algum dos seguintes recursos da empresa está em uso:
 
-+ * Recursos corporativos em nível de banco de dados * Operações de índice on-line * Governador de recursos * Replicação ponto a ponto ou Oracle * Extensões R/Python * TempDB otimizado para memória
+* Recursos empresariais em nível de banco de dados
+* Operações de índice online
+* Resource Governor
+* Replicação ponto a ponto ou Oracle
+* Extensões R/Python
+* TempDB otimizado para memória
+
 
 Se a instância avaliada do SQL Server não utilizar nenhum dos recursos da Enterprise acima e atender às restrições de recursos, a calculadora recomendará o downgrade da licença para Standard Edition. Esta recomendação é feita para ajudá-lo a otimizar seus custos de licenciamento do SQL Server sem comprometer o desempenho ou a funcionalidade.
 
@@ -78,6 +86,7 @@ Siga as etapas na guia para o tipo de armazenamento.
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
 . Em bancos de dados, selecione *Explore savings* e depois *Microsoft SQL Server no EBS*.
 . Na calculadora de economia, forneça os seguintes detalhes:
 +
@@ -112,6 +121,7 @@ Siga as etapas na guia para o tipo de armazenamento.
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
 . Em bancos de dados, selecione *Explore poupança* e depois *Microsoft SQL Server no FSX para Windows*.
 . Na calculadora de economia, forneça os seguintes detalhes:
 +
@@ -219,7 +229,9 @@ Siga as etapas na guia para o tipo de armazenamento.
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Bancos de dados, selecione *Explorar economias* e depois *Microsoft SQL Server no FSx para Windows* no menu.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
+. No menu Databases, selecione *Explorar economias*.
+. Em Explorar economias, selecione a guia *SQL Server no Elastic Block Store (EBS)*.
 +
 Se o Workload Factory detectar hosts EBS, você será redirecionado para a guia Explorar economias.  Se o Workload Factory não detectar hosts EBS, você será redirecionado para a calculadora para<<Explore as poupanças através da personalização,explore as poupanças através da personalização>> .
 
@@ -247,7 +259,9 @@ O Workload Factory consolida vários hosts do SQL Server em uma única recomenda
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Bancos de dados, selecione *Explorar economias* e depois *Microsoft SQL Server no FSx para Windows* no menu.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
+. No menu Databases, selecione *Explorar economias*.
+. Em Explorar economias, selecione a guia *SQL Server on FSx for Windows*.
 +
 Se o Workload Factory detectar hosts FSx para Windows, você será redirecionado para a guia Explorar economias.  Se o Workload Factory não detectar hosts FSx para Windows, você será redirecionado para a calculadora para<<Explore as poupanças através da personalização,explore as poupanças através da personalização>> .
 
@@ -274,10 +288,12 @@ Se as cópias de sombra do FSX for Windows forem detetadas, o valor padrão é *
 --
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. No bloco Bancos de dados, selecione *Explorar economias* e depois *Microsoft SQL Server local* no menu.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
+. No menu Databases, selecione *Explorar economias*.
+. Em Explorar economias, selecione a guia *SQL Server on-premises*.
 . Na guia local do SQL Server, baixe o script para avaliar seus ambientes SQL Server locais.
 +
-.. Baixe o roteiro de avaliação.  O script é uma ferramenta de coleta de dados baseada no PowerShell.  Ele coleta e carrega dados de configuração e desempenho do SQL Server para o Workload Factory.  O consultor de migração avalia os dados e planeja a implantação do FSx para ONTAP para seu ambiente SQL Server.
+.. Baixe o script de avaliação. O script é uma ferramenta de coleta de dados baseada em PowerShell. Ele coleta e carrega dados de configuração e desempenho do SQL Server para o Workload Factory. O consultor de migração avalia os dados e planeja a implantação do FSx para ONTAP no seu ambiente SQL Server.
 +
 image:screenshot-download-script-on-premises.png["Uma captura de tela da guia local do SQL Server mostra a opção de baixar o script de avaliação."]
 
@@ -288,9 +304,8 @@ image:screenshot-upload-script-on-premises.png["Uma captura de tela da guia loca
 
 
 
-. Na guia local do SQL Server, selecione *Explore savings* para executar uma análise de custo do host local do SQL Server contra o FSX for ONTAP.
+. Na guia SQL Server no local, selecione até cinco hosts de banco de dados e, em seguida, selecione *Explorar economias* para executar uma análise de custos do(s) host(s) SQL Server no local em comparação com FSx for ONTAP.
 . Na calculadora de economia, selecione a região para o host local.
-. Para obter resultados mais precisos, atualize as informações do Compute e os detalhes de armazenamento e desempenho.
 . Opcionalmente, forneça os detalhes a seguir sobre clones (cópias de sombra) e snapshots em seu ambiente de banco de dados local para obter uma estimativa de economia de custo mais precisa.
 +
 .. *Frequência de instantâneo*: Selecione uma frequência de instantâneo no menu.
@@ -301,6 +316,10 @@ Se as cópias de sombra do FSX for Windows forem detetadas, o valor padrão é *
 .. *Número de cópias clonadas*: Insira o número de cópias clonadas na configuração local.
 .. *Taxa de mudança mensal*: Insira a porcentagem que os dados clonados e instantâneos mudam em média por mês.
 
+
+. Para obter resultados mais precisos, atualize as informações do Compute e os detalhes de armazenamento e desempenho.
++
+O Workload Factory consolida vários hosts SQL Server no local em uma única recomendação de configuração do FSx for ONTAP para otimizar a economia de custos, a menos que os hosts no local selecionados excedam os limites de throughput, capacidade ou IOPS para um único sistema de arquivos FSx for ONTAP.
 
 
 

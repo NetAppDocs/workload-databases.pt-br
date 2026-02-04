@@ -11,7 +11,7 @@ summary: O NetApp Workload Factory for Databases verifica as configurações do 
 
 
 [role="lead"]
-Usando insights e recomendações de análise de configuração, aproveite o NetApp Workload Factory para implementar as melhores práticas para suas configurações de banco de dados com Microsoft SQL Server e Oracle. Você pode facilmente revisar o status bem arquitetado, aprender sobre problemas com configurações de banco de dados e tomar medidas para melhorar quaisquer configurações que não estejam otimizadas para confiabilidade, segurança, eficiência, desempenho e custo.
+Utilizando insights e recomendações de análise de configuração, aproveite NetApp Workload Factory para implementar as melhores práticas para suas configurações de banco de dados com Microsoft SQL Server e Oracle. Você pode facilmente revisar o status bem arquitetado, aprender sobre problemas nas configurações do banco de dados e corrigir configurações que não estão otimizadas para confiabilidade, segurança, eficiência, desempenho e custo.
 
 Você também pode descartar a análise de configurações específicas que não se aplicam ao seu ambiente para evitar alertas desnecessários e resultados de otimização imprecisos.
 
@@ -42,7 +42,7 @@ Para instâncias do Microsoft SQL Server:
 Para bancos de dados Oracle:
 
 * Dimensionamento do armazenamento: inclui alocação de espaço de troca e espaço livre do sistema de arquivos.
-* Configuração de armazenamento: inclui gerenciamento de capacidade, provisionamento dinâmico, política de camadas, snapshots, eficiência de armazenamento e configurações do sistema operacional para implantações usando NFS ou iSCSI com ou sem Gerenciamento Automático de Armazenamento (ASM), incluindo o status e as configurações do Microsoft Multipath I/O (MPIO).
+* Configuração de storage: inclui gerenciamento de capacidade, thin provisioning, política de camadas, snapshots, eficiências de storage e configurações do sistema operacional para implantações usando NFS ou iSCSI com ou sem Automatic Storage Management (ASM), incluindo o status e as configurações do Microsoft Multipath I/O (MPIO), e as seguintes configurações do dNFS: capacitação do dNFS, resolução de IP consistente do dNFS, arquivo de configuração do dNFS e dNFS `nosharecache`
 * Layout de armazenamento: inclui posicionamento de log de refazer, posicionamento de espaço de tabela temporário, posicionamento de arquivos de dados, posicionamento de log de arquivamento, posicionamento de arquivos de controle e posicionamento de binários, contagem de LUN de grupos de discos ASM
 
 
