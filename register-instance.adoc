@@ -65,8 +65,8 @@ O NetApp Workload Factory oferece suporte ao registro para Failover Cluster Inst
 . Selecione para registrar uma única instância ou múltiplas instâncias.
 . Para autenticar instâncias (etapa 1), faça o seguinte e selecione *Next*:
 +
-** Selecione *Usar as mesmas credenciais para todas as instâncias* ou *Gerenciar credenciais manualmente*.
-** Autentique Microsoft SQL Server e Windows fornecendo informações de nome de usuário e senha.
+.. Selecione *Usar as mesmas credenciais para todas as instâncias* ou *Gerenciar credenciais manualmente*.
+.. Autentique Microsoft SQL Server e Windows fornecendo informações de nome de usuário e senha.
 +
 Se as instâncias forem autenticadas, selecione *Next*.
 
@@ -74,8 +74,8 @@ Se as instâncias forem autenticadas, selecione *Next*.
 
 . Para autenticar o FSx para ONTAP (etapa 2), faça o seguinte:
 +
-** Selecione *Usar as mesmas credenciais para todos os recursos* ou *gerenciar credenciais manualmente*.
-** Insira o nome de usuário e a senha do sistema de arquivos FSx for ONTAP e, em seguida, selecione *Avançar*.
+.. Selecione *Usar as mesmas credenciais para todos os recursos* ou *gerenciar credenciais manualmente*.
+.. Insira o nome de usuário e a senha do sistema de arquivos FSx for ONTAP e, em seguida, selecione *Avançar*.
 +
 Se o sistema de arquivos FSx for ONTAP estiver autenticado, selecione *Avançar*.
 
@@ -83,15 +83,16 @@ Se o sistema de arquivos FSx for ONTAP estiver autenticado, selecione *Avançar*
 
 . Para preparar (passo 3), certifique-se de que a(s) instância(s) atendam aos requisitos mínimos.
 +
-Para atender aos requisitos mínimos, a instância deve ter os módulos AWS e NetApp PowerShell e os módulos PowerShell 7 instalados, e você deve concluir os pré-requisitos para pelo menos um dos recursos listados em Verificação de pré-requisitos. .. Revise os pré-requisitos na *Visualização de verificação de pré-requisitos*.
+Para atender aos requisitos mínimos, a instância deve ter os módulos AWS e NetApp PowerShell e os módulos PowerShell 7 instalados, e você deve concluir os pré-requisitos para pelo menos um dos recursos listados em Verificação de pré-requisitos.
 
 +
-+ Você deve concluir todos os pré-requisitos para uma única funcionalidade, como *Revisar problemas e recomendações bem arquitetados*, para registrar a instância.
-
+.. Revise os pré-requisitos na *visualização de verificação de pré-requisitos*.
 +
+Você deve concluir todos os pré-requisitos para uma única funcionalidade, como *Revisar problemas e recomendações bem arquitetados*, para registrar a instância.
+
 .. Selecione *Detalhes da configuração* para cada funcionalidade para saber mais sobre os pré-requisitos da funcionalidade e siga as instruções na tela para concluir quaisquer pré-requisitos que estejam faltando para uma funcionalidade.
 +
-Para que o Workload Factory link:optimize-configurations.html["revisar e corrigir problemas bem arquitetados"] para suas instâncias, conclua todos os pré-requisitos listados em *Revisar problemas e recomendações de arquitetura adequada* e *Corrigir problemas de arquitetura adequada*.
+Para ter o Workload Factory link:optimize-configurations.html["revisar e corrigir problemas bem arquitetados"] para suas instâncias, conclua todos os pré-requisitos listados em *Revisar problemas e recomendações de arquitetura adequada* e *Corrigir problemas de arquitetura adequada*.
 
 
 
@@ -140,7 +141,7 @@ Você deve concluir todos os pré-requisitos para uma única funcionalidade, com
 
 .. Selecione *Detalhes da configuração* para cada funcionalidade para saber mais sobre os pré-requisitos da funcionalidade e siga as instruções na tela para concluir quaisquer pré-requisitos que estejam faltando para uma funcionalidade.
 +
-Para que o Workload Factory link:optimize-configurations.html["revisar e corrigir problemas bem arquitetados"] para seus bancos de dados, conclua todos os pré-requisitos listados em *Revisar problemas e recomendações de arquitetura bem-sucedida* e *Corrigir problemas de arquitetura bem-sucedida*.
+Para ter Workload Factory link:optimize-configurations.html["revisar e corrigir problemas bem arquitetados"] para seus bancos de dados, conclua todos os pré-requisitos listados em *Review well-architected issues and recommendations* e *Fix well-architected issues* capabilities.
 
 
 
