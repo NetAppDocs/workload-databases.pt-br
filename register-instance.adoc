@@ -19,9 +19,9 @@ Você só pode registrar seus recursos se eles forem executados no armazenamento
 
 == Sobre a tarefa
 
-O registro de uma instância (SQL Server) ou banco de dados (Oracle) envolve três etapas: autenticação da instância ou banco de dados, autenticação do FSx for ONTAP e preparação. A preparação consiste em garantir que todos os módulos da AWS, NetApp e PowerShell estejam instalados na instância ou no banco de dados, e que os requisitos mínimos para recursos do Workload Factory for Databases, como link:analyze-error-logs.html["análise de log de erro"] ou link:optimize-configurations.html["revisão well-architected"], sejam atendidos.
+O registro de uma instância (SQL Server) ou banco de dados (Oracle) envolve três etapas: autenticação da instância ou banco de dados, autenticação do FSx for ONTAP e preparação. Para preparar, instale os módulos AWS, NetApp e PowerShell na instância ou banco de dados e atenda aos requisitos mínimos para recursos do Workload Factory for Databases, como link:analyze-error-logs.html["análise de log de erro"] ou link:optimize-configurations.html["avaliação well-architected"].
 
-O Workload Factory oferece suporte apenas ao registro e gerenciamento de instâncias do Microsoft SQL Server e do banco de dados Oracle.  Dependendo das credenciais da conta da AWS selecionadas no Workload Factory, os hosts PostgreSQL podem aparecer no Inventário.  Atualmente, o Workload Factory oferece suporte a instâncias não registradas do PostgreSQL executadas apenas em sistemas operacionais Amazon Linux.
+Workload Factory suporta apenas o registro e gerenciamento de instâncias do Microsoft SQL Server e bancos de dados Oracle. Dependendo das credenciais da conta AWS que você selecionar no Workload Factory, hosts PostgreSQL aparecem no Inventory. Atualmente, Workload Factory suporta instâncias PostgreSQL não registradas executando apenas em sistemas operacionais Amazon Linux.
 
 
 
@@ -33,14 +33,14 @@ O host da instância ou do banco de dados deve constar no Inventário. Para que 
 
 === Registrando uma instância em uma rede privada
 
-Para registrar uma instância (SQL Server) ou banco de dados (Oracle) em uma rede privada sem conectividade externa, os seguintes endpoints precisam estar disponíveis na VPC com associação às sub-redes onde os servidores SQL estão presentes.  Certifique-se de que os pontos de extremidade da interface permitam a porta 443 no Grupo de Segurança anexado.
+Para registrar uma instância ou banco de dados em uma rede privada sem conectividade externa, disponibilize os endpoints necessários na VPC e associe-os às sub-redes relevantes. Permita a porta 443 no Grupo de Segurança para endpoints da interface.
 
 * `S3 Gateway/endpoint`
 * `ssm`
 * `ssmmessages`
 * `fsx`
 +
-Se você usar um servidor proxy para todas as conexões de saída de instâncias EC2, deverá permitir o acesso aos seguintes domínios para que as operações de gerenciamento funcionem:
+Se você utiliza um servidor proxy para conexões EC2 de saída, permita o acesso a estes domínios para operações de gerenciamento:
 
 * ``.microsoft.com``(Servidor SQL)
 * ``.powershellgallery.com``(Servidor SQL)
@@ -92,11 +92,11 @@ Você deve concluir todos os pré-requisitos para uma única funcionalidade, com
 
 .. Selecione *Detalhes da configuração* para cada funcionalidade para saber mais sobre os pré-requisitos da funcionalidade e siga as instruções na tela para concluir quaisquer pré-requisitos que estejam faltando para uma funcionalidade.
 +
-Para ter o Workload Factory link:optimize-configurations.html["revisar e corrigir problemas bem arquitetados"] para suas instâncias, conclua todos os pré-requisitos listados em *Revisar problemas e recomendações de arquitetura adequada* e *Corrigir problemas de arquitetura adequada*.
+Para habilitar o Workload Factory para link:optimize-configurations.html["revisar e corrigir problemas bem arquitetados"], conclua todos os pré-requisitos em *Revisar problemas e recomendações bem arquitetados* e *Corrigir problemas bem arquitetados*.
 
 
 
-. Quando os pré-requisitos estiverem completos, *Register* a(s) instância(s).
+. Após concluir todos os pré-requisitos, *registre* a(s) instância(s).
 
 
 .Resultado
@@ -145,14 +145,14 @@ Para ter Workload Factory link:optimize-configurations.html["revisar e corrigir 
 
 
 
-. Quando os pré-requisitos estiverem completos, *registre* o(s) banco(s) de dados.
+. Após concluir os pré-requisitos, *registre* o(s) banco(s) de dados.
 
 
 .Resultado
 O registro no banco de dados foi iniciado. Selecione a guia *Monitoramento de tarefas* para acompanhar o progresso.
 
 .O que vem a seguir
-Após o registro do recurso, você pode executar as seguintes tarefas.
+Após o cadastro, você pode realizar essas tarefas.
 
 * Ver bancos de dados do inventário
 * link:create-database.html["Crie um banco de dados"]

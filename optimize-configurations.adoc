@@ -21,9 +21,11 @@ link:optimize-overview.html["Saiba mais sobre a análise de configuração e o s
 
 == Sobre esta tarefa
 
-O Workload Factory analisa as configurações do banco de dados diariamente.  A análise diária fornece o status bem arquitetado, além de insights e recomendações com opções para corrigir automaticamente problemas de configuração para que suas configurações atendam às melhores práticas.
+Workload Factory analisa diariamente as configurações do banco de dados. A análise diária fornece status bem arquitetado, insights e recomendações. Você pode corrigir automaticamente problemas de configuração para atender às melhores práticas.
 
-Você tem opções para revisar as recomendações para problemas de configuração e corrigi-los no inventário de bancos de dados no console do Workload Factory.
+Você pode revisar as recomendações para problemas de configuração e corrigir esses problemas no inventário de databases dentro do console do NetApp Workload Factory.
+
+Para recursos do SQL Server, você pode realizar uma avaliação única para revisar as melhores práticas para suas configurações de banco de dados. Você não precisa registrar recursos nem armazenar credenciais para realizar a avaliação única.
 
 .O que é analisado
 O Workload Factory analisa o status bem arquitetado das seguintes configurações:
@@ -44,19 +46,44 @@ Para bancos de dados Oracle:
 * Dimensionamento do armazenamento: inclui alocação de espaço de troca e espaço livre do sistema de arquivos.
 * Configuração de storage: inclui gerenciamento de capacidade, thin provisioning, política de camadas, snapshots, eficiências de storage e configurações do sistema operacional para implantações usando NFS ou iSCSI com ou sem Automatic Storage Management (ASM), incluindo o status e as configurações do Microsoft Multipath I/O (MPIO), e as seguintes configurações do dNFS: capacitação do dNFS, resolução de IP consistente do dNFS, arquivo de configuração do dNFS e dNFS `nosharecache`
 * Layout de armazenamento: inclui posicionamento de log de refazer, posicionamento de espaço de tabela temporário, posicionamento de arquivos de dados, posicionamento de log de arquivamento, posicionamento de arquivos de controle e posicionamento de binários, contagem de LUN de grupos de discos ASM
+* Computação: inclui patches do sistema operacional
+
+
+A análise bem arquitetada para Oracle notifica você quando uma configuração depende de outras e lista ações para otimizar as configurações vinculadas.
+
+
+
+== Realize uma avaliação única das configurações do banco de dados SQL Server
+
+Realize uma avaliação única para descobrir o status de arquitetura das suas instâncias do Microsoft SQL Server sem armazenar credenciais ou registrar instâncias.
+
+Você pode executar o script e enviar os resultados quantas vezes quiser. A cada envio, o status bem arquitetado e os insights são atualizados com base nos resultados mais recentes.
+
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] em seguida, selecione *Bancos de dados*.
+. No *Inventário*, selecione *One-time assessment* > *Learn about assessment*. Consulte as informações sobre a one-time assessment.
+. Selecione *Download script*.
++
+.. Copie o script para o seu host Microsoft SQL Server.
+.. Execute o script em PowerShell. Um único script coleta metadados de todas as instâncias.
+
+
+. Selecione *One-time assessment* > *Upload*. Localize o arquivo e carregue-o no console do NetApp Workload Factory.
+. Veja a recomendação para qualquer configuração. As recomendações incluem boas práticas e problemas que você pode encontrar se as configurações não estiverem otimizadas.
 
 
 
 
-== Antes de começar
+== Antes de começar a corrigir, descartar e reativar configurações
 
 * Você develink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["conceder permissões de _operações e remediação_"^] na sua conta da AWS.
-* Para avaliar o armazenamento de uma instância do Microsoft SQL Server ou banco de dados Oracle, o recurso deve ser registrado no Workload Factory e o tipo de armazenamento deve ser FSx para ONTAP.link:register-instance.html["Aprenda como registrar recursos."]
-* Certifique-se de rever cada recomendação cuidadosamente antes de selecionar para corrigir uma configuração ou configuração. Para as configurações RSS e MAXDOP, sugerimos que você teste as configurações recomendadas para determinar melhorias de desempenho antes de fazer alterações no seu ambiente de produção.
+* O recurso deve estar registrado no Workload Factory e o tipo de storage deve ser FSx for ONTAP. link:register-instance.html["Aprenda como registrar recursos."]
+* Analise cada recomendação antes de corrigir uma configuração ou ajuste. Para RSS e MAXDOP, teste as configurações recomendadas para verificar o desempenho antes de alterar seu ambiente de produção.
 
 
 
-NOTE: O processo de remediação pode causar tempos de inatividade da instância ou interrupções de serviço. Certifique-se de revisar a recomendação cuidadosamente antes de decidir corrigir uma configuração.
+NOTE: Corrigir uma configuração pode causar indisponibilidade da instância ou interrupções de serviço. Certifique-se de revisar cuidadosamente a recomendação antes de escolher corrigir uma configuração.
 
 
 
@@ -69,7 +96,7 @@ NOTE: O processo de correção pode causar tempos de inatividade da instância o
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] em seguida, selecione *Bancos de dados*.
 . No *Inventário*, selecione o tipo de mecanismo: Microsoft SQL Server ou Oracle.
 . Selecione recursos para corrigir configurações específicas.
 +
@@ -83,7 +110,7 @@ NOTE: O processo de correção pode causar tempos de inatividade da instância o
 Você pode filtrar problemas de configuração por categorias, subcategorias, status, gravidade e tags.
 
 +
-Você também pode baixar um relatório das descobertas selecionando *Exportar PDF*.
+Selecione *Export PDF* para baixar um relatório com os resultados.
 
 . Selecione a seta suspensa para exibir a recomendação para qualquer configuração. As recomendações incluem práticas recomendadas, possíveis armadilhas de configurações não otimizadas e considerações importantes. Certifique-se de rever a recomendação com cuidado.
 . Selecione *Visualizar e corrigir* problemas de configuração quando a opção estiver disponível.
@@ -108,47 +135,13 @@ O Workload Factory começa a corrigir o(s) problema(s).  Selecione a aba *Monito
 
 
 
-== Adiar ou ignorar a análise das configurações do banco de dados
+== Descartar a análise das configurações do banco de dados
 
-Adie ou ignore a análise de configurações de banco de dados específicas que não se aplicam ao ambiente de banco de dados para evitar alertas desnecessários e resultados de otimização imprecisos. Você pode reativar uma análise de configuração adiada ou descartada a qualquer momento.
-
-Os requisitos de aplicação para configurações de banco de dados variam.  O Workload Factory oferece duas opções para pular a análise de configurações específicas do banco de dados, para que você possa monitorar apenas problemas relevantes e obter uma visão precisa da integridade das configurações relevantes.  Quando uma análise de configuração específica é adiada ou descartada, a configuração não é incluída na pontuação total de otimização.
-
-Você pode adiar, descartar e reativar a análise de configuração no nível de configuração e na instância do SQL Server ou no nível do banco de dados Oracle.
-
-* *Adiar por 30 dias*: Adiar a análise interromperá a análise por 30 dias. Após 30 dias, a análise será reiniciada automaticamente.
-* *Dismiss*: Rejeitar a análise adia a análise indefinidamente. Você pode reiniciar a análise, se necessário.
-
-
-As instruções a seguir descrevem como adiar, descartar ou reativar uma análise no nível de configuração.  Para concluir as seguintes tarefas para instâncias específicas do SQL Server ou bancos de dados Oracle, comece na guia *Painel*.
-
-[role="tabbed-block"]
-====
-.Adiar
---
-Adiar para parar uma análise de configuração por 30 dias. Após 30 dias, a análise será reiniciada automaticamente.
+Ignore a análise de configurações específicas de banco de dados que não se aplicam ao seu ambiente de banco de dados para evitar alertas desnecessários e resultados de otimização imprecisos. Você pode reativar uma análise de configuração ignorada a qualquer momento.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
-. No menu Bancos de dados, selecione *Inventário*.
-. No Inventário, selecione o tipo de mecanismo de banco de dados: *Microsoft SQL Server* ou *Oracle*.
-. Navegue até a instância do SQL Server ou banco de dados Oracle com a configuração a ser adiada, selecione o menu de ação e, em seguida, selecione *Bem arquitetado*.
-. Na página Análise bem arquitetada, role para baixo até a configuração a ser adiada, selecione o menu de ação e, em seguida, selecione *Descartar*.
-. Na caixa de diálogo de configuração Descartar, selecione *Adiar por 30 dias* e depois selecione *Descartar*.
-
-
-.Resultado
-A análise de configuração pára por 30 dias.
-
---
-.Dispensar
---
-Ignorar para interromper uma análise de configuração indefinidamente. Você pode reiniciar a análise quando necessário.
-
-.Passos
-. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] em seguida, selecione *Bancos de dados*.
 . No menu Bancos de dados, selecione *Inventário*.
 . No Inventário, selecione o tipo de mecanismo de banco de dados: *Microsoft SQL Server* ou *Oracle*.
 . Navegue até a instância do SQL Server ou banco de dados Oracle com a configuração a ser adiada, selecione o menu de ação e, em seguida, selecione *Bem arquitetado*.
@@ -159,14 +152,17 @@ Ignorar para interromper uma análise de configuração indefinidamente. Você p
 .Resultado
 A análise de configuração pára.
 
---
-.Reativar
---
-Reative uma análise de configuração adiada ou descartada a qualquer momento.
+Você pode reativar a análise a qualquer momento. A configuração não é mais incluída na pontuação total de otimização.
+
+
+
+== Reative uma análise de configuração descartada
+
+Reative uma análise de configuração descartada a qualquer momento. Você pode selecionar uma ou mais configurações para reativar.
 
 .Passos
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
-. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] em seguida, selecione *Bancos de dados*.
 . No menu Bancos de dados, selecione *Inventário*.
 . No Inventário, selecione o tipo de mecanismo de banco de dados: *Microsoft SQL Server* ou *Oracle*.
 . Navegue até a instância do SQL Server ou banco de dados Oracle com a configuração a ser adiada, selecione o menu de ação e, em seguida, selecione *Bem arquitetado*.
@@ -175,7 +171,4 @@ Reative uma análise de configuração adiada ou descartada a qualquer momento.
 
 
 .Resultado
-A análise de configuração é reativada e ocorre diariamente a avançar.
-
---
-====
+A análise de configuração é reativada e executa diariamente a partir de agora.

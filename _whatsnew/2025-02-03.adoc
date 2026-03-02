@@ -1,12 +1,12 @@
-= Ambientes de banco de dados no local análise de custos e Planejamento de migração
+= Análise de custos e planejamento de migração de ambientes de banco de dados SQL Server on-premises
 :allow-uri-read: 
 
 
 
 
-=== Ambientes de banco de dados no local análise de custos e Planejamento de migração
+=== Análise de custos e planejamento de migração de ambientes de banco de dados SQL Server on-premises
 
-A fábrica de workloads do BlueXP  para bancos de dados agora deteta, analisa e ajuda você a Planejar a migração de banco de dados no local para o Amazon FSX for NetApp ONTAP. Use a calculadora de economia para estimar o custo da execução do ambiente de banco de dados local na nuvem e analisar as recomendações para migrar o ambiente de banco de dados local para a nuvem.
+BlueXP workload factory for Databases agora detecta, analisa e ajuda você a planejar a migração de banco de dados SQL Server no storage no local para Amazon FSx for NetApp ONTAP. Você pode usar a calculadora de economia para estimar o custo de execução do seu ambiente de banco de dados SQL Server no storage no local na nuvem e consultar as recomendações para migrar seu ambiente de banco de dados no storage no local para a nuvem.
 
 link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Explore economia para ambientes de banco de dados no local"]
 

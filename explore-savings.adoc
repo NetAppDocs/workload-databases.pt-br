@@ -17,17 +17,17 @@ Explore as economias no NetApp Workload Factory for Databases para suas cargas d
 
 == Sobre esta tarefa
 
-O Workload Factory tem várias maneiras de você explorar economias para suas cargas de trabalho de banco de dados em execução no Amazon Elastic Block Store (EBS), FSx para Windows File Server e armazenamento local - no Painel, na guia Inventário e na guia Explorar economias.  Em todos os casos, você pode usar a calculadora de economia para comparar vários componentes de custo de execução de cargas de trabalho do Microsoft SQL Server, como armazenamento, computação, licença SQL, instantâneos e clones para suas cargas de trabalho de banco de dados no FSx para sistemas de arquivos ONTAP em relação ao Elastic Block Store (EBS), FSx para Windows File Server e armazenamento local.
+Você pode explorar as economias para suas cargas de trabalho de banco de dados no EBS, FSx for Windows File Server e storage no local usando o Dashboard, a guia Inventory ou a guia Explore savings. Em todos os casos, você pode usar a savings calculator para comparar vários componentes de custo da execução de cargas de trabalho do Microsoft SQL Server, como storage, compute, licença SQL, snapshots e clones para suas cargas de trabalho de banco de dados em sistemas de arquivos FSx for ONTAP em comparação com Elastic Block Store (EBS), FSx for Windows File Server e storage no local.
 
-Se o Workload Factory determinar que você pode economizar dinheiro executando essas cargas de trabalho em um sistema de arquivos FSx para ONTAP , você pode implantar o Microsoft SQL sobre o FSx para ONTAP diretamente da calculadora de economia no console do Workload Factory.  Quando você tem várias instâncias do Microsoft SQL Server no Elastic Block Store, FSx para Windows File Server ou armazenamento local, recomendamos uma configuração do FSx para ONTAP com uma única instância do SQL.
+Se o Workload Factory identificar economia de custos no FSx for ONTAP, você pode implantar o Microsoft SQL sobre o FSx for ONTAP diretamente a partir da calculadora de economia no console do Workload Factory. Quando você tiver várias instâncias do Microsoft SQL Server sobre Elastic Block Store, FSx for Windows File Server ou storage no local, recomendaremos uma configuração do FSx for ONTAP com uma única instância do SQL.
 
 .Economias potenciais para todos os workloads de banco de dados
-Acesse o *Painel* de Bancos de Dados no console do Workload Factory para obter uma visão geral das potenciais economias de custos ao executar todas as suas cargas de trabalho de banco de dados no FSx para ONTAP.  No bloco *Potencial de economia*, você pode visualizar o número de todas as cargas de trabalho de banco de dados que você tem no Elastic Block Store e no FSx for Windows File Server, a potencial economia de custos, a porcentagem de economia e a representação visual no gráfico de barras.
+Visite o *Dashboard* de Bancos de Dados no console do Workload Factory para obter uma visão geral da economia potencial ao executar todas as suas cargas de trabalho de banco de dados no FSx for ONTAP. O bloco *Potential savings* mostra suas cargas de trabalho de banco de dados no EBS e FSx for Windows File Server, economia potencial, porcentagem de economia e um gráfico de barras.
 
 image:screenshot-dashboard-potential-savings-tile.png["Uma captura de tela do bloco de economia potencial do painel de bancos de dados no console do Workload Factory.  O bloco de economia potencial mostra o número de todas as cargas de trabalho de banco de dados que você tem no Elastic Block Store e no FSx para Windows File Server, a economia potencial de custos, a porcentagem de economia e a representação visual no gráfico de barras."]
 
 .Calculadora de poupança
-Você pode utilizar a calculadora de economia para comparar vários componentes de custo da execução de cargas de trabalho do Microsoft SQL Server, como armazenamento, computação, licença SQL, snapshots e clones para suas cargas de trabalho de banco de dados nos sistemas de arquivos FSX for ONTAP com Elastic Block Store (EBS), FSX for Windows File Server e armazenamento local. Dependendo de seus requisitos de armazenamento, você pode descobrir que os sistemas de arquivos do FSX for ONTAP são os mais econômicos para suas cargas de trabalho de banco de dados.
+Você pode utilizar a calculadora de economia para comparar vários componentes de custo da execução de cargas de trabalho do Microsoft SQL Server, como armazenamento, computação, licença SQL, snapshots e clones para suas cargas de trabalho de banco de dados em sistemas de arquivos FSx for ONTAP em comparação com Elastic Block Store (EBS), FSx for Windows File Server e storage no local. Os sistemas de arquivos FSx for ONTAP podem ser a opção mais econômica para suas cargas de trabalho de banco de dados.
 
 A calculadora mostra se o armazenamento para as cargas de trabalho de banco de dados nesses servidores SQL da Microsoft custaria menos se você usou um sistema de arquivos FSX for ONTAP. <<Opções de calculadora,Saiba como usar a calculadora.>>
 
@@ -37,7 +37,7 @@ image:screenshot-ebs-savings-calculator-update.png["Uma captura de tela da pági
 
 == Análise de implantação do SQL Server
 
-A calculadora executa uma análise abrangente da implantação do SQL Server para garantir que os recursos e recursos que estão sendo utilizados sejam adequadamente compatíveis com a edição do SQL Server. Aqui estão os principais fatores e condições que a calculadora verifica antes de recomendar um downgrade para Standard Edition:
+A calculadora verifica sua implantação do SQL Server para garantir que os recursos e recursos utilizados correspondam à edição do SQL Server. Aqui estão os principais fatores e condições que a calculadora verifica antes de recomendar um downgrade para Standard Edition:
 
 .Modelo de implantação
 A calculadora avalia o modelo de implantação e se a edição Enterprise é necessária.
@@ -60,7 +60,7 @@ A calculadora verifica se algum dos seguintes recursos da empresa está em uso:
 * TempDB otimizado para memória
 
 
-Se a instância avaliada do SQL Server não utilizar nenhum dos recursos da Enterprise acima e atender às restrições de recursos, a calculadora recomendará o downgrade da licença para Standard Edition. Esta recomendação é feita para ajudá-lo a otimizar seus custos de licenciamento do SQL Server sem comprometer o desempenho ou a funcionalidade.
+Se a instância do SQL Server avaliada não utilizar nenhum dos recursos Enterprise mencionados acima e atender às restrições de recursos, a calculadora recomendará o downgrade da licença para Standard Edition. A calculadora ajuda você a otimizar os custos de licenciamento do SQL Server sem reduzir o desempenho ou a funcionalidade.
 
 
 
@@ -233,14 +233,14 @@ Siga as etapas na guia para o tipo de armazenamento.
 . No menu Databases, selecione *Explorar economias*.
 . Em Explorar economias, selecione a guia *SQL Server no Elastic Block Store (EBS)*.
 +
-Se o Workload Factory detectar hosts EBS, você será redirecionado para a guia Explorar economias.  Se o Workload Factory não detectar hosts EBS, você será redirecionado para a calculadora para<<Explore as poupanças através da personalização,explore as poupanças através da personalização>> .
+Se o Workload Factory detectar EBS hosts, você será redirecionado para a guia Explorar economias. Se ele não detectar EBS hosts, você será redirecionado para a calculadora para <<Explore as poupanças através da personalização,explore as poupanças através da personalização>>.
 
 . Em *Explorar economias*, selecione um ou mais hosts de banco de dados em execução no EBS e, em seguida, selecione *Explorar economias*.
 . Se necessário, autentique o host do banco de dados com credenciais do SQL Server, credenciais do Windows ou adicionando permissões ausentes do SQL Server.
 +
 Se a página Explorar economias não carregar dados após a autenticação bem-sucedida, selecione a aba *Inventário* para recarregar os dados e, em seguida, selecione a aba *Explorar economias* novamente.
 
-. Na calculadora de economia, opcionalmente, forneça os seguintes detalhes sobre clones e instantâneos no seu armazenamento EBS para uma estimativa de economia de custos mais precisa.
+. Na calculadora de economia, você pode fornecer os seguintes detalhes sobre clones e snapshots em seu armazenamento EBS para obter uma estimativa de economia de custos mais precisa.
 +
 .. *Frequência de instantâneo*: Selecione uma frequência de instantâneo no menu.
 .. *Frequência de atualização do clone*: Selecione a frequência de atualização dos clones no menu.
@@ -263,7 +263,7 @@ O Workload Factory consolida vários hosts do SQL Server em uma única recomenda
 . No menu Databases, selecione *Explorar economias*.
 . Em Explorar economias, selecione a guia *SQL Server on FSx for Windows*.
 +
-Se o Workload Factory detectar hosts FSx para Windows, você será redirecionado para a guia Explorar economias.  Se o Workload Factory não detectar hosts FSx para Windows, você será redirecionado para a calculadora para<<Explore as poupanças através da personalização,explore as poupanças através da personalização>> .
+Se o Workload Factory detectar hosts FSx para Windows, você será redirecionado para a guia Explorar economias. Se não detectar hosts FSx para Windows, você será redirecionado para a calculadora para <<Explore as poupanças através da personalização,explore as poupanças através da personalização>>.
 
 . Na guia Explorar economias, selecione *Explorar economias* do host do banco de dados usando o FSx para armazenamento do Windows File Server.
 . Se necessário, autentique o host do banco de dados com credenciais do SQL Server, credenciais do Windows ou adicionando permissões ausentes do SQL Server.
@@ -274,7 +274,7 @@ Se a página Explorar economias não carregar dados após a autenticação bem-s
 +
 .. *Frequência de instantâneo*: Selecione uma frequência de instantâneo no menu.
 +
-Se as cópias de sombra do FSX for Windows forem detetadas, o valor padrão é *Diário*. Se as cópias sombra não forem detetadas, o valor padrão será *Nenhuma frequência de instantâneos*.
+Se o Workload Factory detectar shadow copies do FSx for Windows, ele definirá o valor padrão como *Daily*. Se não detectar shadow copies, ele definirá o valor padrão como *No snapshot frequency*.
 
 .. *Frequência de atualização do clone*: Selecione a frequência de atualização dos clones no menu.
 .. *Número de cópias clonadas*: Insira o número de cópias clonadas na configuração FSX for Windows.
@@ -290,27 +290,22 @@ Se as cópias de sombra do FSX for Windows forem detetadas, o valor padrão é *
 . Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
 . No menu Databases, selecione *Explorar economias*.
-. Em Explorar economias, selecione a guia *SQL Server on-premises*.
-. Na guia local do SQL Server, baixe o script para avaliar seus ambientes SQL Server locais.
+. Em Explorar economias, selecione o tipo de mecanismo *Microsoft SQL Server*.
+. Em seguida, selecione a guia *SQL Server on-premises*.
+. Na guia SQL Server no local, selecione *Script de avaliação* > *Informações do script de avaliação* e revise as informações fornecidas.
+. Selecione *Download assessment script*.
 +
-.. Baixe o script de avaliação. O script é uma ferramenta de coleta de dados baseada em PowerShell. Ele coleta e carrega dados de configuração e desempenho do SQL Server para o Workload Factory. O consultor de migração avalia os dados e planeja a implantação do FSx para ONTAP no seu ambiente SQL Server.
-+
-image:screenshot-download-script-on-premises.png["Uma captura de tela da guia local do SQL Server mostra a opção de baixar o script de avaliação."]
+O script é uma ferramenta de coleta de dados baseada em PowerShell. Ele coleta e carrega dados de configuração e desempenho do SQL Server para o Workload Factory. O consultor de migração avalia os dados e planeja a implantação do FSx para ONTAP no seu ambiente SQL Server.
 
-.. Execute o script no host do SQL Server.
-.. Carregue a saída do script na guia local do SQL Server no Workload Factory.
-+
-image:screenshot-upload-script-on-premises.png["Uma captura de tela da guia local do SQL Server mostra a opção de carregar o script de avaliação."]
-
-
-
+. Execute o script no host do SQL Server com um usuário que tenha privilégios suficientes.
+. Selecione *Carregar resultados do script* na guia SQL Server no local do NetApp Workload Factory.
 . Na guia SQL Server no local, selecione até cinco hosts de banco de dados e, em seguida, selecione *Explorar economias* para executar uma análise de custos do(s) host(s) SQL Server no local em comparação com FSx for ONTAP.
 . Na calculadora de economia, selecione a região para o host local.
 . Opcionalmente, forneça os detalhes a seguir sobre clones (cópias de sombra) e snapshots em seu ambiente de banco de dados local para obter uma estimativa de economia de custo mais precisa.
 +
 .. *Frequência de instantâneo*: Selecione uma frequência de instantâneo no menu.
 +
-Se as cópias de sombra do FSX for Windows forem detetadas, o valor padrão é *Diário*. Se as cópias sombra não forem detetadas, o valor padrão será *Nenhuma frequência de instantâneos*.
+Se o Workload Factory detectar shadow copies do FSx for Windows, ele definirá o valor padrão como *Daily*. Se não detectar shadow copies, ele definirá o valor padrão como *No snapshot frequency*.
 
 .. *Frequência de atualização do clone*: Selecione a frequência de atualização dos clones no menu.
 .. *Número de cópias clonadas*: Insira o número de cópias clonadas na configuração local.
@@ -321,6 +316,38 @@ Se as cópias de sombra do FSX for Windows forem detetadas, o valor padrão é *
 +
 O Workload Factory consolida vários hosts SQL Server no local em uma única recomendação de configuração do FSx for ONTAP para otimizar a economia de custos, a menos que os hosts no local selecionados excedam os limites de throughput, capacidade ou IOPS para um único sistema de arquivos FSx for ONTAP.
 
+
+
+--
+.Oracle Server no local
+--
+.Passos
+. Inicie sessão utilizando uma das link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] Em seguida, selecione *Bancos de dados*.
+. No menu Databases, selecione *Explorar economias*.
+. Em Explorar economias, selecione o tipo de mecanismo *Microsoft SQL Server*.
+. Em seguida, selecione a guia *Oracle Server on-premises*.
+. Na guia Oracle Server on-premises, selecione *Script de avaliação* > *Informações do script de avaliação* e revise as informações fornecidas.
+. Selecione *Download assessment script*.
++
+O script é uma ferramenta de coleta de dados baseada em PowerShell. Ele coleta dados de configuração e desempenho do Oracle Server.
+
+. Execute o script no host Oracle com um usuário que tenha privilégios suficientes.
+. Selecione *Carregar resultados do script* e, em seguida, carregue o arquivo de saída do script para o console do NetApp Workload Factory. O migration advisor avalia os dados e planeja a implantação do Amazon FSx for NetApp ONTAP para o seu ambiente Oracle Server.
+. Na guia Oracle Server no local, selecione o Oracle Server no local e, em seguida, selecione *Explore savings* para executar uma análise de custos em relação ao FSx for ONTAP.
+. Na calculadora de economia, selecione a região para o host local.
+. Opcionalmente, forneça os detalhes a seguir sobre clones (cópias de sombra) e snapshots em seu ambiente de banco de dados local para obter uma estimativa de economia de custo mais precisa.
++
+.. *Frequência de instantâneo*: Selecione uma frequência de instantâneo no menu.
++
+Se o Workload Factory detectar shadow copies do FSx for Windows, ele definirá o valor padrão como *Daily*. Se não detectar shadow copies, ele definirá o valor padrão como *No snapshot frequency*.
+
+.. *Frequência de atualização do clone*: Selecione a frequência de atualização dos clones no menu.
+.. *Número de cópias clonadas*: Insira o número de cópias clonadas na configuração local.
+.. *Taxa de mudança mensal*: Insira a porcentagem que os dados clonados e instantâneos mudam em média por mês.
+
+
+. Para obter resultados mais precisos, atualize as informações do Compute e os detalhes de armazenamento e desempenho.
 
 
 --

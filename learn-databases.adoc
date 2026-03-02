@@ -136,6 +136,9 @@ O Workload Factory oferece suporte aos seguintes mecanismos de banco de dados, v
 | Microsoft SQL Server | SQL Server 2016, 2017, 2019, 2022 | Qualquer | FCI, Independente 
 
 
+| Microsoft SQL Server | SQL Server 2016, 2017, 2019, 2022 | Qualquer | Grupo de disponibilidade Always On 
+
+
 | Oráculo | 19c | RHEL, SuSe Linux | Autônomo (inquilino único/múltiplo) 
 
 
@@ -152,6 +155,9 @@ O Workload Factory oferece suporte aos seguintes mecanismos de banco de dados, v
 
 
 | Oráculo | 21c | RHEL, SuSe Linux | Autônomo com ASM (locatário único/múltiplo) 
+
+
+| Oráculo | 19c, 21c | RHEL, SuSe Linux | Data Guard 
 
 
 | PostgreSQL | PostgreSQL 15 | AMI do Amazon Linux 2023 | HA, instância autônoma 
