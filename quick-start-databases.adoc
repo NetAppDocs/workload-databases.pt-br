@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: quick-start-databases.html 
-keywords: requirements, basic mode, read-only mode, read/write mode 
+keywords: requirements, setup, quick start, getting started, getting started with databases, getting started with workload factory for databases 
 summary: Comece a usar o NetApp Workload Factory for Databases para usar snippets de infraestrutura como código, descobrir hosts, gerenciar recursos e muito mais. 
 ---
 = Início rápido do NetApp Workload Factory para bancos de dados

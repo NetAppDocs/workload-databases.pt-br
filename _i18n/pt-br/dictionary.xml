@@ -31,7 +31,6 @@
   <block id="655a2ef85749dcbb368e1b8b32300552" category="list-text">Na caixa de diálogo Verificação de integridade, clique em *Verificação de integridade*.</block>
   <block id="d2212da19c03bb2b369faeaf9d65f109" category="list-text">Marque o status da verificação integridade nas caixas de areia ou em Monitoramento de trabalhos.</block>
   <block id="8ea37d89915fca644158ae5283f70e68" category="paragraph">Se a verificação de integridade falhar, recomendamos que você não use o clone sandbox e crie um novo clone sandbox.</block>
-  <block id="4d347b6072ee47e025ccdfd378498ab5" category="summary">Conecte um clone de sandbox a um pipeline de CI/CD com código API REST para aprimorar a entrega de software por meio da automação.</block>
   <block id="2af2cf99863645202599afd2708773e2" category="doc">Conete um clone sandbox a ferramentas CI/CD</block>
   <block id="bc71cf96586c8edb703f886cce218a0c" category="paragraph">Para fornecer uma nova versão do software automaticamente ao clone do banco de dados, você deve se conectar a um pipeline de CI/CD. Use o código API REST fornecido a partir desta operação para fazer a conexão.</block>
   <block id="452804eac893658bcf658126b3087551" category="list-text">Selecione *conetar a ferramentas CI/CD*.</block>
@@ -761,7 +760,6 @@
   <block id="0f2833865dd9bd39be8189333dae1c4f" category="list-text">*Frequência de atualização do clone*: Selecione a frequência de atualização dos clones no menu.</block>
   <block id="ca1bcaaac2fa2065767d6cb9b43a5bf7" category="list-text">Na guia Explorar economias, selecione *Explorar economias* do host do banco de dados usando o FSx para armazenamento do Windows File Server.</block>
   <block id="546dcae8b2a33c531e585b76d51af0dd" category="paragraph">Em alguns casos, com permissões limitadas, a página de exploração de economias não carrega dados após a autenticação bem-sucedida.</block>
-  <block id="012a999834d8188ec17b6ec67f4db97d" category="list-text">Resiliência: inclui snapshots locais, FSx para backups ONTAP , replicação entre regiões (CRR) e alta disponibilidade do Microsoft SQL.</block>
   <block id="1caf2514b723d82877e2b000e3ba5e3f" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>Descobrir ou implantar recursos</block>
   <block id="714bf7245115e9e60e5f4ba3dc04e4f5" category="paragraph">Com credenciais e políticas de IAM, você pode descobrir recursos de banco de dados existentes no inventário ou<block ref="086045f9b9433534ba0bc16ba8744718" category="inline-link-macro-rx"></block> .  O inventário fornece uma interface unificada para gerenciar recursos.</block>
   <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">Quatro</block>
@@ -942,7 +940,6 @@
   <block id="da04ea76e1caee6b818a505ce02fa93b" category="paragraph">Explore as economias no NetApp Workload Factory for Databases para suas cargas de trabalho de banco de dados comparando os custos de uso do Microsoft SQL Server no Amazon Elastic Block Store (EBS), FSx para Windows File Server e armazenamento local com o FSx para armazenamento ONTAP .</block>
   <block id="e123e8395730b190f146babf1b2d52a4" category="inline-image-macro">Uma captura de tela do bloco de economia potencial do painel de bancos de dados no console do Workload Factory.  O bloco de economia potencial mostra o número de todas as cargas de trabalho de banco de dados que você tem no Elastic Block Store e no FSx para Windows File Server, a economia potencial de custos, a porcentagem de economia e a representação visual no gráfico de barras.</block>
   <block id="092e04ebb92f098a8d23a32d9a42e747" category="paragraph"><block ref="092e04ebb92f098a8d23a32d9a42e747" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e5af3e73361e966fe2adc79aadc34d57" category="paragraph">O Workload Factory insere as características detectadas do host Elastic Block Store e FSx for Windows File Server para que você possa explorar as economias automaticamente.</block>
   <block id="b9382a492febc168d96a9e8228ee319f" category="paragraph">Depois de explorar as economias de um host local do Microsoft SQL Server, você tem a opção de remover o registro do host local do Workload Factory.  Selecione o menu de ação do host local do Microsoft SQL Server e selecione *Excluir*.</block>
   <block id="1dbb11b39a311ecc5e8a64d372008d84" category="admonition">O Workload Factory não oferece suporte para salvar ou criar vários FSx para sistemas de arquivos ONTAP .</block>
   <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="summary">A NetApp fornece suporte para o Workload Factory e seus serviços de nuvem de diversas maneiras. Há diversas opções gratuitas de autoatendimento disponíveis 24 horas por dia, 7 dias por semana, como artigos da base de conhecimento (KB) e um fórum da comunidade. Seu cadastro no suporte inclui suporte técnico remoto por meio de tickets online.</block>
@@ -1416,7 +1413,6 @@
   <block id="aeb19b16f26ffba9cda709a80fdd7572" category="paragraph">Aplique os patches mais recentes do SQL Server para aprimorar a segurança, proteger contra vulnerabilidades e melhorar a confiabilidade do sistema.</block>
   <block id="4eddb0eeecb1e4ae314e258e08e465e3" category="list-text">*MAXDOP*</block>
   <block id="a87a9d28595a379a45146753041d53f3" category="paragraph">Configure o MAXDOP para otimizar o desempenho das consultas. Valores de 4, 8 ou 16 geralmente funcionam bem. Teste sua carga de trabalho e monitore os tipos de espera de paralelismo, como CXPACKET.</block>
-  <block id="820b8f74ad843d1574106ec4cadfc07e" category="section-title">Confiabilidade</block>
   <block id="277088f7a0bc1d2b0023dc08b1d30e37" category="list-text">*Agendar snapshots locais*</block>
   <block id="2a18a15eebd0bb67a6bfebc30c94b035" category="paragraph">Agende snapshots regulares para backups de ponto no tempo e recuperação rápida em caso de exclusões acidentais, corrupção de dados e outros problemas.</block>
   <block id="29e7ad88f894625110c66db9a5db3cae" category="list-text">*Configuração de backup*</block>
@@ -1468,7 +1464,6 @@
   <block id="3a40f68be193f0f7bc0c01f622d3cc5f" category="paragraph">Opcionalmente, você pode realizar uma avaliação única para revisar as melhores práticas para as configurações do seu banco de dados, sem armazenar credenciais ou registrar recursos.</block>
   <block id="e112d8634bd0280eb27ad63e9eeb9493" category="list-text">Aplicação: inclui licenças do Microsoft SQL Server, patch do Microsoft SQL Server e configurações MAXDOP</block>
   <block id="f953bb98ceaddd49464d672fa425c300" category="list-text">Aplicação: inclui Oracle Critical Patch Updates</block>
-  <block id="10e1b7780581fec77099c3ba816f3e14" category="list-text">Resiliência: inclui replicação entre regiões (CRR) e snapshots consistentes com a aplicação</block>
   <block id="c20a2029d45b71b182aee84243212b9d" category="section-title">Realize uma avaliação única das suas configurações</block>
   <block id="384e59575141746d138a94a55377c6e8" category="paragraph">Realize uma avaliação única para descobrir o status de arquitetura adequada de suas instâncias do Microsoft SQL Server ou bancos de dados Oracle, sem armazenar credenciais ou registrar recursos.</block>
   <block id="c091a4936cfa8cd2dad53f925bd5aee2" category="paragraph">Você pode executar o script e carregar os resultados várias vezes. Workload Factory atualiza o status de arquitetura bem estruturada e as informações a cada carregamento.</block>
@@ -1502,4 +1497,14 @@
   <block id="0d0d1e59f6397f54691afa326ea6ef15" category="paragraph">Use snapshots consistentes de aplicativos com NetApp SnapCenter para tirar snapshots precisos e confiáveis dos seus dados de volume em um momento específico. Isso mantém seus aplicativos funcionando sem problemas e seus dados seguros. SnapCenter facilita os backups e ajuda você a restaurar dados de forma rápida e correta, reduzindo o tempo de inatividade e protegendo suas cargas de trabalho mais importantes.</block>
   <block id="7f65119c79afd09b7f99936d13e97909" category="section-title">06 de abril de 2026</block>
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">06 de outubro de 2025</block>
+  <block id="e41556fc62415ea0a9f5770be89f198d" category="summary">Conecte um clone de sandbox a um pipeline de CI e CD com código de API REST para melhorar a entrega de software por meio da automação.</block>
+  <block id="7c82c4b76396ded628b47eba74c65565" category="paragraph">O Workload Factory insere as características do host detectadas para que você possa explorar oportunidades de economia automaticamente.</block>
+  <block id="d3fcf12bb075f268d31cdb0724f5ce8c" category="section-title">Explore as economias para hosts do Microsoft SQL Server detectados</block>
+  <block id="86a575769a61e2abed6c5895311f8530" category="section-title">Explore as economias para hosts Oracle detectados</block>
+  <block id="44f6dcaf4df7850e972b2333b05391b1" category="list-text">Em Explorar economias, selecione a guia *Oracle no Elastic Block Store (EBS)*.</block>
+  <block id="d2b291a665d715eddff69d121f8023e5" category="list-text">Caso necessário, autentique o host do banco de dados com as credenciais Oracle ou adicionando as permissões Oracle que estiverem faltando.</block>
+  <block id="e83aba812fc0f70eadb6faace95a02ef" category="paragraph">O Workload Factory consolida vários hosts Oracle em uma única recomendação de configuração do FSx for ONTAP para otimizar a economia de custos, a menos que os hosts EBS selecionados excedam os limites de throughput, capacidade ou IOPS para um único sistema de arquivos FSx for ONTAP.</block>
+  <block id="2a1f70a024ddcf60632c72e3981ec1bd" category="paragraph">Após analisar as opções de economia para um host Oracle local, você tem a opção de remover o registro do host local do Workload Factory. Selecione o menu de ações do host Oracle local e, em seguida, selecione *Excluir*.</block>
+  <block id="59b293a0a31a179071c10aecd46b5de5" category="list-text">Resiliência: inclui snapshots locais, configuração de backup, replicação entre regiões (CRR), alta disponibilidade do Microsoft SQL Server e limpeza de clones</block>
+  <block id="07081ec6223cf25eb33c5a000e4055a1" category="list-text">Resiliência: inclui replicação entre regiões (CRR), snapshots consistentes com o aplicativo, configuração de backup e limpeza de clones</block>
 </blocks>
