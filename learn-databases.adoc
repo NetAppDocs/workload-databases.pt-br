@@ -17,7 +17,7 @@ O NetApp Workload Factory for Databases é um serviço completo de implantação
 
 == O que é o NetApp Workload Factory para bancos de dados?
 
-O NetApp Workload Factory for Databases detecta, avalia, planeja, provisiona e move dados do Microsoft SQL Server para o Amazon FSx for NetApp ONTAP (FSx for ONTAP) otimizadas para atender às suas expectativas de desempenho e custo, ao mesmo tempo em que aderem às melhores práticas do setor.  Ao longo do ciclo de vida, o NetApp Workload Factory for Databases oferece otimização e gerenciamento contínuos para bancos de dados no FSx para ONTAP.
+NetApp Workload Factory for Databases descobre, avalia, planeja, provisiona e migra dados do Microsoft SQL Server, PostgreSQL e Oracle para implantações do Amazon FSx for NetApp ONTAP (FSx for ONTAP) otimizadas para atender às suas expectativas de desempenho e custo, seguindo as melhores práticas do setor. NetApp Workload Factory for Databases otimiza e gerencia continuamente bancos de dados no FSx for ONTAP.
 
 Para obter mais informações sobre o Workload Factory, consulte olink:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["Visão geral da Workload Factory"^] .
 
@@ -25,7 +25,7 @@ Para obter mais informações sobre o Workload Factory, consulte olink:https://d
 
 == Benefícios do Workload Factory para bancos de dados autogerenciados
 
-O Workload Factory oferece as seguintes práticas recomendadas e automação benéficas para bancos de dados autogerenciados.
+O Workload Factory oferece as melhores práticas e automação para bancos de dados autogerenciados.
 
 
 
@@ -43,7 +43,7 @@ O Workload Factory oferece as seguintes práticas recomendadas e automação ben
 
 O Workload Factory apresenta automação integrada com o _Codebox_.  O Codebox oferece os seguintes benefícios de automação:
 
-* *Geração de snippets de código*: Snippets de infraestrutura como código (IAC) são gerados durante a criação de recursos, permitindo uma integração perfeita com fluxos de trabalho de orquestração existentes.
+* *Geração de trechos de código*: O Workload Factory gera trechos de Infraestrutura como Código (IaC) durante a criação de recursos, permitindo a integração perfeita com fluxos de trabalho de orquestração existentes.
 * *Copiloto de infraestrutura como código*: o Codebox é um copiloto de infraestrutura como código (IaC) que ajuda desenvolvedores e DevOps a gerar código para executar qualquer operação suportada pelo Workload Factory.
 * *Visualizador de código e catálogo de automação*: O Codebox fornece um visualizador de código para análise rápida da automação e um catálogo de automação para rápida reutilização futura.
 
@@ -54,16 +54,16 @@ O Workload Factory apresenta automação integrada com o _Codebox_.  O Codebox o
 
 O Workload Factory for Databases oferece os seguintes recursos:
 
-* * Implantações simples e rápidas*: Simplifique e simplifique sua experiência de provisionamento selecionando respostas para perguntas de especificação e eliminando o tempo normalmente necessário para investigar como provisionar e configurar seu Microsoft SQL Server na AWS.
-* *Orquestração automatizada*: disponível por meio do console do Workload Factory com modos de criação de implantação _Rápido_ e _Avançado_, o Chatbot e o AWS CloudFormation por meio do Codebox.
-* *Recursos incorporados*: Utilize as melhores práticas do NetApp, Microsoft e Amazon e seleções de recursos da AWS incorporadas à configuração de implantação.
-* *Estimativa de custo*: Avalie possíveis economias de custo com a calculadora de economia que estima e detalha os custos de armazenamento, computação, licenciamento SQL, snapshot e clone detalhados para implantações existentes do Microsoft SQL Server com o Elastic Block Store e o FSX for Windows File Server em comparação com o FSX for ONTAP.
-* *Modelos de automação reutilizáveis*: crie, reutilize e personalize modelos do CloudFormation a partir do Workload Factory Codebox para futuras implantações do Microsoft SQL Server em vários ambientes.
-* *Descoberta e provisionamento de recursos da AWS*: Detecte automaticamente os servidores Microsoft SQL no FSX for ONTAP, FSX for Windows File Servers e Elastic Block Store implantados a partir de sua conta da AWS. O Inventário de bancos de dados serve como ponto de lançamento para explorar oportunidades de economia de custos para servidores em outros sistemas de armazenamento da AWS ou uma ferramenta de gerenciamento para servidores e instâncias baseados no FSX for ONTAP.
-* * Criação de sandbox*: Crie um ambiente de banco de dados isolado sob demanda que pode ser usado para teste, integração, diagnóstico e treinamento, sem afetar os dados de produção.
-* * Criação de banco de dados*: Crie um banco de dados de usuários para seus servidores Microsoft SQL existentes com os modos _Quick_ ou _Advanced_ Create para configurar o agrupamento de banco de dados, nomes de arquivos e tamanhos. A configuração de armazenamento está incluída.
-* *Monitoramento de trabalho*: Monitore e acompanhe o progresso da execução do trabalho do banco de dados e diagnostique e solucione problemas no caso de ocorrer alguma falha.
-* * Otimização contínua*: Verifica continuamente o estado do Microsoft SQL Server offline, fornecendo-lhe um relatório abrangente de insights, oportunidades e recomendações para ajudá-lo a alcançar a excelência operacional.
+* *Estimativa de custos*: avalie a economia potencial de custos com a Savings calculator, que estima e detalha os custos de storage, computação, licenciamento SQL, snapshot e clone para implantações existentes do Microsoft SQL Server e Oracle com Elastic Block Store, FSx for Windows File Server e ambientes locais, em comparação com o FSx for ONTAP.
+* *Implantações simples e rápidas*: simplifique e agilize o provisionamento de hosts, bancos de dados e ambientes de teste com práticas recomendadas incorporadas da NetApp, Microsoft e Amazon, que eliminam a complexidade da configuração manual para instâncias do Microsoft SQL Server e PostgreSQL na AWS.
++
+** Faça a implantação a partir do console do Workload Factory usando os modos de criação _Rápido_ ou _Avançado_, ou crie, reutilize e personalize modelos CloudFormation da AWS por meio do Codebox para implantações futuras em vários ambientes.
+** Crie bancos de dados isolados sob demanda, com configurações de storage e clones de sandbox que podem ser usados para testes, integração, diagnóstico e treinamento, sem afetar dados de produção.
+
+
+* *Recurso de avaliação de arquitetura bem projetada*: analise continuamente seus ambientes Microsoft SQL Server e Oracle para obter um relatório abrangente com insights, oportunidades e recomendações que ajudarão você a alcançar excelência operacional, segurança, confiabilidade, eficiência de desempenho e otimização de custos com base nas melhores práticas da AWS.
+* *Análise de erros*: analise e solucione erros de log com o analisador de IA para obter mensagens de erro detalhadas, etapas de solução de problemas e recomendações para resolver problemas.
+* *Gerenciamento centralizado*: gerencie seus recursos do Microsoft SQL Server, Oracle e PostgreSQL no FSx for ONTAP a partir de um único local. No Workload Factory, visualize a infraestrutura conectada, contas AWS, credenciais, sistemas de arquivos FSx for ONTAP conectados, uso de storage incluindo volumes NFS e LUNs iSCSI, status de proteção, desempenho, status de arquitetura adequada e análise de erros.
 
 
 
@@ -96,7 +96,7 @@ Você pode usar o NetApp Workload Factory com as seguintes ferramentas:
 
 == Configurações compatíveis
 
-O Workload Factory oferece suporte aos seguintes mecanismos de banco de dados, versões, sistemas operacionais e modelos de implantação de acordo com as práticas recomendadas da AWS, NetApp ONTAP, Microsoft SQL Server, Oracle e PostgreSQL.
+Você pode usar o Workload Factory com os seguintes mecanismos de banco de dados, versões, sistemas operacionais e modelos de implantação, seguindo as melhores práticas da AWS, NetApp ONTAP, Microsoft SQL Server, Oracle e PostgreSQL.
 
 [cols="1,1,1,1"]
 |===
