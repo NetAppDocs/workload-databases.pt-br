@@ -23,6 +23,8 @@ O registro de uma instância (SQL Server) ou banco de dados (Oracle) envolve tr�
 
 Workload Factory suporta apenas o registro e gerenciamento de instâncias do Microsoft SQL Server e bancos de dados Oracle. Dependendo das credenciais da conta AWS que você selecionar no Workload Factory, hosts PostgreSQL aparecem no Inventory. Atualmente, Workload Factory suporta instâncias PostgreSQL não registradas executando apenas em sistemas operacionais Amazon Linux.
 
+Usuários da AWS GovCloud (US) devem usar o AWS Secrets Manager para autenticar as credenciais do FSx for ONTAP. Para todos os outros usuários, você deve autenticar o FSx for ONTAP com as credenciais do sistema de arquivos.
+
 
 
 == Antes de começar
@@ -72,10 +74,13 @@ Se as instâncias forem autenticadas, selecione *Next*.
 
 
 
-. Para autenticar o FSx para ONTAP (etapa 2), faça o seguinte:
+. Para autenticar o FSx for ONTAP (etapa 2), faça o seguinte e selecione *Avançar*:
 +
 .. Selecione *Usar as mesmas credenciais para todos os recursos* ou *gerenciar credenciais manualmente*.
-.. Insira o nome de usuário e a senha do sistema de arquivos FSx for ONTAP e, em seguida, selecione *Avançar*.
+.. Insira o ARN do parâmetro AWS SSM com as credenciais do FSx for ONTAP para contas GovCloud ou o nome de usuário e a senha do sistema de arquivos FSx for ONTAP para todas as outras contas e, em seguida, selecione *Avançar*.
++
+Para contas GovCloud, o valor ARN do parâmetro SSM da AWS é fornecido no Parameter Store, em Detalhes do parâmetro, no Console de Gerenciamento da AWS, no seguinte formato: `{fsx:{"username":"fsxadmin","password":"pass"}}`. O tipo de parâmetro SSM da AWS deve ser "Secure String" com o nome no formato `/netapp/wlmdb/<fsx_filesystemID>`. Saiba mais sobre como recuperar parâmetros SSM de link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentação da AWS GovCloud"^].
+
 +
 Se o sistema de arquivos FSx for ONTAP estiver autenticado, selecione *Avançar*.
 
@@ -115,10 +120,10 @@ O registro de uma instância possui três etapas: autenticação do banco de dad
 . No Inventory, selecione *Oracle* como o tipo de mecanismo.
 . Selecione a aba *Bancos de dados*.
 . Selecione para registrar um único banco de dados ou vários bancos de dados.
-. Para autenticar bancos de dados (etapa 1), faça o seguinte:
+. Para autenticar bancos de dados (etapa 1), faça o seguinte e selecione *Avançar*:
 +
-** Selecione *Usar as mesmas credenciais para todas as instâncias* ou *Gerenciar credenciais manualmente*.
-** Autentique o usuário do Oracle e o usuário do Automatic Storage Management (ASM) grid (se aplicável) fornecendo o nome de usuário e a senha.
+.. Selecione *Usar as mesmas credenciais para todas as instâncias* ou *Gerenciar credenciais manualmente*.
+.. Autentique o usuário do Oracle e o usuário do Automatic Storage Management (ASM) grid (se aplicável) fornecendo o nome de usuário e a senha.
 +
 Se os bancos de dados estiverem autenticados, selecione *Next*.
 
@@ -126,8 +131,12 @@ Se os bancos de dados estiverem autenticados, selecione *Next*.
 
 . Para autenticar o FSx for ONTAP (etapa 2), faça o seguinte e selecione *Avançar*:
 +
-** Selecione *Usar as mesmas credenciais para todos os recursos* ou *gerenciar credenciais manualmente*.
-** Insira o nome de usuário e a senha do sistema de arquivos FSx for ONTAP.
+.. Selecione *Usar as mesmas credenciais para todos os recursos* ou *gerenciar credenciais manualmente*.
+.. Insira o ARN do parâmetro AWS SSM com as credenciais do FSx for ONTAP para contas GovCloud ou o nome de usuário e a senha do sistema de arquivos FSx for ONTAP para todas as outras contas e, em seguida, selecione *Avançar*.
++
+O tipo de parâmetro do AWS SSM deve ser "Secure String" com o nome no formato `/netapp/wlmdb/<fsx_filesystemID>`. Insira o valor para o ARN do parâmetro do AWS SSM no seguinte formato:
+`{fsx:{"username":"fsxadmin","password":"pass"}}`. Saiba mais sobre como recuperar parâmetros do SSM em link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentação da AWS GovCloud"^].
+
 +
 Se o sistema de arquivos FSx for ONTAP estiver autenticado, selecione *Avançar*.
 

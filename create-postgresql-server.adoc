@@ -105,6 +105,9 @@ As sub-redes não devem compartilhar a mesma tabela de rotas para alta disponibi
 +
 ... *Criar novo FSX para ONTAP*: Insira o nome de usuário e a senha.
 +
+Para contas GovCloud, insira o valor ARN do parâmetro AWS SSM para as credenciais do FSx for ONTAP no seguinte formato: `{fsx:{"username":"fsxadmin","password":"pass"}}`. O tipo de parâmetro AWS SSM deve ser "Secure String" com o nome no formato `/netapp/wlmdb/<anyname>`. Saiba mais sobre como recuperar parâmetros SSM de link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentação da AWS GovCloud"^].
+
++
 Um novo sistema de arquivos FSX for ONTAP pode adicionar 30 minutos ou mais de tempo de instalação.
 
 ... *Selecione um FSX for ONTAP* existente: Selecione o nome FSX for ONTAP no menu suspenso e insira um nome de usuário e senha para o sistema de arquivos.
@@ -187,15 +190,7 @@ No campo *Configuração de cluster - nó 1*, selecione uma zona de disponibilid
 ... No campo *Configuração de cluster - nó 2*, selecione a zona de disponibilidade secundária para a configuração do MAZ FSX for ONTAP no menu suspenso *zona de disponibilidade* e uma sub-rede da zona de disponibilidade secundária no menu suspenso *Subnet*.
 
 
-.. *Grupo de segurança*: Selecione um grupo de segurança existente ou crie um novo grupo de segurança.
-+
-Dois grupos de segurança são anexados aos nós SQL (instâncias EC2) durante a implantação do novo servidor.
-
-+
-... Um grupo de segurança de carga de trabalho é criado para permitir portas e protocolos necessários para o PostgreSQL.
-... Para um novo sistema de arquivos FSX for ONTAP, um novo grupo de segurança é criado e anexado ao nó SQL. Para um sistema de arquivos FSX for ONTAP existente, o grupo de segurança associado a ele é adicionado automaticamente ao nó PostgreSQL, que permite a comunicação com o sistema de arquivos.
-
-
+.. *Grupo de segurança*: Um grupo de segurança de carga de trabalho é criado para permitir as portas e os protocolos necessários para o PostgreSQL. Além disso, você pode selecionar um ou mais grupos de segurança.
 
 
 . Em *Definições da aplicação*, forneça o seguinte:
@@ -204,6 +199,9 @@ Dois grupos de segurança são anexados aos nós SQL (instâncias EC2) durante a
 .. Selecione a *versão PostgreSQL* no menu suspenso.
 .. *Nome do servidor do banco de dados*: Insira o nome do cluster do banco de dados.
 .. *Credenciais da base de dados*: Introduza um nome de utilizador e uma palavra-passe para uma nova conta de serviço ou utilize credenciais de conta de serviço existentes no ative Directory.
++
+Para contas GovCloud, insira o valor ARN do parâmetro SSM da AWS para as credenciais no seguinte formato: `{fsx:{"username":"fsxadmin","password":"pass"}}`. O tipo de parâmetro SSM da AWS deve ser "Secure String" com o nome no formato `/netapp/wlmdb/<anyname>`. Saiba mais sobre como recuperar parâmetros SSM em link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentação da AWS GovCloud"^].
+
 
 
 . Em *conetividade*, selecione um par de chaves para se conetar com segurança à sua instância.
@@ -214,7 +212,10 @@ Dois grupos de segurança são anexados aos nós SQL (instâncias EC2) durante a
 +
 ... *Criar novo FSX para ONTAP*: Insira o nome de usuário e a senha.
 +
-Um novo sistema de arquivos FSX for ONTAP pode adicionar 30 minutos ou mais de tempo de instalação.
++ Para contas GovCloud, insira o valor ARN do parâmetro AWS SSM para as credenciais do FSx for ONTAP no seguinte formato: `{fsx:{"username":"fsxadmin","password":"pass"}}`. O tipo de parâmetro AWS SSM deve ser "Secure String" com o nome no formato `/netapp/wlmdb/<anyname>`. Saiba mais sobre como recuperar parâmetros SSM de link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentação da AWS GovCloud"^].
+
++
++ Um novo sistema de arquivos FSx for ONTAP pode adicionar 30 minutos ou mais ao tempo de instalação.
 
 ... *Selecione um FSX for ONTAP* existente: Selecione o nome FSX for ONTAP no menu suspenso e insira um nome de usuário e senha para o sistema de arquivos.
 +
@@ -245,7 +246,7 @@ As chaves de criptografia personalizadas do FSX for ONTAP não são listadas com
 As chaves gerenciadas pela AWS são filtradas com base na aplicabilidade do serviço.
 
 .. *Tags*: Opcionalmente, você pode adicionar até 40 tags.
-.. *Simple Notification Service*: Opcionalmente, você pode ativar o Simple Notification Service (SNS) para esta configuração selecionando um tópico SNS para o Microsoft SQL Server no menu suspenso.
+.. *Serviço de Notificação Simples*: Opcionalmente, você pode habilitar o Serviço de Notificação Simples (SNS) para esta configuração selecionando um tópico SNS para PostgreSQL no menu suspenso.
 +
 ... Ative o Serviço de notificação simples.
 ... Selecione um ARN no menu pendente.

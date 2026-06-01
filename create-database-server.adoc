@@ -139,6 +139,13 @@ NOTE: As implantações de FCI são suportadas apenas em configurações do FSX 
 
 
 . Em *Definições da aplicação*, introduza um nome de utilizador e uma palavra-passe para *credenciais da base de dados*.
++
+Para contas GovCloud, insira o valor do ARN do parâmetro AWS SSM no seguinte formato:
+`{fsx:{"username":"fsxadmin","password":"pass"}}`.
+
++
+O valor é fornecido no Parameter Store, em Detalhes do parâmetro, no Console de Gerenciamento da AWS. O tipo de parâmetro do AWS SSM deve ser "Secure String" com o nome no formato  `/netapp/wlmdb/<anyname>`. Saiba mais sobre como recuperar parâmetros do SSM em link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentação da AWS GovCloud"^].
+
 . Em *conetividade*, forneça o seguinte:
 +
 .. *Par de chaves*: Selecione um par de chaves.
@@ -156,6 +163,9 @@ Para diretórios ativos gerenciados pela AWS, os endereços IP DNS aparecem no m
 
 ... No campo *Nome de usuário*, insira o nome de usuário do domínio do ative Directory.
 ... No campo *Senha*, insira uma senha para o domínio do ative Directory.
++
+Para contas GovCloud, insira o valor ARN do parâmetro AWS SSM para credenciais do Active Directory no seguinte formato: `{fsx:{"username":"fsxadmin","password":"pass"}}`. O tipo de parâmetro AWS SSM deve ser "Secure String" com o nome no formato `/netapp/wlmdb/<anyname>`. Saiba mais sobre como recuperar parâmetros SSM em link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentação da AWS GovCloud"^].
+
 
 
 
@@ -166,9 +176,12 @@ Para diretórios ativos gerenciados pela AWS, os endereços IP DNS aparecem no m
 +
 ... *Criar novo FSX para ONTAP*: Insira o nome de usuário e a senha.
 +
+Para contas GovCloud, insira o valor ARN do parâmetro AWS SSM para as credenciais do FSx for ONTAP no seguinte formato: `{fsx:{"username":"fsxadmin","password":"pass"}}`. O tipo de parâmetro AWS SSM deve ser "Secure String" com o nome no formato `/netapp/wlmdb/<anyname>`. Saiba mais sobre como recuperar parâmetros SSM de link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentação da AWS GovCloud"^].
+
++
 Um novo sistema de arquivos FSX for ONTAP pode adicionar 30 minutos ou mais de tempo de instalação.
 
-... *Selecione um FSX for ONTAP* existente: Selecione o nome FSX for ONTAP no menu suspenso e insira um nome de usuário e senha para o sistema de arquivos.
+... *Selecione um FSx for ONTAP existente*: Selecione o nome do FSx for ONTAP e insira um nome de usuário e senha para o sistema de arquivos.
 +
 Para sistemas de arquivos FSX para ONTAP existentes, verifique o seguinte:
 
@@ -251,16 +264,7 @@ NOTE: As implantações de FCI são suportadas apenas em configurações do FSX 
 
 
 
-.. *Grupo de segurança*: Selecione um grupo de segurança existente ou crie um novo grupo de segurança. Três grupos de segurança são anexados aos nós SQL (instâncias EC2) durante a implantação do novo servidor.
-+
-... Um grupo de segurança de carga de trabalho é criado para permitir portas e protocolos necessários para a comunicação de cluster do Microsoft SQL e Windows nos nós.
-... No caso do ative Directory gerenciado pela AWS, o grupo de segurança anexado ao serviço de diretório é adicionado automaticamente aos nós do Microsoft SQL para permitir a comunicação com o ative Directory.
-... Para um sistema de arquivos FSX for ONTAP existente, o grupo de segurança associado a ele é adicionado automaticamente aos nós SQL, o que permite a comunicação com o sistema de arquivos. Quando um novo sistema FSX for ONTAP é criado, um novo grupo de segurança é criado para o sistema de arquivos FSX for ONTAP e o mesmo grupo de segurança também é anexado aos nós SQL.
-+
-Para um ative Directory gerenciado pelo usuário, verifique se o grupo de segurança configurado na instância do AD permite o tráfego de sub-redes usadas para implantação. O grupo de segurança deve permitir a comunicação com os controladores de domínio do ative Directory a partir das sub-redes onde as instâncias EC2 para Microsoft SQL estão configuradas.
-
-
-
+.. *Grupo de segurança*: Um grupo de segurança de carga de trabalho é criado para permitir as portas e os protocolos necessários para a comunicação do cluster Microsoft SQL e Windows nos nós. Além disso, você pode selecionar um ou mais grupos de segurança.
 
 
 . Em *Definições da aplicação*, forneça o seguinte:
@@ -288,6 +292,13 @@ NOTE: Se o conjunto de agrupamento selecionado não for compatível para instala
 +
 Opcional: Selecione *Usar conta de serviço gerenciada* para a conta de serviço do SQL Server. Use esta opção se o seu ambiente usar MSA (Conta de Serviço Gerenciada) ou Contas de Serviço Gerenciadas em Grupo (gMSA), onde o gerenciamento de senhas é feito pelo Active Directory.
 
++
+Para contas GovCloud, insira o valor do ARN do parâmetro AWS SSM no seguinte formato:
+`{fsx:{"username":"fsxadmin","password":"pass"}}`.
+
++
+O valor é fornecido no Parameter Store, em Detalhes do parâmetro, no Console de Gerenciamento da AWS. O tipo de parâmetro do AWS SSM deve ser "Secure String" com o nome no formato  `/netapp/wlmdb/<anyname>`. Saiba mais sobre como recuperar parâmetros do SSM em link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentação da AWS GovCloud"^].
+
 
 
 . Em *conetividade*, forneça o seguinte:
@@ -305,8 +316,10 @@ Opcional: Selecione *Usar conta de serviço gerenciada* para a conta de serviço
 +
 Para diretórios ativos gerenciados pela AWS, os endereços IP DNS aparecem no menu suspenso.
 
-... No campo *Nome de usuário*, insira o nome de usuário do domínio do ative Directory.
-... No campo *Senha*, insira uma senha para o domínio do ative Directory.
+... Insira o nome de usuário e a senha do domínio do Active Directory.
++
+Para contas GovCloud, insira o valor ARN do parâmetro AWS SSM para credenciais do Active Directory no seguinte formato: `{fsx:{"username":"fsxadmin","password":"pass"}}`. O tipo de parâmetro AWS SSM deve ser "Secure String" com o nome no formato `/netapp/wlmdb/<anyname>`. Saiba mais sobre como recuperar parâmetros SSM em link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentação da AWS GovCloud"^].
+
 ... *Controlador de domínio preferencial*: Opcionalmente, insira o controlador de domínio preferencial a ser usado para o Active Directory ingressar.
 ... *Caminho da unidade organizacional preferencial*: Opcionalmente, insira a unidade organizacional (UO) preferencial no Active Directory à qual deseja ingressar.
 ... *Grupo do Active Directory de destino*: Opcionalmente, insira o grupo do Active Directory ao qual deseja adicionar os computadores.
@@ -320,6 +333,9 @@ Para diretórios ativos gerenciados pela AWS, os endereços IP DNS aparecem no m
 .. *FSX para sistema ONTAP*: Crie um novo sistema de arquivos FSX for ONTAP ou use um sistema de arquivos FSX for ONTAP existente.
 +
 ... *Criar novo FSX para ONTAP*: Insira o nome de usuário e a senha.
++
+Para contas GovCloud, insira o valor ARN do parâmetro AWS SSM para as credenciais do FSx for ONTAP no seguinte formato: `{fsx:{"username":"fsxadmin","password":"pass"}}`. O tipo de parâmetro AWS SSM deve ser "Secure String" com o nome no formato `/netapp/wlmdb/<anyname>`. Saiba mais sobre como recuperar parâmetros SSM em link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentação da AWS GovCloud"^].
+
 +
 Um novo sistema de arquivos FSX for ONTAP pode adicionar 30 minutos ou mais de tempo de instalação.
 
