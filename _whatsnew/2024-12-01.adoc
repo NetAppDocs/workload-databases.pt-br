@@ -4,6 +4,7 @@
 
 
 
+[[continuous-optimization-adds-compute-remediation-and-assessment]]
 === A otimização contínua adiciona correção e avaliação de computação
 
 Os bancos de dados agora fornecem insights e recomendações para ajudá-lo a otimizar recursos de computação para instâncias do Microsoft SQL Server. Medimos a utilização da CPU e aproveitamos o serviço AWS Compute Optimizer para recomendar os tipos de instância ideais de tamanho certo e notificá-lo sobre patches de sistema operacional disponíveis. A otimização dos recursos de computação pode ajudar você a tomar decisões conscientes sobre os tipos de instâncias, o que resulta em economia de custos e utilização eficiente de recursos.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[postgresql-support]]
 === Suporte ao PostgreSQL
 
 Agora você pode implantar e gerenciar implantações de servidor PostgreSQL independentes em bancos de dados.

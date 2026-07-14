@@ -4,6 +4,7 @@
 
 
 
+[[well-architected-analysis-includes-high-availability-cluster-validation]]
 === A análise bem arquitetada inclui validação de cluster de alta disponibilidade
 
 A análise bem arquitetada agora inclui validação para clusters de alta disponibilidade.  Esta validação verifica todas as configurações relacionadas ao cluster do lado do servidor, incluindo a disponibilidade e a configuração do disco em ambos os nós, a configuração do cluster do Windows e a prontidão para failover.  Isso garante que o cluster do Windows esteja configurado corretamente e possa fazer failover com sucesso quando necessário.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[multi-level-menu-available-for-instances]]
 === Menu multinível disponível para instâncias
 
 O console da fábrica de carga de trabalho agora inclui um menu multinível para instâncias.  Essa mudança fornece uma estrutura de navegação mais organizada e intuitiva para gerenciar instâncias.  As opções de menu para gerenciamento de instâncias incluem visualizar o painel da instância, visualizar bancos de dados, criar um banco de dados e criar um clone do sandbox.
@@ -20,6 +22,7 @@ image:manage-instance-table-menu.png["Uma captura de tela do menu da tabela de i
 
 
 
+[[new-authentication-option-to-explore-savings]]
 === Nova opção de autenticação para explorar economias
 
 Quando o `NT Authority\SYSTEM` Se o usuário não tiver permissões suficientes no Microsoft SQL Server, você poderá autenticar com credenciais do SQL Server ou adicionar as permissões ausentes do SQL Server. `NT Authority\SYSTEM` .

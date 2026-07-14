@@ -15,6 +15,7 @@ Rastreie trabalhos de banco de dados e monitore bancos de dados no NetApp Worklo
 
 
 
+[[about-this-task]]
 == Sobre esta tarefa
 
 Os bancos de dados fornecem monitoramento de tarefas para que você possa acompanhar o progresso da tarefa e diagnosticar e solucionar problemas caso ocorra alguma falha. Pode filtrar trabalhos por tipo e estado, localizar trabalhos utilizando a função de pesquisa e transferir a tabela trabalhos.
@@ -35,6 +36,7 @@ Os eventos de monitorização de trabalhos são mantidos na interface do utiliza
 
 
 
+[[monitor-jobs]]
 == Monitorizar trabalhos
 
 Monitore tarefas para acompanhar o progresso das operações do banco de dados e diagnostique e solucione problemas caso ocorra alguma falha.

@@ -15,6 +15,7 @@ Utilize o analisador inteligente de logs de erros para interpretar automaticamen
 
 
 
+[[about-this-task]]
 == Sobre esta tarefa
 
 A análise e a correção de logs de erros ajudam a manter a integridade e o desempenho das instâncias do SQL Server e dos bancos de dados Oracle.  Interpretar registros de erros de forma eficaz exige análise cuidadosa e conhecimento especializado. O monitoramento manual, a detecção de erros e a análise da causa raiz consomem muito tempo e são propensos a erros. Esses desafios podem atrasar a resolução de problemas, aumentar o tempo de inatividade e causar ineficiências operacionais.  O analisador inteligente de logs de erros resolve esses desafios com os seguintes benefícios principais:
@@ -33,6 +34,7 @@ link:https://aws.amazon.com/bedrock/pricing/["Preços do Amazon Bedrock"^]
 
 
 
+[[data-privacy-and-security]]
 === Privacidade e segurança de dados
 
 O recurso garante privacidade e segurança dos dados com as seguintes medidas:
@@ -45,6 +47,7 @@ Os dados do cliente não são usados para treinar ou melhorar modelos.  O Amazon
 
 
 
+[[before-you-begin]]
 == Antes de começar
 
 Para usar o analisador de log de erros, você deve atender aos seguintes pré-requisitos:
@@ -86,6 +89,7 @@ A seguinte permissão concede acesso de leitura a alertas de diagnóstico estend
 
 
 
+[[analyze-error-logs]]
 == Analisar logs de erros
 
 Use o console do Workload Factory para analisar logs de erros do SQL Server.

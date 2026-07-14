@@ -4,6 +4,7 @@
 
 
 
+[[databases-dashboard-enhancements]]
 === Aprimoramentos no Dashboard de bancos de dados
 
 Um novo design do Dashboard inclui os seguintes gráficos e aprimoramentos:
@@ -19,6 +20,7 @@ Um novo design do Dashboard inclui os seguintes gráficos e aprimoramentos:
 
 
 
+[[new-completed-with-issues-status-in-job-monitoring]]
 === Novo estado "Concluído com problemas" na monitorização de trabalhos
 
 A funcionalidade de monitorização de trabalhos para bases de dados fornece agora o novo estado "Concluído com problemas" para que possa saber quais os subtrabalhos com problemas e quais são os problemas.
@@ -27,6 +29,7 @@ link:https://docs.netapp.com/us-en/workload-databases/monitor-databases.html["Mo
 
 
 
+[[assessment-and-optimization-for-over-provisioned-microsoft-sql-server-licenses]]
 === Avaliação e otimização para licenças do Microsoft SQL Server superprovisionadas
 
 A calculadora de economia agora avalia se a edição Enterprise é necessária para a implantação do Microsoft SQL Server. Se uma licença estiver superprovisionada, a calculadora recomenda a downgrade. Você será capaz de fazer downgrade automaticamente da licença em bancos de dados otimizando o aplicativo.

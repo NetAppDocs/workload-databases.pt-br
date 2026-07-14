@@ -4,6 +4,7 @@
 
 
 
+[[explore-savings-for-detected-microsoft-sql-servers-on-fsx-for-windows-file-server]]
 === Explore as poupanças para servidores Microsoft SQL detetados no FSX for Windows File Server
 
 Agora você pode explorar a economia de servidores Microsoft SQL detetados no Amazon EC2 com o FSX for Windows File Server de armazenamento na calculadora de economia. Dependendo do seu servidor SQL e requisitos de armazenamento, você pode descobrir que o FSX for ONTAP é o mais econômico para suas cargas de trabalho de banco de dados.

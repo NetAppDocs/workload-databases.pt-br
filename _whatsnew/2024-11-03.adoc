@@ -4,6 +4,7 @@
 
 
 
+[[continuously-optimize-your-microsoft-sql-server-workloads-with-databases]]
 === Otimize continuamente suas cargas de trabalho do Microsoft SQL Server com bancos de dados
 
 A fábrica de carga de trabalho do BlueXP  apresenta orientação contínua e corrimões para garantir a otimização contínua e a adesão às práticas recomendadas para o componente de armazenamento de suas cargas de trabalho do Microsoft SQL Server no Amazon FSX for NetApp ONTAP. Esse recurso verifica continuamente seu estado do Microsoft SQL Server offline, fornecendo a você um relatório abrangente de insights, oportunidades e recomendações para ajudá-lo a alcançar o máximo de desempenho, economia e conformidade.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[terraform-support]]
 === Suporte ao Terraform
 
 Agora você pode usar o Terraform na caixa Codebox para implantar o Microsoft SQL Server.

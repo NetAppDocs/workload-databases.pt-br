@@ -19,6 +19,7 @@ link:optimize-overview.html["Saiba mais sobre a análise de configuração e o s
 
 
 
+[[about-this-task]]
 == Sobre esta tarefa
 
 Workload Factory analisa diariamente as configurações do banco de dados. A análise diária fornece status bem arquitetado, insights e recomendações. Você pode corrigir automaticamente problemas de configuração para atender às melhores práticas.
@@ -55,6 +56,7 @@ A análise bem arquitetada para Oracle notifica você quando uma configuração 
 
 
 
+[[perform-a-one-time-assessment-of-your-configurations]]
 == Realize uma avaliação única das suas configurações
 
 Realize uma avaliação única para descobrir o status de arquitetura adequada de suas instâncias do Microsoft SQL Server ou bancos de dados Oracle, sem armazenar credenciais ou registrar recursos.
@@ -102,6 +104,7 @@ Você pode executar o script e carregar os resultados várias vezes. Workload Fa
 ====
 
 
+[[before-you-begin-fixing-dismissing-and-re-activating-configurations]]
 == Antes de começar a corrigir, descartar e reativar configurações
 
 Os seguintes requisitos são necessários para o monitoramento contínuo do seu ambiente de banco de dados e a correção automática de problemas de configuração. Esses requisitos não são necessários para a avaliação.
@@ -113,6 +116,7 @@ Os seguintes requisitos são necessários para o monitoramento contínuo do seu 
 
 
 
+[[fix-a-configuration-issue]]
 == Corrigir um problema de configuração
 
 Corrija problemas de configuração para ambientes SQL Server ou Oracle em execução no FSx para armazenamento ONTAP .
@@ -161,6 +165,7 @@ O Workload Factory começa a corrigir o(s) problema(s).  Selecione a aba *Monito
 
 
 
+[[dismiss-the-analysis-of-database-configurations]]
 == Descartar a análise das configurações do banco de dados
 
 Ignore a análise de configurações específicas de banco de dados que não se aplicam ao seu ambiente de banco de dados para evitar alertas desnecessários e resultados de otimização imprecisos. Você pode reativar uma análise de configuração ignorada a qualquer momento.
@@ -182,6 +187,7 @@ Você pode reativar a análise a qualquer momento. A configuração não é mais
 
 
 
+[[reactivate-a-dismissed-configuration-analysis]]
 == Reative uma análise de configuração descartada
 
 Reative uma análise de configuração descartada a qualquer momento. Você pode selecionar uma ou mais configurações para reativar.

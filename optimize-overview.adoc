@@ -25,6 +25,7 @@ Os principais recursos incluem:
 
 
 
+[[how-it-works]]
 == Como funciona
 
 O Workload Factory analisa diariamente suas cargas de trabalho em execução em implantações de sistemas de arquivos Amazon FSx for NetApp ONTAP. A análise fornece status bem arquitetado, insights e recomendações.
@@ -35,12 +36,14 @@ Você pode descartar a análise de configurações que não se aplicam aos seus 
 
 
 
+[[why-it-matters]]
 == Por que isso importa
 
 O Workload Factory aplica as melhores práticas a grandes ambientes de armazenamento, banco de dados e VMware, combinando avaliação contínua com insights de recomendações e remediação. As correções automatizadas aplicadas no console do Workload Factory reduzem erros humanos, garantem gerenciamento uniforme e preservam o desempenho e a confiabilidade em toda a sua infraestrutura de cargas de trabalho.
 
 
 
+[[options-for-analyzing-your-database-environment]]
 == Opções para analisar seu ambiente de banco de dados
 
 O Workload Factory oferece as seguintes opções para analisar seu ambiente de banco de dados:
@@ -51,6 +54,7 @@ O Workload Factory oferece as seguintes opções para analisar seu ambiente de b
 
 
 
+[[analysis-requirements]]
 == Requisitos de análise
 
 Para a avaliação única, você só precisa fornecer as credenciais uma vez para as instâncias do Microsoft SQL Server ou o banco de dados Oracle que deseja analisar.
@@ -70,12 +74,14 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Ap
 
 
 
+[[best-practices-and-recommendations-for-database-workloads]]
 == Melhores práticas e recomendações para cargas de trabalho de banco de dados
 
 O Workload Factory fornece um conjunto de práticas recomendadas e recomendações para operar cargas de trabalho de banco de dados bem arquitetadas. A análise bem arquitetada avalia as configurações e definições do Microsoft SQL Server e do Oracle Database relacionadas ao dimensionamento de storage, layout de storage, configuração de storage, computação, aplicação (SQL Server) e resiliência.
 
 
 
+[[microsoft-sql-server]]
 === Microsoft SQL Server
 
 
@@ -196,6 +202,7 @@ Analise e remova regularmente clones desatualizados para reduzir os custos de st
 
 
 
+[[oracle]]
 === Oráculo
 
 

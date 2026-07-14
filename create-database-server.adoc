@@ -15,6 +15,7 @@ A criação de um novo Microsoft SQL Server ou host de banco de dados no Workloa
 
 
 
+[[about-this-task]]
 == Sobre esta tarefa
 
 Antes de criar um Microsoft SQL Server a partir do Workload Factory, saiba mais sobre os tipos de implantação de armazenamento disponíveis para a configuração do host do banco de dados, a configuração de E/S multicaminho da Microsoft, a implantação do Active Directory, os detalhes de rede e os requisitos para concluir esta operação.
@@ -55,6 +56,7 @@ Se você decidir reverter os recursos do sistema de nomes de domínio (DNS), os 
 
 
 
+[[before-you-begin]]
 == Antes de começar
 
 Certifique-se de que você tem os seguintes pré-requisitos antes de criar um novo host de banco de dados.
@@ -75,6 +77,7 @@ Ao se conetar ao ative Directory, você deve ter acesso administrativo com permi
 
 
 
+[[step-1-create-a-database-server]]
 == Passo 1: Crie um servidor de banco de dados
 
 Você pode usar os modos de implantação _Criação rápida_ ou _Criação avançada_ para concluir esta tarefa no Workload Factory com permissões do modo _Automatizar_.  Você também pode usar as seguintes ferramentas disponíveis no Codebox: REST API, AWS CLI, AWS CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Saiba como usar o Codebox para automação"^] .
@@ -399,6 +402,7 @@ Alternativamente, você pode salvar a configuração.
 ====
 
 
+[[step-2-enable-remote-connection-on-the-microsoft-sql-server]]
 == Passo 2: Ative a conexão remota no Microsoft SQL Server
 
 Após a implantação do servidor, o Workload Factory não habilita a conexão remota no Microsoft SQL Server.  Para habilitar a conexão remota, siga as etapas a seguir.

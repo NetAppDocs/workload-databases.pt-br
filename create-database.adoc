@@ -37,6 +37,7 @@ Como alternativa, você pode usar o Codebox para copiar um modelo para que você
 
 
 
+[[create-a-database]]
 == Crie um banco de dados
 
 Você pode usar os modos de implantação _Criação rápida_ ou _Criação avançada_ para concluir essa tarefa no Workload Factory.

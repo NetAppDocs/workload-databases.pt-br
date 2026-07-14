@@ -4,12 +4,14 @@
 
 
 
+[[postgresql-and-oracle-detection]]
 === Detecção de PostgreSQL e Oracle
 
 Agora você pode descobrir as instâncias que executam bancos de dados do servidor PostgreSQL e implantações de bancos de dados Oracle na sua conta da AWS no console do Workload Factory. As instâncias descobertas aparecerão no inventário de bancos de dados.
 
 
 
+[[updated-optimization-terminology]]
 === Terminologia de "Otimização" atualizada
 
 Anteriormente chamado de "Otimização", o workload factory agora usa "problemas bem arquitetados" e "status bem arquitetados" para descrever a análise de configurações de banco de dados e "correção" para descrever a correção de oportunidades para melhorar as configurações de banco de dados para atender às recomendações de melhores práticas.
@@ -18,6 +20,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-overview.html["An
 
 
 
+[[improved-onboarding-for-instances]]
 === Integração aprimorada para instâncias
 
 Em vez dos termos "não detectado", "não gerenciado" ou "gerenciado" para o gerenciamento de instâncias, o Workload Factory agora usa "registro" para integração de instâncias. O novo processo de registro inclui a autenticação e a preparação de instâncias para que você possa criar, monitorar, analisar e corrigir recursos nas configurações do seu banco de dados no console do Workload Factory. A etapa de preparação no processo de registro indica se suas instâncias estão prontas para gerenciamento.
