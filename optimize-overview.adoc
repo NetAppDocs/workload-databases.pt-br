@@ -11,17 +11,9 @@ summary: O Workload Factory for Databases analisa as configurações do Microsof
 
 
 [role="lead"]
-O Workload Factory for Databases analisa as configurações do banco de dados regularmente para determinar se há algum problema com as implantações do Microsoft SQL Server e do Oracle no Amazon FSx for NetApp ONTAP .  Quando problemas são encontrados, o Workload Factory mostra quais são os problemas e explica o que precisa ser alterado para garantir que as configurações do seu banco de dados atinjam o desempenho máximo, a eficiência de custos e a conformidade com as práticas recomendadas.
+O Workload Factory for Databases analisa regularmente as configurações de banco de dados para determinar se há algum problema com as implementações do Microsoft SQL Server e do Oracle no armazenamento Amazon FSx for NetApp ONTAP. Quando problemas são encontrados, o Workload Factory mostra quais são os problemas e explica o que precisa ser alterado para que suas configurações de banco de dados alcancem o máximo desempenho, eficiência de custos e conformidade com as melhores práticas.
 
-Os principais recursos incluem:
-
-* Análise de configuração diária
-* Validações automáticas de melhores práticas
-* Recomendações para o dimensionamento correto
-* Observabilidade proativa
-* Insights para ação
-* Consultor do AWS Well-Architected Framework
-
+O Workload Factory fornece as melhores práticas e recomendações para cargas de trabalho de banco de dados bem arquitetadas. A análise bem arquitetada avalia as configurações e definições do Microsoft SQL Server e do Oracle Database relacionadas a armazenamento, computação, aplicação, resiliência e clonagem.
 
 
 
@@ -32,7 +24,13 @@ O Workload Factory analisa diariamente suas cargas de trabalho em execução em 
 
 Após a conclusão da análise diária, as configurações aparecem como "otimizadas" ou "não otimizadas" no painel Well-architected da implantação. Você encontrará a pontuação total de otimização, problemas de configuração por categoria e uma lista de problemas de configuração e recomendações. Você pode revisar as recomendações para problemas de configuração. Alguns problemas podem ser corrigidos automaticamente pelo Workload Factory, enquanto outros exigem intervenção manual. Nesse caso, o Workload Factory fornece instruções detalhadas para ajudar você a implementar as alterações recomendadas.
 
-Você pode descartar a análise de configurações que não se aplicam aos seus ambientes. Isso evita alertas desnecessários e resultados de otimização imprecisos. Ao descartar uma análise de configuração específica, Workload Factory não inclui a configuração na pontuação total de otimização.
+Você pode descartar a análise de configurações que não se aplicam aos seus ambientes. Isso evita alertas desnecessários e resultados de otimização imprecisos.
+
+Você também pode criar regras personalizadas em linguagem simples para validar seus ambientes em relação aos padrões da sua organização e às melhores práticas da NetApp. Teste as regras com uma simulação e, em seguida, agende a execução delas em todos os seus ambientes. link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["Saiba mais sobre regras personalizadas"^].
+
+Você também pode criar regras personalizadas em linguagem simples para validar seus ambientes em relação aos padrões da sua organização e às melhores práticas da NetApp. Teste as regras com uma simulação e, em seguida, agende a execução delas em todos os seus ambientes.
+
+link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["Saiba mais sobre regras personalizadas"^].
 
 
 
@@ -49,265 +47,642 @@ O Workload Factory aplica as melhores práticas a grandes ambientes de armazenam
 O Workload Factory oferece as seguintes opções para analisar seu ambiente de banco de dados:
 
 * *Avaliação única*: Execute uma link:optimize-configurations.html["avaliação única"]avaliação para descobrir o status de arquitetura adequada de suas instâncias do Microsoft SQL Server ou bancos de dados Oracle sem armazenar credenciais ou registrar recursos.
-* *Monitoramento contínuo*: Registre recursos para ativar o monitoramento contínuo. Workload Factory analisa seu ambiente de banco de dados regularmente, fornece recomendações contínuas para otimizar suas configurações e corrige problemas automaticamente.
-
-
-
-
-[[analysis-requirements]]
-== Requisitos de análise
-
-Para a avaliação única, você só precisa fornecer as credenciais uma vez para as instâncias do Microsoft SQL Server ou o banco de dados Oracle que deseja analisar.
-
-Para monitoramento contínuo, você precisa registrar seus recursos, associar um link e conceder permissões em sua conta da AWS.
-
-* link:register-instance.html["Registre seus recursos"] e certifique-se de que eles estejam online.
-* Associe um link. A conectividade de links permite que o Workload Factory analise todas as configurações de implantação do banco de dados, como layout de storage e resiliência.
 +
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda como associar um link existente ou criar e associar um novo link"].
+Para a avaliação única, você só precisa fornecer as credenciais uma vez para as instâncias do Microsoft SQL Server ou bancos de dados Oracle que deseja analisar.
 
-* Conceda permissões de _visualização, planejamento e análise_ em sua conta AWS.
+* *avaliação contínua*: O Workload Factory analisa regularmente o seu ambiente de banco de dados, fornece recomendações contínuas para otimizar suas configurações e corrige problemas automaticamente.
 +
-link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprenda como conceder permissões a uma conta da AWS"^]
+Para avaliação contínua, você precisa registrar seus recursos, associar um link e conceder permissões em sua conta AWS.
 
 
 
 
 
-[[best-practices-and-recommendations-for-database-workloads]]
-== Melhores práticas e recomendações para cargas de trabalho de banco de dados
+[[microsoft-sql-server-best-practices]]
+== Melhores práticas do Microsoft SQL Server
 
-O Workload Factory fornece um conjunto de práticas recomendadas e recomendações para operar cargas de trabalho de banco de dados bem arquitetadas. A análise bem arquitetada avalia as configurações e definições do Microsoft SQL Server e do Oracle Database relacionadas ao dimensionamento de storage, layout de storage, configuração de storage, computação, aplicação (SQL Server) e resiliência.
-
-
-
-[[microsoft-sql-server]]
-=== Microsoft SQL Server
+As seguintes práticas recomendadas e recomendações aplicam-se às cargas de trabalho do Microsoft SQL Server.
 
 
 
-==== Dimensionamento de storage
+[[storage]]
+=== Storage
 
-* *Camada de storage*
-+
-Use a camada SSD primária para volumes FSx for ONTAP para garantir o desempenho ideal. A camada de pool de capacidade pode reduzir o desempenho e aumentar a latência. A camada SSD primária foi projetada para cargas de trabalho de alto desempenho, enquanto a camada de pool de capacidade é otimizada para eficiência de custos e pode não atender aos requisitos de desempenho das cargas de trabalho do SQL Server.
+.Camada de armazenamento
+Utilize a camada SSD primária para cargas de trabalho SQL sensíveis ao desempenho.
 
-* *Espaço disponível no sistema de arquivos*
-+
-Mantenha capacidade suficiente no sistema de arquivos acima do tamanho total do seu volume. Pouca capacidade livre causa problemas de desempenho; capacidade excessiva desperdiça storage e aumenta os custos.
+[%collapsible]
+====
+Use a camada SSD primária para volumes FSx for ONTAP para desempenho ideal. A camada de pool de capacidade pode reduzir o desempenho e aumentar a latência. A camada SSD primária foi projetada para cargas de trabalho de alto desempenho, enquanto a camada de pool de capacidade é otimizada para eficiência de custos e pode não atender aos requisitos de desempenho das cargas de trabalho do SQL Server.
 
-* *Tamanho do log drive*
-+
-Dimensione e monitore adequadamente a unidade de log do SQL Server para evitar reversões de transações, indisponibilidade do banco de dados, corrupção de dados e problemas de desempenho causados por uma unidade de log cheia.
+====
+.Espaço livre no sistema de arquivos
+Mantenha uma quantidade suficiente de espaço livre acima do tamanho total do volume.
 
-* *Tamanho da unidade TempDB*
-+
-Dimensione e monitore o TempDB adequadamente para manter o desempenho ideal e a estabilidade do sistema. Espaço insuficiente no TempDB pode causar lentidão nas consultas, timeouts de aplicativos e travamentos do sistema.
+[%collapsible]
+====
+Mantenha capacidade suficiente no sistema de arquivos acima do tamanho total do seu volume. Pouco espaço livre causa problemas de desempenho; espaço livre em excesso desperdiça armazenamento e aumenta os custos.
+
+====
+.Tamanho da unidade de log
+Dimensione e monitore os discos de log para evitar reversões e interrupções.
+
+[%collapsible]
+====
+Dimensione e monitore seu disco de logs do SQL Server para evitar reversões de transações, indisponibilidade do banco de dados, corrupção de dados e problemas de desempenho causados por um disco de logs cheio.
+
+====
+.Tamanho da unidade TempDB
+Dimensione o TempDB para evitar gargalos e timeouts.
+
+[%collapsible]
+====
+Dimensione e monitore o TempDB para manter o desempenho e a estabilidade. Pouco espaço no TempDB pode causar lentidão nas consultas, timeouts de aplicativos e falhas do sistema.
+
+====
+.Posicionamento de arquivos de dados e de log
+Separe  `.mdf`e  `.ldf`caminhos.
+
+[%collapsible]
+====
+Separe os arquivos de dados e de log em unidades diferentes para melhorar a E/S paralela, a flexibilidade de backup e o comportamento de restauração. Recomendamos separar os caminhos LUN de dados e de log em volumes diferentes para bancos de dados menores.
+
+====
+.Posicionamento do TempDB
+Use uma unidade dedicada.
+
+[%collapsible]
+====
+Instale o TempDB em uma unidade dedicada para evitar conflitos de E/S e melhorar o desempenho e a estabilidade do SQL Server.
+
+====
+.Thin provisioning
+Aloque armazenamento conforme necessário.
+
+[%collapsible]
+====
+Configure thin provisioning para volumes FSx for ONTAP para aproveitar melhor o armazenamento e reduzir custos. O thin provisioning permite que você aloque armazenamento conforme necessário, em vez de reservar toda a capacidade de uma só vez.
+
+====
+.Dimensionamento automático e modo de dimensionamento automático
+Aumente os volumes automaticamente.
+
+[%collapsible]
+====
+Ative o dimensionamento automático e configure o modo para  `grow` que os volumes aumentem automaticamente antes de ficarem cheios e somente leitura.
+
+====
+.Gerenciamento de espaço do dispositivo de bloco
+Configure as configurações de espaço do dispositivo de bloco para LUNs usadas pelo SQL Server.
+
+[%collapsible]
+====
+Configure as configurações de espaço do dispositivo de bloco para LUNs usadas por instâncias do Microsoft SQL Server para evitar falhas de gravação e melhorar a eficiência do espaço no FSx for ONTAP.
+
+====
+.Reserva de cópia Snapshot e exclusão automática
+Mantenha espaço para dados ativos.
+
+[%collapsible]
+====
+Defina a reserva de cópia Snapshot para 0% e ative a exclusão automática de cópia Snapshot para proteger o espaço para os dados ativos.
+
+====
+.Gerenciamento de espaço
+Expanda o volume antes de excluir as cópias Snapshot.
+
+[%collapsible]
+====
+Quando o espaço estiver acabando, expanda o volume antes de excluir as cópias Snapshot. Expandir o volume evita erros de "volume cheio", reduz falhas de gravação e preserva os pontos de recuperação de cópia Snapshot.
+
+====
+.Hierarquização / otimização de TCO
+Coloque os dados de cópia Snapshot em camadas usando a política de hierarquização somente de cópias Snapshot.
+
+[%collapsible]
+====
+Utilize a política de tiering somente para cópias Snapshot, que move apenas os dados de cópia Snapshot para a camada de capacidade, mantendo os dados ativos na camada SSD. Essa abordagem preserva o desempenho de baixa latência para cargas de trabalho SQL, enquanto reduz os custos de armazenamento. Faça o tiering dos dados de cópia Snapshot após um período de resfriamento de 7 dias.
+
+====
+.Eficiências de armazenamento
+Utilize desduplicação, compressão e compactação.
+
+[%collapsible]
+====
+Habilite a deduplicação, a compressão e a compactação para reduzir o uso de armazenamento e o custo, mantendo o desempenho.
+
+====
+.Tipo de OS
+Associe o tipo de sistema operacional do LUN ONTAP ao particionamento do host.
+
+[%collapsible]
+====
+Associe o valor do sistema operacional LUN do ONTAP ao esquema de particionamento do host para manter o alinhamento correto de E/S.
+
+====
+.Política MPIO, sessões, status e configurações de tempo limite
+Configure a política, as sessões, o status e as configurações de tempo limite de Multipath I/O (MPIO).
+
+[%collapsible]
+====
+Configure o Multipath I/O (MPIO) para resiliência e taxa de transferência. Use cinco sessões MPIO por interface de destino para Microsoft SQL Server em LUNs iSCSI, monitore o status do caminho e defina o tempo limite do host para 60 segundos.
+
+====
+.Tamanho da unidade de alocação NTFS
+Configurado para 64K.
+
+[%collapsible]
+====
+Defina o tamanho da unidade de alocação NTFS para 64 KB para melhorar a eficiência do disco e reduzir a fragmentação em cargas de trabalho do SQL Server.
+
+====
+.Snapshots locais programados
+Desative os snapshots agendados.
+
+[%collapsible]
+====
+Desative os snapshots agendados para volumes FSx for ONTAP usados pelo Microsoft SQL Server. Em vez disso, gerencie os snapshots externamente usando ferramentas como NetApp SnapCenter, que criam backups consistentes com o aplicativo e ajudam a evitar corrupção de dados durante as operações de restauração.
+
+====
 
 
+[[compute]]
+=== Computação
+
+.Dimensionamento correto de computação
+Ajuste o tamanho da instância EC2 à demanda da carga de trabalho.
+
+[%collapsible]
+====
+Ajuste o tamanho da sua instância EC2 do SQL Server de acordo com a demanda da carga de trabalho. Aumente o tamanho quando estiver subdimensionado e reduza o tamanho quando estiver superdimensionado para equilibrar custo e desempenho.
+
+====
+.Patch do sistema operacional
+Aplique os patches atuais do sistema operacional.
+
+[%collapsible]
+====
+Aplique os patches mais recentes do sistema operacional para melhorar a segurança e a confiabilidade.
+
+====
+.Configurações do adaptador de rede
+Configure o Receive Side Scaling (RSS).
+
+[%collapsible]
+====
+Configure o Receive Side Scaling (RSS) para distribuir o processamento de rede entre as CPUs e melhorar o desempenho da rede. Valide as configurações antes da implantação.
+
+====
+.Alinhamento MTU
+Alinhe a Unidade Máxima de Transmissão (MTU) entre os caminhos do host e do armazenamento.
+
+[%collapsible]
+====
+Alinhe as configurações de Unidade Máxima de Transmissão (MTU) do EC2 com os caminhos do FSx for ONTAP para evitar fragmentação e manter uma taxa de transferência estável.
+
+====
 
 
+[[application]]
+=== Aplicativo
 
-==== Layout de storage
+.Licença
+Analise o uso da licença para recursos pagos.
 
-* *Posicionamento de arquivos de dados (.mdf)* e *posicionamento de arquivos de log (.ldf)*
-+
-Coloque os arquivos de dados e de log em unidades separadas para melhorar o desempenho e permitir operações independentes de backup e restauração.
+[%collapsible]
+====
+Analise o uso da licença do SQL Server no nível do host. Se os recursos pagos não estiverem em uso, a licença não estará otimizada e pode aumentar o custo.
 
-* *Posicionamento do TempDB*
-+
-Instale o TempDB em uma unidade dedicada para evitar conflitos de E/S e melhorar o desempenho e a estabilidade do SQL Server. Caso contrário, você pode enfrentar gargalos de E/S, consultas mais lentas e instabilidade do sistema.
+====
+.Patch do Microsoft SQL Server
+Aplique os patches mais recentes do SQL Server.
 
+[%collapsible]
+====
+Aplique os patches mais recentes do SQL Server para melhorar a segurança e a confiabilidade do sistema.
 
+====
+.MAXDOP
+Utilize valores testados sob carga de trabalho.
 
-
-
-==== Configuração de storage
-
-* *Configuração do ONTAP*
-+
-Habilite thin provisioning, dimensionamento automático e gerenciamento de espaço para volumes FSx for ONTAP para otimizar a eficiência de storage e a relação custo-benefício. Configure políticas de tiering para mover snapshots antigos para a camada de capacidade, mantendo alto desempenho para dados ativos. Para LUNs, certifique-se de que o tipo de sistema operacional corresponda ao seu esquema de particionamento do sistema operacional para o alinhamento adequado de E/S, habilite reserva de espaço para evitar falhas de gravação e habilite alocação de espaço para permitir exigência de espaço e notificações do host quando o storage estiver cheio.
-
-* *Sistema operacional*
-+
-Habilite e configure o Microsoft Multipath I/O (MPIO) com as configurações de tempo limite apropriadas para garantir alta disponibilidade e consistência no acesso a dados para bancos de dados SQL Server no EC2 com FSx para ONTAP. O MPIO fornece caminhos redundantes para maior resiliência e desempenho durante failovers. Configure o tamanho da unidade de alocação NTFS adequadamente para otimizar a utilização do disco e o desempenho.
-
-
-
-
-
-==== Computação
-
-* *Dimensionamento correto de computação*
-+
-Ajuste o tamanho da sua instância EC2 do SQL Server de acordo com as demandas de carga de trabalho para equilibrar desempenho e eficiência de custos. Se a sua instância atual estiver subdimensionada, um upgrade pode aumentar a capacidade de CPU, memória e E/S. Se estiver superdimensionada, um downgrade pode manter o desempenho enquanto reduz os custos.
-
-* *Patch do sistema operacional*
-+
-Aplique os patches mais recentes do sistema operacional para melhorar a segurança e a confiabilidade do sistema.
-
-* *Configurações do adaptador de rede*
-+
-Configure o Receive Side Scaling (RSS) para distribuir o processamento de rede entre vários processadores e melhorar o desempenho da rede. Teste as configurações antes de aplicá-las em produção.
-
-* *Alinhamento de MTU*
-+
-Alinhe as configurações de Unidade Máxima de Transmissão (MTU) da instância EC2 com FSx for ONTAP para evitar a fragmentação da rede e otimizar o desempenho do SQL Server. Corrigir o desalinhamento de MTU garante uma configuração consistente de MTU em todos os nós e caminhos de rede.
-
-
-
-
-
-==== Aplicativo (Microsoft SQL Server)
-
-* *Licença*
-+
-A avaliação e a recomendação de licença do SQL Server são fornecidas no nível do host. O Workload Factory considera uma licença "não otimizada" quando detecta que sua infraestrutura de banco de dados não utiliza nenhum dos recursos da licença de software comercial pelos quais você está pagando. Uma licença não otimizada pode resultar em custos desnecessários. Revise o uso da sua licença do SQL Server para garantir que você esteja utilizando todos os recursos pelos quais está pagando.
-
-* *Patch do Microsoft SQL Server*
-+
-Aplique os patches mais recentes do SQL Server para aprimorar a segurança, proteger contra vulnerabilidades e melhorar a confiabilidade do sistema.
-
-* *MAXDOP*
-+
+[%collapsible]
+====
 Configure o MAXDOP para otimizar o desempenho das consultas. Valores de 4, 8 ou 16 geralmente funcionam bem. Teste sua carga de trabalho e monitore os tipos de espera de paralelismo, como CXPACKET.
 
+====
+
+
+[[resiliency]]
+=== Resiliência
+
+.Snapshots consistentes com a aplicação
+Use snapshots consistentes de aplicativos com o NetApp SnapCenter.
+
+[%collapsible]
+====
+Use snapshots consistentes de aplicativos com o NetApp SnapCenter para tirar snapshots precisos e confiáveis dos seus dados de volume em um momento específico. SnapCenter facilita os backups e ajuda você a restaurar dados rapidamente, reduzindo o tempo de inatividade e protegendo cargas de trabalho críticas.
+
+====
+.Replicação entre regiões
+Proteja contra interrupções regionais.
+
+[%collapsible]
+====
+Habilite a replicação entre regiões (CRR) para melhorar a disponibilidade de dados e a recuperação de desastres em seu ambiente SQL Server. A CRR ajuda a proteger contra interrupções regionais e garante a continuidade dos negócios ao replicar dados em diferentes locais.
+
+====
+.Configuração de backup
+Configure o FSx for ONTAP backups ou AWS Backup.
+
+[%collapsible]
+====
+Configure o FSx for ONTAP backups ou o AWS Backup para atender aos requisitos de retenção e conformidade, evitando fluxos de trabalho de backup duplicados.
+
+====
+.Quórum do cluster
+Configure o quorum para instâncias de cluster de failover.
+
+[%collapsible]
+====
+Configure o quorum corretamente para as instâncias de failover cluster do SQL Server para que o cluster possa tolerar falhas de nós esperadas.
+
+====
+.Letra da unidade
+Mantenha as letras das unidades consistentes em todos os nós.
+
+[%collapsible]
+====
+Use as mesmas letras de unidade em todos os nós da sua configuração de alta disponibilidade do SQL Server. Isso facilita o gerenciamento e ajuda o failover a funcionar corretamente.
+
+====
+.Configurações de heartbeat
+Ajuste o heartbeat para um comportamento de failover estável.
+
+[%collapsible]
+====
+Ajuste as configurações de heartbeat para evitar failovers desnecessários, enquanto ainda detecta falhas reais rapidamente.
+
+====
+.Storage compartilhado
+Certifique-se de que ambos os nós possam acessar os LUNs iSCSI compartilhados.
+
+[%collapsible]
+====
+Todos os discos compartilhados (iSCSI LUNs) devem ser acessíveis a partir de ambos os nós no modelo de implementação FCI para que o failover funcione.
+
+====
+.Serviço do SQL Server
+Valide a conta de serviço e as dependências de inicialização.
+
+[%collapsible]
+====
+Valide as permissões da conta de serviço, o tipo de inicialização e as dependências para garantir um comportamento confiável de alta disponibilidade.
+
+====
+
+
+[[cloning]]
+=== Clonagem
+
+.Limpeza de clones
+Remova clones antigos regularmente.
+
+[%collapsible]
+====
+Remova regularmente clones obsoletos para reduzir o custo de storage e a complexidade operacional. Clones antigos e não utilizados geram custos elevados.
+
+====
+
+
+[[oracle-best-practices]]
+== Melhores práticas da Oracle
+
+As seguintes boas práticas e recomendações aplicam-se às cargas de trabalho do Oracle.
 
 
 
+[[storage]]
+=== Storage
 
-==== Resiliência
+.Espaço livre no sistema de arquivos
+Mantenha uma quantidade suficiente de espaço livre acima do tamanho total do volume.
 
-* *Agendar snapshots locais*
-+
-Agende snapshots regulares para backups de ponto no tempo e recuperação rápida em caso de exclusões acidentais, corrupção de dados e outros problemas.
+[%collapsible]
+====
+Mantenha capacidade suficiente no sistema de arquivos acima do tamanho total do seu volume. Pouco espaço livre causa problemas de desempenho; espaço livre em excesso desperdiça armazenamento e aumenta os custos.
 
-* *Configuração de backup*
-+
-Configure FSx for ONTAP backups ou AWS Backup para atender aos requisitos de retenção de dados e conformidade. Evite backups redundantes.
+====
+.Thin provisioning
+Aloque armazenamento conforme necessário.
 
-* *Replicação entre regiões*
-+
-Habilite a replicação entre regiões (CRR) para melhorar a disponibilidade de dados e a recuperação de desastres. Use CRR para proteger contra interrupções regionais e garantir a continuidade dos negócios.
+[%collapsible]
+====
+Configure thin provisioning para volumes FSx for ONTAP para aproveitar melhor o armazenamento e reduzir custos. O thin provisioning permite que você aloque armazenamento conforme necessário, em vez de reservar toda a capacidade de uma só vez.
 
-* *Alta disponibilidade do Microsoft SQL Server*
-+
-Certifique-se de que a alta disponibilidade esteja configurada para SQL Server, verificando se todo storage compartilhado está acessível a todos os nós do cluster, se as letras das unidades são as mesmas em todos os nós para evitar conflitos durante o failover, se o quorum está configurado para a integridade do cluster, se os limites de heartbeat estão definidos para ambientes de nuvem e se os serviços do SQL Server estão configurados para inicialização e failover automáticos.
+====
+.Dimensionamento automático e modo de dimensionamento automático
+Aumente os volumes automaticamente.
 
-* *Limpeza de clones*
-+
-Analise e remova regularmente clones desatualizados para reduzir os custos de storage. Clones antigos e não utilizados geram custos elevados.
+[%collapsible]
+====
+Ative o dimensionamento automático e defina o modo para  `grow` que os volumes aumentem automaticamente antes de ficarem cheios e somente leitura.
 
+====
+.Gerenciamento de espaço do dispositivo de bloco
+Configure as configurações de espaço do dispositivo de bloco para LUNs usadas pelo SQL Server.
 
+[%collapsible]
+====
+Configure as configurações de espaço do dispositivo de bloco para LUNs usados por bancos de dados Oracle para evitar falhas de gravação e melhorar a eficiência de espaço no FSx para ONTAP.
 
+====
+.Reserva de cópia Snapshot e exclusão automática
+Mantenha espaço para dados ativos.
 
+[%collapsible]
+====
+Defina a reserva de cópia Snapshot para 0% e ative a exclusão automática de cópia Snapshot para proteger o espaço para os dados ativos.
 
-[[oracle]]
-=== Oráculo
+====
+.Gerenciamento de espaço
+Expanda o volume antes de excluir as cópias Snapshot.
 
+[%collapsible]
+====
+Quando o espaço estiver acabando, expanda o volume antes de excluir as cópias Snapshot. Expandir o volume evita erros de "volume cheio", reduz falhas de gravação e preserva os pontos de recuperação de cópia Snapshot.
 
+====
+.Hierarquização / otimização de TCO
+Coloque os dados de cópia Snapshot em camadas usando a política de hierarquização somente de cópias Snapshot.
 
-==== Dimensionamento de storage
+[%collapsible]
+====
+Utilize a política de tiering somente para cópias Snapshot, que move apenas os dados de cópia Snapshot para a camada de capacidade, mantendo os dados ativos na camada SSD. Essa abordagem preserva o desempenho de baixa latência para cargas de trabalho SQL, enquanto reduz os custos de armazenamento. Faça o tiering dos dados de cópia Snapshot após um período de resfriamento de 7 dias.
 
-* *Espaço disponível no sistema de arquivos*
-+
-Mantenha capacidade adequada do sistema de arquivos para otimizar o desempenho do storage e evitar a degradação do desempenho. Espaço livre suficiente permite um gerenciamento de storage eficiente e suporta o crescimento do banco de dados.
+====
+.Eficiências de armazenamento
+Utilize desduplicação, compressão e compactação.
 
-* *Espaço de swap*
-+
+[%collapsible]
+====
+Habilite a deduplicação, a compressão e a compactação para reduzir o uso de armazenamento e o custo, mantendo o desempenho.
+
+====
+.Espaço de swap
+Defina a troca de memória com base na RAM.
+
+[%collapsible]
+====
 Configure o espaço de troca (swap) com base na quantidade de RAM para que o sistema possa lidar com a pressão na memória e evitar lentidão ou travamentos.
 
+====
+.Arquivamento, dados, controle, refazer e alocação temporária
+Utilize um volume dedicado para cada tipo de arquivo Oracle para isolar padrões de E/S e melhorar o desempenho.
 
+[%collapsible]
+====
+Armazene logs de arquivamento, arquivos de dados, arquivos de controle, logs de refazer e arquivos temporários em unidades separadas para isolar padrões de E/S e melhorar a resiliência. Mantenha cópias redundantes em volumes separados onde necessário.
 
+====
+.Posicionamento binário do Oracle
+Utilize um volume dedicado.
 
+[%collapsible]
+====
+Coloque os binários do Oracle em um volume dedicado para reduzir a disputa de E/S. Essa separação simplifica as atualizações de software e minimiza o risco de modificações acidentais ou corrupção.
 
-==== Layout de storage
+====
+.Snapshots locais programados
+Desative os snapshots locais agendados.
 
-* *Posicionamento de binário Oracle*
+[%collapsible]
+====
+Desative os snapshots agendados para volumes FSx for ONTAP usados pela Oracle para economizar espaço e reduzir custos. Em vez disso, gerencie os snapshots externamente usando ferramentas como NetApp SnapCenter, que criam backups consistentes com o aplicativo e ajudam a evitar corrupção de dados durante as operações de restauração.
+
+====
+.NFS rootonly
+Desative para dNFS.
+
+[%collapsible]
+====
+Desative o parâmetro ONTAP `nfs-rootonly` para dNFS. `nfs-rootonly` Restringe as conexões NFS a portas privilegiadas (<1024). Como os processos dNFS no NFSv4+ não são executados como root e usam portas mais altas, desativar esse parâmetro permite as conexões necessárias.
+
+====
+.Política de exportação de binários
+Inclua permissões de superusuário e setuid na política de exportação dedicada para binários Oracle.
+
+[%collapsible]
+====
+Certifique-se de que, se os binários do Oracle estiverem localizados em um compartilhamento NFS, a política de exportação inclua permissões de superusuário e setuid. O acesso de superusuário (root) permite que os clientes NFS sejam mapeados como root, o que é necessário para a execução dos binários.
+
+====
+.Configuração ASM
+Configure o Oracle Automatic Storage Management (ASM) para storage baseado em iSCSI em execução no FSx para ONTAP.
+
+[%collapsible]
+====
+Utilize o Oracle Automatic Storage Management (ASM) para armazenamento baseado em iSCSI executado no FSx for ONTAP para otimizar o desempenho, simplificar o gerenciamento de storage e aumentar a escalabilidade para as implementações do Oracle Database.
+
+====
+.Configurações somente ASM
+* *LUNs do grupo de discos de dados ASM, grupo de discos de logs ASM, grupo de discos FRA ASM e grupo de discos de arquivamento ASM*
 +
-Instale os binários do Oracle em um volume dedicado para garantir desempenho e estabilidade ideais, reduzindo a contenção de E/S. Essa separação simplifica as atualizações de software e minimiza o risco de modificações acidentais ou corrupção.
+Distribua LUNs entre os recursos do grupo de discos do Automatic Storage Management (ASM).
 
-* *Posicionamento de arquivos de dados*
 +
-Coloque os arquivos de dados em um volume dedicado ou com arquivos de controle para isolar operações de E/S aleatórias e melhorar o desempenho. Essa separação permite configurações de snapshots personalizadas, políticas de tiering e mecanismos de eficiência para otimizar o desempenho e custo.
-
-* *Posicionamento de arquivos de controle*
-+
-Armazene cópias dos arquivos de controle em diferentes volumes ou discos para evitar um ponto único de falha e adicionar redundância. Coloque os arquivos de controle em um volume dedicado ou compartilhe-os com os redo logs ou arquivos de dados, mas não os coloque em volumes em camadas com storage de objetos devido aos requisitos de desempenho.
-
-* *Colocação dos redo logs*
-+
-Coloque redo logs em um volume dedicado ou compartilhe-os adequadamente com arquivos temp ou de controle para isolar operações de E/S de gravação intensiva e melhorar o desempenho. Armazene cada cópia do redo log em um volume separado para redundância. Não coloque redo logs em snapshots de volume ou em volumes em camadas com storage de objetos porque eles são atualizados com frequência.
-
-* *Vaga temporária*
-+
-Coloque os arquivos temporários em um volume dedicado ou compartilhe-os adequadamente com os arquivos de redo ou de controle para isolar operações de E/S de gravação intensiva e melhorar o desempenho. Cada cópia temporária multiplexada deve residir em um volume separado para redundância. Os arquivos temporários não devem ser colocados em snapshots de volume ou volumes em camadas com storage de objetos devido aos seus padrões frequentes de atualização.
-
-* *Posicionamento de archive*
-+
-Armazene os logs de arquivamento em um volume dedicado para melhorar o desempenho e os processos de recuperação, evitando que altas demandas de I/O interfiram em outras operações do banco de dados.
-
-* *Configurações exclusivas do ASM: ASM data disk group LUNs, ASM logs disk group LUNs e ASM archive disk group LUNs*
-+
+[%collapsible]
+====
 Distribua os LUNs entre os grupos de discos de dados, redo log e archive log do Automatic Storage Management (ASM) para desempenho e redundância ideais.
 
-
-
-
-
-==== Configuração de storage
-
-* *ONTAP*
+====
+* *redundância externa do ASM*
 +
-Otimize a configuração do FSx for ONTAP para bancos de dados Oracle, habilitando thin provisioning, dimensionamento automático e gerenciamento de espaço para volumes. Configure políticas de snapshot e estratégias de tiering adequadas para equilibrar desempenho e custo. Para LUNs, assegure o alinhamento correto do tipo de sistema operacional, reserva de espaço e configurações de alocação de espaço para evitar falhas de gravação e habilitar exigência de espaço automática.
+Configure grupos de discos Oracle ASM com redundância EXTERNAL.
 
-* *Sistema operacional*
 +
-Configurar as definições do sistema operacional para desempenho ideal do banco de dados Oracle, incluindo ajuste dos parâmetros do kernel para cargas de trabalho de banco de dados e configuração adequada das definições de NFS ou dNFS para acesso ao sistema de arquivos de rede.
+[%collapsible]
+====
+Configure grupos de discos Oracle ASM com redundância EXTERNAL para LUNs iSCSI do FSx for ONTAP para aproveitar a alta disponibilidade incorporada do FSx for ONTAP, otimizar a eficiência de storage e reduzir custos evitando o espelhamento de dados no nível do Oracle.
 
-
-
-
-
-==== Computação
-
-* *Patch do sistema operacional*
+====
+* *Alinhamento do tamanho do bloco lógico do driver de filtro ASM e da ASMLib*
 +
-Aplique patches do sistema operacional regularmente para garantir melhorias de segurança, estabilidade e desempenho para o seu ambiente de banco de dados Oracle.
+Configure o Oracle ASM Filter Driver (AFD) e a ASMLib para usar o tamanho de bloco lógico do storage FSx for ONTAP subjacente.
 
-
-
-
-
-==== Aplicativo
-
-* *Atualizações críticas de segurança da Oracle*
 +
+[%collapsible]
+====
+Configure o Oracle ASM Filter Driver (AFD) e o ASMLib no arquivo de configuração do ASMLib para usar o tamanho de bloco lógico do armazenamento FSx for ONTAP subjacente. Isso garante que o AFD e o ASMLib alinhem as operações de E/S com o tamanho de bloco do storage, otimizando o desempenho ao minimizar a latência e reduzir a sobrecarga de E/S desnecessária.
+
+====
+
+
+.Tabela de slots TCP
+Defina como 128 para cargas de trabalho Oracle baseadas em NFS.
+
+[%collapsible]
+====
+Configure os parâmetros do kernel para a tabela de slots TCP com o valor 128 para cargas de trabalho do Oracle executadas em NFS. Essa configuração permite mais operações de E/S simultâneas, reduzindo a latência em cenários de alta taxa de transferência, como o acesso a arquivos de dados do Oracle. Os parâmetros do kernel controlam o número máximo de solicitações NFS pendentes via TCP, funcionando como a profundidade da fila em configurações Fibre Channel. Os valores padrão do Linux, normalmente definidos como 16, não oferecem desempenho ideal para o banco de dados.
+
+====
+.Opções de montagem NFS - arquivos de banco de dados
+Utilize opções de montagem NFS que otimizem o desempenho para arquivos de banco de dados.
+
+[%collapsible]
+====
+Use opções de montagem NFS otimizadas para arquivos de banco de dados. Os principais parâmetros incluem  `rw` para acesso de leitura/gravação,  `bg` para montagem em segundo plano,  `hard` para tentativas indefinidas em caso de falhas e  `proto=tcp` para entrega confiável. Os valores  `rsize` e  `wsize` de 262144 melhoram operações de E/S de grande porte, aumentando a taxa de transferência, enquanto  `nointr` não interrompe tarefas de longa duração. Essa configuração aprimora o desempenho e a resiliência do banco de dados, principalmente em ambientes de alta taxa de transferência.
+
+====
+.Opções de montagem NFS para ADR home
+Use opções de montagem NFS que otimizem o desempenho para o diretório base ADR.
+
+[%collapsible]
+====
+Use opções de montagem NFS otimizadas para o diretório base ou diretório raiz do Repositório de Diagnóstico Automático (ADR). O diretório base do ADR armazena logs e rastreamentos, que se beneficiam de opções de confiabilidade semelhantes às dos arquivos principais do banco de dados, mas não exigem a opção de montagem  `nointr`, pois as operações são menos sensíveis a interrupções.
+
+====
+.Nome de domínio NFSv4
+Faça a correspondência dos nomes de domínio NFSv4 entre o host e o servidor NFS.
+
+[%collapsible]
+====
+Corresponda os nomes de domínio NFSv4 entre o host (`/etc/idmapd.conf` ou  `hostname -d`) e o servidor NFS (`v4-id-domain` no ONTAP).
+
+====
+.Opções de armazenamento em cache NFS
+Não desative o armazenamento em cache do host em implantações independentes.
+
+[%collapsible]
+====
+Omitir as opções de montagem NFS que desativam o armazenamento em cache do host—como, `actimeo=0` e `noac`—em implantações Oracle independentes para melhorar a eficiência e a confiabilidade. Essas opções se aplicam a ambientes clusterizados para garantir a consistência do cache, mas em ambientes de instância única, elas ignoram o armazenamento em cache e podem reduzir significativamente o desempenho.
+
+====
+.capacitação dNFS
+Ative dNFS.
+
+[%collapsible]
+====
+Habilite o Direct NFS (dNFS) em seu ambiente Oracle para melhorar o desempenho e a confiabilidade do armazenamento NFS.
+
+====
+.Resolução de IP consistente dNFS
+Evite a resolução de nomes por round-robin.
+
+[%collapsible]
+====
+Evite o uso de Direct NFS (dNFS) com qualquer tipo de resolução de nomes round-robin, incluindo DNS, DDNS, NIS ou qualquer outro método. Isso inclui o recurso de balanceamento de carga de DNS disponível no ONTAP. A resolução consistente de endereço IP mantém a estabilidade do banco de dados e previne possíveis falhas ou corrupção de dados.
+
+====
+.arquivo de configuração dNFS
+Validar  `oranfstab`conteúdo.
+
+[%collapsible]
+====
+Verifique e atualize o conteúdo do arquivo  `oranfstab` para garantir o uso correto do Direct NFS (dNFS). O arquivo  `oranfstab` é essencial para configurar recursos avançados do dNFS, como multipathing e opções específicas do NFS. A configuração correta melhora a eficiência do acesso e do gerenciamento de dados.
+
+====
+.dNFS sem armazenamento em cache compartilhado
+Use  `nosharecache` para casos específicos de montagem múltipla.
+
+[%collapsible]
+====
+Configure a opção de montagem  `nosharecache` para ambientes onde Direct NFS (dNFS) está habilitado e um volume de origem é montado mais de uma vez em um único servidor com montagens NFS aninhadas. Essa configuração impede o compartilhamento de armazenamento em cache entre as montagens, garantindo a consistência de dados e o desempenho ideal.
+
+====
+
+
+[[compute]]
+=== Computação
+
+.Patch do sistema operacional
+Aplique os patches atuais.
+
+[%collapsible]
+====
+Aplique os patches mais recentes do sistema operacional para melhorar a segurança e a confiabilidade.
+
+====
+.Páginas gigantes transparentes
+Desative Páginas Grandes Transparentes (THP).
+
+[%collapsible]
+====
+Desative as Transparent Huge Pages (THP) em hosts de banco de dados que executam bancos de dados Oracle para evitar possível degradação de desempenho e melhorar o gerenciamento de memória.
+
+====
+.Opções avançadas de TCP
+Ative as opções avançadas do Transmission Control Protocol (TCP).
+
+[%collapsible]
+====
+Ative os carimbos de data/hora TCP, SACK e dimensionamento de janela para obter o melhor desempenho e confiabilidade da rede.
+
+====
+.Opções de E/S do sistema de arquivos
+Defina  `filesystemio_options = setall`.
+
+[%collapsible]
+====
+Configure  `filesystemio_options = setall` para obter o desempenho ideal de E/S. Ajuste o tamanho da área global do sistema (SGA), se necessário, ao migrar de E/S com buffer.
+
+====
+.Contagem de leitura multibloco
+Remova o  `db_file_multiblock_read_count` parâmetro.
+
+[%collapsible]
+====
+Remova o parâmetro  `db_file_multiblock_read_count` do arquivo de texto FILE  `init.ora` ou do arquivo binário gerenciado pelo servidor SPFILE (`spfile<SID>.ora` para bancos de dados Oracle para evitar problemas de desempenho e permitir que o Oracle gerencie essa configuração automaticamente.
+
+====
+.Atualizações críticas de patch da Oracle
+Aplique as atualizações de CPU mais recentes.
+
+[%collapsible]
+====
 Aplique as atualizações críticas mais recentes da Oracle para corrigir vulnerabilidades de segurança e manter a integridade do seu ambiente de banco de dados. Revise e aplique patches regularmente para se proteger contra possíveis ameaças e garantir a conformidade com as melhores práticas de segurança.
 
+====
 
 
+[[resiliency]]
+=== Resiliência
+
+.Snapshots consistentes com a aplicação
+Use snapshots consistentes de aplicativos com o NetApp SnapCenter.
+
+[%collapsible]
+====
+Use snapshots consistentes de aplicativos com o NetApp SnapCenter para tirar snapshots precisos e confiáveis dos seus dados de volume em um momento específico. SnapCenter facilita os backups e ajuda você a restaurar dados rapidamente, reduzindo o tempo de inatividade e protegendo cargas de trabalho críticas.
+
+====
+.Replicação entre regiões
+Proteja contra interrupções regionais.
+
+[%collapsible]
+====
+Habilite a replicação entre regiões (CRR) para melhorar a disponibilidade de dados e a recuperação de desastres para seus bancos de dados Oracle. A CRR ajuda a proteger contra interrupções regionais e garante a continuidade dos negócios ao replicar dados em diferentes locais.
+
+====
+.Configuração de backup
+Configure o FSx for ONTAP backups ou AWS Backup.
+
+[%collapsible]
+====
+Configure o FSx for ONTAP backups ou o AWS Backup para atender aos requisitos de retenção e conformidade, evitando fluxos de trabalho de backup duplicados.
+
+====
 
 
-==== Resiliência
+[[cloning]]
+=== Clonagem
 
-* *Replicação entre regiões (CRR)*
-+
-Habilite a replicação entre regiões (CRR) para aprimorar a disponibilidade de dados e os recursos de recuperação de desastres para seus bancos de dados Oracle. A CRR ajuda a proteger contra interrupções regionais e garante a continuidade dos negócios ao replicar dados em locais geograficamente dispersos.
+.Limpeza de clones
+Remova clones antigos regularmente.
 
-* *Instantâneos consistentes com a aplicação*
-+
-Use snapshots consistentes de aplicativos com NetApp SnapCenter para tirar snapshots precisos e confiáveis dos seus dados de volume em um momento específico. Isso mantém seus aplicativos funcionando sem problemas e seus dados seguros. SnapCenter facilita os backups e ajuda você a restaurar dados de forma rápida e correta, reduzindo o tempo de inatividade e protegendo suas cargas de trabalho mais importantes.
+[%collapsible]
+====
+Remova regularmente clones obsoletos para reduzir o custo de storage e a complexidade operacional. Clones antigos e não utilizados geram custos elevados.
 
-* *Configuração de backup*
-+
-Configure FSx for ONTAP backups ou AWS Backup para atender aos requisitos de retenção de dados e conformidade. Evite backups redundantes.
-
-* *Limpeza de clones*
-+
-Analise e remova regularmente clones desatualizados para reduzir os custos de storage. Clones antigos e não utilizados geram custos elevados.
-
-
-
+====
 .O que vem a seguir
 link:optimize-configurations.html["Implementar configurações de banco de dados bem arquitetadas"]

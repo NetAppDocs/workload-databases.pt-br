@@ -24,9 +24,9 @@ A criação de um banco de dados no Workload Factory requer permissões de _visu
 NOTE: Os servidores Microsoft SQL que usam o protocolo SMB não suportam a criação de banco de dados.
 
 .Antes de começar
-Certifique-se de concluir os seguintes pré-requisitos antes de criar um novo banco de dados.
+Complete os seguintes pré-requisitos antes de criar um novo banco de dados.
 
-* *Credenciais e permissões*: Você precisa ter link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de _visualização, planejamento e análise_"^] Para criar um novo banco de dados no Workload Factory.
+* *Credenciais e permissões*: Você deve ter link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenciais da conta AWS e permissões de _operações e remediação_"^] para criar um novo banco de dados no Workload Factory.
 +
 Como alternativa, você pode usar o Codebox para copiar um modelo para que você possa implantar um banco de dados fora da fábrica de carga de trabalho usando a API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Saiba mais sobre a automação Codebox"^].
 

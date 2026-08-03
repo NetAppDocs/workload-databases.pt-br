@@ -33,6 +33,9 @@ Para usar o analisador de log de erros, você precisa ativar o Amazon Bedrock, s
 link:https://aws.amazon.com/bedrock/pricing/["Preços do Amazon Bedrock"^]
 
 
+NOTE: Se o administrador da sua conta desativou os recursos de IA, você verá uma mensagem e não poderá usar a análise de IA. Entre em contato com seu administrador ou link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Aprenda sobre administração de IA"^].
+
+
 
 [[data-privacy-and-security]]
 === Privacidade e segurança de dados
