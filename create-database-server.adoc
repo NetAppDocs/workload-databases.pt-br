@@ -4,7 +4,7 @@ permalink: create-database-server.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
 summary: Crie um novo Microsoft SQL Server dentro do NetApp Workload Factory for Databases. 
 ---
-= Crie um Microsoft SQL Server no Workload Factory para bancos de dados
+= Crie um Microsoft SQL Server no NetApp Workload Factory para bancos de dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

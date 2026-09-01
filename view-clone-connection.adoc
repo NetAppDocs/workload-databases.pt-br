@@ -4,7 +4,7 @@ permalink: view-clone-connection.html
 keywords: view clone connection, copy connection information 
 summary: Visualize e copie as informações de conexão de um clone de banco de dados no NetApp Workload Factory for Databases. 
 ---
-= Exibir informações de conexão de um clone de banco de dados
+= Visualizar informações de conexão de clone no NetApp Workload Factory para Bancos de Dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

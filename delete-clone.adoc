@@ -4,7 +4,7 @@ permalink: delete-clone.html
 keywords: delete, clone 
 summary: Exclua um clone de sandbox no NetApp Workload Factory for Databases quando não precisar mais dele e quiser liberar capacidade de armazenamento. 
 ---
-= Excluir um clone de datahase no NetApp Workload Factory for Databases
+= Excluir um clone de banco de dados no NetApp Workload Factory para Bancos de Dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

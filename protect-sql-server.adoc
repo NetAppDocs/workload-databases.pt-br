@@ -4,7 +4,7 @@ permalink: protect-sql-server.html
 keywords: protect, server, Microsoft SQL Server, SQL Server, protect instance, protect database 
 summary: Proteja instâncias e bancos de dados do Microsoft SQL Server. 
 ---
-= Proteja as cargas de trabalho do Microsoft SQL Server
+= Proteja as cargas de trabalho do Microsoft SQL Server com o NetApp Workload Factory para Bancos de Dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

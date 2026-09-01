@@ -4,7 +4,7 @@ permalink: check-clone-integrity.html
 keywords: integrity check, data corruption 
 summary: Execute uma verificação de integridade para determinar se os dados do clone do sandbox estão intactos ou corrompidos no NetApp Workload Factory for Databases. 
 ---
-= Verifique a integridade dos dados em um clone de sandbox
+= Verifique a integridade de dados no NetApp Workload Factory para bancos de dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

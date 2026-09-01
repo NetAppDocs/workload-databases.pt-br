@@ -4,7 +4,7 @@ permalink: split-clone.html
 keywords: split, clone, source, new database 
 summary: Divida um clone de banco de dados do banco de dados de origem para criar um novo banco de dados no NetApp Workload Factory for Databases. 
 ---
-= Dividir um clone de banco de dados do banco de dados de origem
+= Dividir um clone de banco de dados no NetApp Workload Factory para Bancos de Dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
