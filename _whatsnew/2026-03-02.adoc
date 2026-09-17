@@ -22,7 +22,7 @@ Após registrar suas instâncias do AOAG e bancos de dados do Data Guard, você 
 
 Workload Factory for Databases também oferece suporte à análise bem arquitetada para instâncias do Microsoft SQL Server com o modelo de implantação AOAG. Você pode analisar as configurações de suas instâncias do SQL Server em um grupo de disponibilidade e receber recomendações para otimizar suas configurações de implantação e cumprir as melhores práticas. Registre suas instâncias AOAG para habilitar esse recurso.
 
-link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#register-a-sql-server-instance["Registre recursos no Workload Factory for Databases"]
+link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registre recursos no Workload Factory for Databases"]
 
 
 
