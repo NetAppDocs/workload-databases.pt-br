@@ -1679,10 +1679,10 @@
   <block id="c615884836ba8ff129bccac26af65a58" category="section-title">Reverter um clone do banco de dados</block>
   <block id="74c32f8fc6fe86c04537074f1e3cb88e" category="section-title">Dividir um clone de banco de dados</block>
   <block id="2f06756420805ba71f60842577c60dc8" category="section-title">Veja as informações de conexão de um clone</block>
-  <block id="301497b54979bb49bba5249c4f44b4ad" category="section-title">27 de setembro de 2026</block>
   <block id="e30e82b6ba088958ce23ba4d6a33b01f" category="sidebar">Use o Workload Factory para cargas de trabalho de banco de dados</block>
   <block id="573be33921395db38cda47a4830a127e" category="sidebar">Crie recursos de banco de dados</block>
   <block id="33995eab65a0112a35f0233d5de5a0a6" category="sidebar">Proteja, monitore e otimize os recursos do banco de dados</block>
   <block id="753d621a767f80f69e64e577e1856e54" category="doc">Suporte a vários sistemas de arquivos por uma única instância</block>
   <block id="6adeb7328ee4497e74b45036bf16ff9d" category="paragraph">O Workload Factory for Databases oferece suporte a vários sistemas de arquivos por instância única do Microsoft SQL Server. Você pode registrar vários sistemas de arquivos em uma instância do SQL Server e corrigir um problema de configuração em vários sistemas de arquivos em uma instância do SQL Server ao mesmo tempo.</block>
+  <block id="74bc5d714652a3ae18c64ee93e4ba085" category="section-title">30 de setembro de 2026</block>
 </blocks>
