@@ -1685,4 +1685,6 @@
   <block id="753d621a767f80f69e64e577e1856e54" category="doc">Suporte a vários sistemas de arquivos por uma única instância</block>
   <block id="6adeb7328ee4497e74b45036bf16ff9d" category="paragraph">O Workload Factory for Databases oferece suporte a vários sistemas de arquivos por instância única do Microsoft SQL Server. Você pode registrar vários sistemas de arquivos em uma instância do SQL Server e corrigir um problema de configuração em vários sistemas de arquivos em uma instância do SQL Server ao mesmo tempo.</block>
   <block id="74bc5d714652a3ae18c64ee93e4ba085" category="section-title">30 de setembro de 2026</block>
+  <block id="3fba0171e458258e875a2f8013e395b8" category="cell">O SQL Server 2025</block>
+  <block id="9e5f96378bed43aac0d5d94368775263" category="cell">Windows Server 2025</block>
 </blocks>
